@@ -1,7 +1,7 @@
 export default {
     target: 'static',
     router: {
-        base: '/bondibon/'
+        base: '/bondibon/dist/'
     },
     head: {
         title: 'Nuxt',
