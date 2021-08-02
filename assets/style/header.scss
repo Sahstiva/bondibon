@@ -53,15 +53,26 @@
     color: #ffffff;
     font-size: 19px;
     line-height: 23.94px;
+    margin: 0 5px 0 0;
   }
 
-  &-text {
-    font-family: 'Manrope-Regular';
+  &-link, &-text {
+    font-family: 'Manrope-Regular', Helvetica, Arial, sans-serif;
+    text-decoration: none;
     font-size: 17px;
     line-height: 22.94px;
     letter-spacing: 0.5px;
     color: #ffffff;
     margin: 0 0 0 0;
   }
-
+    &-link {
+      &:hover {
+        color: red;
+      }
+    }
+    &-text {
+      &:hover {
+        color: #29d3d8;
+      }
+    }
 }

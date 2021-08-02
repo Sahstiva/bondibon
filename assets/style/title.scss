@@ -1,21 +1,19 @@
 .title {
-  background: url('~assets/images/background_header.png');
-  background-repeat: no-repeat;
-  width: 100%;
+  background: url('~assets/images/background_title.png') center top no-repeat;
+  width: 100vw;
   min-height: 700px;
   &-img {
-    margin: 138px 0 0 617px;
+    margin: 138px 0 0 calc(50vw - 960px + 617px);
   }
   &-benefit {
     width: 218px;
     height: 71px;
     border-radius: 35px;
-    background-color: #00c0c4;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 10px 0 10px;
-    margin: 0 50px 0 50px;
+    margin: 0 40px 0 40px;
 
     &--img {
       fill: #ffffff;
@@ -31,19 +29,19 @@
       margin: 0 0 0 15px;
     }
 
-    &--text {
+    &--text, &--litera {
       color: #ffffff;
-      font-family: 'vogue-cyr-bold', 'Arial Rounded MT Bold', sans-serif;
-      font-size: 13px;
+      font-family: 'Ruda-Bold', 'Arial Rounded MT Bold', sans-serif;
       text-transform: uppercase;
       margin: 0;
     }
 
+    &--text {
+      font-size: 13px;
+    }
+
     &--litera {
-      color: #ffffff;
-      font-family: 'vogue-cyr-bold', 'Arial Rounded MT Bold', sans-serif;
       font-size: 25px;
-      margin: 0;
     }
 
     &--wrapper {
@@ -60,6 +58,23 @@
 
     &--cyan {
       background: linear-gradient(90deg, rgba(0,193,196,1) 0%, rgba(81,189,190,1) 100%);
+      position: relative;
+
+      &:before {
+        content: '';
+        //background: #07aea8;
+        background: rgba(7, 174, 168, 1);
+        //background: url('~assets/images/title_ellipse.png');
+        width: 146px;
+        height: 146px;
+        border-radius: 73px;
+        display: block;
+        position: absolute;
+        top: -80px;
+        left: -20px;
+        z-index: -1;
+        opacity: 1;
+      }
     }
 
     &--magenta {
@@ -75,9 +90,9 @@
     justify-content: center;
     align-items: center;
     &-wrapper {
-      width: 100%;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       padding: 50px;
     }
     &--text {
@@ -87,6 +102,9 @@
       text-transform: uppercase;
       line-height: 26px;
       text-align: center;
+    }
+    &--icon {
+      margin: 30px 0 0 0;
     }
 
   }
