@@ -72,6 +72,11 @@
           </div>
         </div>
       </div>
+      <div class="title-learnmore-wrapper">
+        <div class="title-learnmore">
+          <p class="title-learnmore--text">узнай больше о полезных играх</p>
+        </div>
+      </div>
     </section>
   </div>
 </template>

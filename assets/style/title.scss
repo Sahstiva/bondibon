@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 10px 0 10px;
+    margin: 0 50px 0 50px;
 
     &--img {
       fill: #ffffff;
@@ -48,7 +49,9 @@
     &--wrapper {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      margin: -100px 0 0 0;
+      width: 100%;
     }
 
     &--orange {
@@ -63,4 +66,28 @@
       background: linear-gradient(90deg, rgba(146,53,224,1) 0%, rgba(152,91,234,1) 100%);
     }
 }
+  &-learnmore {
+    width: 489px;
+    height: 49px;
+    background-color: #d2beae;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+    &--text {
+      font-size: 24px;
+      font-family: Manrope-Regular, Arial, sans-serif;
+      color: #ffffff;
+      text-transform: uppercase;
+      line-height: 26px;
+      text-align: center;
+    }
+
+  }
 }
