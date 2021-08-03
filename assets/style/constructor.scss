@@ -1,9 +1,9 @@
-.mosaic {
-  background-image: url('~assets/images/background_mosaic.png');
+.constructor {
+  background-image: url('~assets/images/background_constructor.png');
   background-position: 41.4% top;
   background-repeat: no-repeat;
   width: 100vw;
-  min-height: 1300px;
+  //min-height: 1300px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -94,20 +94,20 @@
     text-transform: uppercase;
     text-align: center;
 
-    &--aquatermo {
-      background-color: #6bb2ee;
+    &--robots {
+      background-color: #f9dd2f;
     }
-    &--engraving {
-      background-color: #edafce;
+    &--magnit {
+      background-color: #f89826;
     }
-    &--modeling {
-      background-color: #52cfed;
+    &--sqrew {
+      background-color: #fab449;
     }
-    &--drawing {
-      background-color: #6ccedb;
+    &--puzzles {
+      background-color: #fb651d;
     }
-    &--knitting {
-      background-color: #92cafd;
+    &--models {
+      background-color: #f73818;
     }
   }
 }

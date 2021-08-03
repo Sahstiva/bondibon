@@ -1,9 +1,9 @@
-.microscope {
-  background-image: url('~assets/images/background_microscope.png');
+.mosaic {
+  background-image: url('~assets/images/background_mosaic.png');
   background-position: 41.4% top;
   background-repeat: no-repeat;
   width: 100vw;
-  min-height: 1300px;
+  //min-height: 1300px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -13,9 +13,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: -33px 0 0 0;
+  margin: 50px 0 0 0;
   @media (max-width: 1920px) {
-    background-position: 35.6% top;
+    background-position: 40% top;
   }
   @media (max-width: 1600px) {
     background-position: 32.15% top;
@@ -30,8 +30,13 @@
     font-family: 'Ruda-Bold', 'Arial Rounded MT Bold', sans-serif;
     font-size: 30px;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     color: #d2beae;
+    max-width: 300px;
+    margin: 0;
+    &--small {
+      font-size: 17px;
+    }
   }
 
   &-icon {
@@ -46,7 +51,7 @@
       justify-content: center;
       align-items: center;
       @media (max-width: 1920px) {
-        margin: 140px 100px 0 0;
+        margin: 105px 50px 0 0;
       }
       @media (max-width: 1280px) {
         margin: 140px 102px 0 0;
@@ -58,7 +63,7 @@
     }
 
     &--items {
-      margin: -200px 0 0 0;
+      margin: -50px 0 0 0;
       display: grid;
       width: 1050px;
       grid-template-columns: repeat(5, 1fr);
@@ -68,7 +73,7 @@
     }
 
     &--wrapper {
-      margin: 0 0 0 -160px;
+      margin: 120px 0 0 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -89,24 +94,20 @@
     text-transform: uppercase;
     text-align: center;
 
-    &--small {
-      font-size: 12px;
+    &--aquatermo {
+      background-color: #6bb2ee;
     }
-
-    &--microscope {
-      background-color: rgb(57, 170, 205);
+    &--engraving {
+      background-color: #edafce;
     }
-    &--science {
-      background-color: rgb(54, 177, 194);
+    &--modeling {
+      background-color: #52cfed;
     }
-    &--digger {
-      background-color: rgb(50, 176, 166);
+    &--drawing {
+      background-color: #6ccedb;
     }
-    &--entertainment {
-      background-color: rgb(47, 167, 144);
-    }
-    &--magic {
-      background-color: rgb(42, 156, 102);
+    &--knitting {
+      background-color: #92cafd;
     }
   }
 }

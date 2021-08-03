@@ -1,9 +1,9 @@
-.evamoda {
-  background-image: url('~assets/images/background_evamoda.png');
+.tablegames {
+  background-image: url('~assets/images/background_tablegames.png');
   background-position: 41.4% top;
   background-repeat: no-repeat;
   width: 100vw;
-  min-height: 1300px;
+  //min-height: 1300px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -94,20 +94,20 @@
     text-transform: uppercase;
     text-align: center;
 
-    &--evamoda {
-      background-color: #923a6c;
+    &--antistress {
+      background-color: #2c9c75;
     }
-    &--bodyart {
-      background-color: #b06ec8;
+    &--transport {
+      background-color: #32b3ad;
     }
-    &--accesoires {
-      background-color: #f9aad3;
+    &--rolegames {
+      background-color: #35b2bd;
     }
-    &--umbrella {
-      background-color: #faaca8;
+    &--dolls {
+      background-color: #37b0c4;
     }
-    &--bags {
-      background-color: #f76e67;
+    &--newborn {
+      background-color: #79dbea;
     }
   }
 }

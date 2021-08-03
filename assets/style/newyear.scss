@@ -1,11 +1,12 @@
-.knowledge {
-  background-image: url('~assets/images/background_knowledge.png');
+.newyear {
+  background-image: url('~assets/images/background_newyear.png');
   background-position: 44% top;
   background-repeat: no-repeat;
   width: 100vw;
-  min-height: 880px;
+  min-height: 700px;
+  margin: 139px 0 0 0;
   z-index: -2;
-  opacity: 0;
+  opacity: 1;
   transform: translateZ(0);
   perspective: 1000px;
   backface-visibility: hidden;
@@ -23,7 +24,7 @@
     background-position: 55% top;
   }
   &-title {
-    padding: 250px 0 0 0;
+    padding: 90px 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +60,8 @@
       line-height: 13px;
       text-transform: uppercase;
       text-align: center;
-      max-width: 150px;
+      max-width: 200px;
+      margin: 10px 0 10px 0;
     }
   }
 }

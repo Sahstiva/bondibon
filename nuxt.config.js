@@ -1,7 +1,7 @@
 export default {
     target: 'static',
     router: {
-        base: '/bondibon/dist/'
+        base: '/'
     },
     head: {
         title: 'Nuxt',
@@ -29,9 +29,11 @@ export default {
         '@fortawesome/fontawesome-svg-core/styles.css'
     ],
     plugins: [
+        '~/plugins/animateOnScroll.client.js',
         '~/plugins/fontawesome.js'
     ],
     modules: [
-        ['vue-scrollto/nuxt', { duration: 500, easing: "ease-in" }],
+        ['vue-scrollto/nuxt', { container: "body", duration: 500, easing: "ease-in", force: true,
+            cancelable: false, offset: 50 }],
     ]
 }

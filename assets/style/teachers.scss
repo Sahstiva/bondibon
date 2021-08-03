@@ -1,9 +1,9 @@
-.evamoda {
-  background-image: url('~assets/images/background_evamoda.png');
+.teachers {
+  background-image: url('~assets/images/background_teachers.png');
   background-position: 41.4% top;
   background-repeat: no-repeat;
   width: 100vw;
-  //min-height: 1300px;
+  min-height: 1300px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0 0 0;
+  margin: 0;
   @media (max-width: 1920px) {
     background-position: 40% top;
   }
@@ -63,7 +63,7 @@
     }
 
     &--items {
-      margin: -50px 0 0 0;
+      margin: -150px 0 0 0;
       display: grid;
       width: 1050px;
       grid-template-columns: repeat(5, 1fr);
@@ -73,7 +73,7 @@
     }
 
     &--wrapper {
-      margin: 120px 0 0 40px;
+      margin: 0 -120px 150px 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -94,21 +94,28 @@
     text-transform: uppercase;
     text-align: center;
 
-    &--evamoda {
-      background-color: #923a6c;
+    &--large {
+      font-size: 20px;
     }
-    &--bodyart {
-      background-color: #b06ec8;
+
+    &--speech {
+      background-color: #39aacd;
     }
-    &--accesoires {
-      background-color: #f9aad3;
+    &--discovery {
+      background-color: #36b1c2;
     }
-    &--umbrella {
-      background-color: #faaca8;
+    &--art {
+      background-color: #32b0a6;
     }
-    &--bags {
-      background-color: #f76e67;
+    &--social {
+      background-color: #2fa790;
     }
+    &--catalog {
+      background-color: #be0000;
+    }
+  }
+  &-download {
+    margin: -190px 0 0 940px;
   }
 }
 

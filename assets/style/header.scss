@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   height: 92px;
+  width: 920px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,7 +23,7 @@
   &-wheretobuy {
     align-items: center;
     max-width: 150px;
-    padding: 0 0 0 130px;
+    padding: 0 0 15px 130px;
     text-align: center;
   }
 

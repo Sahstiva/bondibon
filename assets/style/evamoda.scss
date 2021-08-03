@@ -1,9 +1,9 @@
-.constructor {
-  background-image: url('~assets/images/background_constructor.png');
+.evamoda {
+  background-image: url('~assets/images/background_evamoda.png');
   background-position: 41.4% top;
   background-repeat: no-repeat;
   width: 100vw;
-  min-height: 1300px;
+  //min-height: 1300px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -94,20 +94,20 @@
     text-transform: uppercase;
     text-align: center;
 
-    &--robots {
-      background-color: #f9dd2f;
+    &--evamoda {
+      background-color: #923a6c;
     }
-    &--magnit {
-      background-color: #f89826;
+    &--bodyart {
+      background-color: #b06ec8;
     }
-    &--sqrew {
-      background-color: #fab449;
+    &--accesoires {
+      background-color: #f9aad3;
     }
-    &--puzzles {
-      background-color: #fb651d;
+    &--umbrella {
+      background-color: #faaca8;
     }
-    &--models {
-      background-color: #f73818;
+    &--bags {
+      background-color: #f76e67;
     }
   }
 }
