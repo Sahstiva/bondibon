@@ -3,7 +3,7 @@
   background-position: 41.4% top;
   background-repeat: no-repeat;
   width: 100vw;
-  min-height: 1300px;
+  //min-height: 1300px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -27,7 +27,8 @@
     background-position: 81.5% top;
   }
   &-text {
-    font-family: 'Ruda-Bold', 'Arial Rounded MT Bold', sans-serif;
+    font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
+    font-weight: bold;
     font-size: 30px;
     text-transform: uppercase;
     text-align: left;
@@ -89,7 +90,8 @@
     justify-content: center;
     flex-direction: column;
     color: #ffffff;
-    font-family: 'Ruda-Bold', 'Arial Rounded MT Bold', sans-serif;
+    font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
+    font-weight: bold;
     font-size: 15px;
     text-transform: uppercase;
     text-align: center;

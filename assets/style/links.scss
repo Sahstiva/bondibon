@@ -1,9 +1,9 @@
-.evamoda {
-  background-image: url('~assets/images/background_evamoda.png');
+.links {
+  background-image: url('~assets/images/background_links.png');
   background-position: 41.4% top;
   background-repeat: no-repeat;
   width: 100vw;
-  //min-height: 1300px;
+  min-height: 1300px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -13,103 +13,125 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0 0 0;
+  margin: 155px 0 0 0;
   @media (max-width: 1920px) {
-    background-position: 40% top;
+    background-position: 55% top;
   }
   @media (max-width: 1600px) {
-    background-position: 32.15% top;
+    background-position: 65% top;
   }
   @media (max-width: 1280px) {
-    background-position: -45% top;
+    background-position: 40% top;
   }
   @media (max-width: 1024px) {
-    background-position: 81.5% top;
+    background-position: 45% top;
   }
-  &-text {
-    font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    text-transform: uppercase;
-    text-align: left;
-    color: #d2beae;
-    max-width: 300px;
-    margin: 0;
-    &--small {
-      font-size: 17px;
-    }
-  }
-
-  &-icon {
-    margin: 0 0 0 100px;
-  }
-
   &-wrapper {
-    &--img {
-      margin: 140px 160px 0 0;
-      width: 1050px;
+    margin: 185px 0 0 70px;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "opinion instagram come"
+    "youtube subscribe bgames";
+    font-family: 'RotondaC', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+  }
+  &-arrow {
+    margin: 35px 0 0 50px;
+  }
+  &-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--wrapper {
+      width: 173px;
+      height: 173px;
+      border-radius: 50%;
+      background-color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
-      @media (max-width: 1920px) {
-        margin: 105px 50px 0 0;
-      }
-      @media (max-width: 1280px) {
-        margin: 140px 102px 0 0;
-      }
-      @media (max-width: 1024px) {
-        margin: 140px 30px 0 0;
-        width: 1000px;
-      }
+      box-shadow: 6.709px 4.357px 0 0 rgba(0, 0, 0, 0.09);
     }
-
-    &--items {
-      margin: -50px 0 0 0;
-      display: grid;
-      width: 1050px;
-      grid-template-columns: repeat(5, 1fr);
-      @media (max-width: 1024px) {
-        width: 1000px;
-      }
-    }
-
-    &--wrapper {
-      margin: 120px 0 0 40px;
+    &--redcircle {
+      width: 138px;
+      height: 138px;
+      border-radius: 50%;
+      background-color: #d02027;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
     }
-  }
-  &-item {
-    border-radius: 50%;
-    box-shadow: 6.709px 4.357px 0px 0px rgba(0, 0, 0, 0.09);
-    width: 170px;
-    height: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #ffffff;
-    font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-    text-transform: uppercase;
-    text-align: center;
+    &--opinion {
+      grid-area: opinion;
+      font-size: 35px;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    &--instagram {
+      grid-area: instagram;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &--come {
+      grid-area: come;
+      font-size: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    &--youtube {
+      grid-area: youtube;
+      font-size: 20px;
+      position: relative;
+      .arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        background-image: url('~assets/images/arrow.png');
+        top: 0;
+        right: 0;
+      }
+    }
 
-    &--evamoda {
-      background-color: #923a6c;
+    &--bgames {
+      grid-area: bgames;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
-    &--bodyart {
-      background-color: #b06ec8;
+    &--video {
+      grid-area: video;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
-    &--accesoires {
-      background-color: #f9aad3;
+    &--small {
+      font-size: 20px;
+      text-align: left;
+      margin: 10px 0 0 0;
     }
-    &--umbrella {
-      background-color: #faaca8;
-    }
-    &--bags {
-      background-color: #f76e67;
+    &--subscribe {
+      grid-area: subscribe;
+      font-size: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
   }
 }

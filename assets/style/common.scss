@@ -1,9 +1,12 @@
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
 .site_wrapper {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  //justify-content: center;
   width: 100vw;
 }
 .container {

@@ -29,7 +29,8 @@
     justify-content: center;
     align-items: center;
     &--title, &--subtitle {
-      font-family: 'Ruda-Bold', 'Arial Rounded MT Bold', sans-serif;
+      font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
+      font-weight: bold;
       color: #ffffff;
       text-transform: uppercase;
       margin: 0 25px 0 25px;
@@ -55,7 +56,8 @@
 
     &--text {
       color: #ffffff;
-      font-family: 'Ruda-Bold', 'Arial Rounded MT Bold', sans-serif;
+      font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
+      font-weight: bold;
       font-size: 13px;
       line-height: 13px;
       text-transform: uppercase;

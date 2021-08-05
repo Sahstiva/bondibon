@@ -4,8 +4,8 @@ export default {
         base: '/'
     },
     head: {
-        title: 'Nuxt',
-        titleTemplate: 'My amazing Nuxt application | %s',
+        title: 'BONDIBON',
+        titleTemplate: 'Игрушки, развивающие и развлекательные игры | %s',
         htmlAttrs: {
             lang: 'en',
             amp: true
@@ -19,8 +19,7 @@ export default {
             {
                 hid: 'description',
                 name: 'description',
-                content:
-                    'The amazing Nuxt application that teaches me all the cool features of Nuxt'
+                content: 'Bondibon - игрушки, развивающие и развлекательные игры'
             }
         ],
     },
