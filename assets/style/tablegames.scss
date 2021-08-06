@@ -1,9 +1,8 @@
 .tablegames {
   background-image: url('~assets/images/background_tablegames.png');
-  background-position: 41.4% top;
+  background-position: center top;
   background-repeat: no-repeat;
-  width: 100vw;
-  //min-height: 1300px;
+  width: 1920px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -15,17 +14,9 @@
   align-items: center;
   margin: 50px 0 0 0;
   @media (max-width: 1920px) {
-    background-position: 40% top;
+    width: 100vw;
   }
-  @media (max-width: 1600px) {
-    background-position: 32.15% top;
-  }
-  @media (max-width: 1280px) {
-    background-position: -45% top;
-  }
-  @media (max-width: 1024px) {
-    background-position: 81.5% top;
-  }
+
   &-text {
     font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
     font-weight: bold;
@@ -46,20 +37,12 @@
 
   &-wrapper {
     &--img {
-      margin: 140px 160px 0 0;
-      width: 1050px;
+      margin: 60px 0 0 calc(1920px/2 - 870px/2 - 647px);
       display: flex;
       justify-content: center;
       align-items: center;
       @media (max-width: 1920px) {
-        margin: 105px 50px 0 0;
-      }
-      @media (max-width: 1280px) {
-        margin: 140px 102px 0 0;
-      }
-      @media (max-width: 1024px) {
-        margin: 140px 30px 0 0;
-        width: 1000px;
+        margin: 60px 0 0 calc(50vw - 870px/2 - 647px);
       }
     }
 
@@ -92,9 +75,13 @@
     color: #ffffff;
     font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     text-transform: uppercase;
     text-align: center;
+
+    &--small {
+      font-size: 15px;
+    }
 
     &--antistress {
       background-color: #2c9c75;

@@ -248,19 +248,19 @@
         </div>
       </div>
       <div class="constructor-wrapper--items">
-        <div class="constructor-item constructor-item--robots">НАБОРЫ РОБОТОТЕХНИКИ</div>
-        <div class="constructor-item constructor-item--magnit">МАГНИТНЫЕ, БЛОЧНЫЕ И ИГОЛЬЧАТЫЕ КОНСТРУКТОРЫ</div>
-        <div class="constructor-item constructor-item--sqrew">кОНСТРУКТОРЫ С ОТВЁРТКОЙ, С ШЕСТЕРЕНКАМИ И ТРЕКАМИ</div>
-        <div class="constructor-item constructor-item--puzzles">3D ПАЗЛЫ</div>
-        <div class="constructor-item constructor-item--models">сБОРНЫЕ МОДЕЛИ</div>
+        <div class="constructor-item constructor-item--robots">наборы робототехники</div>
+        <div class="constructor-item constructor-item--magnit">магнитные,<br>блочные и игольчатые конструкторы</div>
+        <div class="constructor-item constructor-item--sqrew">конструкторы<br>с отвёрткой,<br>с шестеренками<br>и треками</div>
+        <div class="constructor-item constructor-item--puzzles">3d пазлы</div>
+        <div class="constructor-item constructor-item--models">сборные модели</div>
       </div>
     </section>
     <section class="evamoda">
       <div class="evamoda-wrapper--img">
         <img src="~/assets/images/evamoda.png" alt="КОСМЕТИКА ДЕТСКАЯ, НАБОРЫ ДЛЯ СОЗДАНИЯ УКРАШЕНИЙ, СУМОЧКИ И АКСЕССУАРЫ" class="evamoda-img">
         <div class="evamoda-wrapper--wrapper">
-          <p class="evamoda-text">КРАСОТА СПАСЁТ МИр!</p>
-          <p class="evamoda-text evamoda-text--small">КОСМЕТИКА ДЕТСКАЯ, НАБОРЫ ДЛЯ СОЗДАНИЯ УКРАШЕНИЙ, СУМОЧКИ И АКСЕССУАРЫ</p>
+          <p class="evamoda-text">красота<br>спасёт мир!</p>
+          <p class="evamoda-text evamoda-text--small">косметика детская, наборы для создания украшений, сумочки и аксессуары</p>
           <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56px" height="56px"
@@ -277,18 +277,18 @@
         </div>
       </div>
       <div class="evamoda-wrapper--items">
-        <div class="evamoda-item evamoda-item--evamoda">EVA MODA КОСМЕТИКА ДЕТСКАЯ</div>
-        <div class="evamoda-item evamoda-item--bodyart">БОДИ-АРТ, ПЕРЕВОДНЫЕ ТАТУИРОВКИ, ДИЗАЙН НОГТЕЙ</div>
-        <div class="evamoda-item evamoda-item--accesoires">НАБОРЫ ДЛЯ СОЗДАНИЯ УКРАШЕНИЙ И АКСЕССУАРОВ</div>
-        <div class="evamoda-item evamoda-item--umbrella">ДЕСТКИЕ ЗОНТИКИ И суМОЧКИ</div>
-        <div class="evamoda-item evamoda-item--bags">СУМКИ ДЛЯ РАСКРАШИВАНИЯ</div>
+        <div class="evamoda-item evamoda-item--evamoda">eva moda<br>косметика<br>детская</div>
+        <div class="evamoda-item evamoda-item--bodyart">боди-арт, переводные татуировки,<br>дизайн ногтей</div>
+        <div class="evamoda-item evamoda-item--accesoires">наборы для создания украшений и аксессуаров</div>
+        <div class="evamoda-item evamoda-item--umbrella">десткие зонтики и сумочки</div>
+        <div class="evamoda-item evamoda-item--bags">сумки для раскрашивания</div>
       </div>
     </section>
     <section class="tablegames">
       <div class="tablegames-wrapper--img">
         <img src="~/assets/images/tablegames.png" alt="ДЕЛУ ВРЕМЯ, ПОТЕХЕ - ЧАC" class="tablegames-img">
         <div class="tablegames-wrapper--wrapper">
-          <p class="tablegames-text">ДЕЛУ ВРЕМЯ, ПОТЕХЕ - ЧАc</p>
+          <p class="tablegames-text">делу время,<br>потехе - чаc</p>
           <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56px" height="56px"
@@ -305,11 +305,11 @@
         </div>
       </div>
       <div class="tablegames-wrapper--items">
-        <div class="tablegames-item tablegames-item--antistress">ИГРУШКИ-АНТИСТРЕСС:<span class="tablegames-item--small">СКВИШИ, ТЯНУЧКИ, ПРУЖИНКИ, МЯКИШИ И ЛИЗУНЫ</span></div>
-        <div class="tablegames-item tablegames-item--transport"><span class="tablegames-item--small">ТРАНСПОРТ:МАШИНКИ, ТРЕКИ, ЖЕЛЕЗНЫЕ ДОРОГИ</span></div>
-        <div class="tablegames-item tablegames-item--rolegames">СЮЖЕТНО-РОЛЕВЫЕ ИГРУШКИ</div>
-        <div class="tablegames-item tablegames-item--dolls">КУКЛЫ И ПУПСЫ</div>
-        <div class="tablegames-item tablegames-item--newborn">ИГРУШКИ ДЛЯ МАЛЫШЕЙ</div>
+        <div class="tablegames-item tablegames-item--antistress">игрушки-антистресс:<span class="tablegames-item--small">сквиши, тянучки, пружинки, мякиши и лизуны</span></div>
+        <div class="tablegames-item tablegames-item--transport">транспорт:<span class="tablegames-item--small">машинки, треки, железные дороги</span></div>
+        <div class="tablegames-item tablegames-item--rolegames">сюжетно-ролевые игрушки</div>
+        <div class="tablegames-item tablegames-item--dolls">куклы и пупсы</div>
+        <div class="tablegames-item tablegames-item--newborn">игрушки для малышей</div>
       </div>
     </section>
     <section class="gift" id="giftpage" v-scroll="handleScroll">

@@ -1,9 +1,15 @@
 .title {
   background: url('~assets/images/background_title.png') center top no-repeat;
-  width: 100vw;
+  width: 1920px;
   min-height: 700px;
+  @media (max-width: 1920px) {
+    width: 100vw;
+  }
   &-img {
-    margin: 138px 0 0 calc(50vw - 960px + 617px);
+    margin: 138px 0 0 calc(1920px/2 - 400px);
+    @media (max-width: 1920px) {
+      margin: 138px 0 0 calc(50vw - 400px);
+    }
   }
   &-benefit {
     width: 218px;
@@ -50,6 +56,7 @@
       justify-content: center;
       margin: -100px 0 0 0;
       width: 100%;
+      position: relative;
     }
 
     &--orange {
@@ -58,23 +65,7 @@
 
     &--cyan {
       background: linear-gradient(90deg, rgba(0,193,196,1) 0%, rgba(81,189,190,1) 100%);
-      position: relative;
-
-      &:before {
-        content: '';
-        //background: #07aea8;
-        background: rgba(7, 174, 168, 1);
-        //background: url('~assets/images/title_ellipse.png');
-        width: 146px;
-        height: 146px;
-        border-radius: 73px;
-        display: block;
-        position: absolute;
-        top: -80px;
-        left: -20px;
-        z-index: -1;
-        opacity: 1;
-      }
+      z-index: 1;
     }
 
     &--magenta {
