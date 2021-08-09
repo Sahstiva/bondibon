@@ -27,7 +27,7 @@
     </header>
     <section class="title">
       <img src="~/assets/images/title_children.png" alt="Дети" class="title-img">
-      <div class="title-benefit--wrapper container">
+      <div class="title-benefit--wrapper">
         <div class="title-benefit title-benefit--cyan">
           <svg class="title-benefit--img" xmlns="http://www.w3.org/2000/svg" height="90.68" width="88.013" xml:space="preserve">
             <g transform="scale(0.05)">
@@ -337,7 +337,7 @@
     </button>
     <section class="newyear">
       <div class="newyear-title">
-        <p class="newyear-title--title">новый год к нам мчится!</p>
+        <p class="newyear-title--title">новый год<br>к нам мчится!</p>
         <p class="newyear-title--subtitle">новогодние наборы для творчества, ёлочные игрушки hand-made, настольные игр</p>
       </div>
       <div class="newyear-grid">
@@ -474,6 +474,9 @@
         </div>
       </div>
     </section>
+    <section class="map">
+
+    </section>
   </div>
 </template>
 
@@ -484,6 +487,7 @@ import '~/assets/style/style.scss';
 export default {
   name: 'Bondibon',
   title: 'Bondibon landing',
+
    components: {
      Swiper,
      SwiperSlide
@@ -560,4 +564,13 @@ export default {
     }
   }
 </script>
+<style>
+  .site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+  }
+</style>
 

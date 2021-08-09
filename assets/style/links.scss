@@ -1,9 +1,9 @@
 .links {
   background-image: url('~assets/images/background_links.png');
-  background-position: 41.4% top;
+  background-position: center top;
   background-repeat: no-repeat;
-  width: 100vw;
-  min-height: 1300px;
+  width: 1920px;
+  min-height: 720px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -15,19 +15,11 @@
   align-items: center;
   margin: 155px 0 0 0;
   @media (max-width: 1920px) {
-    background-position: 55% top;
+    width: 100vw;
   }
-  @media (max-width: 1600px) {
-    background-position: 65% top;
-  }
-  @media (max-width: 1280px) {
-    background-position: 40% top;
-  }
-  @media (max-width: 1024px) {
-    background-position: 45% top;
-  }
+
   &-wrapper {
-    margin: 185px 0 0 70px;
+    margin: 185px 0 0 100px;
     display: grid;
     grid-template-columns: 400px 400px 400px;
     grid-template-rows: repeat(2, 1fr);

@@ -43,6 +43,15 @@
       @media (max-width: 1920px) {
         margin: 105px 0 0 calc(50vw - 975px/2 - 450px);
       }
+      @media (max-width: 1600px) {
+        margin: 105px 0 0 calc(50vw - 975px/2 - 295px);
+      }
+      @media (max-width: 1280px) {
+        margin: 105px 0 0 calc(50vw - 975px/2 - 135px);
+      }
+      @media (max-width: 1024px) {
+        margin: 105px 0 0 calc(50vw - 975px/2 - 5px);
+      }
     }
 
     &--items {

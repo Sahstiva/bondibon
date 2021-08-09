@@ -1,8 +1,8 @@
 .gift {
     background-image: url('~assets/images/background_gifts.png');
-    background-position: 44% top;
+    background-position: center top;
     background-repeat: no-repeat;
-    width: 100vw;
+    width: 1920px;
     min-height: 1300px;
     margin-top: 50px;
     z-index: -1;
@@ -15,37 +15,24 @@
     flex-direction: column;
     align-items: center;
     @media (max-width: 1920px) {
-        background-position: 50% top;
-    }
-    @media (max-width: 1600px) {
-        background-position: 35% top;
-    }
-    @media (max-width: 1280px) {
-        background-position: 26% top;
-    }
-    @media (max-width: 1024px) {
-        background-position: left top;
+        width: 100vw;
     }
     &-wrapper {
-        width: 50%;
-        margin: 175px 0 0 215px;
-
+        width: 995px;
+        margin: 175px 0 0 calc(1920px/2 - 995px/2 - 390px);
         @media (max-width: 1920px) {
-            width: 52%;
-            margin: 180px 0 0 85px;
+            margin: 175px 0 0 calc(50vw - 995px/2 - 390px);
         }
         @media (max-width: 1600px) {
-            width: 60%;
-            margin: 175px 110px 0 0;
+            margin: 175px 0 0 calc(50vw - 995px/2 - 230px);
         }
-        @media (max-width:1280px) {
-            width: 75%;
-            margin: 175px 103px 0 0;
+        @media (max-width: 1280px) {
+            margin: 175px 0 0 calc(50vw - 995px/2 - 80px);
         }
-        @media (max-width:1024px) {
-            width: 95%;
-            margin: 175px 55px 0 0;
-        }    }
+        @media (max-width: 1280px) {
+            margin: 175px 0 0 calc(50vw - 995px/2 + 60px);
+        }
+    }
     &-button {
         background: transparent;
         border: none;

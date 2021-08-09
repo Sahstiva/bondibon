@@ -2,6 +2,7 @@
   background-image: url('~assets/images/background_microscope.png');
   background-position: center top;
   background-repeat: no-repeat;
+
   width: 1920px;
   z-index: -3;
   opacity: 1;
@@ -39,6 +40,15 @@
       align-items: center;
       @media (max-width: 1920px) {
         margin: 140px 0 0 calc(50vw - 974px/2 - 570px);
+      }
+      @media (max-width: 1600px) {
+        margin: 140px 0 0 calc(50vw - 974px/2 - 410px);
+      }
+      @media (max-width: 1280px) {
+        margin: 140px 0 0 calc(50vw - 974px/2 - 250px);
+      }
+      @media (max-width: 1024px) {
+        margin: 140px 0 0 calc(50vw - 974px/2 - 120px);
       }
     }
 
