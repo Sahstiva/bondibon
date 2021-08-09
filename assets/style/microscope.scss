@@ -1,6 +1,6 @@
 .microscope {
   background-image: url('~assets/images/background_microscope.png');
-  background-position: center top;
+  background-position: 50px top;
   background-repeat: no-repeat;
 
   width: 1920px;
@@ -16,6 +16,10 @@
   margin: -33px 0 0 0;
   @media (max-width: 1920px) {
     width:  100vw;
+    background-position: center top;
+  }
+  @media (max-width: 1024px) {
+    background-position: center top;
   }
 
   &-text {
@@ -33,7 +37,7 @@
 
   &-wrapper {
     &--img {
-      margin: 140px 0 0 calc(1920px/2 - 974px/2 - 570px);
+      margin: 140px 0 0 calc(1920px/2 - 974px/2 - 470px);
       width: 1050px;
       display: flex;
       justify-content: center;
@@ -43,6 +47,9 @@
       }
       @media (max-width: 1600px) {
         margin: 140px 0 0 calc(50vw - 974px/2 - 410px);
+      }
+      @media (max-width: 1440px) {
+        margin: 140px 0 0 calc(50vw - 974px/2 - 330px);
       }
       @media (max-width: 1280px) {
         margin: 140px 0 0 calc(50vw - 974px/2 - 250px);
@@ -55,11 +62,8 @@
     &--items {
       margin: -200px 0 0 0;
       display: grid;
-      width: 1050px;
-      grid-template-columns: repeat(5, 1fr);
-      @media (max-width: 1024px) {
-        width: 1000px;
-      }
+      grid-template-columns: repeat(5, 170px);
+      grid-column-gap: 30px;
     }
 
     &--wrapper {

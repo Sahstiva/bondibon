@@ -1,6 +1,6 @@
 .gift {
     background-image: url('~assets/images/background_gifts.png');
-    background-position: center top;
+    background-position: 50px top;
     background-repeat: no-repeat;
     width: 1920px;
     min-height: 1300px;
@@ -16,21 +16,29 @@
     align-items: center;
     @media (max-width: 1920px) {
         width: 100vw;
+        background-position: center top;
+    }
+    @media (max-width: 1024px) {
+        background-image: url('~assets/images/background_gifts_1024.png');
     }
     &-wrapper {
         width: 995px;
-        margin: 175px 0 0 calc(1920px/2 - 995px/2 - 390px);
+        margin: 175px 0 0 calc(1920px/2 - 995px/2 - 290px);
         @media (max-width: 1920px) {
             margin: 175px 0 0 calc(50vw - 995px/2 - 390px);
         }
         @media (max-width: 1600px) {
             margin: 175px 0 0 calc(50vw - 995px/2 - 230px);
         }
+        @media (max-width: 1440px) {
+            margin: 175px 0 0 calc(50vw - 995px/2 - 150px);
+        }
         @media (max-width: 1280px) {
             margin: 175px 0 0 calc(50vw - 995px/2 - 80px);
         }
-        @media (max-width: 1280px) {
-            margin: 175px 0 0 calc(50vw - 995px/2 + 60px);
+        @media (max-width: 1024px) {
+            margin: 175px 0 0 calc(50vw - 995px/2 - 75px);
+            width: 935px;
         }
     }
     &-button {

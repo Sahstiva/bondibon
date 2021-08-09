@@ -1,13 +1,13 @@
 .teachers {
   background-image: url('~assets/images/background_teachers.png');
-  background-position: center top;
+  background-position: 50px top;
   background-repeat: no-repeat;
   width: 1920px;
   z-index: -3;
   opacity: 1;
-  //transform: translateZ(0);
-  //perspective: 1000px;
-  //backface-visibility: hidden;
+  transform: translateZ(0);
+  perspective: 1000px;
+  backface-visibility: hidden;
   transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
   display: flex;
   flex-direction: column;
@@ -15,6 +15,7 @@
   margin: 0;
   @media (max-width: 1920px) {
     width: 100vw;
+    background-position: center top;
   }
   &-text {
     font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
@@ -56,11 +57,8 @@
     &--items {
       margin: -150px 0 0 0;
       display: grid;
-      width: 1050px;
-      grid-template-columns: repeat(5, 1fr);
-      @media (max-width: 1024px) {
-        width: 1000px;
-      }
+      grid-template-columns: repeat(5, 170px);
+      grid-column-gap: 30px;
     }
 
     &--wrapper {

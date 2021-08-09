@@ -1,10 +1,11 @@
 .newyear {
   background-image: url('~assets/images/background_newyear.png');
-  background-position: center top;
+  background-position: 50px top;
   background-repeat: no-repeat;
   width: 1920px;
   min-height: 700px;
-  margin: 139.5px 0 0 0;
+  margin: 139.45px 0 0 0;
+  //margin: 140.45px 0 0 0;
   z-index: -2;
   opacity: 1;
   transform: translateZ(0);
@@ -15,8 +16,11 @@
   flex-direction: column;
   align-items: center;
   @media (max-width: 1920px) {
-   width: 100vw;
+    width: 100vw;
+    margin: 139.45px 0 0 0;
+    background-position: center top;
   }
+
   &-title {
     padding: 90px 0 0 0;
     display: flex;

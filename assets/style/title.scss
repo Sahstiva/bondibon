@@ -1,14 +1,41 @@
 .title {
-  background: url('~assets/images/background_title.png') center top no-repeat;
+  background-image: url('~assets/images/background_title.png');
+  background-position: 50px top;
+  background-repeat: no-repeat;
   width: 1920px;
   min-height: 700px;
   @media (max-width: 1920px) {
     width: 100vw;
+    background-position: left top;
+  }
+  @media (max-width: 1600px) {
+    background-position: -160px top;
+  }
+  @media (max-width: 1440px) {
+    background-position: -240px top;
+  }
+  @media (max-width: 1280px) {
+    background-position: -320px top;
+  }
+  @media (max-width: 1024px) {
+    background-position: -450px top;
   }
   &-img {
-    margin: 138px 0 0 calc(1920px/2 - 400px);
+    margin: 138px 0 0 calc(1920px/2 - 350px);
     @media (max-width: 1920px) {
       margin: 138px 0 0 calc(50vw - 400px);
+    }
+    @media (max-width: 1600px) {
+      margin: 138px 0 0 calc(50vw - 400px);
+    }
+    @media (max-width: 1440px) {
+      margin: 138px 0 0 calc(50vw - 400px);
+    }
+    @media (max-width: 1280px) {
+      margin: 138px 0 0 calc(50vw - 400px);
+    }
+    @media (max-width: 1024px) {
+      margin: 138px 0 0 calc(50vw - 403px);
     }
   }
   &-benefit {

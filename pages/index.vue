@@ -230,8 +230,8 @@
       <div class="constructor-wrapper--img">
         <img src="~/assets/images/constructor.png" alt="Микроскопы" class="constructor-img">
         <div class="constructor-wrapper--wrapper">
-          <p class="constructor-text">МЫСЛИ КОНСТРУКТИВНО</p>
-          <p class="constructor-text constructor-text--small">КОНСТРУКТОРЫ И РОБОТОТЕХНИКА, СБОРНЫЕ МОДЕЛИ, 3D ПАЗЛЫ</p>
+          <p class="constructor-text">мысли<br>конструктивно</p>
+          <p class="constructor-text constructor-text--small">конструкторы и робототехника,<br>сборные модели, 3d пазлы</p>
           <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56px" height="56px"
@@ -250,7 +250,7 @@
       <div class="constructor-wrapper--items">
         <div class="constructor-item constructor-item--robots">наборы робототехники</div>
         <div class="constructor-item constructor-item--magnit">магнитные,<br>блочные и игольчатые конструкторы</div>
-        <div class="constructor-item constructor-item--sqrew">конструкторы<br>с отвёрткой,<br>с шестеренками<br>и треками</div>
+        <div class="constructor-item constructor-item--sqrew">конструкторы<br>с отвёрткой,<br>с шестеренками<br>fgiftfи треками</div>
         <div class="constructor-item constructor-item--puzzles">3d пазлы</div>
         <div class="constructor-item constructor-item--models">сборные модели</div>
       </div>
@@ -264,7 +264,7 @@
           <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56px" height="56px"
-              class="evamoda-icon">
+              class="evamoda-icon">f
             <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
                   d="M39.530,27.473 C40.388,28.359 40.388,29.796 39.530,30.682 L28.475,42.094 C27.616,42.980 26.224,42.980 25.365,42.094 C24.507,41.208 24.507,39.770 25.365,38.884 L36.420,27.473 C37.279,26.586 38.671,26.586 39.530,27.473 Z"/>
             <path fill-rule="evenodd"  fill="rgb(202, 4, 44)"
@@ -315,9 +315,27 @@
     <section class="gift" id="giftpage" v-scroll="handleScroll">
       <div class="gift-wrapper">
         <swiper class="swiper" :options="swiperOption" ref="swiperGift">
-          <swiper-slide><img src="~/assets/images/slider_cup.png" alt="Настольные игры"></swiper-slide>
-          <swiper-slide><img src="~/assets/images/slider_newyear.png" alt="Пазлы и мозаики"></swiper-slide>
-          <swiper-slide><img src="~/assets/images/slider_xmastree.png" alt="Игры в дорогу"></swiper-slide>
+          <swiper-slide>
+            <picture>
+              <source srcset="~/assets/images/slider_cup_1024.png" media="(max-width: 1024px)" />
+              <source srcset="~/assets/images/slider_cup.png" media="(min-width: 1025px)" />
+              <img src="~/assets/images/slider_cup.png" alt="Настольные игры">
+            </picture>
+          </swiper-slide>
+          <swiper-slide>
+            <picture>
+              <source srcset="~/assets/images/slider_newyear_1024.png" media="(max-width: 1024px)" />
+              <source srcset="~/assets/images/slider_newyear.png" media="(min-width: 1025px)" />
+              <img src="~/assets/images/slider_cup.png" alt="Пазлы и мозаики">
+            </picture>
+          </swiper-slide>
+          <swiper-slide>
+            <picture>
+              <source srcset="~/assets/images/slider_xmastree_1024.png" media="(max-width: 1024px)" />
+              <source srcset="~/assets/images/slider_xmastree.png" media="(min-width: 1025px)" />
+              <img src="~/assets/images/slider_cup.png" alt="Игры в дорогу">
+            </picture>
+          </swiper-slide>
         </swiper>
       </div>
     </section>
@@ -512,10 +530,10 @@ export default {
     },
   mounted() {
       this.$nextTick(() => {
-        const swiperMain = this.$refs.swiperMain.$swiper;
-        swiperMain.init();
-        const swiperGift = this.$refs.swiperGift.$swiper;
-        swiperGift.init();
+        // const swiperMain = this.$refs.swiperMain.$swiper;
+        // swiperMain.init();
+        // const swiperGift = this.$refs.swiperGift.$swiper;
+        // swiperGift.init();
       });
   },
   methods: {

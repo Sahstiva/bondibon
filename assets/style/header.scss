@@ -23,8 +23,11 @@
   &-wheretobuy {
     align-items: center;
     max-width: 150px;
-    padding: 0 0 15px 130px;
+    padding: 0 0 15px 230px;
     text-align: center;
+    @media (max-width: 1920px) {
+      padding: 0 0 15px 130px;
+    }
   }
 
   &-social {

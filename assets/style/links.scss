@@ -1,6 +1,6 @@
 .links {
   background-image: url('~assets/images/background_links.png');
-  background-position: center top;
+  background-position: 50px top;
   background-repeat: no-repeat;
   width: 1920px;
   min-height: 720px;
@@ -16,14 +16,14 @@
   margin: 155px 0 0 0;
   @media (max-width: 1920px) {
     width: 100vw;
+    background-position: center top;
   }
-
   &-wrapper {
-    margin: 185px 0 0 100px;
+    margin: 185px 0 0 170px;
     display: grid;
     grid-template-columns: 400px 400px 400px;
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px 20px;
+
     grid-auto-flow: row;
     grid-template-areas:
     "opinion instagram come"
@@ -33,9 +33,20 @@
     font-size: 20px;
     color: white;
     text-transform: uppercase;
+    @media (max-width: 1920px) {
+      margin: 185px 0 0 100px;
+    }
+    @media (max-width: 1024px) {
+      margin: 190px 5px 0 5px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
   }
   &-arrow {
     margin: 35px 0 0 50px;
+    @media (max-width: 1024px) {
+      margin: 10px 0 0 50px;
+    }
   }
   &-item {
     display: flex;

@@ -1,9 +1,9 @@
 .map {
   background-image: url('~assets/images/background_map.png');
-  background-position: center top;
+  background-position: 50px top;
   background-repeat: no-repeat;
   width: 1920px;
-  min-height: 900px;
+  min-height: 1000px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -16,6 +16,7 @@
   @media (max-width: 1920px) {
     width: 100vw;
     min-height: 500px;
+    background-position: center top;
   }
 }
 

@@ -1,6 +1,6 @@
 .constructor {
   background-image: url('~assets/images/background_constructor.png');
-  background-position: center top;
+  background-position: 50px top;
   background-repeat: no-repeat;
   width: 1920px;
   z-index: -3;
@@ -15,16 +15,20 @@
   margin: 50px 0 0 0;
   @media (max-width: 1920px) {
     width: 100vw;
+    background-position: center top;
   }
   &-text {
     font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     text-transform: uppercase;
     text-align: left;
     color: #d2beae;
     max-width: 300px;
     margin: 0;
+    &--small {
+      font-size: 15px;
+    }
   }
 
   &-icon {
@@ -33,40 +37,41 @@
 
   &-wrapper {
     &--img {
-      margin: 140px 0 0 calc(1920px/2 - 987px/2 - 390px);
+      margin: 140px 0 0 calc(1920px/2 - 987px/2 - 372px);
       width: 1050px;
       display: flex;
       justify-content: center;
       align-items: center;
       @media (max-width: 1920px) {
-        margin: 140px 0 0 calc(50vw - 987px/2 - 390px);
+        margin: 140px 0 0 calc(50vw - 987px/2 - 471px);
       }
       @media (max-width: 1600px) {
-        margin: 140px 0 0 calc(50vw - 987px/2 - 235px);
+        margin: 140px 0 0 calc(50vw - 987px/2 - 310px);
+      }
+      @media (max-width: 1440px) {
+        margin: 140px 0 0 calc(50vw - 987px/2 - 231px);
       }
       @media (max-width: 1280px) {
-        margin: 140px 0 0 calc(50vw - 987px/2 - 75px);
+        margin: 140px 0 0 calc(50vw - 987px/2 - 152px);
       }
-      @media (max-width: 1280px) {
-        margin: 140px 0 0 calc(50vw - 987px/2 + 52px);
+      @media (max-width: 1024px) {
+        margin: 140px 0 0 calc(50vw - 987px/2 - 23px);
+        width: auto;
       }
     }
 
     &--items {
       margin: -50px 0 0 0;
       display: grid;
-      width: 1050px;
-      grid-template-columns: repeat(5, 1fr);
-      @media (max-width: 1024px) {
-        width: 1000px;
-      }
+      grid-template-columns: repeat(5, 170px);
+      grid-column-gap: 30px;
     }
 
     &--wrapper {
-      margin: 120px 0 0 40px;
+      margin: 120px 0 0 10px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
   }
   &-item {
