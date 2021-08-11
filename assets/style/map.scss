@@ -3,7 +3,7 @@
   background-position: 50px top;
   background-repeat: no-repeat;
   width: 1920px;
-  min-height: 1000px;
+  min-height: 3000px;
   z-index: -3;
   opacity: 1;
   transform: translateZ(0);
@@ -15,8 +15,15 @@
   align-items: center;
   @media (max-width: 1920px) {
     width: 100vw;
-    min-height: 500px;
+    min-height: 1080px;
     background-position: center top;
+  }
+  &-wrapper {
+    margin: 200px 0 100px 0;
+    width: 900px;
+    height: 450px;
+    border-radius: 50px;
+    overflow: hidden;
   }
 }
 

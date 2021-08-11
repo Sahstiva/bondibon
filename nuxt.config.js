@@ -1,7 +1,11 @@
 export default {
     target: 'static',
+    components: true,
+    build: {
+        vendor:  ['vue-yandex-maps']
+    },
     router: {
-        base: '/'
+        base: '/promo/'
     },
     head: {
         title: 'BONDIBON',
@@ -29,7 +33,11 @@ export default {
     ],
     plugins: [
         '~/plugins/animateOnScroll.client.js',
-        '~/plugins/fontawesome.js'
+        '~/plugins/fontawesome.js',
+        {
+            src: '~/plugins/ymapPlugin.js',
+            mode: 'client'
+        }
     ],
     modules: [
         ['vue-scrollto/nuxt', { container: "body", duration: 500, easing: "ease-in", force: true,
