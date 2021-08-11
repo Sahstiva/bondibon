@@ -1,6 +1,25 @@
+<template>
+  <section class="map">
+    <div class="map-wrapper">
+      <Yandexmap />
+    </div>
+  </section>
+</template>
+
+<script>
+import Yandexmap from "../components/yandexmap";
+export default {
+  name: "BBmap",
+  components: {
+    Yandexmap
+  }
+}
+</script>
+
+<style lang="scss" scoped>
 .map {
   background-image: url('~assets/images/background_map.png');
-  background-position: 50px top;
+  background-position: center top;
   background-repeat: no-repeat;
   width: 1920px;
   min-height: 3000px;
@@ -26,4 +45,4 @@
     overflow: hidden;
   }
 }
-
+</style>

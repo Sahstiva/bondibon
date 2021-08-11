@@ -5,25 +5,28 @@
       <div class="evamoda-wrapper--wrapper">
         <p class="evamoda-text">красота<br>спасёт мир!</p>
         <p class="evamoda-text evamoda-text--small">косметика детская, наборы для создания украшений, сумочки и аксессуары</p>
-        <button class="evamoda-button" @click="$emit('goToNextPage', 'BBtablegames')">
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56px" height="56px"
-              class="evamoda-icon">f
-            <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-                  d="M39.530,27.473 C40.388,28.359 40.388,29.796 39.530,30.682 L28.475,42.094 C27.616,42.980 26.224,42.980 25.365,42.094 C24.507,41.208 24.507,39.770 25.365,38.884 L36.420,27.473 C37.279,26.586 38.671,26.586 39.530,27.473 Z"/>
-            <path fill-rule="evenodd"  fill="rgb(202, 4, 44)"
-                  d="M13.726,27.570 C14.588,26.680 15.986,26.680 16.847,27.570 L27.947,39.027 C28.809,39.917 28.809,41.360 27.947,42.249 C27.085,43.139 25.687,43.139 24.825,42.249 L13.726,30.792 C12.864,29.902 12.864,28.460 13.726,27.570 Z"/>
-            <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-                  d="M26.782,12.624 C28.008,12.616 28.997,13.623 28.989,14.874 L28.888,30.974 C28.881,32.225 27.880,33.245 26.653,33.253 C25.426,33.261 24.438,32.253 24.445,31.003 L24.546,14.903 C24.554,13.653 25.554,12.632 26.782,12.624 Z"/>
-            <path fill-rule="evenodd"  stroke="rgb(226, 189, 158)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
-                  d="M26.625,2.312 C40.156,2.312 51.125,13.281 51.125,26.812 C51.125,40.343 40.156,51.312 26.625,51.312 C13.094,51.312 2.125,40.343 2.125,26.812 C2.125,13.281 13.094,2.312 26.625,2.312 Z"/>
-          </svg>
-        </button>
+        <div class="evamoda-button--wrapper">
+          <button class="evamoda-button" @click="$emit('goToNextPage', 'BBtablegames')">
+            <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M37.3961 25.1602C38.2546 26.0461 38.2546 27.4835 37.3961 28.3694L26.3406 39.7816C25.4821 40.6675 24.0899 40.6675 23.2314 39.7816C22.3727 38.8952 22.3727 37.4583 23.2314 36.5719L34.2867 25.1602C35.1454 24.2738 36.5374 24.2738 37.3961 25.1602Z" fill="#E2BD9E"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5923 25.2579C12.4543 24.3677 13.8519 24.3677 14.714 25.2579L25.8132 36.7147C26.6752 37.6044 26.6752 39.0472 25.8132 39.9368C24.9512 40.8265 23.5535 40.8265 22.6916 39.9368L11.5923 28.4801C10.7303 27.5904 10.7303 26.1476 11.5923 25.2579Z" fill="#CA042C"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24.6476 10.3119C25.8745 10.3038 26.8627 11.3107 26.8549 12.5614L26.7546 28.6619C26.7468 29.9126 25.7459 30.9325 24.5191 30.9401C23.2921 30.9483 22.3038 29.9408 22.3116 28.6907L22.412 12.5901C22.4198 11.34 23.4207 10.3195 24.6476 10.3119Z" fill="#E2BD9E"/>
+              <path d="M24.5 2C36.9263 2 47 12.0734 47 24.4996C47 36.9259 36.9263 46.9998 24.5 46.9998C12.0735 46.9998 2 36.9259 2 24.4996C2 12.0733 12.0735 2 24.5 2Z" fill="black" fill-opacity="0.01" stroke="#E2BD9E" stroke-width="4"/>
+            </svg>
+          </button>
+<!--          <button class="evamoda-button evamoda-button&#45;&#45;up" @click="$emit('goToNextPage', 'BBconstructor')">-->
+<!--            <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--              <path fill-rule="evenodd" clip-rule="evenodd" d="M37.3961 25.1602C38.2546 26.0461 38.2546 27.4835 37.3961 28.3694L26.3406 39.7816C25.4821 40.6675 24.0899 40.6675 23.2314 39.7816C22.3727 38.8952 22.3727 37.4583 23.2314 36.5719L34.2867 25.1602C35.1454 24.2738 36.5374 24.2738 37.3961 25.1602Z" fill="#E2BD9E"/>-->
+<!--              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5923 25.2579C12.4543 24.3677 13.8519 24.3677 14.714 25.2579L25.8132 36.7147C26.6752 37.6044 26.6752 39.0472 25.8132 39.9368C24.9512 40.8265 23.5535 40.8265 22.6916 39.9368L11.5923 28.4801C10.7303 27.5904 10.7303 26.1476 11.5923 25.2579Z" fill="#CA042C"/>-->
+<!--              <path fill-rule="evenodd" clip-rule="evenodd" d="M24.6476 10.3119C25.8745 10.3038 26.8627 11.3107 26.8549 12.5614L26.7546 28.6619C26.7468 29.9126 25.7459 30.9325 24.5191 30.9401C23.2921 30.9483 22.3038 29.9408 22.3116 28.6907L22.412 12.5901C22.4198 11.34 23.4207 10.3195 24.6476 10.3119Z" fill="#E2BD9E"/>-->
+<!--              <path d="M24.5 2C36.9263 2 47 12.0734 47 24.4996C47 36.9259 36.9263 46.9998 24.5 46.9998C12.0735 46.9998 2 36.9259 2 24.4996C2 12.0733 12.0735 2 24.5 2Z" fill="black" fill-opacity="0.01" stroke="#E2BD9E" stroke-width="4"/>-->
+<!--            </svg>-->
+<!--          </button>-->
+        </div>
       </div>
     </div>
     <div class="evamoda-wrapper--items">
-      <div class="evamoda-item evamoda-item--evamoda">eva moda<br>косметика<br>детская</div>
+      <div class="evamoda-item evamoda-item--evamoda">eva moda косметика детская</div>
       <div class="evamoda-item evamoda-item--bodyart">боди-арт, переводные татуировки,<br>дизайн ногтей</div>
       <div class="evamoda-item evamoda-item--accesoires">наборы для создания украшений и аксессуаров</div>
       <div class="evamoda-item evamoda-item--umbrella">десткие зонтики и сумочки</div>
@@ -41,22 +44,31 @@ export default {
 <style lang="scss" scoped>
 .evamoda {
   background-image: url('~assets/images/background_evamoda.png');
-  background-position: 50px top;
+  background-position: center top;
   background-repeat: no-repeat;
   width: 1920px;
+  height: 700px;
   z-index: -3;
-  opacity: 1;
-  transform: translateZ(0);
-  perspective: 1000px;
-  backface-visibility: hidden;
-  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0 0 0;
+  margin: 0;
   @media (max-width: 1920px) {
     width: 100vw;
     background-position: center top;
+  }
+  @media (max-width: 1023px) {
+    background-image: url('~assets/mobile/background_evamoda_mobile.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 480px;
+    height: 800px;
+  }
+  &-img {
+    @media (max-width: 1023px) {
+      display: none;
+    }
   }
 
   &-text {
@@ -68,8 +80,14 @@ export default {
     color: #d2beae;
     max-width: 300px;
     margin: 0;
+    @media (max-width: 1023px) {
+      text-align: center;
+    }
     &--small {
       font-size: 17px;
+      @media (max-width: 1023px) {
+        display: none;
+      }
     }
   }
 
@@ -98,23 +116,35 @@ export default {
       @media (max-width: 1024px) {
         margin: 110px 0 0 calc(50vw - 1021px/2 + 10px);
       }
+      @media (max-width: 1023px) {
+        width: unset;
+        margin: 220px 0 10px 0;
+      }
     }
 
     &--items {
-      margin: -50px 0 0 0;
+      margin: -75px 0 0 0;
       display: grid;
-      //width: 1050px;
       grid-template-columns: repeat(5, 170px);
       grid-column-gap: 30px;
-      //@media (max-width: 1024px) {
-      //  width: 1000px;
-      //}
+      @media (max-width: 1023px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+        margin: 0;
+        width: 90%;
+        max-width: 375px;
+      }
     }
 
     &--wrapper {
-      margin: 120px 0 0 40px;
+      margin: 75px 0 0 40px;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      @media (max-width: 1023px) {
+        position: relative;
+        margin: 120px 0 0 0;
+      }
     }
   }
   &-item {
@@ -132,6 +162,11 @@ export default {
     font-size: 15px;
     text-transform: uppercase;
     text-align: center;
+    @media (max-width: 1023px) {
+      width: 100%;
+      height: 47px;
+      border-radius: 24px;
+    }
 
     &--evamoda {
       background-color: #923a6c;
@@ -153,6 +188,26 @@ export default {
     background: transparent;
     border: none;
     cursor: pointer;
+    z-index: 2;
+    padding: 0;
+    width: 49px;
+    height: 49px;
+    &--right {
+      transform: rotate(270deg);
+    }
+    &--up {
+      transform: rotate(180deg);
+    }
+    &--wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 49px;
+      justify-content: space-between;
+      @media (max-width: 1023px) {
+        position: absolute;
+        top: 375px;
+      }
+    }
   }
 }
 </style>

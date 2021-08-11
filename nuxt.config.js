@@ -32,7 +32,7 @@ export default {
         '@fortawesome/fontawesome-svg-core/styles.css'
     ],
     plugins: [
-        '~/plugins/animateOnScroll.client.js',
+        //'~/plugins/animateOnScroll.client.js',
         '~/plugins/fontawesome.js',
         {
             src: '~/plugins/ymapPlugin.js',
@@ -40,7 +40,7 @@ export default {
         }
     ],
     modules: [
-        ['vue-scrollto/nuxt', { container: "body", duration: 500, easing: "ease-in", force: true,
-            cancelable: false, offset: 50 }],
+        //['vue-scrollto/nuxt', { container: "body", duration: 500, easing: "ease-in", force: true,
+        //    cancelable: false, offset: 50 }],
     ]
 }

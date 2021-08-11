@@ -2,7 +2,7 @@
   <section class="knowledge">
     <div class="knowledge-title">
       <p class="knowledge-title--title">знания сила!</p>
-      <p class="knowledge-title--subtitle">познавательные и обучающие игры для развития и подготовки к школьным заданиям</p>
+      <p class="knowledge-title--subtitle">познавательные и обучающие игры<br>для развития и подготовки к школьным заданиям</p>
     </div>
     <div class="knowledge-grid">
       <div class="knowledge-item">
@@ -43,23 +43,27 @@
       </div>
       <div class="knowledge-item">
         <img src="~/assets/images/grid_mosaic.png" alt="Игры из дерева" class="knowledge-item--img">
-        <p class="knowledge-item--text">МОЗАИКИ И ПАЗЛЫ BABY YOU</p>
+        <p class="knowledge-item--text">мозаики и пазлы baby you</p>
       </div>
     </div>
-    <button class="knowledge-button" @click="$emit('goToNextPage', 'BBmicroscope')">
-      <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="56px" height="56px">
-        <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-              d="M39.918,27.973 C40.776,28.859 40.776,30.296 39.918,31.182 L28.862,42.594 C28.003,43.480 26.611,43.480 25.753,42.594 C24.894,41.708 24.894,40.271 25.753,39.384 L36.808,27.973 C37.667,27.086 39.059,27.086 39.918,27.973 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-              d="M14.114,28.070 C14.976,27.181 16.373,27.181 17.235,28.070 L28.335,39.527 C29.197,40.417 29.197,41.860 28.335,42.749 C27.473,43.639 26.075,43.639 25.213,42.749 L14.114,31.292 C13.252,30.403 13.252,28.960 14.114,28.070 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-              d="M27.169,13.124 C28.396,13.116 29.384,14.124 29.376,15.374 L29.276,31.474 C29.268,32.725 28.267,33.745 27.041,33.753 C25.814,33.761 24.825,32.754 24.833,31.503 L24.933,15.403 C24.941,14.152 25.942,13.132 27.169,13.124 Z"/>
-        <path fill-rule="evenodd"  stroke="rgb(226, 189, 158)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
-              d="M27.000,2.812 C40.531,2.812 51.500,13.781 51.500,27.312 C51.500,40.843 40.531,51.812 27.000,51.812 C13.469,51.812 2.500,40.843 2.500,27.312 C2.500,13.781 13.469,2.812 27.000,2.812 Z"/>
-      </svg>
-    </button>
+    <div class="knowledge-button--wrapper">
+      <button class="knowledge-button" @click="$emit('goToNextPage', 'BBmicroscope')">
+        <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M37.3961 25.1602C38.2546 26.0461 38.2546 27.4835 37.3961 28.3694L26.3406 39.7816C25.4821 40.6675 24.0899 40.6675 23.2314 39.7816C22.3727 38.8952 22.3727 37.4583 23.2314 36.5719L34.2867 25.1602C35.1454 24.2738 36.5374 24.2738 37.3961 25.1602Z" fill="#E2BD9E"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5923 25.2579C12.4543 24.3677 13.8519 24.3677 14.714 25.2579L25.8132 36.7147C26.6752 37.6044 26.6752 39.0472 25.8132 39.9368C24.9512 40.8265 23.5535 40.8265 22.6916 39.9368L11.5923 28.4801C10.7303 27.5904 10.7303 26.1476 11.5923 25.2579Z" fill="#FFFFFF"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M24.6476 10.3119C25.8745 10.3038 26.8627 11.3107 26.8549 12.5614L26.7546 28.6619C26.7468 29.9126 25.7459 30.9325 24.5191 30.9401C23.2921 30.9483 22.3038 29.9408 22.3116 28.6907L22.412 12.5901C22.4198 11.34 23.4207 10.3195 24.6476 10.3119Z" fill="#E2BD9E"/>
+          <path d="M24.5 2C36.9263 2 47 12.0734 47 24.4996C47 36.9259 36.9263 46.9998 24.5 46.9998C12.0735 46.9998 2 36.9259 2 24.4996C2 12.0733 12.0735 2 24.5 2Z" fill="black" fill-opacity="0.01" stroke="#E2BD9E" stroke-width="4"/>
+        </svg>
+      </button>
+<!--      <button class="knowledge-button knowledge-button&#45;&#45;up" @click="$emit('goToNextPage', 'BBslider')">-->
+<!--        <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--          <path fill-rule="evenodd" clip-rule="evenodd" d="M37.3961 25.1602C38.2546 26.0461 38.2546 27.4835 37.3961 28.3694L26.3406 39.7816C25.4821 40.6675 24.0899 40.6675 23.2314 39.7816C22.3727 38.8952 22.3727 37.4583 23.2314 36.5719L34.2867 25.1602C35.1454 24.2738 36.5374 24.2738 37.3961 25.1602Z" fill="#E2BD9E"/>-->
+<!--          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5923 25.2579C12.4543 24.3677 13.8519 24.3677 14.714 25.2579L25.8132 36.7147C26.6752 37.6044 26.6752 39.0472 25.8132 39.9368C24.9512 40.8265 23.5535 40.8265 22.6916 39.9368L11.5923 28.4801C10.7303 27.5904 10.7303 26.1476 11.5923 25.2579Z" fill="#FFFFFF"/>-->
+<!--          <path fill-rule="evenodd" clip-rule="evenodd" d="M24.6476 10.3119C25.8745 10.3038 26.8627 11.3107 26.8549 12.5614L26.7546 28.6619C26.7468 29.9126 25.7459 30.9325 24.5191 30.9401C23.2921 30.9483 22.3038 29.9408 22.3116 28.6907L22.412 12.5901C22.4198 11.34 23.4207 10.3195 24.6476 10.3119Z" fill="#E2BD9E"/>-->
+<!--          <path d="M24.5 2C36.9263 2 47 12.0734 47 24.4996C47 36.9259 36.9263 46.9998 24.5 46.9998C12.0735 46.9998 2 36.9259 2 24.4996C2 12.0733 12.0735 2 24.5 2Z" fill="black" fill-opacity="0.01" stroke="#E2BD9E" stroke-width="4"/>-->
+<!--        </svg>-->
+<!--      </button>-->
+    </div>
   </section>
 </template>
 
@@ -72,16 +76,11 @@ export default {
 <style lang="scss" scoped>
 .knowledge {
   background-image: url('~assets/images/background_knowledge.png');
-  background-position: 50px top;
+  background-position: center top;
   background-repeat: no-repeat;
   width: 1920px;
-  min-height: 880px;
+  height: 700px;
   z-index: -2;
-  opacity: 1;
-  transform: translateZ(0);
-  perspective: 1000px;
-  backface-visibility: hidden;
-  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,11 +88,22 @@ export default {
     width: 100vw;
     background-position: center top;
   }
+  @media (max-width: 1023px) {
+    background-image: url('~assets/mobile/background_know_mobile.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    max-width: 480px;
+    height: 804px;
+  }
   &-title {
-    padding: 250px 0 0 0;
+    padding: 120px 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 1023px) {
+      flex-direction: column;
+      max-width: 375px;
+    }
     &--title, &--subtitle {
       font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
       font-weight: bold;
@@ -103,10 +113,19 @@ export default {
     }
     &--title {
       font-size: 45px;
+      @media (max-width: 1023px) {
+        font-size: 25px;
+      }
     }
     &--subtitle {
       font-size: 17px;
       width: 350px;
+      @media (max-width: 1023px) {
+        white-space: nowrap;
+        overflow: hidden;
+        max-height: 20px;
+        text-align: center;
+      }
     }
   }
   &-grid {
@@ -114,11 +133,26 @@ export default {
     grid-template-columns: repeat(5, 1fr);
     width: 950px;
     margin: 20px 0 0 0;
+    @media (max-width: 1023px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      max-width: 375px;
+    }
   }
   &-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 1023px) {
+      height: 41px;
+      width: 90%;
+      max-width: 326px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      margin: 0 0 20px 0;
+    }
 
     &--text {
       color: #ffffff;
@@ -129,12 +163,36 @@ export default {
       text-transform: uppercase;
       text-align: center;
       max-width: 150px;
+      @media (max-width: 1023px) {
+        color: #31afa4;
+      }
+    }
+    &--img {
+      @media (max-width: 1023px) {
+        display: none;
+      }
     }
   }
   &-button {
     background: transparent;
     border: none;
     cursor: pointer;
+    z-index: 2;
+    padding: 0;
+    width: 49px;
+    height: 49px;
+    &--right {
+      transform: rotate(270deg);
+    }
+    &--up {
+      transform: rotate(180deg);
+    }
+    &--wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 49px;
+      justify-content: space-between;
+    }
   }
 }
 </style>

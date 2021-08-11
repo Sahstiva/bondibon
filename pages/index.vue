@@ -1,218 +1,75 @@
 <template>
   <div class="site_wrapper">
-    <BBheader />
-    <component v-bind:is="currentComponent" v-on:goToNextPage="nextPage($event)"></component>
-
-    <section class="gift" id="giftpage">
-      <div class="gift-wrapper">
-        <swiper class="swiper" :options="swiperOption" ref="swiperGift">
-          <swiper-slide>
-            <picture>
-              <source srcset="~/assets/images/slider_cup_1024.png" media="(max-width: 1024px)" />
-              <source srcset="~/assets/images/slider_cup.png" media="(min-width: 1025px)" />
-              <img src="~/assets/images/slider_cup.png" alt="Настольные игры">
-            </picture>
-          </swiper-slide>
-          <swiper-slide>
-            <picture>
-              <source srcset="~/assets/images/slider_newyear_1024.png" media="(max-width: 1024px)" />
-              <source srcset="~/assets/images/slider_newyear.png" media="(min-width: 1025px)" />
-              <img src="~/assets/images/slider_cup.png" alt="Пазлы и мозаики">
-            </picture>
-          </swiper-slide>
-          <swiper-slide>
-            <picture>
-              <source srcset="~/assets/images/slider_xmastree_1024.png" media="(max-width: 1024px)" />
-              <source srcset="~/assets/images/slider_xmastree.png" media="(min-width: 1025px)" />
-              <img src="~/assets/images/slider_cup.png" alt="Игры в дорогу">
-            </picture>
-          </swiper-slide>
-        </swiper>
-      </div>
-    </section>
-    <button @click="goNextGift" class="gift-button">
-      <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="56px" height="56px">
-        <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-              d="M27.285,13.907 C28.172,13.049 29.609,13.049 30.495,13.907 L41.907,24.963 C42.793,25.822 42.793,27.213 41.907,28.072 C41.020,28.931 39.583,28.931 38.697,28.072 L27.285,17.017 C26.399,16.158 26.399,14.766 27.285,13.907 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(202, 4, 44)"
-              d="M27.383,39.711 C26.493,38.849 26.493,37.452 27.383,36.590 L38.840,25.491 C39.730,24.629 41.172,24.629 42.062,25.491 C42.952,26.353 42.952,27.750 42.062,28.612 L30.605,39.711 C29.715,40.573 28.273,40.573 27.383,39.711 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-              d="M12.437,26.656 C12.429,25.429 13.436,24.441 14.687,24.449 L30.787,24.549 C32.038,24.557 33.058,25.558 33.066,26.785 C33.074,28.011 32.066,29.000 30.816,28.992 L14.716,28.892 C13.465,28.884 12.445,27.883 12.437,26.656 Z"/>
-        <path fill-rule="evenodd"  stroke="rgb(226, 189, 158)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
-              d="M26.625,2.312 C40.156,2.312 51.125,13.281 51.125,26.812 C51.125,40.343 40.156,51.312 26.625,51.312 C13.094,51.312 2.125,40.343 2.125,26.812 C2.125,13.281 13.094,2.312 26.625,2.312 Z"/>
-      </svg>
-    </button>
-    <section class="newyear">
-      <div class="newyear-title">
-        <p class="newyear-title--title">новый год<br>к нам мчится!</p>
-        <p class="newyear-title--subtitle">новогодние наборы для творчества, ёлочные игрушки hand-made, настольные игр</p>
-      </div>
-      <div class="newyear-grid">
-        <div class="newyear-item">
-          <img src="~/assets/images/newyear_roadgames.png" alt="Мини-игры в дорогу новогодние" class="newyear-item--img">
-          <p class="newyear-item--text">мини-игры в дорогу новогодние</p>
-        </div>
-        <div class="newyear-item">
-          <img src="~/assets/images/newyear_ceramic.png" alt="Керамические ёлочные украшения для росписи" class="newyear-item--img">
-          <p class="newyear-item--text">керамические ёлочные украшения для росписи</p>
-        </div>
-        <div class="newyear-item">
-          <img src="~/assets/images/newyear_felt.png" alt="Наборы для создания ёлочных игрушек из фетра" class="newyear-item--img">
-          <p class="newyear-item--text">наборы для создания ёлочных игрушек из фетра</p>
-        </div>
-        <div class="newyear-item">
-          <img src="~/assets/images/newyear_compact.png" alt="Самая компактная ёлка" class="newyear-item--img">
-          <p class="newyear-item--text">самая компактная ёлка</p>
-        </div>
-        <div class="newyear-item">
-          <img src="~/assets/images/newyear_crystall.png" alt="Новогодние наборы для выращивани кристаллов" class="newyear-item--img">
-          <p class="newyear-item--text">новогодние наборы для выращивани кристаллов</p>
-        </div>
-        <div class="newyear-item">
-          <img src="~/assets/images/newyear_cups.png"alt="Керамические кружки и сувениры для росписи" class="newyear-item--img">
-          <p class="newyear-item--text">керамические кружки и сувениры для росписи</p>
-        </div>
-        <div class="newyear-item">
-          <img src="~/assets/images/newyear_aquatermo.png" alt="Аква- и термо- мозаики новогодние" class="newyear-item--img">
-          <p class="newyear-item--text">аква- и термо- мозаики новогодние</p>
-        </div>
-        <div class="newyear-item">
-          <img src="~/assets/images/newyear_cards.png" alt="Новогодние открытки своими руками" class="newyear-item--img">
-          <p class="newyear-item--text">новогодние открытки своими руками</p>
-        </div>
-        <div class="newyear-item">
-          <img src="~/assets/images/newyear_cultivate.png" alt="Развивающие игры под ёлку" class="newyear-item--img">
-          <p class="newyear-item--text">развивающие игры под ёлку</p>
-        </div>
-        <div class="newyear-item">
-          <img src="~/assets/images/newyear_3dxmaxtree.png" alt="3d ёлочки деревянные" class="newyear-item--img">
-          <p class="newyear-item--text">3d ёлочки деревянные</p>
-        </div>
-      </div>
-      <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="56px" height="56px">
-        <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-              d="M39.918,27.973 C40.776,28.859 40.776,30.296 39.918,31.182 L28.862,42.594 C28.003,43.480 26.611,43.480 25.753,42.594 C24.894,41.708 24.894,40.271 25.753,39.384 L36.808,27.973 C37.667,27.086 39.059,27.086 39.918,27.973 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-              d="M14.114,28.070 C14.976,27.181 16.373,27.181 17.235,28.070 L28.335,39.527 C29.197,40.417 29.197,41.860 28.335,42.749 C27.473,43.639 26.075,43.639 25.213,42.749 L14.114,31.292 C13.252,30.403 13.252,28.960 14.114,28.070 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-              d="M27.169,13.124 C28.396,13.116 29.384,14.124 29.376,15.374 L29.276,31.474 C29.268,32.725 28.267,33.745 27.041,33.753 C25.814,33.761 24.825,32.754 24.833,31.503 L24.933,15.403 C24.941,14.152 25.942,13.132 27.169,13.124 Z"/>
-        <path fill-rule="evenodd"  stroke="rgb(226, 189, 158)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
-              d="M27.000,2.812 C40.531,2.812 51.500,13.781 51.500,27.312 C51.500,40.843 40.531,51.812 27.000,51.812 C13.469,51.812 2.500,40.843 2.500,27.312 C2.500,13.781 13.469,2.812 27.000,2.812 Z"/>
-      </svg>
-    </section>
-    <section class="teachers">
-      <div class="teachers-wrapper--img">
-        <div class="teachers-wrapper--wrapper">
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="218px" height="53px">
-            <image  x="0px" y="0px" width="218px" height="53px"  xlink:href="data:img/png;base64,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" />
-          </svg>
-          <p class="teachers-text">полезно педагогам</p>
-        </div>
-        <img src="~/assets/images/teachers.png" alt="Полезно педагогам" class="teachers-img">
-      </div>
-      <div class="teachers-wrapper--items">
-        <div class="teachers-item teachers-item--speech">речевое развитие</div>
-        <div class="teachers-item teachers-item--discovery">познавательное развитие</div>
-        <div class="teachers-item teachers-item--art">художественно- эстетическое развитие</div>
-        <div class="teachers-item teachers-item--social">социально- коммуника- тивное развитие</div>
-        <div class="teachers-item teachers-item--catalog">Получите<span class="teachers-item--large"> каталог</span> рекомендованной продукции</div>
-      </div>
-      <svg class="teachers-download"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          width="55px" height="56px">
-        <path fill-rule="evenodd"  stroke="rgb(226, 189, 158)" stroke-width="4px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"
-              d="M26.505,2.187 C40.036,2.187 51.005,13.156 51.005,26.687 C51.005,40.218 40.036,51.187 26.505,51.187 C12.974,51.187 2.005,40.218 2.005,26.687 C2.005,13.156 12.974,2.187 26.505,2.187 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-              d="M40.376,22.699 C41.231,23.577 41.231,24.999 40.376,25.876 L29.359,37.170 C28.503,38.047 27.116,38.047 26.260,37.170 C25.405,36.293 25.405,34.871 26.260,33.993 L37.277,22.699 C38.133,21.822 39.520,21.822 40.376,22.699 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-              d="M14.661,22.796 C15.520,21.916 16.913,21.916 17.772,22.796 L28.833,34.135 C29.692,35.016 29.692,36.444 28.833,37.324 C27.974,38.205 26.581,38.205 25.722,37.324 L14.661,25.985 C13.802,25.105 13.802,23.677 14.661,22.796 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(226, 189, 158)"
-              d="M27.672,8.004 C28.894,7.997 29.879,8.993 29.871,10.231 L29.771,26.165 C29.763,27.402 28.766,28.412 27.544,28.420 C26.321,28.428 25.336,27.431 25.343,26.194 L25.444,10.259 C25.452,9.022 26.449,8.012 27.672,8.004 Z"/>
-        <path fill-rule="evenodd"  fill="rgb(202, 4, 44)"
-              d="M36.996,41.568 C37.003,42.917 36.026,44.005 34.813,43.995 L19.196,43.885 C17.983,43.876 16.994,42.776 16.986,41.427 C16.978,40.078 17.955,38.991 19.168,38.999 L34.785,39.110 C35.998,39.119 36.988,40.219 36.996,41.568 Z"/>
-      </svg>
-    </section>
-    <BBlinks />
-    <section class="map">
-      <div class="map-wrapper">
-        <Yandexmap />
-      </div>
-    </section>
+    <LazyBBheader />
+    <LazyBBtitle />
+    <LazyBBslider />
+    <LazyBBknow />
+    <LazyBBmicroscope/>
+    <LazyBBmosaic/>
+    <LazyBBconstructor/>
+    <LazyBBevamoda/>
+    <LazyBBtablegames/>
+    <LazyBBgift/>
+    <LazyBBnewyear/>
+<!--    <LazyBBteachers/>-->
+<!--    <LazyBBlinks/>-->
+<!--    <LazyBBmap/>-->
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+
 import '~/assets/style/style.scss';
-import Yandexmap from "../components/yandexmap";
+
 import BBheader from "../components/BBheader";
 import BBtitle from "../components/BBtitle";
-
+import BBslider from "../components/BBslider";
+import BBknow from "../components/BBknow";
+import BBmicroscope from "../components/BBmicroscope";
+import BBmosaic from "../components/BBmosaic";
+import BBconstructor from "../components/BBconstructor";
+import BBevamoda from "../components/BBevamoda";
+import BBtablegames from "../components/BBtablegames";
+import BBgift from "../components/BBgift";
+import BBnewyear from "../components/BBnewyear";
+import BBteachers from "../components/BBteachers";
 import BBlinks from "../components/BBlinks";
+import BBmap from "../components/BBmap";
 
-const VueScrollTo = require('vue-scrollto');
+//const VueScrollTo = require('vue-scrollto');
 
 export default {
   name: 'Bondibon',
   title: 'Bondibon landing',
 
    components: {
-     BBlinks,
-     BBtitle,
      BBheader,
-     Yandexmap,
-     Swiper,
-     SwiperSlide
+     BBtitle,
+     BBslider,
+     BBknow,
+     BBmicroscope,
+     BBmosaic,
+     BBconstructor,
+     BBevamoda,
+     BBtablegames,
+     BBgift,
+     BBnewyear,
+     BBteachers,
+     BBlinks,
+     BBmap,
    },
   data() {
     return {
-      isScrolling: false,
+      //isScrolling: false,
       currentComponent: 'BBtitle',
-        swiperOption: {
-          mousewheel: false,
-          slidesPerView: 1,
-          spaceBetween: 70,
-          loop: true,
-          breakpoints: {
-            // when window width is >= 1025px
-            1025: {
-              slidesPerView: 1,
-              spaceBetween: 50
-            }
-          }
-        }
       }
     },
-  mounted() {
-      this.$nextTick(() => {
-        // const swiperMain = this.$refs.swiperMain.$swiper;
-        // swiperMain.init();
-        // const swiperGift = this.$refs.swiperGift.$swiper;
-        // swiperGift.init();
-      });
-  },
   methods: {
       nextPage(name) {
         console.log(`Go to page ${name}`);
         this.currentComponent = name;
       },
-      goNextMain() {
-        //console.log('goNext');
-        this.$refs.swiperMain.$swiper.slideNext();
-      },
-      goNextGift() {
-        //console.log('goNext');
-        this.$refs.swiperGift.$swiper.slideNext();
-      },
-      handleScroll: function (evt, el) {
+      // handleScroll: function (evt, el) {
         // console.log('scrolling', el.className);
         // console.log(window.scrollY);
         // console.log(evt);
@@ -228,34 +85,24 @@ export default {
         //   this.$scrollTo(el, 500, options);
         //   this.isScrolling = true;
         // }
-        if (window.scrollY > 50 && el.className === 'slider') {
-          el.setAttribute(
-              'style',
-              'opacity: 1; transform: translate3d(0, -10px, 0)'
-          );
-          //window.scrollY = 250;
-        } else if(window.scrollY > 680 && el.className === 'knowledge') {
-          el.setAttribute(
-              'style',
-              'opacity: 1; transform: translate3d(0, -10px, 0)'
-          );
-        }
-        return window.scrollY > 1000
-      },
-      doneScrolling: function(el) {
-        this.isScrolling = false;
-        console.log('scrolling',this.isScrolling);
-      }
+      //   if (window.scrollY > 50 && el.className === 'slider') {
+      //     el.setAttribute(
+      //         'style',
+      //         'opacity: 1; transform: translate3d(0, -10px, 0)'
+      //     );
+      //     //window.scrollY = 250;
+      //   } else if(window.scrollY > 680 && el.className === 'knowledge') {
+      //     el.setAttribute(
+      //         'style',
+      //         'opacity: 1; transform: translate3d(0, -10px, 0)'
+      //     );
+      //   }
+      //   return window.scrollY > 1000
+      // },
+      // doneScrolling: function(el) {
+      //   this.isScrolling = false;
+      //   console.log('scrolling',this.isScrolling);
+      // }
     }
   }
 </script>
-<style>
-  .site {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: red;
-  }
-</style>
-

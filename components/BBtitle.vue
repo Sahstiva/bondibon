@@ -1,8 +1,7 @@
 <template>
   <section class="title">
-    <img src="~/assets/images/title_children.png" alt="Дети" class="title-img">
-    <div class="title-benefit--wrapper">
-      <div class="title-benefit title-benefit--cyan">
+    <div class="title-benefit">
+      <div class="title-benefit--item title-benefit--cyan">
         <svg class="title-benefit--img" xmlns="http://www.w3.org/2000/svg" height="90.68" width="88.013" xml:space="preserve">
             <g transform="scale(0.05)">
               <path d="M554.352 306.234H105.73l36.274-255.43h376.098l36.25 255.43zm-2.247 365.282c9.239 10.5 25.196 11.55 35.696 2.379 10.496-9.165 11.609-25.184 2.383-35.684L349.055 361.578c-9.098-10.531-25.192-11.586-35.688-2.41-.98.875-1.953 1.816-2.73 2.793l-240.77 276.25c-9.207 10.5-8.117 26.519 2.414 35.684 10.488 9.171 26.52 8.121 35.684-2.379l222.051-254.797 222.089 254.797zm-98.242-427.215c0 8.437 6.797 15.254 15.196 15.254a15.219 15.219 0 0 0 15.246-15.254V99.848c0-8.399-6.789-15.227-15.246-15.227-8.399 0-15.196 6.828-15.196 15.227V244.3zm-92.703 0c0 8.437 6.785 15.254 15.184 15.254a15.218 15.218 0 0 0 15.254-15.254V99.848c0-8.399-6.785-15.227-15.254-15.227-8.399 0-15.184 6.828-15.184 15.227V244.3zm-92.711 0c0 8.437 6.856 15.254 15.25 15.254 8.395 0 15.254-6.817 15.254-15.254V99.848c0-8.399-6.859-15.227-15.254-15.227-8.394 0-15.25 6.828-15.25 15.227V244.3zm-92.644 0c0 8.437 6.859 15.254 15.254 15.254 8.394 0 15.183-6.817 15.183-15.254V99.848c0-8.399-6.789-15.227-15.183-15.227-8.395 0-15.254 6.828-15.254 15.227V244.3zM25.402 438.27h174.895c13.992 0 25.324-11.372 25.324-25.368 0-14.027-11.332-25.398-25.324-25.398H50.766v-50.801h558.586v50.801H459.754c-13.996 0-25.332 11.371-25.332 25.398 0 13.996 11.336 25.368 25.332 25.368h174.93c13.996 0 25.461-11.372 25.461-25.368V311.301c0-13.992-11.465-25.399-25.461-25.399h-32.051L565.125 21.828A25.293 25.293 0 0 0 540.074.063v-.06H120.035c-13.336 0-24.281 10.274-25.297 23.36L57.445 285.902H25.402c-14.03 0-25.398 11.407-25.398 25.399v101.601c0 13.996 11.367 25.368 25.398 25.368"/>
@@ -14,7 +13,7 @@
           <p class="title-benefit--text">игр и игрушек</p>
         </div>
       </div>
-      <div class="title-benefit title-benefit--orange">
+      <div class="title-benefit--item title-benefit--orange">
         <svg class="title-benefit--img" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
              viewBox="0 0 130.58667 124.37333"
              height="124.37333"
@@ -29,7 +28,7 @@
           <p class="title-benefit--text">бренду</p>
         </div>
       </div>
-      <div class="title-benefit title-benefit--magenta">
+      <div class="title-benefit--item title-benefit--magenta">
         <svg class="title-benefit--img" xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 133.56 154.85333"
              height="154.85333"
@@ -46,8 +45,8 @@
         </div>
       </div>
     </div>
-    <div class="title-learnmore-wrapper">
-      <div class="title-learnmore">
+    <div class="title-learnmore">
+      <div class="title-learnmore--wrapper">
         <p class="title-learnmore--text">узнай больше о полезных играх</p>
       </div>
       <button class="title-learnmore--button" @click="$emit('goToNextPage', 'BBslider')">
@@ -60,6 +59,7 @@
       </button>
     </div>
   </section>
+
 </template>
 
 <script>
@@ -71,132 +71,136 @@ export default {
 <style lang="scss" scoped>
 .title {
   background-image: url('~assets/images/background_title.png');
-  background-position: 50px top;
+  background-position: center top;
   background-repeat: no-repeat;
   width: 1920px;
-  min-height: 700px;
+  height: 704px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   @media (max-width: 1920px) {
     width: 100vw;
+  }
+  @media (max-width: 1023px) {
+    background-image: url('~assets/mobile/background_title_mobile.png');
     background-position: center top;
-  }
-  @media (max-width: 1600px) {
-    background-position: -160px top;
-  }
-  @media (max-width: 1440px) {
-    background-position: -240px top;
-  }
-  @media (max-width: 1280px) {
-    background-position: -320px top;
-  }
-  @media (max-width: 1024px) {
-    background-position: -450px top;
-  }
-  &-img {
-    margin: 138px 0 0 calc(1920px/2 - 350px);
-    @media (max-width: 1920px) {
-      margin: 138px 0 0 calc(50vw - 400px);
-    }
-    @media (max-width: 1600px) {
-      margin: 138px 0 0 calc(50vw - 400px);
-    }
-    @media (max-width: 1440px) {
-      margin: 138px 0 0 calc(50vw - 400px);
-    }
-    @media (max-width: 1280px) {
-      margin: 138px 0 0 calc(50vw - 400px);
-    }
-    @media (max-width: 1024px) {
-      margin: 138px 0 0 calc(50vw - 403px);
-    }
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 480px;
+    height: 807px;
   }
   &-benefit {
-    width: 218px;
-    height: 71px;
-    border-radius: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 30px 0 30px;
-
-    &--img {
-      fill: #ffffff;
-      max-width: 38px;
-      max-height: 39px;
-      transform: rotate(180deg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    margin: 290px 0 0 0;
+    position: relative;
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 10px;
+      margin: 350px 0 0 0;
+      max-width: 375px;
     }
 
-    &--textbox {
+    &--item {
+      width: 218px;
+      height: 71px;
+      border-radius: 35px;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      margin: 0 0 0 15px;
-    }
-
-    &--text, &--litera {
-      color: #ffffff;
-      font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin: 0;
-    }
-
-    &--text {
-      font-size: 13px;
-    }
-
-    &--litera {
-      font-size: 25px;
-    }
-
-    &--wrapper {
-      display: flex;
-      flex-direction: row;
       justify-content: center;
-      margin: -100px 0 0 0;
-      width: 100%;
-      position: relative;
-    }
-
-    &--orange {
-      background: linear-gradient(90deg, rgba(252,118,24,1) 0%, rgba(254,175,34,1) 100%);
-    }
-
-    &--cyan {
-      background: linear-gradient(90deg, rgba(0,193,196,1) 0%, rgba(81,189,190,1) 100%);
-      z-index: 1;
-    }
-
-    &--magenta {
-      background: linear-gradient(90deg, rgba(146,53,224,1) 0%, rgba(152,91,234,1) 100%);
-    }
-  }
-  &-learnmore {
-    width: 489px;
-    height: 49px;
-    background-color: #d2beae;
-    border-radius: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &-wrapper {
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      padding: 30px 30px 0 30px;
+      margin: 10px 30px 0 30px;
+      @media (max-width: 1023px) {
+        width: 326px;
+      }
+    }
+
+      &--img {
+        fill: #ffffff;
+        max-width: 38px;
+        max-height: 39px;
+        transform: rotate(180deg);
+      }
+
+      &--textbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0 0 0 15px;
+      }
+
+      &--text, &--litera {
+        color: #ffffff;
+        font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      &--text {
+        font-size: 13px;
+      }
+
+      &--litera {
+        font-size: 25px;
+      }
+
+      &--orange {
+        background: linear-gradient(90deg, rgba(252, 118, 24, 1) 0%, rgba(254, 175, 34, 1) 100%);
+      }
+
+      &--cyan {
+        background: linear-gradient(90deg, rgba(0, 193, 196, 1) 0%, rgba(81, 189, 190, 1) 100%);
+        z-index: 1;
+      }
+
+      &--magenta {
+        background: linear-gradient(90deg, rgba(146, 53, 224, 1) 0%, rgba(152, 91, 234, 1) 100%);
+      }
+    }
+
+  &-learnmore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 0 0;
+    @media (max-width: 1023px) {
+      width: 100%;
+    }
+    &--wrapper {
+      width: 489px;
+      height: 49px;
+      background-color: #d2beae;
+      border-radius: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 1023px) {
+        width: 90%;
+        max-width: 375px;
+        height: 41px;
+      }
     }
     &--text {
-      font-size: 24px;
+      font-size: 23px;
       font-family: Manrope-Regular, Arial, sans-serif;
       color: #ffffff;
       text-transform: uppercase;
       line-height: 26px;
       text-align: center;
+      @media (max-width: 1023px) {
+        font-size: 18px;
+      }
     }
     &--button {
-      margin: 30px 0 0 0;
+      margin: 15px 180px 0 0;
       cursor: pointer;
       background: transparent;
       border: none;
+      @media (max-width: 1023px) {
+        margin: 15px 0 0 0;
+      }
     }
 
   }
