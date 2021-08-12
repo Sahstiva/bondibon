@@ -37,12 +37,25 @@ export default {
     min-height: 1080px;
     background-position: center top;
   }
+  @media (max-width: 1023px) {
+    background-image: url('~assets/mobile/background_map_mobile.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #d77aea;
+    width: 100vw;
+    max-width: 480px;
+    height: 883px;
+  }
   &-wrapper {
     margin: 200px 0 100px 0;
     width: 900px;
     height: 450px;
     border-radius: 50px;
     overflow: hidden;
+    @media (max-width: 1023px) {
+      width: 335px;
+      height: 685px;
+    }
   }
 }
 </style>

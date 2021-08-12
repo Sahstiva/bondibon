@@ -131,6 +131,7 @@ export default {
         display: inline;
         font-size: 24px;
         text-align: center;
+        margin: 20px 0 10px 0;
       }
     }
     &--subtitle {

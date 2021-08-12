@@ -11,9 +11,9 @@
     <LazyBBtablegames/>
     <LazyBBgift/>
     <LazyBBnewyear/>
-<!--    <LazyBBteachers/>-->
-<!--    <LazyBBlinks/>-->
-<!--    <LazyBBmap/>-->
+    <LazyBBteachers/>
+    <LazyBBlinks/>
+    <LazyBBmap/>
   </div>
 </template>
 
