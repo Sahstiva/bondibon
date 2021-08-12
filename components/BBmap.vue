@@ -7,13 +7,14 @@
 </template>
 
 <script>
-import Yandexmap from "../components/yandexmap";
+import Yandexmap from './yandexmap';
+
 export default {
-  name: "BBmap",
+  name: 'BBmap',
   components: {
-    Yandexmap
-  }
-}
+    Yandexmap,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
