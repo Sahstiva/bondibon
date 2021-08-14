@@ -1,13 +1,13 @@
 <template>
   <section class="map">
-    <div class="map-wrapper">
-      <Yandexmap />
-    </div>
+<!--    <div class="map-wrapper">-->
+      <Yandexmap class="map-wrapper"/>
+<!--    </div>-->
   </section>
 </template>
 
 <script>
-import Yandexmap from './yandexmap';
+import Yandexmap from './yandexmap.vue';
 
 export default {
   name: 'BBmap',
@@ -24,7 +24,6 @@ export default {
   background-repeat: no-repeat;
   width: 1920px;
   min-height: 3000px;
-  z-index: -3;
   opacity: 1;
   transform: translateZ(0);
   perspective: 1000px;

@@ -21,7 +21,7 @@
             >
             <img
               src="~/assets/images/slider_cup.png"
-              alt="Настольные игры"
+              alt="Подарки своими руками"
             >
           </picture>
         </swiper-slide>
@@ -37,7 +37,7 @@
             >
             <img
               src="~/assets/images/slider_cup.png"
-              alt="Пазлы и мозаики"
+              alt="Новогодние игры"
             >
           </picture>
         </swiper-slide>
@@ -53,50 +53,19 @@
             >
             <img
               src="~/assets/images/slider_cup.png"
-              alt="Игры в дорогу"
+              alt="Креативные наборы"
             >
           </picture>
         </swiper-slide>
       </swiper>
     </div>
     <div class="gift-button--wrapper">
+      <p class="gift-button--text">{{ slidesText[currentSlide <= slidesText.length ? currentSlide - 1 : currentSlide % slidesText.length - 1] }}</p>
       <button
         class="gift-button gift-button--right"
         @click="goNext"
       >
-        <svg
-          width="49"
-          height="49"
-          viewBox="0 0 49 49"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M37.3961 25.1602C38.2546 26.0461 38.2546 27.4835 37.3961 28.3694L26.3406 39.7816C25.4821 40.6675 24.0899 40.6675 23.2314 39.7816C22.3727 38.8952 22.3727 37.4583 23.2314 36.5719L34.2867 25.1602C35.1454 24.2738 36.5374 24.2738 37.3961 25.1602Z"
-            fill="#E2BD9E"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M11.5923 25.2579C12.4543 24.3677 13.8519 24.3677 14.714 25.2579L25.8132 36.7147C26.6752 37.6044 26.6752 39.0472 25.8132 39.9368C24.9512 40.8265 23.5535 40.8265 22.6916 39.9368L11.5923 28.4801C10.7303 27.5904 10.7303 26.1476 11.5923 25.2579Z"
-            fill="#CA042C"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M24.6476 10.3119C25.8745 10.3038 26.8627 11.3107 26.8549 12.5614L26.7546 28.6619C26.7468 29.9126 25.7459 30.9325 24.5191 30.9401C23.2921 30.9483 22.3038 29.9408 22.3116 28.6907L22.412 12.5901C22.4198 11.34 23.4207 10.3195 24.6476 10.3119Z"
-            fill="#E2BD9E"
-          />
-          <path
-            d="M24.5 2C36.9263 2 47 12.0734 47 24.4996C47 36.9259 36.9263 46.9998 24.5 46.9998C12.0735 46.9998 2 36.9259 2 24.4996C2 12.0733 12.0735 2 24.5 2Z"
-            fill="black"
-            fill-opacity="0.01"
-            stroke="#E2BD9E"
-            stroke-width="4"
-          />
-        </svg>
+        <img src="~/assets/images/arrow_down.svg" alt="Следующий слайд">
       </button>
     </div>
   </section>
@@ -113,13 +82,14 @@ export default {
   },
   data() {
     return {
+      currentSlide: 1,
+      slidesText: ['подарки своими руками', 'новогодние игры', 'креативные наборы'],
       swiperOption: {
         mousewheel: false,
         slidesPerView: 1,
         spaceBetween: 70,
         loop: true,
         breakpoints: {
-          // when window width is >= 1025px
           1025: {
             slidesPerView: 1,
             spaceBetween: 50,
@@ -128,9 +98,13 @@ export default {
       },
     };
   },
+  mounted() {
+    this.$refs.swiperGift.$swiper.on('slideChange',() => {
+      this.currentSlide = this.$refs.swiperGift.$swiper.activeIndex;
+    });
+  },
   methods: {
     goNext() {
-      console.log('goNext');
       this.$refs.swiperGift.$swiper.slideNext();
     },
   },
@@ -138,6 +112,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/style/style.scss";
 .gift {
   background-image: url('~assets/images/background_gifts.png');
   background-position: center top;
@@ -150,10 +125,6 @@ export default {
   position: relative;
   @media (max-width: 1920px) {
     width: 100vw;
-    background-position: center top;
-  }
-  @media (max-width: 1024px) {
-    background-image: url('~assets/images/background_gifts_1024.png');
   }
   @media (max-width: 1023px) {
     background-image: url('~assets/mobile/background_gift_mobile.png');
@@ -167,23 +138,13 @@ export default {
     align-items: center;
   }
   &-wrapper {
-    width: 995px;
-    margin: 120px 0 0 550px;
+    width: 678px;
+    margin: 115px 0 0 860px;
     @media (max-width: 1920px) {
-      margin: 120px 0 0 500px;
-    }
-    @media (max-width: 1600px) {
-      margin: 120px 0 0 340px;
-    }
-    @media (max-width: 1440px) {
-      margin: 120px 0 0 260px;
-    }
-    @media (max-width: 1280px) {
-      margin: 120px 0 0 180px;
+      margin: 115px 0 0 calc(50vw - 100px);
     }
     @media (max-width: 1024px) {
-      margin: 120px 0 0 calc(50vw - 995px/2 - 75px);
-      width: 935px;
+      margin: 115px 0 0 300px;
     }
     @media (max-width: 1023px) {
       width: 100%;
@@ -195,42 +156,59 @@ export default {
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 2;
-    padding: 0;
+    margin: 15px 0 0 0;
     width: 49px;
     height: 49px;
+
+    &--text {
+      @include font-Rotonda;
+      font-size: 35px;
+      text-align: right;
+      color: #d2beae;
+      margin: 0 0 15px 0;
+      width: 361px;
+      height: 80px;
+      @media (max-width: 1024px) {
+        width: 290px;
+        height: 120px;
+        margin: 0 0 5px 0;
+      }
+      @media (max-width: 1023px) {
+        margin: 0;
+        width: 325px;
+        height: 80px;
+        text-align: left;
+      }
+    }
     &--right {
       transform: rotate(270deg);
+      &:hover {
+        transform: rotate(270deg) scale(1.1) translateY(-5px);
+        transition: all 0.3s ease-in-out;
+      }
     }
     &--wrapper {
       display: flex;
-      width:  49px;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
       position: absolute;
-      top: 530px;
-      left: calc(50vw - 60px);
-      //z-index: 555;
-      @media (max-width: 1440px) {
-        margin: -170px 0 0 260px;
-      }
+      top: 400px;
+      left:  360px;
       @media (max-width: 1920px) {
-        top: 500px;
-        left: calc(50vw - 240px);
+        left:  calc(50vw - 500px);
       }
-      @media (max-width: 1600px) {
-        margin: -170px 0 0 340px;
-      }
-      @media (max-width: 1280px) {
-        margin: -170px 0 0 180px;
+      @media (max-width: 1024px) {
+        max-width: 270px;
+        left:  calc(50vw - 530px);
       }
       @media (max-width: 1023px) {
-        top: 745px;
-        left: calc(50vw - 180px);
-      }
-      @media (max-width: 480px) {
-        top: 745px;
-        left: calc(50vw - 70px);
+        position: unset;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 480px;
+        margin: 25px 0 0 0;
       }
     }
   }

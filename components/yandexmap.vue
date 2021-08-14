@@ -47,6 +47,6 @@ export default {
 <style scoped>
 .ymap-container {
   height: 100%;
-  z-index: 10;
+  z-index: 1;
 }
 </style>

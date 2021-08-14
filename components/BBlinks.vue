@@ -4,14 +4,14 @@
       <div class="links-item--opinion">
         интересует мнение<br>профессионалов?
       </div>
-      <div class="links-item--instagram">
+      <a href="https://www.instagram.com/bondibon_games/" class="links-item--instagram">
         <div class="links-item--wrapper">
           <img
             src="~/assets/images/links_instagram.jpg"
             alt="Подписывайтесь на наш инстаграм!"
           >
         </div>
-      </div>
+      </a>
       <div class="links-item--come">
         заходите на наш<br>youtube канал
       </div>
@@ -26,137 +26,40 @@
           >
         </div>
       </div>
-      <div class="links-item--subscribe">
+      <a href="https://www.instagram.com/bondibon_games/" class="links-item--subscribe">
         <p>подписывайтесь на наш инстаграм!</p>
-      </div>
+      </a>
       <div class="links-item--learn">
         <p>Узнавайте первыми о новинках, акциях и розыгрышах призов от бренда</p>
       </div>
-      <div class="links-item--bgames">
+      <a href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA" class="links-item--bgames">
         <div class="links-item--wrapper">
           <div class="links-item--redcircle">
             <img
               class="links-item--img"
               src="~/assets/images/links_bondibongames.png"
-              alt="заходите на наш youtube канал"
+              alt="Заходите на наш youtube канал"
             >
           </div>
         </div>
-      </div>
-      <div class="links-item--wholesale">
+      </a>
+      <a href="https://gratwest.ru" class="links-item--wholesale">
         <p class="links-item--text">
           оптовые закупки
         </p>
-        <svg
-          class="links-item--right"
-          width="49"
-          height="49"
-          viewBox="0 0 49 49"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M37.3961 25.1602C38.2546 26.0461 38.2546 27.4835 37.3961 28.3694L26.3406 39.7816C25.4821 40.6675 24.0899 40.6675 23.2314 39.7816C22.3727 38.8952 22.3727 37.4583 23.2314 36.5719L34.2867 25.1602C35.1454 24.2738 36.5374 24.2738 37.3961 25.1602Z"
-            fill="#E2BD9E"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M11.5923 25.2579C12.4543 24.3677 13.8519 24.3677 14.714 25.2579L25.8132 36.7147C26.6752 37.6044 26.6752 39.0472 25.8132 39.9368C24.9512 40.8265 23.5535 40.8265 22.6916 39.9368L11.5923 28.4801C10.7303 27.5904 10.7303 26.1476 11.5923 25.2579Z"
-            fill="#FFFFFF"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M24.6476 10.3119C25.8745 10.3038 26.8627 11.3107 26.8549 12.5614L26.7546 28.6619C26.7468 29.9126 25.7459 30.9325 24.5191 30.9401C23.2921 30.9483 22.3038 29.9408 22.3116 28.6907L22.412 12.5901C22.4198 11.34 23.4207 10.3195 24.6476 10.3119Z"
-            fill="#E2BD9E"
-          />
-          <path
-            d="M24.5 2C36.9263 2 47 12.0734 47 24.4996C47 36.9259 36.9263 46.9998 24.5 46.9998C12.0735 46.9998 2 36.9259 2 24.4996C2 12.0733 12.0735 2 24.5 2Z"
-            fill="black"
-            fill-opacity="0.01"
-            stroke="#E2BD9E"
-            stroke-width="4"
-          />
-        </svg>
-      </div>
-      <div class="links-item--arrows">
-        <svg
-          width="49"
-          height="49"
-          viewBox="0 0 49 49"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M37.3961 25.1602C38.2546 26.0461 38.2546 27.4835 37.3961 28.3694L26.3406 39.7816C25.4821 40.6675 24.0899 40.6675 23.2314 39.7816C22.3727 38.8952 22.3727 37.4583 23.2314 36.5719L34.2867 25.1602C35.1454 24.2738 36.5374 24.2738 37.3961 25.1602Z"
-            fill="#E2BD9E"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M11.5923 25.2579C12.4543 24.3677 13.8519 24.3677 14.714 25.2579L25.8132 36.7147C26.6752 37.6044 26.6752 39.0472 25.8132 39.9368C24.9512 40.8265 23.5535 40.8265 22.6916 39.9368L11.5923 28.4801C10.7303 27.5904 10.7303 26.1476 11.5923 25.2579Z"
-            fill="#FFFFFF"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M24.6476 10.3119C25.8745 10.3038 26.8627 11.3107 26.8549 12.5614L26.7546 28.6619C26.7468 29.9126 25.7459 30.9325 24.5191 30.9401C23.2921 30.9483 22.3038 29.9408 22.3116 28.6907L22.412 12.5901C22.4198 11.34 23.4207 10.3195 24.6476 10.3119Z"
-            fill="#E2BD9E"
-          />
-          <path
-            d="M24.5 2C36.9263 2 47 12.0734 47 24.4996C47 36.9259 36.9263 46.9998 24.5 46.9998C12.0735 46.9998 2 36.9259 2 24.4996C2 12.0733 12.0735 2 24.5 2Z"
-            fill="black"
-            fill-opacity="0.01"
-            stroke="#E2BD9E"
-            stroke-width="4"
-          />
-        </svg>
-      </div>
-      <div class="links-item--video">
+        <img class="links-item--right" src="~/assets/images/arrow_white.svg" alt="Далее">
+      </a>
+      <button class="links-item--button" @click="$emit('goToNextPage', 'BBmap')">
+        <img src="~/assets/images/arrow_white.svg" alt="Далее">
+      </button>
+      <a href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA" class="links-item--video">
         <p class="links-item--small">
           Веселые и увлекательные видео для детей, подростков и их родителей
         </p>
-      </div>
+      </a>
     </div>
-    <button class="links-down">
-      <svg
-        width="49"
-        height="49"
-        viewBox="0 0 49 49"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M37.3961 25.1602C38.2546 26.0461 38.2546 27.4835 37.3961 28.3694L26.3406 39.7816C25.4821 40.6675 24.0899 40.6675 23.2314 39.7816C22.3727 38.8952 22.3727 37.4583 23.2314 36.5719L34.2867 25.1602C35.1454 24.2738 36.5374 24.2738 37.3961 25.1602Z"
-          fill="#E2BD9E"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M11.5923 25.2579C12.4543 24.3677 13.8519 24.3677 14.714 25.2579L25.8132 36.7147C26.6752 37.6044 26.6752 39.0472 25.8132 39.9368C24.9512 40.8265 23.5535 40.8265 22.6916 39.9368L11.5923 28.4801C10.7303 27.5904 10.7303 26.1476 11.5923 25.2579Z"
-          fill="#FFFFFF"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M24.6476 10.3119C25.8745 10.3038 26.8627 11.3107 26.8549 12.5614L26.7546 28.6619C26.7468 29.9126 25.7459 30.9325 24.5191 30.9401C23.2921 30.9483 22.3038 29.9408 22.3116 28.6907L22.412 12.5901C22.4198 11.34 23.4207 10.3195 24.6476 10.3119Z"
-          fill="#E2BD9E"
-        />
-        <path
-          d="M24.5 2C36.9263 2 47 12.0734 47 24.4996C47 36.9259 36.9263 46.9998 24.5 46.9998C12.0735 46.9998 2 36.9259 2 24.4996C2 12.0733 12.0735 2 24.5 2Z"
-          fill="black"
-          fill-opacity="0.01"
-          stroke="#E2BD9E"
-          stroke-width="4"
-        />
-      </svg>
+    <button class="links-down" @click="$emit('goToNextPage', 'BBmap')">
+      <img src="~/assets/images/arrow_white.svg" alt="Далее">
     </button>
   </section>
 </template>
@@ -174,7 +77,6 @@ export default {
   background-repeat: no-repeat;
   width: 1920px;
   height: 700px;
-  z-index: -3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -377,6 +279,11 @@ export default {
       justify-content: center;
       align-items: flex-end;
       position: relative;
+      text-decoration: none;
+      color: #ffffff;
+      &:visited, &:active {
+        color: #ffffff;
+      }
       @media (max-width: 1023px) {
         text-align: center;
         align-items: center;
@@ -424,11 +331,18 @@ export default {
       }
     }
 
-    &--arrows {
+    &--button {
       grid-area: arrows;
       display: flex;
       justify-content: space-around;
       align-items: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1) translateY(5px);
+        transition: all 0.3s ease-in-out;
+      }
       @media (max-width: 1023px) {
         grid-area: unset;
         display: none;
@@ -441,6 +355,10 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+      text-decoration: none;
+      &:hover p {
+        color: #fae816;
+      }
     }
 
     &--video {
@@ -449,6 +367,11 @@ export default {
       justify-content: center;
       align-items: flex-start;
       position: relative;
+      text-decoration: none;
+      color: #ffffff;
+      &:visited, &:active {
+        color: #ffffff;
+      }
       @media (max-width: 1023px) {
         max-width: 170px;
         align-items: center;
@@ -498,6 +421,10 @@ export default {
     &--right {
       transform: rotate(270deg);
       margin: 0 0 0 15px;
+      &:hover {
+        transform: rotate(270deg) scale(1.1) translateY(5px);
+        transition: all 0.3s ease-in-out;
+      }
       @media (max-width: 1023px) {
         display: none;
         visibility: hidden;
@@ -509,10 +436,13 @@ export default {
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 2;
     padding: 0;
     width: 49px;
     height: 49px;
+    &:hover {
+      transform: rotate(270deg) scale(1.1) translateY(5px);
+      transition: all 0.3s ease-in-out;
+    }
     @media (max-width: 1023px) {
       display: none;
       visibility: hidden;
@@ -535,7 +465,6 @@ export default {
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 2;
     padding: 0;
     width: 49px;
     height: 49px;

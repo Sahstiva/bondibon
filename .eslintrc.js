@@ -19,7 +19,13 @@ module.exports = {
   plugins: [
     'vue',
   ],
-  rules: {},
+  rules: {
+    'max-len': ['error', { code: 120 }],
+    'vue/max-len': ['error', {
+      code: 120,
+      template: 100,
+    }],
+  },
   settings: {
     'import/resolver': {
       nuxt: {

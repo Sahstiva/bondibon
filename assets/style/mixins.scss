@@ -1,0 +1,19 @@
+@mixin font-mobile {
+  font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+@mixin font-desktop {
+  font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+@mixin font-Rotonda {
+  font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}

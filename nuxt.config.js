@@ -40,7 +40,7 @@ export default {
     },
   ],
   modules: [
-    // ['vue-scrollto/nuxt', { container: "body", duration: 500, easing: "ease-in", force: true,
-    //    cancelable: false, offset: 50 }],
+     ['vue-scrollto/nuxt', { container: "body", duration: 500, easing: "ease-in", force: true,
+        cancelable: false, offset: 1 }],
   ],
 };

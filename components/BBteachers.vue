@@ -72,88 +72,23 @@
         социально- коммуника- тивное развитие
       </div>
       <div class="teachers-items--item teachers-items--catalog">
-        Получите&nbsp;<span class="teachers-items--large">каталог <font-awesome-icon
+        Получите&nbsp;<span class="teachers-items--large">каталог </span>
+        <font-awesome-icon
           class="teachers-items--mobile"
           :icon="['fas', 'download']"
-        /></span>
+        />
         <span class="teachers-items--nomobile">рекомендованной продукции</span>
       </div>
 
-      <svg
-        class="teachers-items--download"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="55px"
-        height="56px"
-      >
-        <path
-          fill-rule="evenodd"
-          stroke="rgb(226, 189, 158)"
-          stroke-width="4px"
-          stroke-linecap="butt"
-          stroke-linejoin="miter"
-          fill="rgb(255, 255, 255)"
-          d="M26.505,2.187 C40.036,2.187 51.005,13.156 51.005,26.687 C51.005,40.218 40.036,51.187 26.505,51.187 C12.974,51.187 2.005,40.218 2.005,26.687 C2.005,13.156 12.974,2.187 26.505,2.187 Z"
-        />
-        <path
-          fill-rule="evenodd"
-          fill="rgb(226, 189, 158)"
-          d="M40.376,22.699 C41.231,23.577 41.231,24.999 40.376,25.876 L29.359,37.170 C28.503,38.047 27.116,38.047 26.260,37.170 C25.405,36.293 25.405,34.871 26.260,33.993 L37.277,22.699 C38.133,21.822 39.520,21.822 40.376,22.699 Z"
-        />
-        <path
-          fill-rule="evenodd"
-          fill="rgb(226, 189, 158)"
-          d="M14.661,22.796 C15.520,21.916 16.913,21.916 17.772,22.796 L28.833,34.135 C29.692,35.016 29.692,36.444 28.833,37.324 C27.974,38.205 26.581,38.205 25.722,37.324 L14.661,25.985 C13.802,25.105 13.802,23.677 14.661,22.796 Z"
-        />
-        <path
-          fill-rule="evenodd"
-          fill="rgb(226, 189, 158)"
-          d="M27.672,8.004 C28.894,7.997 29.879,8.993 29.871,10.231 L29.771,26.165 C29.763,27.402 28.766,28.412 27.544,28.420 C26.321,28.428 25.336,27.431 25.343,26.194 L25.444,10.259 C25.452,9.022 26.449,8.012 27.672,8.004 Z"
-        />
-        <path
-          fill-rule="evenodd"
-          fill="rgb(202, 4, 44)"
-          d="M36.996,41.568 C37.003,42.917 36.026,44.005 34.813,43.995 L19.196,43.885 C17.983,43.876 16.994,42.776 16.986,41.427 C16.978,40.078 17.955,38.991 19.168,38.999 L34.785,39.110 C35.998,39.119 36.988,40.219 36.996,41.568 Z"
-        />
-      </svg>
+    <button class="teachers-items--download">
+      <img src="~/assets/images/arrow_download.svg" width="49" height="49" alt="Скачать каталог">
+    </button>
     </div>
     <button
-      class="teachers-mobile--download"
+      class="teachers-mobile--button"
       @click="$emit('goToNextPage', 'BBlinks')"
     >
-      <svg
-        width="49"
-        height="49"
-        viewBox="0 0 49 49"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M37.3961 25.1602C38.2546 26.0461 38.2546 27.4835 37.3961 28.3694L26.3406 39.7816C25.4821 40.6675 24.0899 40.6675 23.2314 39.7816C22.3727 38.8952 22.3727 37.4583 23.2314 36.5719L34.2867 25.1602C35.1454 24.2738 36.5374 24.2738 37.3961 25.1602Z"
-          fill="#E2BD9E"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M11.5923 25.2579C12.4543 24.3677 13.8519 24.3677 14.714 25.2579L25.8132 36.7147C26.6752 37.6044 26.6752 39.0472 25.8132 39.9368C24.9512 40.8265 23.5535 40.8265 22.6916 39.9368L11.5923 28.4801C10.7303 27.5904 10.7303 26.1476 11.5923 25.2579Z"
-          fill="#CA042C"
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M24.6476 10.3119C25.8745 10.3038 26.8627 11.3107 26.8549 12.5614L26.7546 28.6619C26.7468 29.9126 25.7459 30.9325 24.5191 30.9401C23.2921 30.9483 22.3038 29.9408 22.3116 28.6907L22.412 12.5901C22.4198 11.34 23.4207 10.3195 24.6476 10.3119Z"
-          fill="#E2BD9E"
-        />
-        <path
-          d="M24.5 2C36.9263 2 47 12.0734 47 24.4996C47 36.9259 36.9263 46.9998 24.5 46.9998C12.0735 46.9998 2 36.9259 2 24.4996C2 12.0733 12.0735 2 24.5 2Z"
-          fill="black"
-          fill-opacity="0.01"
-          stroke="#E2BD9E"
-          stroke-width="4"
-        />
-      </svg>
+      <img src="~/assets/images/arrow_down.svg" alt="Далее">
     </button>
   </section>
 </template>
@@ -165,13 +100,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/style/style.scss";
 .teachers {
   background-image: url('~assets/images/background_teachers.png');
   background-position: center top;
   background-repeat: no-repeat;
   width: 1920px;
   height: 700px;
-  z-index: -3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,7 +123,7 @@ export default {
     height: 801px;
   }
   &-mobile {
-    &--download {
+    &--button {
       display: none;
       visibility: hidden;
       @media (max-width: 1023px) {
@@ -198,7 +133,7 @@ export default {
         border: none;
         cursor: pointer;
         padding: 0;
-        margin: 25px 0 0 0;
+        margin: 10px 0 0 0;
         width: 49px;
         height: 49px;
       }
@@ -207,7 +142,7 @@ export default {
   &-usefull {
     margin: 200px 25vw 0 0;
     @media (max-width: 1023px) {
-      margin: 420px 0 10px 0;
+      margin: 410px 0 0 0;
     }
     &--arrow {
       @media (max-width: 1023px) {
@@ -216,28 +151,29 @@ export default {
       }
     }
     &--text {
-      font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
-      font-weight: bold;
-      font-size: 30px;
-      text-transform: uppercase;
+      @include font-Rotonda;
+      font-size: 35px;
       text-align: left;
       color: #d2beae;
       max-width: 300px;
       margin: 0;
       @media (max-width: 1023px) {
         text-align: center;
-        font-size: 25px;
+        font-size: 30px;
       }
     }
     &--button {
       background: transparent;
       border: none;
       cursor: pointer;
-      z-index: 2;
       padding: 0;
       width: 49px;
       height: 49px;
       margin: 70px 0 70px 0;
+      &:hover {
+        transform: scale(1.1) translateY(5px);
+        transition: all 0.3s ease-in-out;
+      }
       @media (max-width: 1023px) {
         display: none;
         visibility: hidden;
@@ -266,16 +202,12 @@ export default {
       justify-content: center;
       flex-direction: column;
       color: #ffffff;
-      font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
-      font-weight: bold;
-      font-size: 15px;
-      text-transform: uppercase;
-      text-align: center;
+      @include font-desktop;
       @media (max-width: 1023px) {
         width: 100%;
         height: 40px;
         border-radius: 20px;
-        font-weight: normal;
+        @include font-mobile;
         flex-direction: row;
       }
     }
@@ -283,6 +215,16 @@ export default {
       font-size: 25px;
       @media (max-width: 1023px) {
         font-size: 15px;
+      }
+    }
+    &--mobile {
+      display: none;
+      visibility: hidden;
+      @media (max-width: 1023px) {
+        font-size: 15px;
+        display: inline;
+        visibility: visible;
+        margin: 0 0 3px 10px;
       }
     }
     &--nomobile {
@@ -310,6 +252,14 @@ export default {
       position: absolute;
       bottom: 140px;
       right: 0;
+      width: 49px;
+      height: 49px;
+      background: transparent;
+      border: none;
+      &:hover {
+        transform: scale(1.1) translateY(5px);
+        transition: all 0.3s ease-in-out;
+      }
       @media (max-width: 1023px) {
         display: none;
       }
