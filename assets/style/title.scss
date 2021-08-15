@@ -45,18 +45,27 @@
       }
     }
 
-    &--img {
-      fill: #ffffff;
-      max-width: 38px;
-      max-height: 39px;
+    &--basket {
       transform: rotate(180deg);
+      width: 44px;
+      height: 45px;
+    }
+    &--cake {
+      transform: rotate(180deg);
+      width: 52px;
+      height: 50px;
+    }
+    &--medal {
+      transform: rotate(180deg);
+      width: 47px;
+      height: 54px;
     }
 
     &--textbox {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      margin: 0 0 0 15px;
+      margin: 0 0 0 10px;
     }
 
     &--text, &--litera {

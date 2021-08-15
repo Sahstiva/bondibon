@@ -47,4 +47,3 @@ export default {
   name: 'BBevamoda',
 };
 </script>
-

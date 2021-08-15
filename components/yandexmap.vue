@@ -23,6 +23,15 @@
 <script>
 export default {
   name: 'Yandexmap',
+  data: () => ({
+    zoom: 2,
+    searchControlProvider: 'yandex#search',
+    bounds: [[55.556730, 37.332852], [55.923726, 37.860701]],
+    shops: [],
+  }),
+  mounted() {
+    this.getAddresses();
+  },
   methods: {
     balloonTemplate(name, address, coords) {
       return `
@@ -32,26 +41,17 @@ export default {
             href="https://yandex.ru/maps/?rtext=~${coords}&rtt=auto">
             Построить маршрут в Яндекс.Картах
         </a>
-      `
+      `;
     },
     async getAddresses() {
       this.$axios.$get('/data/address.json')
-        .then(res => {
+        .then((res) => {
           this.shops = [...res.shops];
         })
-        .catch(err => {
-          console.log(err);
-        })
-    }
-  },
-  data: () => ({
-    zoom: 2,
-    searchControlProvider: 'yandex#search',
-    bounds: [[55.556730, 37.332852], [55.923726, 37.860701]],
-    shops: []
-  }),
-  mounted() {
-    this.getAddresses();
+        .catch((err) => {
+          console.error(err);
+        });
+    },
   },
 };
 </script>

@@ -56,7 +56,8 @@
           /></a>
         </div>
         <div class="header-social--wrapper">
-          <a class="header-social--icon" href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA">
+          <a class="header-social--icon"
+             href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA">
           <font-awesome-icon
             :icon="['fab', 'youtube']"
           /></a>

@@ -8,7 +8,6 @@ module.exports = {
     'eslint:recommended',
     'airbnb-base',
     'plugin:vue/essential',
-    'plugin:vue/vue3-recommended',
     'plugin:nuxt/recommended',
   ],
   parser: 'vue-eslint-parser',
@@ -24,6 +23,9 @@ module.exports = {
     'vue/max-len': ['error', {
       code: 120,
       template: 100,
+    }],
+    'vue/no-parsing-error': ['error', {
+      'invalid-first-character-of-tag-name': false,
     }],
   },
   settings: {

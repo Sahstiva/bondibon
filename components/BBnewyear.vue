@@ -129,4 +129,3 @@ export default {
   name: 'BBnewyear',
 };
 </script>
-

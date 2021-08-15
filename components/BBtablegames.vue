@@ -14,8 +14,8 @@
       </div>
     </div>
     <div class="tablegames-items">
-      <div class="tablegames-items--item tablegames-items--antistress">
-        игрушки-антистресс<span class="tablegames-items--nomobile">сквиши, тянучки, пружинки, мякиши и лизуны</span>
+      <div class="tablegames-items--item tablegames-items--antistress">игрушки-антистресс
+        <span class="tablegames-items--nomobile">сквиши, тянучки, пружинки, мякиши и лизуны</span>
       </div>
       <div class="tablegames-items--item tablegames-items--transport">
         транспорт<span class="tablegames-items--nomobile">машинки, треки, железные дороги</span>
@@ -44,4 +44,3 @@ export default {
   name: 'BBtablegames',
 };
 </script>
-

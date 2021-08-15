@@ -60,7 +60,15 @@
       </swiper>
     </div>
     <div class="slider-button--wrapper">
-      <p class="slider-button--text">{{ slidesText[currentSlide <= slidesText.length ? currentSlide - 1 : currentSlide % slidesText.length - 1] }}</p>
+      <p class="slider-button--text">
+        {{
+          slidesText[
+              currentSlide <= slidesText.length
+                  ? currentSlide - 1
+                  : currentSlide % slidesText.length - 1
+              ]
+        }}
+      </p>
       <button
         class="slider-button slider-button--right"
         @click="goNext"
@@ -95,7 +103,7 @@ export default {
     };
   },
   mounted() {
-    this.$refs.swiperMain.$swiper.on('slideChange',() => {
+    this.$refs.swiperMain.$swiper.on('slideChange', () => {
       this.currentSlide = this.$refs.swiperMain.$swiper.activeIndex;
     });
   },

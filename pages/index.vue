@@ -64,9 +64,9 @@ export default {
   },
   methods: {
     nextPage(page) {
-      const el = document.querySelector('#' + page);
+      const el = document.querySelector(`#${page}`);
       VueScrollTo.scrollTo(el);
-    }
+    },
   },
   // handleScroll: function (evt, el) {
   // console.log('scrolling', el.className);
