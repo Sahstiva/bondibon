@@ -1,19 +1,33 @@
 <template>
-  <div class="site_wrapper">
-    <BBheader @goToNextPage="nextPage($event)"/>
-    <BBtitle @goToNextPage="nextPage($event)"/>
-    <BBslider id="BBslider" @goToNextPage="nextPage($event)"/>
-    <BBknow id="BBknow" @goToNextPage="nextPage($event)"/>
-    <BBmicroscope id="BBmicroscope" @goToNextPage="nextPage($event)"/>
-    <BBmosaic id="BBmosaic" @goToNextPage="nextPage($event)"/>
-    <BBconstructor id="BBconstructor" @goToNextPage="nextPage($event)"/>
-    <BBevamoda id="BBevamoda" @goToNextPage="nextPage($event)"/>
-    <BBtablegames id="BBtablegames" @goToNextPage="nextPage($event)"/>
-    <BBgift id="BBgift" @goToNextPage="nextPage($event)"/>
-    <BBnewyear id="BBnewyear" @goToNextPage="nextPage($event)"/>
-    <BBteachers id="BBteachers" @goToNextPage="nextPage($event)"/>
-    <BBlinks id="BBlinks" @goToNextPage="nextPage($event)"/>
-    <BBmap id="BBmap" @goToNextPage="nextPage($event)"/>
+  <div class="site-wrapper">
+    <h1 class="visually-hidden">Игрушки, развивающие и развлекательные игры - BONDIBON</h1>
+    <LazyBBheader @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">5000 наименований игр и игрушек</h2>
+    <LazyBBtitle @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Полезные игры</h2>
+    <LazyBBslider id="BBslider" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Знания - сила!</h2>
+    <LazyBBknow id="BBknow" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Хочу всё знать</h2>
+    <LazyBBmicroscope id="BBmicroscope" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Интеллект на кончиках пальцев</h2>
+    <LazyBBmosaic id="BBmosaic" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Мысли конструктивно</h2>
+    <LazyBBconstructor id="BBconstructor" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Красота спасёт мир!</h2>
+    <LazyBBevamoda id="BBevamoda" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Делу время - потехе час</h2>
+    <LazyBBtablegames id="BBtablegames" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Подарки своими руками</h2>
+    <LazyBBgift id="BBgift" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Новый год к нам мчится</h2>
+    <LazyBBnewyear id="BBnewyear" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Полезно педагогам</h2>
+    <LazyBBteachers id="BBteachers" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Подписывайтесь на наш инстаграм, смотрите видео на канале</h2>
+    <LazyBBlinks id="BBlinks" @goToNextPage="nextPage($event)"/>
+    <h2 class="visually-hidden">Где купить</h2>
+    <LazyBBmap id="BBmap" @goToNextPage="nextPage($event)"/>
   </div>
 </template>
 

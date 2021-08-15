@@ -6,6 +6,8 @@ const settings = {
   lang: 'ru_RU',
   coordorder: 'latlong',
   version: '2.1',
+  center: [55.76, 37.64],
+  zoom: 10,
 };
 
 Vue.use(YmapPlugin, settings);

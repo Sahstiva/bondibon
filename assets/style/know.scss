@@ -27,18 +27,18 @@
       flex-direction: column;
       max-width: 375px;
     }
-    &--title, &--subtitle {
+    &__title, &__subtitle {
       @include font-Rotonda;
       color: #ffffff;
       margin: 0 25px 0 25px;
     }
-    &--title {
+    &__title {
       font-size: 45px;
       @media (max-width: 1023px) {
         font-size: 25px;
       }
     }
-    &--subtitle {
+    &__subtitle {
       font-size: 17px;
       width: 350px;
       @media (max-width: 1023px) {
@@ -73,7 +73,7 @@
       justify-content: center;
     }
 
-    &--text {
+    &__text {
       color: #ffffff;
       @include font-desktop;
       max-width: 200px;
@@ -84,7 +84,7 @@
         @include font-mobile;
       }
     }
-    &--img {
+    &__img {
       @media (max-width: 1023px) {
         display: none;
         visibility: hidden;
@@ -103,7 +103,7 @@
       transition: all 0.3s ease-in-out;
     }
 
-    &--wrapper {
+    &__wrapper {
       margin: 0 200px 0 0;
       @media (max-width: 1023px) {
         margin: 10px 0 0 0;

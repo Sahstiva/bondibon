@@ -20,7 +20,7 @@
     height: 801px;
   }
   &-mobile {
-    &--button {
+    &__button {
       display: none;
       visibility: hidden;
       @media (max-width: 1023px) {
@@ -41,13 +41,13 @@
     @media (max-width: 1023px) {
       margin: 410px 0 0 0;
     }
-    &--arrow {
+    &__arrow {
       @media (max-width: 1023px) {
         display: none;
         visibility: hidden;
       }
     }
-    &--text {
+    &__text {
       @include font-Rotonda;
       font-size: 35px;
       text-align: left;
@@ -59,7 +59,7 @@
         font-size: 30px;
       }
     }
-    &--button {
+    &__button {
       background: transparent;
       border: none;
       cursor: pointer;
@@ -89,7 +89,7 @@
       width: 90%;
       max-width: 375px;
     }
-    &--item {
+    &__item {
       border-radius: 50%;
       box-shadow: 6.709px 4.357px 0 0 rgba(0, 0, 0, 0.09);
       width: 170px;
@@ -108,13 +108,13 @@
         flex-direction: row;
       }
     }
-    &--large {
+    &__large {
       font-size: 25px;
       @media (max-width: 1023px) {
         font-size: 15px;
       }
     }
-    &--mobile {
+    &__mobile {
       display: none;
       visibility: hidden;
       @media (max-width: 1023px) {
@@ -124,28 +124,28 @@
         margin: 0 0 3px 10px;
       }
     }
-    &--nomobile {
+    &__nomobile {
       @media (max-width: 1023px) {
         display: none;
         visibility: hidden;
       }
     }
-    &--speech {
+    &__speech {
       background-color: #39aacd;
     }
-    &--discovery {
+    &__discovery {
       background-color: #36b1c2;
     }
-    &--art {
+    &__art {
       background-color: #32b0a6;
     }
-    &--social {
+    &__social {
       background-color: #2fa790;
     }
-    &--catalog {
+    &__catalog {
       background-color: #be0000;
     }
-    &--download {
+    &__download {
       position: absolute;
       bottom: 140px;
       right: 0;

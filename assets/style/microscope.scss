@@ -20,7 +20,7 @@
     height: 796px;
   }
   &-mobile {
-    &--button {
+    &__button {
       display: none;
       visibility: hidden;
       @media (max-width: 1023px) {
@@ -46,13 +46,13 @@
       margin: 350px 0 0 0;
       justify-content: center;
     }
-    &--wrapper {
+    &__wrapper {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
     }
 
-    &--text {
+    &__text {
       @include font-desktop;
       font-size: 35px;
       text-align: right;
@@ -66,7 +66,7 @@
       }
     }
 
-    &--button {
+    &__button {
       background: transparent;
       border: none;
       cursor: pointer;
@@ -97,7 +97,7 @@
       max-width: 375px;
     }
 
-    &--item {
+    &__item {
       border-radius: 50%;
       box-shadow: 6.709px 4.357px 0 0 rgba(0, 0, 0, 0.09);
       width: 170px;
@@ -117,7 +117,7 @@
       }
     }
 
-    &--nomobile {
+    &__nomobile {
       font-size: 12px;
       margin: 5px 0 0 0;
       @media (max-width: 1023px) {
@@ -126,23 +126,23 @@
       }
     }
 
-    &--microscope {
+    &__microscope {
       background-color: rgb(57, 170, 205);
     }
 
-    &--science {
+    &__science {
       background-color: rgb(54, 177, 194);
     }
 
-    &--digger {
+    &__digger {
       background-color: rgb(50, 176, 166);
     }
 
-    &--entertainment {
+    &__entertainment {
       background-color: rgb(47, 167, 144);
     }
 
-    &--magic {
+    &__magic {
       background-color: rgb(42, 156, 102);
     }
   }

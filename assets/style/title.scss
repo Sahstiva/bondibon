@@ -32,7 +32,7 @@
       max-width: 375px;
     }
 
-    &--item {
+    &__item {
       width: 218px;
       height: 71px;
       border-radius: 35px;
@@ -45,30 +45,30 @@
       }
     }
 
-    &--basket {
+    &__basket {
       transform: rotate(180deg);
       width: 44px;
       height: 45px;
     }
-    &--cake {
+    &__cake {
       transform: rotate(180deg);
       width: 52px;
       height: 50px;
     }
-    &--medal {
+    &__medal {
       transform: rotate(180deg);
       width: 47px;
       height: 54px;
     }
 
-    &--textbox {
+    &__textbox {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       margin: 0 0 0 10px;
     }
 
-    &--text, &--litera {
+    &__text, &__litera {
       color: #ffffff;
       font-family: 'RotondaC', 'Arial Rounded MT Bold', sans-serif;
       font-weight: bold;
@@ -76,23 +76,23 @@
       margin: 0;
     }
 
-    &--text {
+    &__text {
       font-size: 13px;
     }
 
-    &--litera {
+    &__litera {
       font-size: 25px;
     }
 
-    &--orange {
+    &__orange {
       background: linear-gradient(90deg, rgba(252, 118, 24, 1) 0%, rgba(254, 175, 34, 1) 100%);
     }
 
-    &--cyan {
+    &__cyan {
       background: linear-gradient(90deg, rgba(0, 193, 196, 1) 0%, rgba(81, 189, 190, 1) 100%);
     }
 
-    &--magenta {
+    &__magenta {
       background: linear-gradient(90deg, rgba(146, 53, 224, 1) 0%, rgba(152, 91, 234, 1) 100%);
     }
   }
@@ -105,7 +105,7 @@
     @media (max-width: 1023px) {
       width: 100%;
     }
-    &--wrapper {
+    &__wrapper {
       width: 489px;
       height: 49px;
       background-color: #d2beae;
@@ -119,7 +119,7 @@
         height: 41px;
       }
     }
-    &--text {
+    &__text {
       font-size: 23px;
       font-family: Manrope-Regular, Arial, sans-serif;
       color: #ffffff;
@@ -130,7 +130,7 @@
         font-size: 18px;
       }
     }
-    &--button {
+    &__button {
       margin: 15px 180px 0 0;
       cursor: pointer;
       background: transparent;

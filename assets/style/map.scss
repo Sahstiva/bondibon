@@ -38,3 +38,11 @@
     }
   }
 }
+.ymap-container {
+  height: 450px;
+  z-index: 1;
+  @media (max-width: 1023px) {
+    width: 335px;
+    height: 685px;
+  }
+}

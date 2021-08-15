@@ -1,43 +1,43 @@
 <template>
   <section class="evamoda">
     <div class="evamoda-beauty">
-      <div class="evamoda-beauty--wrapper">
-        <p class="evamoda-beauty--text">
+      <div class="evamoda-beauty__wrapper">
+        <p class="evamoda-beauty__text">
           красота<br>спасёт мир!
         </p>
-        <p class="evamoda-beauty--text evamoda-beauty--nomobile">
+        <p class="evamoda-beauty__text evamoda-beauty__nomobile">
           косметика детская, наборы для создания украшений, сумочки и аксессуары
         </p>
           <button
-              class="evamoda-beauty--button"
+              class="evamoda-beauty__button"
               @click="$emit('goToNextPage', 'BBtablegames')"
           >
-            <img src="~/assets/images/arrow_down.svg" alt="Далее">
+            <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
           </button>
       </div>
     </div>
     <div class="evamoda-items">
-      <div class="evamoda-items--item evamoda-items--evamoda">
+      <div class="evamoda-items__item evamoda-items__evamoda">
         eva moda косметика детская
       </div>
-      <div class="evamoda-items--item evamoda-items--bodyart">
+      <div class="evamoda-items__item evamoda-items__bodyart">
         боди-арт, переводные татуировки,<br>дизайн ногтей
       </div>
-      <div class="evamoda-items--item evamoda-items--accesoires">
+      <div class="evamoda-items__item evamoda-items__accesoires">
         наборы для создания украшений и аксессуаров
       </div>
-      <div class="evamoda-items--item evamoda-items--umbrella">
+      <div class="evamoda-items__item evamoda-items__umbrella">
         десткие зонтики и сумочки
       </div>
-      <div class="evamoda-items--item evamoda-items--bags">
+      <div class="evamoda-items__item evamoda-items__bags">
         сумки для раскрашивания
       </div>
     </div>
     <button
-        class="evamoda-mobile--button"
+        class="evamoda-mobile__button"
         @click="$emit('goToNextPage', 'BBtablegames')"
     >
-      <img src="~/assets/images/arrow_down.svg" alt="Далее">
+      <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
     </button>
   </section>
 </template>

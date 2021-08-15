@@ -5,7 +5,7 @@ export default {
     vendor: ['vue-yandex-maps'],
   },
   router: {
-    base: '/promo/',
+    base: '/',
   },
   head: {
     title: 'BONDIBON',

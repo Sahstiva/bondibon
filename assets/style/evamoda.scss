@@ -20,7 +20,7 @@
     height: 800px;
   }
   &-mobile {
-    &--button {
+    &__button {
       display: none;
       visibility: hidden;
       @media (max-width: 1023px) {
@@ -46,13 +46,13 @@
       margin: 350px 0 0 0;
       justify-content: center;
     }
-    &--wrapper {
+    &__wrapper {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
     }
 
-    &--text {
+    &__text {
       @include font-desktop;
       font-size: 35px;
       text-align: right;
@@ -65,7 +65,7 @@
         margin-bottom: 10px;
       }
     }
-    &--nomobile {
+    &__nomobile {
       font-size: 17px;
       @media (max-width: 1023px) {
         display: none;
@@ -73,7 +73,7 @@
       }
     }
 
-    &--button {
+    &__button {
       background: transparent;
       border: none;
       cursor: pointer;
@@ -104,7 +104,7 @@
       max-width: 375px;
     }
 
-    &--item {
+    &__item {
       border-radius: 50%;
       box-shadow: 6.709px 4.357px 0 0 rgba(0, 0, 0, 0.09);
       width: 170px;
@@ -124,7 +124,7 @@
       }
     }
 
-    &--nomobile {
+    &__nomobile {
       font-size: 12px;
       margin: 5px 0 0 0;
       @media (max-width: 1023px) {
@@ -132,19 +132,19 @@
         visibility: hidden;
       }
     }
-    &--evamoda {
+    &__evamoda {
       background-color: #923a6c;
     }
-    &--bodyart {
+    &__bodyart {
       background-color: #b06ec8;
     }
-    &--accesoires {
+    &__accesoires {
       background-color: #f9aad3;
     }
-    &--umbrella {
+    &__umbrella {
       background-color: #faaca8;
     }
-    &--bags {
+    &__bags {
       background-color: #f76e67;
     }
   }

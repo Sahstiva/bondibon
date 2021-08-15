@@ -1,65 +1,74 @@
 <template>
   <section class="links">
     <div class="links-wrapper">
-      <div class="links-item--opinion">
+      <div class="links-item__opinion">
         интересует мнение<br>профессионалов?
       </div>
-      <a href="https://www.instagram.com/bondibon_games/" class="links-item--instagram">
-        <div class="links-item--wrapper">
+      <a href="https://www.instagram.com/bondibon_games/" class="links-item__instagram">
+        <div class="links-item__wrapper">
           <img
+              width="92"
+              height="92"
             src="~/assets/images/links_instagram.jpg"
             alt="Подписывайтесь на наш инстаграм!"
           >
         </div>
       </a>
-      <div class="links-item--come">
+      <div class="links-item__come">
         заходите на наш<br>youtube канал
       </div>
-      <div class="links-item--feedback">
+      <div class="links-item__feedback">
         cмотрите отзывы практикующих педагогов
       </div>
-      <div class="links-item--youtube">
-        <div class="links-item--wrapper">
+      <div class="links-item__youtube">
+        <div class="links-item__wrapper">
           <img
+              width="89"
+              height="63"
             src="~/assets/images/links_youtube.png"
             alt="Cмотрите отзывы практикующих педагогов"
           >
         </div>
       </div>
-      <a href="https://www.instagram.com/bondibon_games/" class="links-item--subscribe">
+      <a href="https://www.instagram.com/bondibon_games/" class="links-item__subscribe">
         <p>подписывайтесь на наш инстаграм!</p>
       </a>
-      <div class="links-item--learn">
+      <div class="links-item__learn">
         <p>Узнавайте первыми о новинках, акциях и розыгрышах призов от бренда</p>
       </div>
-      <a href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA" class="links-item--bgames">
-        <div class="links-item--wrapper">
-          <div class="links-item--redcircle">
+      <a href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA" class="links-item__bgames">
+        <div class="links-item__wrapper">
+          <div class="links-item__redcircle">
             <img
-              class="links-item--img"
+                width="120"
+                height="41"
+              class="links-item__img"
               src="~/assets/images/links_bondibongames.png"
               alt="Заходите на наш youtube канал"
             >
           </div>
         </div>
       </a>
-      <a href="https://gratwest.ru" class="links-item--wholesale">
-        <p class="links-item--text">
+      <a href="https://gratwest.ru" class="links-item__wholesale">
+        <p class="links-item__text">
           оптовые закупки
         </p>
-        <img class="links-item--right" src="~/assets/images/arrow_white.svg" alt="Далее">
+        <img
+            class="links-item__right"
+            src="~/assets/images/arrow_white.svg"
+            width="49"  height="49" alt="Далее">
       </a>
-      <button class="links-item--button" @click="$emit('goToNextPage', 'BBmap')">
-        <img src="~/assets/images/arrow_white.svg" alt="Далее">
+      <button class="links-item__button" @click="$emit('goToNextPage', 'BBmap')">
+        <img src="~/assets/images/arrow_white.svg" width="49"  height="49" alt="Далее">
       </button>
-      <a href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA" class="links-item--video">
-        <p class="links-item--small">
+      <a href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA" class="links-item__video">
+        <p class="links-item__small">
           Веселые и увлекательные видео для детей, подростков и их родителей
         </p>
       </a>
     </div>
     <button class="links-down" @click="$emit('goToNextPage', 'BBmap')">
-      <img src="~/assets/images/arrow_white.svg" alt="Далее">
+      <img src="~/assets/images/arrow_white.svg" width="49"  height="49" alt="Далее">
     </button>
   </section>
 </template>

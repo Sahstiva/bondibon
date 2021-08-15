@@ -21,6 +21,8 @@
             >
             <img
               src="~/assets/images/slider_cup.png"
+              width="678"
+              height="575"
               alt="Подарки своими руками"
             >
           </picture>
@@ -37,6 +39,8 @@
             >
             <img
               src="~/assets/images/slider_cup.png"
+              width="678"
+              height="575"
               alt="Новогодние игры"
             >
           </picture>
@@ -53,14 +57,16 @@
             >
             <img
               src="~/assets/images/slider_cup.png"
+              width="678"
+              height="575"
               alt="Креативные наборы"
             >
           </picture>
         </swiper-slide>
       </swiper>
     </div>
-    <div class="gift-button--wrapper">
-      <p class="gift-button--text">
+    <div class="gift-button__wrapper">
+      <p class="gift-button__text">
         {{
           slidesText[
               currentSlide <= slidesText.length
@@ -70,10 +76,10 @@
         }}
       </p>
       <button
-        class="gift-button gift-button--right"
+        class="gift-button gift-button__right"
         @click="goNext"
       >
-        <img src="~/assets/images/arrow_down.svg" alt="Следующий слайд">
+        <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Следующий слайд">
       </button>
     </div>
   </section>

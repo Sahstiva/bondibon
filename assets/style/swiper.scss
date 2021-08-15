@@ -9,7 +9,7 @@
 }
 
 :root {
-  --swiper-theme-color: #{$themeColor};
+  __swiper-theme-color: #{$themeColor};
 }
 .swiper-container {
   margin-left: auto;

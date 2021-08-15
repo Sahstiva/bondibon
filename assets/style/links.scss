@@ -84,14 +84,14 @@
     justify-content: center;
     align-items: center;
 
-    &--img {
+    &__img {
       @media (max-width: 1023px) {
         width: 100px;
         height: 34px;
       }
     }
 
-    &--wrapper {
+    &__wrapper {
       width: 173px;
       height: 173px;
       border-radius: 50%;
@@ -106,7 +106,7 @@
       }
     }
 
-    &--redcircle {
+    &__redcircle {
       width: 138px;
       height: 138px;
       border-radius: 50%;
@@ -120,7 +120,7 @@
       }
     }
 
-    &--opinion {
+    &__opinion {
       grid-area: opinion;
       font-size: 25px;
       text-align: right;
@@ -134,7 +134,7 @@
       }
     }
 
-    &--instagram {
+    &__instagram {
       grid-area: instagram;
       display: flex;
       justify-content: center;
@@ -145,7 +145,7 @@
       }
     }
 
-    &--come {
+    &__come {
       grid-area: come;
       font-size: 25px;
       display: flex;
@@ -156,7 +156,7 @@
       }
     }
 
-    &--feedback {
+    &__feedback {
       grid-area: feedback;
       text-align: right;
       display: flex;
@@ -170,7 +170,7 @@
       }
     }
 
-    &--youtube {
+    &__youtube {
       grid-area: youtube;
       font-size: 15px;
       position: relative;
@@ -199,7 +199,7 @@
       }
     }
 
-    &--subscribe {
+    &__subscribe {
       grid-area: subscribe;
       font-size: 25px;
       display: flex;
@@ -233,7 +233,7 @@
       }
     }
 
-    &--learn {
+    &__learn {
       grid-area: learn;
       display: flex;
       justify-content: center;
@@ -248,7 +248,7 @@
       }
     }
 
-    &--bgames {
+    &__bgames {
       grid-area: bgames;
       display: flex;
       justify-content: center;
@@ -258,7 +258,7 @@
       }
     }
 
-    &--button {
+    &__button {
       grid-area: arrows;
       display: flex;
       justify-content: space-around;
@@ -277,7 +277,7 @@
       }
     }
 
-    &--wholesale {
+    &__wholesale {
       grid-area: wholesale;
       display: flex;
       justify-content: center;
@@ -288,7 +288,7 @@
       }
     }
 
-    &--video {
+    &__video {
       grid-area: video;
       display: flex;
       justify-content: center;
@@ -320,7 +320,7 @@
       }
     }
 
-    &--small {
+    &__small {
       font-size: 20px;
       text-align: left;
       margin: 10px 0 0 0;
@@ -330,7 +330,7 @@
       }
     }
 
-    &--text {
+    &__text {
       font-size: 20px;
       font-family: Manrope-Regular, Arial, sans-serif;
       color: #ffffff;
@@ -345,7 +345,7 @@
       border-radius: 24px;
     }
 
-    &--right {
+    &__right {
       transform: rotate(270deg);
       margin: 0 0 0 15px;
       &:hover {
@@ -375,11 +375,11 @@
       visibility: hidden;
     }
 
-    &--right {
+    &__right {
       transform: rotate(270deg);
     }
 
-    &--wrapper {
+    &__wrapper {
       display: flex;
       flex-direction: row;
       width: 170px;

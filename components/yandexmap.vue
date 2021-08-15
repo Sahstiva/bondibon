@@ -1,7 +1,7 @@
 <template>
   <yandex-map
       :coords="[55.750318, 37.620078]"
-      :show-all-markers="true"
+        :show-all-markers="true"
   >
     <ymap-marker
         v-for="shop in shops"
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Yandexmap',
   data: () => ({
@@ -29,7 +30,7 @@ export default {
     bounds: [[55.556730, 37.332852], [55.923726, 37.860701]],
     shops: [],
   }),
-  mounted() {
+  created() {
     this.getAddresses();
   },
   methods: {
@@ -38,27 +39,16 @@ export default {
         <h2>${name}</h2>
         <p>${address}</p>
         <a  target=_blank
+            rel="noreferrer"
             href="https://yandex.ru/maps/?rtext=~${coords}&rtt=auto">
             Построить маршрут в Яндекс.Картах
         </a>
       `;
     },
-    async getAddresses() {
-      this.$axios.$get('/data/address.json')
-        .then((res) => {
-          this.shops = [...res.shops];
-        })
-        .catch((err) => {
-          console.error(err);
-        });
+    getAddresses() {
+      const data = require('static/data/address.json');
+      this.shops = [...data.shops];
     },
   },
 };
 </script>
-
-<style scoped>
-.ymap-container {
-  height: 100%;
-  z-index: 1;
-}
-</style>

@@ -20,6 +20,8 @@
               media="(max-width: 1023px)"
             >
             <img
+                width="678"
+                height="575"
               src="~/assets/images/slider_tablegames.png"
               alt="Настольные игры"
             >
@@ -36,6 +38,8 @@
               media="(max-width: 1023px)"
             >
             <img
+                width="678"
+                height="575"
               src="~/assets/images/slider_mosaic.png"
               alt="Пазлы и мозаики"
             >
@@ -52,6 +56,8 @@
               media="(max-width: 1023px)"
             >
             <img
+                width="678"
+                height="575"
               src="~/assets/images/slider_roadgames.png"
               alt="Игры в дорогу"
             >
@@ -59,8 +65,8 @@
         </swiper-slide>
       </swiper>
     </div>
-    <div class="slider-button--wrapper">
-      <p class="slider-button--text">
+    <div class="slider-button__wrapper">
+      <p class="slider-button__text">
         {{
           slidesText[
               currentSlide <= slidesText.length
@@ -70,10 +76,10 @@
         }}
       </p>
       <button
-        class="slider-button slider-button--right"
+        class="slider-button slider-button__right"
         @click="goNext"
       >
-        <img src="~/assets/images/arrow_down.svg" alt="Следующий слайд">
+        <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Следующий слайд">
       </button>
     </div>
   </section>
