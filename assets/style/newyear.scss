@@ -98,6 +98,10 @@
         width: 152.5px;
         height: 150px;
       }
+      @media (max-width: 374px) {
+        width: 130px;
+        height: 129px;
+      }
     }
   }
   &-button {

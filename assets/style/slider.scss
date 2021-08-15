@@ -25,6 +25,12 @@
     flex-direction: column;
     align-items: center;
   }
+  &-image {
+    @media (max-width: 374px) {
+      width: 320px;
+      height: 370px;
+    }
+  }
   &-wrapper {
     width: 678px;
     margin: 115px 400px 0 0;

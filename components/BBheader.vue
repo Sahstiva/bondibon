@@ -5,13 +5,18 @@
     <div class="header-wrapper">
       <section class="header-address">
         <a href="https://bondibon.ru">
-        <img
-          src="~/assets/images/logo_bondibon.png"
-          width="131"
-          height="36"
-          alt="Бондибон -официальный сайт"
-          class="header-address__logo"
-        ></a>
+          <picture class="header-address__logo">
+            <source
+                srcset="~/assets/images/logo_bondibon.png"
+                media="(min-width: 375px)">
+            <source
+                srcset="~/assets/mobile/logo_bondibon_se.png"
+                media="(max-width: 374px)">
+            <img
+              src="~/assets/images/logo_bondibon.png"
+              alt="Бондибон -официальный сайт"
+            >
+          </picture></a>
         <a
           class="header-address__link"
           href="mailto:info@bondibon.ru"

@@ -10,55 +10,60 @@
         :options="swiperOption"
       >
         <swiper-slide>
-          <picture>
+          <picture class="slider-img">
             <source
               srcset="~/assets/images/slider_tablegames.png"
               media="(min-width: 1024px)"
             >
             <source
+                srcset="~/assets/mobile/slider_tablegames_se.png"
+                media="(max-width: 374px)"
+            >            <source
               srcset="~/assets/mobile/slider_tablegames_mobile.png"
               media="(max-width: 1023px)"
             >
             <img
-                width="678"
-                height="575"
-              src="~/assets/images/slider_tablegames.png"
+              srcset="~/assets/images/slider_tablegames.png"
               alt="Настольные игры"
             >
           </picture>
         </swiper-slide>
         <swiper-slide>
-          <picture>
+          <picture class="slider-img">
             <source
               srcset="~/assets/images/slider_mosaic.png"
               media="(min-width: 1024px)"
+            >
+            <source
+                srcset="~/assets/mobile/slider_mosaic_se.png"
+                media="(max-width: 374px)"
             >
             <source
               srcset="~/assets/mobile/slider_mosaic_mobile.png"
               media="(max-width: 1023px)"
             >
             <img
-                width="678"
-                height="575"
-              src="~/assets/images/slider_mosaic.png"
+              srcset="~/assets/images/slider_mosaic.png"
               alt="Пазлы и мозаики"
             >
           </picture>
         </swiper-slide>
         <swiper-slide>
-          <picture>
+          <picture class="slider-img">
             <source
               srcset="~/assets/images/slider_roadgames.png"
               media="(min-width: 1024px)"
+            >
+            <source
+                srcset="~/assets/mobile/slider_roadgames_se.png"
+                media="(max-width: 374px)"
             >
             <source
               srcset="~/assets/mobile/slider_roadgames_mobile.png"
               media="(max-width: 1023px)"
             >
             <img
-                width="678"
-                height="575"
-              src="~/assets/images/slider_roadgames.png"
+              srcset="~/assets/images/slider_roadgames.png"
               alt="Игры в дорогу"
             >
           </picture>
