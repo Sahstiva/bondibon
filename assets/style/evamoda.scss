@@ -1,0 +1,151 @@
+.evamoda {
+  background-image: url('~assets/images/background_evamoda.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  @media (max-width: 1920px) {
+    width: 100vw;
+  }
+  @media (max-width: 1023px) {
+    background-image: url('~assets/mobile/background_evamoda_mobile.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 480px;
+    height: 800px;
+  }
+  &-mobile {
+    &--button {
+      display: none;
+      visibility: hidden;
+      @media (max-width: 1023px) {
+        display: block;
+        visibility: visible;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 10px 0 0 0;
+        width: 49px;
+        height: 49px;
+      }
+    }
+  }
+  &-beauty {
+    width: 100vw;
+    margin: 250px 0 0 0;
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 1023px) {
+      margin: 350px 0 0 0;
+      justify-content: center;
+    }
+    &--wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &--text {
+      @include font-desktop;
+      font-size: 35px;
+      text-align: right;
+      color: #d2beae;
+      max-width: 350px;
+      margin: 10px 0 0 0;
+      @media (max-width: 1023px) {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+    &--nomobile {
+      font-size: 17px;
+      @media (max-width: 1023px) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+    &--button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 49px;
+      height: 49px;
+      margin: 50px 0 0 0;
+      &:hover {
+        transform: scale(1.1) translateY(5px);
+        transition: all 0.3s ease-in-out;
+      }
+      @media (max-width: 1023px) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+  &-items {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 170px);
+    grid-column-gap: 30px;
+    position: relative;
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 15px;
+      width: 90%;
+      max-width: 375px;
+    }
+
+    &--item {
+      border-radius: 50%;
+      box-shadow: 6.709px 4.357px 0 0 rgba(0, 0, 0, 0.09);
+      width: 170px;
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #ffffff;
+      @include font-desktop;
+      @media (max-width: 1023px) {
+        width: 100%;
+        height: 40px;
+        border-radius: 20px;
+        @include font-mobile;
+        flex-direction: row;
+      }
+    }
+
+    &--nomobile {
+      font-size: 12px;
+      margin: 5px 0 0 0;
+      @media (max-width: 1023px) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+    &--evamoda {
+      background-color: #923a6c;
+    }
+    &--bodyart {
+      background-color: #b06ec8;
+    }
+    &--accesoires {
+      background-color: #f9aad3;
+    }
+    &--umbrella {
+      background-color: #faaca8;
+    }
+    &--bags {
+      background-color: #f76e67;
+    }
+  }
+}

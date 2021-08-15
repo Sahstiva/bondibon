@@ -60,13 +60,10 @@ export default {
   },
   data() {
     return {
-      // isScrolling: false,
-      // currentComponent: 'BBtitle',
     };
   },
   methods: {
     nextPage(page) {
-      console.log(`Event to scroll page ${page} emitted`);
       const el = document.querySelector('#' + page);
       VueScrollTo.scrollTo(el);
     }

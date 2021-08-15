@@ -42,5 +42,6 @@ export default {
   modules: [
      ['vue-scrollto/nuxt', { container: "body", duration: 500, easing: "ease-in", force: true,
         cancelable: false, offset: 1 }],
+     ['@nuxtjs/axios']
   ],
 };

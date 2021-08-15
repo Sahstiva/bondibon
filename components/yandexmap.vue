@@ -1,46 +1,58 @@
 <template>
   <yandex-map
-    :coords="coordMain"
-    :bounds="[coordMain, coordTomilino]"
+      :coords="[55.750318, 37.620078]"
+      :show-all-markers="true"
   >
     <ymap-marker
-      marker-id="Main"
-      :coords="coordMain"
-      :icon="markerMain"
-    />
-    <ymap-marker
-      marker-id="Tomilino"
-      :coords="coordTomilino"
-      :icon="markerTomilino"
-    />
+        v-for="shop in shops"
+        :key="shop.name"
+        :marker-id="shop.name"
+        :coords="shop.coords"
+        :icon="{
+            layout: 'default#imageWithContent',
+            imageHref: '/images/ymaps_bondibon.png',
+            imageSize: [25, 25],
+            imageOffset: [-12, -12],
+            hintContent: shop.name,
+            balloonContent: shop.address,
+        }"
+        :balloon-template="balloonTemplate(shop.name, shop.address, shop.coords)"/>
   </yandex-map>
 </template>
 
 <script>
 export default {
   name: 'Yandexmap',
+  methods: {
+    balloonTemplate(name, address, coords) {
+      return `
+        <h2>${name}</h2>
+        <p>${address}</p>
+        <a  target=_blank
+            href="https://yandex.ru/maps/?rtext=~${coords}&rtt=auto">
+            Построить маршрут в Яндекс.Картах
+        </a>
+      `
+    },
+    async getAddresses() {
+      this.$axios.$get('/data/address.json')
+        .then(res => {
+          this.shops = [...res.shops];
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }
+  },
   data: () => ({
-    coordMain: [55.600880, 37.599135],
-    coordTomilino: [55.640711, 37.930229],
     zoom: 2,
     searchControlProvider: 'yandex#search',
-    markerMain: {
-      layout: 'default#imageWithContent',
-      imageHref: '/images/ymaps_bondibon.png',
-      imageSize: [50, 50],
-      imageOffset: [-25, -25],
-      hintContent: 'BONDIBON Центральный офис',
-      balloonContent: 'Кировоградская улица, 23, Москва, Россия',
-    },
-    markerTomilino: {
-      layout: 'default#imageWithContent',
-      imageHref: '/images/ymaps_bondibon.png',
-      imageSize: [50, 50],
-      imageOffset: [-25, -25],
-      hintContent: 'BONDIBON Склад Томилино',
-      balloonContent: 'Московская область, Люберецкий р-н, пос.Томилино, пос.Птицефабрика, уч.3',
-    },
+    bounds: [[55.556730, 37.332852], [55.923726, 37.860701]],
+    shops: []
   }),
+  mounted() {
+    this.getAddresses();
+  },
 };
 </script>
 

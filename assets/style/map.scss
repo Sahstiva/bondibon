@@ -1,0 +1,40 @@
+.map {
+  background-image: url('~assets/images/background_map.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: 1920px;
+  min-height: 3000px;
+  opacity: 1;
+  transform: translateZ(0);
+  perspective: 1000px;
+  backface-visibility: hidden;
+  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 1920px) {
+    width: 100vw;
+    min-height: 1080px;
+    background-position: center top;
+  }
+  @media (max-width: 1023px) {
+    background-image: url('~assets/mobile/background_map_mobile.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #d77aea;
+    width: 100vw;
+    max-width: 480px;
+    height: 883px;
+  }
+  &-wrapper {
+    margin: 200px 0 100px 0;
+    width: 900px;
+    height: 450px;
+    border-radius: 50px;
+    overflow: hidden;
+    @media (max-width: 1023px) {
+      width: 335px;
+      height: 685px;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.knowledge {
+  background-image: url('~assets/images/background_knowledge.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 1920px) {
+    width: 100vw;
+    background-position: center top;
+  }
+  @media (max-width: 1023px) {
+    background-image: url('~assets/mobile/background_know_mobile.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    max-width: 480px;
+    height: 804px;
+  }
+  &-title {
+    margin: 100px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 1023px) {
+      flex-direction: column;
+      max-width: 375px;
+    }
+    &--title, &--subtitle {
+      @include font-Rotonda;
+      color: #ffffff;
+      margin: 0 25px 0 25px;
+    }
+    &--title {
+      font-size: 45px;
+      @media (max-width: 1023px) {
+        font-size: 25px;
+      }
+    }
+    &--subtitle {
+      font-size: 17px;
+      width: 350px;
+      @media (max-width: 1023px) {
+        white-space: nowrap;
+        overflow: hidden;
+        max-height: 20px;
+        text-align: center;
+      }
+    }
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 950px;
+    margin: 20px 0 0 0;
+    @media (max-width: 1023px) {
+      width: 90%;
+      max-width: 330px;
+      grid-template-columns: 1fr;
+      grid-row-gap: 10px;
+    }
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 1023px) {
+      height: 45px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      margin: 0;
+      justify-content: center;
+    }
+
+    &--text {
+      color: #ffffff;
+      @include font-desktop;
+      max-width: 200px;
+      @media (max-width: 1023px) {
+        color: #31afa4;
+        margin: 0;
+        max-width: 330px;
+        @include font-mobile;
+      }
+    }
+    &--img {
+      @media (max-width: 1023px) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+  &-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 49px;
+    height: 49px;
+    &:hover {
+      transform: scale(1.1) translateY(5px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &--wrapper {
+      margin: 0 200px 0 0;
+      @media (max-width: 1023px) {
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+}
