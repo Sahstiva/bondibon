@@ -4,19 +4,19 @@
         :show-all-markers="true"
   >
     <ymap-marker
-        v-for="shop in shops"
-        :key="shop.name"
-        :marker-id="shop.name"
-        :coords="shop.coords"
+        v-for="(shop, index) in shops"
+        :key="index"
+        :marker-id="index"
+        :coords="shop.position.split(' ').reverse()"
         :icon="{
             layout: 'default#imageWithContent',
             imageHref: '/images/ymaps_bondibon.png',
             imageSize: [25, 25],
             imageOffset: [-12, -12],
             hintContent: shop.name,
-            balloonContent: shop.address,
+            balloonContent: shop.geocode,
         }"
-        :balloon-template="balloonTemplate(shop.name, shop.address, shop.coords)"/>
+        :balloon-template="balloonTemplate(shop)"/>
   </yandex-map>
 </template>
 
@@ -34,13 +34,21 @@ export default {
     this.getAddresses();
   },
   methods: {
-    balloonTemplate(name, address, coords) {
+    balloonTemplate(shop) {
       return `
-        <h2>${name}</h2>
-        <p>${address}</p>
+        <h3>
+            <a  target=_blank
+                rel="noreferrer"
+                href="${shop.link}"
+                class="map-link">
+                ${shop.name}
+            </a>
+        </h3>
+        <p>${shop.geocode}</p>
         <a  target=_blank
             rel="noreferrer"
-            href="https://yandex.ru/maps/?rtext=~${coords}&rtt=auto">
+            class="map-link"
+            href="https://yandex.ru/maps/?rtext=~${shop.position.split(' ').reverse()}&rtt=auto">
             Построить маршрут в Яндекс.Картах
         </a>
       `;

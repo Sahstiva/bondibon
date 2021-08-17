@@ -2,7 +2,7 @@
   <div class="site-wrapper">
     <h1 class="visually-hidden">Игрушки, развивающие и развлекательные игры - BONDIBON</h1>
     <transition name="fade">
-      <LazyBBheader v-if="showHeader" @goToNextPage="nextPage($event)"/>
+      <LazyBBheader v-show="showHeader" @goToNextPage="nextPage($event)"/>
     </transition>
     <h2 class="visually-hidden">5000 наименований игр и игрушек</h2>
     <LazyBBtitle id="BBtitle" @goToNextPage="nextPage($event)"/>
@@ -29,7 +29,7 @@
     <h2 class="visually-hidden">Подписывайтесь на наш инстаграм, смотрите видео на канале</h2>
     <LazyBBlinks id="BBlinks" @goToNextPage="nextPage($event)"/>
     <h2 class="visually-hidden">Где купить</h2>
-    <LazyBBmap id="BBmap" @goToNextPage="nextPage($event)"/>
+    <LazyBBmap v-if="showMap" id="BBmap" @goToNextPage="nextPage($event)"/>
   </div>
 </template>
 
@@ -78,6 +78,7 @@ export default {
     return {
       scrollPosition: 0,
       showHeader: true,
+      showMap: false,
       isMobile: false,
     };
   },
@@ -126,15 +127,16 @@ export default {
         this.showHeader = false;
       else
         this.showHeader = true;
-      console.log(window.scrollY);
+      //console.log(window.scrollY);
     }
   },
   mounted() {
     this.scrollPosition = document.body.scrollTop;
     this.isMobile = window.innerWidth < 1024 ? true : false;
-    console.log(window.screen.width, window.screen.height);
-    console.log(window.innerWidth, window.innerHeight);
-    console.log(`isMobile: ${this.isMobile}`);
+    this.showMap = true;
+    //console.log(window.screen.width, window.screen.height);
+    //console.log(window.innerWidth, window.innerHeight);
+    //console.log(`isMobile: ${this.isMobile}`);
   },
   beforeMount () {
     window.addEventListener('scroll', this.handleScroll);

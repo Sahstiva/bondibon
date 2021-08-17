@@ -1,5 +1,5 @@
 export default {
-  target: 'static',
+  target: 'server',
   components: true,
   build: {
     vendor: ['vue-yandex-maps'],

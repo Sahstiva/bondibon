@@ -78,6 +78,11 @@
       }
     }
   }
+  &-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #007acd;
+  }
 }
 .ymap-container {
   height: 450px;
