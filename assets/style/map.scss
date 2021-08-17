@@ -40,16 +40,54 @@
       width: 300px;
       height: 685px;
     }  }
+  &-back {
+    width: 100vw;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 1023px) {
+      margin: 0;
+      justify-content: center;
+    }
+
+    &__text {
+      @include font-desktop;
+      font-size: 35px;
+      text-align: center;
+      color: #d2beae;
+      max-width: 350px;
+      margin: 0;
+      @media (max-width: 1023px) {
+        font-size: 30px;
+        color: #ffffff;
+      }
+    }
+
+    &__button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      width: 65px;
+      height: 55px;
+      margin: 0 0 0 20px;
+      transform: rotate(180deg);
+      &:hover {
+        transform: rotate(180deg) scale(1.1) translateY(5px);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
 }
 .ymap-container {
   height: 450px;
   z-index: 1;
   @media (max-width: 1023px) {
     width: 335px;
-    height: 685px;
+    min-height: 685px;
   }
   @media (max-width: 374px) {
     width: 300px;
-    height: 685px;
+//    minheight: 685px;
   }
 }

@@ -1,9 +1,11 @@
 <template>
   <div class="site-wrapper">
     <h1 class="visually-hidden">Игрушки, развивающие и развлекательные игры - BONDIBON</h1>
-    <LazyBBheader @goToNextPage="nextPage($event)"/>
+    <transition name="fade">
+      <LazyBBheader v-if="showHeader" @goToNextPage="nextPage($event)"/>
+    </transition>
     <h2 class="visually-hidden">5000 наименований игр и игрушек</h2>
-    <LazyBBtitle @goToNextPage="nextPage($event)"/>
+    <LazyBBtitle id="BBtitle" @goToNextPage="nextPage($event)"/>
     <h2 class="visually-hidden">Полезные игры</h2>
     <LazyBBslider id="BBslider" @goToNextPage="nextPage($event)"/>
     <h2 class="visually-hidden">Знания - сила!</h2>
@@ -74,6 +76,9 @@ export default {
   },
   data() {
     return {
+      scrollPosition: 0,
+      showHeader: true,
+      isMobile: false,
     };
   },
   methods: {
@@ -81,41 +86,61 @@ export default {
       const el = document.querySelector(`#${page}`);
       VueScrollTo.scrollTo(el);
     },
+    handleScroll () {
+      //const scrollDirection = window.scrollY > this.scrollPosition ? 'down' : 'up';
+      this.scrollPosition = window.scrollY;
+      if(this.isMobile) {
+        console.log(this.isMobile);
+        if (
+            (this.scrollPosition > 50 && this.scrollPosition < 850) ||
+            (this.scrollPosition > 920 && this.scrollPosition < 1570) ||
+            (this.scrollPosition > 1630 && this.scrollPosition < 2380) ||
+            (this.scrollPosition > 2470 && this.scrollPosition < 3170) ||
+            (this.scrollPosition > 3260 && this.scrollPosition < 3970) ||
+            (this.scrollPosition > 4060 && this.scrollPosition < 4770) ||
+            (this.scrollPosition > 4830 && this.scrollPosition < 5570) ||
+            (this.scrollPosition > 5660 && this.scrollPosition < 6370) ||
+            (this.scrollPosition > 6450 && this.scrollPosition < 7180) ||
+            (this.scrollPosition > 7220 && this.scrollPosition < 8760) ||
+            (this.scrollPosition > 8820 && this.scrollPosition < 9560) ||
+            (this.scrollPosition > 9610 && this.scrollPosition < 10500)
+        )
+          this.showHeader = false;
+        else
+          this.showHeader = true;
+      }
+      else if(
+          (this.scrollPosition > 50 && this.scrollPosition < 600) ||
+          (this.scrollPosition > 750 && this.scrollPosition < 1350) ||
+          (this.scrollPosition > 1415 && this.scrollPosition < 2030) ||
+          (this.scrollPosition > 2150 && this.scrollPosition < 2750) ||
+          (this.scrollPosition > 2850 && this.scrollPosition < 3430) ||
+          (this.scrollPosition > 3550 && this.scrollPosition < 4130) ||
+          (this.scrollPosition > 4250 && this.scrollPosition < 4830) ||
+          (this.scrollPosition > 4950 && this.scrollPosition < 5510) ||
+          (this.scrollPosition > 5650 && this.scrollPosition < 6220) ||
+          (this.scrollPosition > 6315 && this.scrollPosition < 6920) ||
+          (this.scrollPosition > 7050 && this.scrollPosition < 7630) ||
+          (this.scrollPosition > 7750 && this.scrollPosition < 8400)
+      )
+        this.showHeader = false;
+      else
+        this.showHeader = true;
+      console.log(window.scrollY);
+    }
   },
-  // handleScroll: function (evt, el) {
-  // console.log('scrolling', el.className);
-  // console.log(window.scrollY);
-  // console.log(evt);
-  // if(!this.isScrolling && el.className === 'slider' && window.scrollY < 680) {
-  //   const _done = this.doneScrolling;
-  //   const options = { offset: -20, onDone: _done };
-  //   this.$scrollTo(el, 500, options);
-  //   this.isScrolling = true;
-  // }
-  // else if(!this.isScrolling && el.className === 'knowledge' && window.scrollY > 680) {
-  //   const _done = this.doneScrolling;
-  //   const options = { offset: 0, onDone: _done };
-  //   this.$scrollTo(el, 500, options);
-  //   this.isScrolling = true;
-  // }
-  //   if (window.scrollY > 50 && el.className === 'slider') {
-  //     el.setAttribute(
-  //         'style',
-  //         'opacity: 1; transform: translate3d(0, -10px, 0)'
-  //     );
-  //     //window.scrollY = 250;
-  //   } else if(window.scrollY > 680 && el.className === 'knowledge') {
-  //     el.setAttribute(
-  //         'style',
-  //         'opacity: 1; transform: translate3d(0, -10px, 0)'
-  //     );
-  //   }
-  //   return window.scrollY > 1000
-  // },
-  // doneScrolling: function(el) {
-  //   this.isScrolling = false;
-  //   console.log('scrolling',this.isScrolling);
-  // }
-  // },
+  mounted() {
+    this.scrollPosition = document.body.scrollTop;
+    this.isMobile = window.innerWidth < 1024 ? true : false;
+    console.log(window.screen.width, window.screen.height);
+    console.log(window.innerWidth, window.innerHeight);
+    console.log(`isMobile: ${this.isMobile}`);
+  },
+  beforeMount () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 };
 </script>

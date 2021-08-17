@@ -28,7 +28,6 @@ export default {
     ],
   },
   css: [
-    '~/assets/style/variables.scss',
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
   plugins: [
@@ -47,6 +46,5 @@ export default {
       cancelable: false,
       offset: 1,
     }],
-    ['@nuxtjs/axios'],
   ],
 };

@@ -42,7 +42,7 @@
     border: none;
     cursor: pointer;
     margin: 15px 0 0 0;
-    width: 55px;
+    width: 65px;
     height: 52px;
 
     &__text {
@@ -63,6 +63,9 @@
         width: 325px;
         height: 80px;
         text-align: left;
+      }
+      @media (max-width: 374px) {
+        font-size: 27px;
       }
     }
     &__right {
