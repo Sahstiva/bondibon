@@ -8,12 +8,6 @@
         <p class="evamoda-beauty__text evamoda-beauty__nomobile">
           косметика детская, наборы для создания украшений, сумочки и аксессуары
         </p>
-          <button
-              class="evamoda-beauty__button"
-              @click="$emit('goToNextPage', 'BBtablegames')"
-          >
-            <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
-          </button>
       </div>
     </div>
     <div class="evamoda-items">
@@ -34,7 +28,7 @@
       </div>
     </div>
     <button
-        class="evamoda-mobile__button"
+        class="evamoda-button"
         @click="$emit('goToNextPage', 'BBtablegames')"
     >
       <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">

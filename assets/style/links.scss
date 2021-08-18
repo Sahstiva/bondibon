@@ -266,6 +266,7 @@
       background: transparent;
       border: none;
       cursor: pointer;
+      margin: 0 150px 0 0;
       &:hover {
         transform: scale(1.1) translateY(5px);
         transition: all 0.3s ease-in-out;
@@ -363,7 +364,6 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0;
     width: 49px;
     height: 49px;
     &:hover {

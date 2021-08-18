@@ -87,6 +87,14 @@
         <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Следующий слайд">
       </button>
     </div>
+    <div class="gift-down">
+      <button
+          class="slider-down__button"
+          @click="$emit('goToNextPage', 'BBnewyear')"
+      >
+        <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
+      </button>
+    </div>
   </section>
 </template>
 
@@ -106,14 +114,8 @@ export default {
       swiperOption: {
         mousewheel: false,
         slidesPerView: 1,
-        spaceBetween: 70,
+        spaceBetween: 2,
         loop: true,
-        breakpoints: {
-          1025: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-          },
-        },
       },
     };
   },

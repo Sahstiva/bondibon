@@ -19,23 +19,22 @@
     max-width: 480px;
     height: 802px;
   }
-  &-mobile {
-    &__button {
-      display: none;
-      visibility: hidden;
+  &-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: -20px 0 0 -150px;
+    &:hover {
+      transform: scale(1.1) translateY(5px);
+      transition: all 0.3s ease-in-out;
+    }
       @media (max-width: 1023px) {
-        display: block;
-        visibility: visible;
-        background: transparent;
-        border: none;
-        cursor: pointer;
         padding: 0;
         margin: 10px 0 0 0;
         width: 49px;
         height: 49px;
       }
     }
-  }
   &-think {
     width: 100vw;
     margin: 250px 0 0 0;
@@ -73,26 +72,9 @@
       }
     }
 
-    &__button {
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      width: 49px;
-      height: 49px;
-      margin: 50px 0 0 0;
-      &:hover {
-        transform: scale(1.1) translateY(5px);
-        transition: all 0.3s ease-in-out;
-      }
-      @media (max-width: 1023px) {
-        display: none;
-        visibility: hidden;
-      }
-    }
   }
   &-items {
-    margin: 0;
+    margin: 105px 0 0 0;
     display: grid;
     grid-template-columns: repeat(5, 170px);
     grid-column-gap: 30px;
@@ -102,6 +84,7 @@
       grid-row-gap: 15px;
       width: 90%;
       max-width: 375px;
+      margin: 0;
     }
 
     &__item {

@@ -9,12 +9,6 @@
       <p class="teachers-usefull__text">
         полезно педагогам
       </p>
-      <button
-        class="teachers-usefull__button"
-        @click="$emit('goToNextPage', 'BBlinks')"
-      >
-      <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
-      </button>
     </div>
     <div class="teachers-items">
       <div class="teachers-items__item teachers-items__speech">
@@ -43,7 +37,7 @@
     </button>
     </div>
     <button
-      class="teachers-mobile__button"
+      class="teachers-button"
       @click="$emit('goToNextPage', 'BBlinks')"
     >
       <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">

@@ -6,7 +6,7 @@
   height: 700px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
   @media (max-width: 1920px) {
     width: 100vw;
@@ -24,12 +24,11 @@
   }
   &-wrapper {
     width: 678px;
-    margin: 115px 0 0 860px;
-    @media (max-width: 1920px) {
-      margin: 115px 0 0 calc(50vw - 100px);
-    }
-    @media (max-width: 1024px) {
-      margin: 115px 0 0 300px;
+    margin: 115px 0 0 450px;
+
+    @media (max-width: 1279px) {
+      width: 100%;
+      margin: 70px 0 0 600px;
     }
     @media (max-width: 1023px) {
       width: 100%;
@@ -97,6 +96,18 @@
         width: 80%;
         max-width: 480px;
         margin: 25px 0 0 0;
+      }
+    }
+  }
+  &-down {
+    &__button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin: -45px 20px 0 0;
+      &:hover {
+        transform: scale(1.1) translateY(5px);
+        transition: all 0.3s ease-in-out;
       }
     }
   }

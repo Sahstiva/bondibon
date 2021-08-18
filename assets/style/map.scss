@@ -14,7 +14,7 @@
   align-items: center;
   @media (max-width: 1920px) {
     width: 100vw;
-    min-height: 1080px;
+    //min-height: 1080px;
     background-position: center top;
   }
   @media (max-width: 1023px) {
@@ -27,7 +27,7 @@
     height: 883px;
   }
   &-wrapper {
-    margin: 200px 0 100px 0;
+    margin: 200px 0 30px 0;
     width: 900px;
     height: 450px;
     border-radius: 50px;
@@ -70,7 +70,7 @@
       cursor: pointer;
       width: 65px;
       height: 55px;
-      margin: 0 0 0 20px;
+      margin: 0 20px 0 20px;
       transform: rotate(180deg);
       &:hover {
         transform: rotate(180deg) scale(1.1) translateY(5px);

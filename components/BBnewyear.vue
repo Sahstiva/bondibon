@@ -133,9 +133,9 @@
         </p>
       </div>
     </div>
-    <div class="newyear-button__wrapper">
+    <div class="newyear-button">
       <button
-        class="newyear-button"
+        class="newyear-button__button"
         @click="$emit('goToNextPage', 'BBteachers')"
       >
         <img src="~/assets/images/arrow_white.svg" width="49"  height="49" alt="Далее">

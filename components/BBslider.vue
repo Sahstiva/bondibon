@@ -70,7 +70,7 @@
         </swiper-slide>
       </swiper>
     </div>
-    <div class="slider-button__wrapper">
+    <div class="slider-button">
       <p class="slider-button__text">
         {{
           slidesText[
@@ -81,12 +81,22 @@
         }}
       </p>
       <button
-        class="slider-button slider-button__right"
+        class="slider-button__button slider-button__right"
         @click="goNext"
       >
         <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Следующий слайд">
       </button>
     </div>
+    <transition name="fade">
+      <div v-show="showDown" class="slider-down">
+        <button
+            class="slider-down__button"
+            @click="$emit('goToNextPage', 'BBknow')"
+        >
+          <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
+        </button>
+      </div>
+    </transition>
   </section>
 </template>
 
@@ -104,6 +114,7 @@ export default {
   data() {
     return {
       currentSlide: 1,
+      showDown: true,
       slidesText: ['Настольные игры', 'Пазлы и мозаики', 'Игры в дорогу'],
       swiperOption: {
         mousewheel: false,
@@ -123,6 +134,19 @@ export default {
       this.$refs.swiperMain.$swiper.slideNext();
       this.currentSlide = this.$refs.swiperMain.$swiper.activeIndex;
     },
+    handleScroll() {
+      console.log(window.scrollY);
+      if(window.scrollY > 1300)
+        this.showDown = false;
+      else
+        this.showDown = true;
+    }
   },
+  beforeMount () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 };
 </script>

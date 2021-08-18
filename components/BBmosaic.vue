@@ -8,12 +8,6 @@
         <p class="mosaic-smart__text mosaic-smart__nomobile">
           наборы для творчества и рукоделия
         </p>
-          <button
-            class="mosaic-smart__button"
-            @click="$emit('goToNextPage', 'BBconstructor')"
-          >
-            <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
-          </button>
       </div>
     </div>
     <div class="mosaic-items">
@@ -34,7 +28,7 @@
       </div>
     </div>
     <button
-        class="mosaic-mobile__button"
+        class="mosaic-button"
         @click="$emit('goToNextPage', 'BBconstructor')"
     >
       <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">

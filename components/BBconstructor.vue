@@ -8,12 +8,6 @@
         <p class="constructor-think__text constructor-think__nomobile">
           конструкторы и робототехника,<br>сборные модели, 3d пазлы
         </p>
-          <button
-            class="constructor-think__button"
-            @click="$emit('goToNextPage', 'BBevamoda')"
-          >
-            <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
-          </button>
       </div>
     </div>
     <div class="constructor-items">
@@ -34,7 +28,7 @@
       </div>
     </div>
     <button
-        class="constructor-mobile__button"
+        class="constructor-button"
         @click="$emit('goToNextPage', 'BBevamoda')"
     >
       <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">

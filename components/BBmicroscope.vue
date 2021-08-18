@@ -5,12 +5,6 @@
         <p class="microscope-wannaknow__text">
           хочу всё знать!
         </p>
-        <button
-            class="microscope-wannaknow__button"
-            @click="$emit('goToNextPage', 'BBmosaic')"
-        >
-          <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
-        </button>
       </div>
     </div>
     <div class="microscope-items">
@@ -31,7 +25,7 @@
       </div>
     </div>
     <button
-        class="microscope-mobile__button"
+        class="microscope-button"
         @click="$emit('goToNextPage', 'BBmosaic')"
     >
       <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">

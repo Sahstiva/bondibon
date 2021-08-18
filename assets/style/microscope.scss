@@ -19,23 +19,22 @@
     max-width: 480px;
     height: 796px;
   }
-  &-mobile {
-    &__button {
-      display: none;
-      visibility: hidden;
-      @media (max-width: 1023px) {
-        display: block;
-        visibility: visible;
-        background: transparent;
-        border: none;
-        cursor: pointer;
+  &-button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin: -20px 150px 0 0;
+      &:hover {
+        transform: scale(1.1) translateY(5px);
+        transition: all 0.3s ease-in-out;
+      }
+        @media (max-width: 1023px) {
         padding: 0;
         margin: 10px 0 0 0;
         width: 49px;
         height: 49px;
       }
     }
-  }
   &-wannaknow {
     width: 100vw;
     margin: 250px 0 0 0;
@@ -65,41 +64,23 @@
         margin-bottom: 10px;
       }
     }
-
-    &__button {
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      width: 49px;
-      height: 49px;
-      margin: 70px 0 70px 0;
-      &:hover {
-        transform: scale(1.1) translateY(5px);
-        transition: all 0.3s ease-in-out;
-      }
-      @media (max-width: 1023px) {
-        display: none;
-        visibility: hidden;
-      }
-    }
   }
   &-items {
-    margin: 0;
+    margin: 190px 0 0 0;
     display: grid;
     grid-template-columns: repeat(5, 170px);
     grid-column-gap: 30px;
-    position: relative;
     @media (max-width: 1023px) {
       grid-template-columns: 1fr;
       grid-row-gap: 15px;
       width: 90%;
       max-width: 375px;
+      margin: 0;
     }
 
     &__item {
       border-radius: 50%;
-      box-shadow: 6.709px 4.357px 0 0 rgba(0, 0, 0, 0.09);
+      box-shadow: 6.709px 4.357px 3px 0 rgba(0, 0, 0, 0.15);
       width: 170px;
       height: 170px;
       display: flex;
@@ -108,6 +89,12 @@
       flex-direction: column;
       color: #ffffff;
       @include font-desktop;
+      &:hover {
+        cursor: pointer;
+        box-shadow: none;
+        transform: translate(6.709px, 4.357px);
+        transition: all 0.3s ease-in-out;
+      }
       @media (max-width: 1023px) {
         width: 100%;
         height: 40px;

@@ -5,12 +5,6 @@
         <p class="tablegames-time__text">
           делу время,<br>потехе - чаc
         </p>
-          <button
-              class="tablegames-time__button"
-              @click="$emit('goToNextPage', 'BBgift')"
-          >
-            <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
-          </button>
       </div>
     </div>
     <div class="tablegames-items">
@@ -31,7 +25,7 @@
       </div>
     </div>
     <button
-        class="tablegames-mobile__button"
+        class="tablegames-button"
         @click="$emit('goToNextPage', 'BBgift')"
     >
       <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
