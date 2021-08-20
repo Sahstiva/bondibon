@@ -1,5 +1,6 @@
 <template>
   <section class="tablegames">
+    <h2 class="visually-hidden">Делу время - потехе час</h2>
     <div class="tablegames-time">
       <div class="tablegames-time__wrapper">
         <p class="tablegames-time__text">
@@ -8,21 +9,22 @@
       </div>
     </div>
     <div class="tablegames-items">
-      <div class="tablegames-items__item tablegames-items__antistress">игрушки-антистресс
-        <span class="tablegames-items__nomobile">сквиши, тянучки, пружинки, мякиши и лизуны</span>
-      </div>
-      <div class="tablegames-items__item tablegames-items__transport">
-        транспорт<span class="tablegames-items__nomobile">машинки, треки, железные дороги</span>
-      </div>
-      <div class="tablegames-items__item tablegames-items__rolegames">
-        сюжетно-ролевые игрушки
-      </div>
-      <div class="tablegames-items__item tablegames-items__dolls">
-        куклы и пупсы
-      </div>
-      <div class="tablegames-items__item tablegames-items__newborn">
-        игрушки для малышей
-      </div>
+      <button v-for="(section, index) in links.sections" @click="showModal(section)" class="tablegames-items__item" :class="'tablegames-items__' + styles[index]" v-html="section.text" :key="index"/>
+<!--      <div class="tablegames-items__item tablegames-items__antistress">игрушки-антистресс-->
+<!--        <span class="tablegames-items__nomobile">сквиши, тянучки, пружинки, мякиши и лизуны</span>-->
+<!--      </div>-->
+<!--      <div class="tablegames-items__item tablegames-items__transport">-->
+<!--        транспорт<span class="tablegames-items__nomobile">машинки, треки, железные дороги</span>-->
+<!--      </div>-->
+<!--      <div class="tablegames-items__item tablegames-items__rolegames">-->
+<!--        сюжетно-ролевые игрушки-->
+<!--      </div>-->
+<!--      <div class="tablegames-items__item tablegames-items__dolls">-->
+<!--        куклы и пупсы-->
+<!--      </div>-->
+<!--      <div class="tablegames-items__item tablegames-items__newborn">-->
+<!--        игрушки для малышей-->
+<!--      </div>-->
     </div>
     <button
         class="tablegames-button"
@@ -34,7 +36,37 @@
 </template>
 
 <script>
+import modal from "@/components/modal";
+
 export default {
   name: 'BBtablegames',
+  props: ['links'],
+  data() {
+    return {
+      styles: [
+        'antistress',
+        'transport',
+        'rolegames',
+        'dolls',
+        'newborn'
+      ]
+    }
+  },
+  methods: {
+    showModal(section) {
+      this.$modal.show(
+          modal,
+          {
+            title: section.text,
+            image: '',
+            links: section.links
+          },
+          {
+            height: 'auto',
+            adaptive: true,
+          }
+      );
+    }
+  }
 };
 </script>

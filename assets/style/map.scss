@@ -14,7 +14,7 @@
   align-items: center;
   @media (max-width: 1920px) {
     width: 100vw;
-    //min-height: 1080px;
+    min-height: 1080px;
     background-position: center top;
   }
   @media (max-width: 1023px) {
@@ -24,7 +24,7 @@
     background-color: #d77aea;
     width: 100vw;
     max-width: 480px;
-    height: 883px;
+    min-height: 883px;
   }
   &-wrapper {
     margin: 200px 0 30px 0;
@@ -93,6 +93,5 @@
   }
   @media (max-width: 374px) {
     width: 300px;
-//    minheight: 685px;
   }
 }

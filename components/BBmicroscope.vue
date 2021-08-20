@@ -1,5 +1,6 @@
 <template>
   <section class="microscope">
+    <h2 class="visually-hidden">Хочу всё знать</h2>
     <div class="microscope-wannaknow">
       <div class="microscope-wannaknow__wrapper">
         <p class="microscope-wannaknow__text">
@@ -8,21 +9,7 @@
       </div>
     </div>
     <div class="microscope-items">
-      <div class="microscope-items__item microscope-items__microscope">
-        микроскопы
-      </div>
-      <div class="microscope-items__item microscope-items__science">
-        научные опыты
-      </div>
-      <div class="microscope-items__item microscope-items__digger">
-        наборы для раскопок<span class="microscope-items__nomobile"> археология и палеонтолия</span>
-      </div>
-      <div class="microscope-items__item microscope-items__entertainment">
-        развлекательные эксперименты
-      </div>
-      <div class="microscope-items__item microscope-items__magic">
-        наборы фокусника
-      </div>
+      <button v-for="(section, index) in links.sections" @click="showModal(section)" class="microscope-items__item" :class="'microscope-items__' + styles[index]" v-html="section.text" :key="index"/>
     </div>
     <button
         class="microscope-button"
@@ -34,7 +21,37 @@
 </template>
 
 <script>
+import modal from "@/components/modal";
+
 export default {
   name: 'BBmicroscope',
+  props: ['links'],
+  data() {
+    return {
+      styles: [
+        'microscope',
+        'science',
+        'digger',
+        'entertainment',
+        'magic'
+      ]
+    }
+  },
+  methods: {
+    showModal(section) {
+      this.$modal.show(
+          modal,
+          {
+            title: section.text,
+            image: '',
+            links: section.links
+          },
+          {
+            height: 'auto',
+            adaptive: true,
+          }
+      );
+    }
+  }
 };
 </script>

@@ -1,137 +1,30 @@
 <template>
   <section class="newyear">
+    <h2 class="visually-hidden">Новый год к нам мчится</h2>
     <div class="newyear-title">
       <p class="newyear-title__title">
         новый год<br>к нам мчится!
       </p>
       <p class="newyear-title__subtitle">
-        новогодние наборы для творчества, ёлочные игрушки hand-made, настольные игр
+        новогодние наборы для творчества, ёлочные игрушки hand-made, настольные игры
       </p>
       <p class="newyear-title__mobile">
         новогоднее творчество, игры, hand-made
       </p>
     </div>
     <div class="newyear-grid">
-      <div class="newyear-item">
-        <img
-            width="176"
-            height="173"
-          src="~/assets/images/newyear_roadgames.png"
-          alt="Мини-игры в дорогу новогодние"
-          class="newyear-item__img"
-        >
-        <p class="newyear-item__text">
-          мини-игры в дорогу новогодние
-        </p>
-      </div>
-      <div class="newyear-item">
-        <img
-            width="176"
-            height="173"
-          src="~/assets/images/newyear_ceramic.png"
-          alt="Керамические ёлочные украшения для росписи"
-          class="newyear-item__img"
-        >
-        <p class="newyear-item__text">
-          керамические ёлочные украшения для росписи
-        </p>
-      </div>
-      <div class="newyear-item">
-        <img
-            width="176"
-            height="173"
-          src="~/assets/images/newyear_felt.png"
-          alt="Наборы для создания ёлочных игрушек из фетра"
-          class="newyear-item__img"
-        >
-        <p class="newyear-item__text">
-          наборы для создания ёлочных игрушек из фетра
-        </p>
-      </div>
-      <div class="newyear-item">
-        <img
-            width="176"
-            height="173"
-          src="~/assets/images/newyear_compact.png"
-          alt="Самая компактная ёлка"
-          class="newyear-item__img"
-        >
-        <p class="newyear-item__text">
-          самая компактная ёлка
-        </p>
-      </div>
-      <div class="newyear-item">
-        <img
-            width="176"
-            height="173"
-          src="~/assets/images/newyear_crystall.png"
-          alt="Новогодние наборы для выращивани кристаллов"
-          class="newyear-item__img"
-        >
-        <p class="newyear-item__text">
-          новогодние наборы для выращивани кристаллов
-        </p>
-      </div>
-      <div class="newyear-item">
-        <img
-            width="176"
-            height="173"
-          src="~/assets/images/newyear_cups.png"
-          alt="Керамические кружки и сувениры для росписи"
-          class="newyear-item__img"
-        >
-        <p class="newyear-item__text">
-          керамические кружки и сувениры для росписи
-        </p>
-      </div>
-      <div class="newyear-item">
-        <img
-            width="176"
-            height="173"
-          src="~/assets/images/newyear_aquatermo.png"
-          alt="Аква- и термо- мозаики новогодние"
-          class="newyear-item__img"
-        >
-        <p class="newyear-item__text">
-          аква- и термо- мозаики новогодние
-        </p>
-      </div>
-      <div class="newyear-item">
-        <img
-            width="176"
-            height="173"
-          src="~/assets/images/newyear_cards.png"
-          alt="Новогодние открытки своими руками"
-          class="newyear-item__img"
-        >
-        <p class="newyear-item__text">
-          новогодние открытки своими руками
-        </p>
-      </div>
-      <div class="newyear-item">
-        <img
-            width="176"
-            height="173"
-          src="~/assets/images/newyear_cultivate.png"
-          alt="Развивающие игры под ёлку"
-          class="newyear-item__img"
-        >
-        <p class="newyear-item__text">
-          развивающие игры под ёлку
-        </p>
-      </div>
-      <div class="newyear-item">
-        <img
-            width="176"
-            height="173"
-          src="~/assets/images/newyear_3dxmaxtree.png"
-          alt="3d ёлочки деревянные"
-          class="newyear-item__img"
-        >
-        <p class="newyear-item__text">
-          3d ёлочки деревянные
-        </p>
-      </div>
+      <button v-for="section in links.sections" @click="showModal(section)" class="newyear-item">
+        <div class="newyear-item__wrapper">
+          <img
+              :src="require(`~/assets/images/${section.image}`)"
+              width="160"
+              height="160"
+              :alt="section.text"
+              class="newyear-item__img"
+          >
+        </div>
+        <p class="newyear-item__text" v-html="section.text"/>
+      </button>
     </div>
     <div class="newyear-button">
       <button
@@ -145,7 +38,27 @@
 </template>
 
 <script>
+import modal from "@/components/modal";
+
 export default {
   name: 'BBnewyear',
+  props: ['links'],
+  methods: {
+    showModal(section) {
+      this.$modal.show(
+          modal,
+          {
+            title: section.text,
+            image: section.image,
+            links: section.links
+          },
+          {
+            height: 'auto',
+            adaptive: true,
+            classes: 'wheretobuy-modal'
+          }
+      );
+    }
+  }
 };
 </script>

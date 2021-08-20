@@ -1,5 +1,6 @@
 <template>
   <section class="title">
+    <h2 class="visually-hidden">5000 наименований игр и игрушек</h2>
     <div class="title-benefit">
       <div class="title-benefit__item title-benefit__cyan">
         <img src="~/assets/images/basket.svg" width="44" height="45" class="title-benefit__basket" alt="5000 наименований игр и игрушек">

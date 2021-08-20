@@ -3,6 +3,7 @@
     id="giftpage"
     class="gift"
   >
+    <h2 class="visually-hidden">Подарки своими руками</h2>
     <div class="gift-wrapper">
       <swiper
         ref="swiperGift"
@@ -89,10 +90,10 @@
     </div>
     <div class="gift-down">
       <button
-          class="slider-down__button"
+          class="gift-down__button"
           @click="$emit('goToNextPage', 'BBnewyear')"
       >
-        <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
+        <img src="~/assets/images/arrow_white.svg" width="49"  height="49" alt="Далее">
       </button>
     </div>
   </section>

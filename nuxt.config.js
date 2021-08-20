@@ -1,9 +1,6 @@
 export default {
-  target: 'server',
+  target: 'static',
   components: true,
-  build: {
-    vendor: ['vue-yandex-maps'],
-  },
   router: {
     base: '/',
   },
@@ -33,6 +30,10 @@ export default {
   plugins: [
     '~/plugins/fontawesome.js',
     {
+      src: '~plugins/vue-js-modal.js',
+      mode: 'client',
+    },
+    {
       src: '~/plugins/ymapPlugin.js',
       mode: 'client',
     },
@@ -46,5 +47,6 @@ export default {
       cancelable: false,
       offset: 1,
     }],
+    '@nuxtjs/axios'
   ],
 };

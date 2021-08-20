@@ -3,6 +3,7 @@
     id="sliderpage"
     class="slider"
   >
+    <h2 class="visually-hidden">Полезные игры</h2>
     <div class="slider-wrapper">
       <swiper
         ref="swiperMain"
@@ -135,7 +136,7 @@ export default {
       this.currentSlide = this.$refs.swiperMain.$swiper.activeIndex;
     },
     handleScroll() {
-      console.log(window.scrollY);
+      //console.log(window.scrollY);
       if(window.scrollY > 1300)
         this.showDown = false;
       else

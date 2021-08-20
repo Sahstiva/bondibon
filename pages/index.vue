@@ -4,26 +4,26 @@
     <transition name="fade">
       <LazyBBheader v-show="showHeader" @goToNextPage="nextPage($event)"/>
     </transition>
-    <h2 class="visually-hidden">5000 наименований игр и игрушек</h2>
+
     <LazyBBtitle id="BBtitle" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Полезные игры</h2>
+
     <LazyBBslider id="BBslider" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Знания - сила!</h2>
-    <LazyBBknow id="BBknow" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Хочу всё знать</h2>
-    <LazyBBmicroscope id="BBmicroscope" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Интеллект на кончиках пальцев</h2>
-    <LazyBBmosaic id="BBmosaic" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Мысли конструктивно</h2>
-    <LazyBBconstructor id="BBconstructor" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Красота спасёт мир!</h2>
-    <LazyBBevamoda id="BBevamoda" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Делу время - потехе час</h2>
-    <LazyBBtablegames id="BBtablegames" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Подарки своими руками</h2>
+
+    <LazyBBknow v-if="linksPages.get('BBknow')" id="BBknow" :links="linksPages.get('BBknow')" @goToNextPage="nextPage($event)"/>
+
+    <LazyBBmicroscope v-if="linksPages.get('BBmicroscope')" id="BBmicroscope" :links="linksPages.get('BBmicroscope')" @goToNextPage="nextPage($event)"/>
+
+    <LazyBBmosaic v-if="linksPages.get('BBmosaic')" id="BBmosaic" :links="linksPages.get('BBmosaic')" @goToNextPage="nextPage($event)"/>
+
+    <LazyBBconstructor v-if="linksPages.get('BBconstructor')" id="BBconstructor" :links="linksPages.get('BBconstructor')" @goToNextPage="nextPage($event)"/>
+
+    <LazyBBevamoda v-if="linksPages.get('BBevamoda')" id="BBevamoda" :links="linksPages.get('BBevamoda')" @goToNextPage="nextPage($event)"/>
+
+    <LazyBBtablegames v-if="linksPages.get('BBtablegames')" id="BBtablegames" :links="linksPages.get('BBtablegames')" @goToNextPage="nextPage($event)"/>
+
     <LazyBBgift id="BBgift" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Новый год к нам мчится</h2>
-    <LazyBBnewyear id="BBnewyear" @goToNextPage="nextPage($event)"/>
+
+    <LazyBBnewyear v-if="linksPages.get('BBnewyear')" id="BBnewyear" :links="linksPages.get('BBnewyear')" @goToNextPage="nextPage($event)"/>
     <h2 class="visually-hidden">Полезно педагогам</h2>
     <LazyBBteachers id="BBteachers" @goToNextPage="nextPage($event)"/>
     <h2 class="visually-hidden">Подписывайтесь на наш инстаграм, смотрите видео на канале</h2>
@@ -80,9 +80,23 @@ export default {
       showHeader: true,
       showMap: false,
       isMobile: false,
+      linksPages: new Map()
     };
   },
+  created() {
+    this.loadLinks();
+  },
   methods: {
+    async loadLinks() {
+//      const response = await this.$axios.$get('https://promo.vitshas.dev/data/links.json');
+      const response = await this.$axios.$get('/data/links.json');
+      if(response.pages.length > 0) {
+        response.pages.forEach(page => {
+          this.linksPages.set(page.id, { title: page.title, sections: [...page.sections] });
+        });
+        //console.log(this.linksPages);
+      }
+    },
     nextPage(page) {
       const el = document.querySelector(`#${page}`);
       VueScrollTo.scrollTo(el);
@@ -91,7 +105,7 @@ export default {
       //const scrollDirection = window.scrollY > this.scrollPosition ? 'down' : 'up';
       this.scrollPosition = window.scrollY;
       if(this.isMobile) {
-        console.log(this.isMobile);
+        //console.log(this.isMobile);
         if (
             (this.scrollPosition > 50 && this.scrollPosition < 850) ||
             (this.scrollPosition > 920 && this.scrollPosition < 1570) ||

@@ -53,9 +53,12 @@ export default {
         </a>
       `;
     },
-    getAddresses() {
-      const data = require('static/data/address.json');
-      this.shops = [...data.shops];
+    async getAddresses() {
+      //const data = require('static/data/address.json');
+      const response = await this.$axios.$get('/data/address.json');
+      if(response) {
+        this.shops = [...response.shops];
+      }
     },
   },
 };

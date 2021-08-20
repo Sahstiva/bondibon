@@ -1,5 +1,6 @@
 <template>
   <section class="constructor">
+    <h2 class="visually-hidden">Мысли конструктивно</h2>
     <div class="constructor-think">
       <div class="constructor-think__wrapper">
         <p class="constructor-think__text">
@@ -11,21 +12,22 @@
       </div>
     </div>
     <div class="constructor-items">
-      <div class="constructor-items__item constructor-items__robots">
-        наборы робототехники
-      </div>
-      <div class="constructor-items__item constructor-items__magnit">
-        магнитные,<br>блочные и игольчатые конструкторы
-      </div>
-      <div class="constructor-items__item constructor-items__sqrew">
-        конструкторы с отвёрткой,<br>с шестеренками
-      </div>
-      <div class="constructor-items__item constructor-items__puzzles">
-        3d пазлы
-      </div>
-      <div class="constructor-items__item constructor-items__models">
-        сборные модели
-      </div>
+      <button v-for="(section, index) in links.sections" @click="showModal(section)" class="constructor-items__item" :class="'constructor-items__' + styles[index]" v-html="section.text" :key="index"/>
+<!--      <div class="constructor-items__item constructor-items__robots">-->
+<!--        наборы робототехники-->
+<!--      </div>-->
+<!--      <div class="constructor-items__item constructor-items__magnit">-->
+<!--        магнитные,<br>блочные и игольчатые конструкторы-->
+<!--      </div>-->
+<!--      <div class="constructor-items__item constructor-items__sqrew">-->
+<!--        конструкторы с отвёрткой,<br>с шестеренками-->
+<!--      </div>-->
+<!--      <div class="constructor-items__item constructor-items__puzzles">-->
+<!--        3d пазлы-->
+<!--      </div>-->
+<!--      <div class="constructor-items__item constructor-items__models">-->
+<!--        сборные модели-->
+<!--      </div>-->
     </div>
     <button
         class="constructor-button"
@@ -37,7 +39,37 @@
 </template>
 
 <script>
+import modal from "@/components/modal";
+
 export default {
   name: 'BBconstructor',
+  props: ['links'],
+  data() {
+    return {
+      styles: [
+        'robots',
+        'magnit',
+        'sqrew',
+        'puzzles',
+        'models'
+      ]
+    }
+  },
+  methods: {
+    showModal(section) {
+      this.$modal.show(
+          modal,
+          {
+            title: section.text,
+            image: '',
+            links: section.links
+          },
+          {
+            height: 'auto',
+            adaptive: true,
+          }
+      );
+    }
+  }
 };
 </script>

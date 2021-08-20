@@ -1,5 +1,6 @@
 <template>
   <section class="mosaic">
+    <h2 class="visually-hidden">Интеллект на кончиках пальцев</h2>
     <div class="mosaic-smart">
       <div class="mosaic-smart__wrapper">
         <p class="mosaic-smart__text">
@@ -11,21 +12,7 @@
       </div>
     </div>
     <div class="mosaic-items">
-      <div class="mosaic-items__item mosaic-items__aquatermo">
-        аква- и термо- мозаики
-      </div>
-      <div class="mosaic-items__item mosaic-items__engraving">
-        гравюры, фрески и аппликации
-      </div>
-      <div class="mosaic-items__item mosaic-items__modeling">
-        поделки, лепка, выжигание
-      </div>
-      <div class="mosaic-items__item mosaic-items__drawing">
-        рисование, роспись, раскрашивание
-      </div>
-      <div class="mosaic-items__item mosaic-items__knitting">
-        рукоделие: вязание, шитьё, вышивка, плетение
-      </div>
+      <button v-for="(section, index) in links.sections" @click="showModal(section)" class="mosaic-items__item" :class="'mosaic-items__' + styles[index]" v-html="section.text" :key="index"/>
     </div>
     <button
         class="mosaic-button"
@@ -37,7 +24,37 @@
 </template>
 
 <script>
+import modal from "@/components/modal";
+
 export default {
   name: 'BBmosaic',
+  props: ['links'],
+  data() {
+    return {
+      styles: [
+        'aquatermo',
+        'engraving',
+        'modeling',
+        'drawing',
+        'knitting'
+      ]
+    }
+  },
+  methods: {
+    showModal(section) {
+      this.$modal.show(
+          modal,
+          {
+            title: section.text,
+            image: '',
+            links: section.links
+          },
+          {
+            height: 'auto',
+            adaptive: true,
+          }
+      );
+    }
+  }
 };
 </script>
