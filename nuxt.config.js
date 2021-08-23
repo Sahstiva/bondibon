@@ -1,4 +1,12 @@
 export default {
+  publicRuntimeConfig: {
+    BASE_URL: process.env.NODE_ENV === 'production' ? 'https://promo.vitshas.dev/data/' : 'http://localhost:3000/data/',
+    LINKS_URL: '${BASE_URL}links.json',
+    ADDRESS_URL: '${BASE_URL}address.json'
+  },
+  privateRuntimeConfig: {
+    API_YMAP: process.env.API_YMAP
+  },
   target: 'static',
   components: true,
   router: {
@@ -24,9 +32,6 @@ export default {
       },
     ],
   },
-  css: [
-    '@fortawesome/fontawesome-svg-core/styles.css',
-  ],
   plugins: [
     '~/plugins/fontawesome.js',
     {
@@ -47,6 +52,5 @@ export default {
       cancelable: false,
       offset: 1,
     }],
-    '@nuxtjs/axios'
   ],
 };

@@ -24,15 +24,12 @@
 
 export default {
   name: 'Yandexmap',
+  props: ['shops'],
   data: () => ({
     zoom: 2,
     searchControlProvider: 'yandex#search',
     bounds: [[55.556730, 37.332852], [55.923726, 37.860701]],
-    shops: [],
   }),
-  created() {
-    this.getAddresses();
-  },
   methods: {
     balloonTemplate(shop) {
       return `
@@ -52,13 +49,6 @@ export default {
             Построить маршрут в Яндекс.Картах
         </a>
       `;
-    },
-    async getAddresses() {
-      //const data = require('static/data/address.json');
-      const response = await this.$axios.$get('/data/address.json');
-      if(response) {
-        this.shops = [...response.shops];
-      }
     },
   },
 };

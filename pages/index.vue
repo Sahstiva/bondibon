@@ -29,7 +29,7 @@
     <h2 class="visually-hidden">Подписывайтесь на наш инстаграм, смотрите видео на канале</h2>
     <LazyBBlinks id="BBlinks" @goToNextPage="nextPage($event)"/>
     <h2 class="visually-hidden">Где купить</h2>
-    <LazyBBmap v-if="showMap" id="BBmap" @goToNextPage="nextPage($event)"/>
+    <LazyBBmap v-if="showMap" :shops="shops" id="BBmap" @goToNextPage="nextPage($event)"/>
   </div>
 </template>
 
@@ -80,21 +80,35 @@ export default {
       showHeader: true,
       showMap: false,
       isMobile: false,
-      linksPages: new Map()
+      shops: [],
+      linksPages: new Map(),
+      LinksUrl: '',
+      AddressUrl: ''
     };
   },
+  async asyncData({ $config: { LINKS_URL, ADDRESS_URL } }) {
+    let LinksUrl = LINKS_URL, AddressUrl = ADDRESS_URL;
+    return { LinksUrl, AddressUrl }
+  },
   created() {
-    this.loadLinks();
+    this.loadAddress(this.AddressUrl);
+    this.loadLinks(this.LinksUrl);
   },
   methods: {
-    async loadLinks() {
-//      const response = await this.$axios.$get('https://promo.vitshas.dev/data/links.json');
-      const response = await this.$axios.$get('/data/links.json');
-      if(response.pages.length > 0) {
-        response.pages.forEach(page => {
-          this.linksPages.set(page.id, { title: page.title, sections: [...page.sections] });
+    async loadAddress(url) {
+      const response = await fetch(url);
+      const result = await response.json();
+      if(result) {
+        this.shops = [...result.shops];
+      }
+    },
+    async loadLinks(url) {
+      const response = await fetch(url);
+      const result = await response.json();
+      if(result.pages.length > 0) {
+        result.pages.forEach(page => {
+          this.linksPages.set(page.id, {title: page.title, sections: [...page.sections]});
         });
-        //console.log(this.linksPages);
       }
     },
     nextPage(page) {
@@ -102,10 +116,8 @@ export default {
       VueScrollTo.scrollTo(el);
     },
     handleScroll () {
-      //const scrollDirection = window.scrollY > this.scrollPosition ? 'down' : 'up';
       this.scrollPosition = window.scrollY;
       if(this.isMobile) {
-        //console.log(this.isMobile);
         if (
             (this.scrollPosition > 50 && this.scrollPosition < 850) ||
             (this.scrollPosition > 920 && this.scrollPosition < 1570) ||
@@ -141,16 +153,12 @@ export default {
         this.showHeader = false;
       else
         this.showHeader = true;
-      //console.log(window.scrollY);
     }
   },
   mounted() {
     this.scrollPosition = document.body.scrollTop;
     this.isMobile = window.innerWidth < 1024 ? true : false;
     this.showMap = true;
-    //console.log(window.screen.width, window.screen.height);
-    //console.log(window.innerWidth, window.innerHeight);
-    //console.log(`isMobile: ${this.isMobile}`);
   },
   beforeMount () {
     window.addEventListener('scroll', this.handleScroll);

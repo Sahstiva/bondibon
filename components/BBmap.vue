@@ -1,6 +1,6 @@
 <template>
   <section class="map">
-      <Yandexmap class="map-wrapper"/>
+      <LazyYandexmap :shops="shops" class="map-wrapper"/>
       <div class="map-back">
         <button
             class="map-back__button"
@@ -20,6 +20,7 @@ import Yandexmap from './yandexmap.vue';
 
 export default {
   name: 'BBmap',
+  props: ['shops'],
   components: {
     Yandexmap,
   },
