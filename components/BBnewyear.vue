@@ -13,7 +13,11 @@
       </p>
     </div>
     <div class="newyear-grid">
-      <button v-for="section in links.sections" @click="showModal(section)" class="newyear-item">
+      <button
+          v-for="(section, index) in links.sections"
+          @click="showModal(section)"
+          class="newyear-item"
+          :key="index">
         <div class="newyear-item__wrapper">
           <img
               :src="require(`~/assets/images/${section.image}`)"
@@ -38,7 +42,7 @@
 </template>
 
 <script>
-import modal from "@/components/modal";
+import modal from '@/components/modal.vue';
 
 export default {
   name: 'BBnewyear',
@@ -46,19 +50,19 @@ export default {
   methods: {
     showModal(section) {
       this.$modal.show(
-          modal,
-          {
-            title: section.text,
-            image: section.image,
-            links: section.links
-          },
-          {
-            height: 'auto',
-            adaptive: true,
-            classes: 'wheretobuy-modal'
-          }
+        modal,
+        {
+          title: section.text,
+          image: section.image,
+          links: section.links,
+        },
+        {
+          height: 'auto',
+          adaptive: true,
+          classes: 'wheretobuy-modal',
+        },
       );
-    }
-  }
+    },
+  },
 };
 </script>

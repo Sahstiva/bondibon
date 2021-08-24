@@ -2,6 +2,7 @@
   <yandex-map
       :coords="[55.750318, 37.620078]"
         :show-all-markers="true"
+        @map-was-initialized="mapInitialized"
   >
     <ymap-marker
         v-for="(shop, index) in shops"
@@ -31,6 +32,9 @@ export default {
     bounds: [[55.556730, 37.332852], [55.923726, 37.860701]],
   }),
   methods: {
+    mapInitialized() {
+      this.$emit('YandexReady', true);
+    },
     balloonTemplate(shop) {
       return `
         <h3>

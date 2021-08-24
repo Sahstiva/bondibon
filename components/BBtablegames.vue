@@ -9,22 +9,12 @@
       </div>
     </div>
     <div class="tablegames-items">
-      <button v-for="(section, index) in links.sections" @click="showModal(section)" class="tablegames-items__item" :class="'tablegames-items__' + styles[index]" v-html="section.text" :key="index"/>
-<!--      <div class="tablegames-items__item tablegames-items__antistress">игрушки-антистресс-->
-<!--        <span class="tablegames-items__nomobile">сквиши, тянучки, пружинки, мякиши и лизуны</span>-->
-<!--      </div>-->
-<!--      <div class="tablegames-items__item tablegames-items__transport">-->
-<!--        транспорт<span class="tablegames-items__nomobile">машинки, треки, железные дороги</span>-->
-<!--      </div>-->
-<!--      <div class="tablegames-items__item tablegames-items__rolegames">-->
-<!--        сюжетно-ролевые игрушки-->
-<!--      </div>-->
-<!--      <div class="tablegames-items__item tablegames-items__dolls">-->
-<!--        куклы и пупсы-->
-<!--      </div>-->
-<!--      <div class="tablegames-items__item tablegames-items__newborn">-->
-<!--        игрушки для малышей-->
-<!--      </div>-->
+      <button
+          v-for="(section, index) in links.sections"
+          @click="showModal(section)"
+          class="tablegames-items__item"
+          :class="'tablegames-items__' + styles[index]"
+          v-html="section.text" :key="index"/>
     </div>
     <button
         class="tablegames-button"
@@ -36,7 +26,7 @@
 </template>
 
 <script>
-import modal from "@/components/modal";
+import modal from '@/components/modal.vue';
 
 export default {
   name: 'BBtablegames',
@@ -48,25 +38,25 @@ export default {
         'transport',
         'rolegames',
         'dolls',
-        'newborn'
-      ]
-    }
+        'newborn',
+      ],
+    };
   },
   methods: {
     showModal(section) {
       this.$modal.show(
-          modal,
-          {
-            title: section.text,
-            image: '',
-            links: section.links
-          },
-          {
-            height: 'auto',
-            adaptive: true,
-          }
+        modal,
+        {
+          title: section.text,
+          image: '',
+          links: section.links,
+        },
+        {
+          height: 'auto',
+          adaptive: true,
+        },
       );
-    }
-  }
+    },
+  },
 };
 </script>

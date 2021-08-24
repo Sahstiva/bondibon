@@ -3,7 +3,7 @@
     class="header"
   >
     <div class="header-wrapper">
-      <section class="header-address">
+      <div class="header-address">
         <a href="https://bondibon.ru">
           <picture class="header-address__logo">
             <source
@@ -14,6 +14,7 @@
                 media="(max-width: 374px)">
             <img
               src="~/assets/images/logo_bondibon.png"
+              width="131" height="36"
               alt="Бондибон -официальный сайт"
             >
           </picture></a>
@@ -31,34 +32,37 @@
           class="header-icon"
           :icon="['fas', 'phone-alt']"
         />8-800-550-05-28</a>
-      </section>
-      <section class="header-wheretobuy">
+      </div>
+      <div class="header-wheretobuy">
         <button class="header-wheretobuy__button" @click="$emit('goToNextPage', 'BBmap')">
           <font-awesome-icon
             class="header-wheretobuy__icon"
             :icon="['fas', 'map-marker-alt']"
           />
-          <div class="header-wheretobuy__text">Где купить</div>
+          <p class="header-wheretobuy__text">Где купить</p>
         </button>
-      </section>
-      <section class="header-social">
+      </div>
+      <div class="header-social">
         <div class="header-social__wrapper">
           <a class="header-social__icon" href="https://vk.com/public173602765">
-          <font-awesome-icon
-            :icon="['fab', 'vk']"
-          /></a>
+            <font-awesome-icon
+              :icon="['fab', 'vk']"
+            /><span class="visually-hidden">Перейти на ВК</span>
+          </a>
         </div>
         <div class="header-social__wrapper">
           <a class="header-social__icon" href="https://ru-ru.facebook.com/gameskidsgroup">
-          <font-awesome-icon
-            :icon="['fab', 'facebook-f']"
-          /></a>
+            <font-awesome-icon
+              :icon="['fab', 'facebook-f']"
+            /><span class="visually-hidden">Перейти на Facebook</span>
+          </a>
         </div>
         <div class="header-social__wrapper">
           <a class="header-social__icon" href="https://www.instagram.com/bondibon_games/">
-          <font-awesome-icon
-            :icon="['fab', 'instagram-square']"
-          /></a>
+            <font-awesome-icon
+              :icon="['fab', 'instagram-square']"
+            /><span class="visually-hidden">Перейти на Facebook</span>
+          </a>
         </div>
         <div class="header-social__wrapper">
           <a class="header-social__icon"
@@ -67,7 +71,7 @@
             :icon="['fab', 'youtube']"
           /></a>
         </div>
-      </section>
+      </div>
     </div>
   </header>
 </template>

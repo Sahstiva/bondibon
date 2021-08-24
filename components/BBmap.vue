@@ -1,6 +1,7 @@
 <template>
   <section class="map">
-      <LazyYandexmap :shops="shops" class="map-wrapper"/>
+    <h2 class="visually-hidden">Где купить</h2>
+      <Yandexmap :shops="shops" @YandexReady="$emit('YandexReady',$event)" class="map-wrapper"/>
       <div class="map-back">
         <button
             class="map-back__button"

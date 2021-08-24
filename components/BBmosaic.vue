@@ -12,7 +12,13 @@
       </div>
     </div>
     <div class="mosaic-items">
-      <button v-for="(section, index) in links.sections" @click="showModal(section)" class="mosaic-items__item" :class="'mosaic-items__' + styles[index]" v-html="section.text" :key="index"/>
+      <button
+          v-for="(section, index) in links.sections"
+          @click="showModal(section)"
+          class="mosaic-items__item"
+          :class="'mosaic-items__' + styles[index]"
+          v-html="section.text"
+          :key="index"/>
     </div>
     <button
         class="mosaic-button"
@@ -24,7 +30,7 @@
 </template>
 
 <script>
-import modal from "@/components/modal";
+import modal from '@/components/modal.vue';
 
 export default {
   name: 'BBmosaic',
@@ -36,25 +42,25 @@ export default {
         'engraving',
         'modeling',
         'drawing',
-        'knitting'
-      ]
-    }
+        'knitting',
+      ],
+    };
   },
   methods: {
     showModal(section) {
       this.$modal.show(
-          modal,
-          {
-            title: section.text,
-            image: '',
-            links: section.links
-          },
-          {
-            height: 'auto',
-            adaptive: true,
-          }
+        modal,
+        {
+          title: section.text,
+          image: '',
+          links: section.links,
+        },
+        {
+          height: 'auto',
+          adaptive: true,
+        },
       );
-    }
-  }
+    },
+  },
 };
 </script>

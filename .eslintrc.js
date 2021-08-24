@@ -27,6 +27,7 @@ module.exports = {
     'vue/no-parsing-error': ['error', {
       'invalid-first-character-of-tag-name': false,
     }],
+    'linebreak-style': ['error', 'windows'],
   },
   settings: {
     'import/resolver': {

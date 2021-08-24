@@ -28,17 +28,19 @@
   @media (max-width: 374px) {
     min-height: 700px;
   }
-  &-image {
+  &-img {
     @media (max-width: 374px) {
       width: 320px;
       height: 370px;
+    }
+    @media (max-width: 1023px) {
+      width: 480px;
+      height: 555px;
     }
   }
   &-wrapper {
     width: 678px;
     margin: 115px 400px 0 0;
-    @media (max-width: 1920px) {
-    }
     @media (max-width: 1023px) {
       width: 100%;
       max-width: 480px;

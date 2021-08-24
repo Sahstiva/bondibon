@@ -12,7 +12,12 @@
       </div>
     </div>
     <div class="evamoda-items">
-      <button v-for="(section, index) in links.sections" @click="showModal(section)" class="evamoda-items__item" :class="'evamoda-items__' + styles[index]" v-html="section.text" :key="index"/>
+      <button
+          v-for="(section, index) in links.sections"
+          @click="showModal(section)"
+          class="evamoda-items__item"
+          :class="'evamoda-items__' + styles[index]"
+          v-html="section.text" :key="index"/>
     </div>
     <button
         class="evamoda-button"
@@ -24,7 +29,7 @@
 </template>
 
 <script>
-import modal from "@/components/modal";
+import modal from '@/components/modal.vue';
 
 export default {
   name: 'BBevamoda',
@@ -36,25 +41,25 @@ export default {
         'bodyart',
         'accesoires',
         'umbrella',
-        'bags'
-      ]
-    }
+        'bags',
+      ],
+    };
   },
   methods: {
     showModal(section) {
       this.$modal.show(
-          modal,
-          {
-            title: section.text,
-            image: '',
-            links: section.links
-          },
-          {
-            height: 'auto',
-            adaptive: true,
-          }
+        modal,
+        {
+          title: section.text,
+          image: '',
+          links: section.links,
+        },
+        {
+          height: 'auto',
+          adaptive: true,
+        },
       );
-    }
-  }
+    },
+  },
 };
 </script>

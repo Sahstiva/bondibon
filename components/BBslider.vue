@@ -24,7 +24,9 @@
               media="(max-width: 1023px)"
             >
             <img
-              srcset="~/assets/images/slider_tablegames.png"
+                class="slider-img"
+              src="~/assets/images/slider_tablegames.png"
+              width="678" height="575"
               alt="Настольные игры"
             >
           </picture>
@@ -44,7 +46,10 @@
               media="(max-width: 1023px)"
             >
             <img
-              srcset="~/assets/images/slider_mosaic.png"
+                class="slider-img"
+              src="~/assets/images/slider_mosaic.png"
+              width="678"
+              height="575"
               alt="Пазлы и мозаики"
             >
           </picture>
@@ -64,7 +69,9 @@
               media="(max-width: 1023px)"
             >
             <img
-              srcset="~/assets/images/slider_roadgames.png"
+                class="slider-img"
+              src="~/assets/images/slider_roadgames.png"
+              width="678" height="575"
               alt="Игры в дорогу"
             >
           </picture>
@@ -136,18 +143,16 @@ export default {
       this.currentSlide = this.$refs.swiperMain.$swiper.activeIndex;
     },
     handleScroll() {
-      //console.log(window.scrollY);
-      if(window.scrollY > 1300)
-        this.showDown = false;
-      else
-        this.showDown = true;
-    }
+      // console.log(window.scrollY);
+      if (window.scrollY > 1300) this.showDown = false;
+      else this.showDown = true;
+    },
   },
-  beforeMount () {
+  beforeMount() {
     window.addEventListener('scroll', this.handleScroll);
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
-  }
+  },
 };
 </script>

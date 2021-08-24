@@ -2,34 +2,54 @@
   <div class="site-wrapper">
     <h1 class="visually-hidden">Игрушки, развивающие и развлекательные игры - BONDIBON</h1>
     <transition name="fade">
-      <LazyBBheader v-show="showHeader" @goToNextPage="nextPage($event)"/>
+      <BBheader v-show="showHeader" @goToNextPage="nextPage($event)"/>
     </transition>
-
-    <LazyBBtitle id="BBtitle" @goToNextPage="nextPage($event)"/>
-
-    <LazyBBslider id="BBslider" @goToNextPage="nextPage($event)"/>
-
-    <LazyBBknow v-if="linksPages.get('BBknow')" id="BBknow" :links="linksPages.get('BBknow')" @goToNextPage="nextPage($event)"/>
-
-    <LazyBBmicroscope v-if="linksPages.get('BBmicroscope')" id="BBmicroscope" :links="linksPages.get('BBmicroscope')" @goToNextPage="nextPage($event)"/>
-
-    <LazyBBmosaic v-if="linksPages.get('BBmosaic')" id="BBmosaic" :links="linksPages.get('BBmosaic')" @goToNextPage="nextPage($event)"/>
-
-    <LazyBBconstructor v-if="linksPages.get('BBconstructor')" id="BBconstructor" :links="linksPages.get('BBconstructor')" @goToNextPage="nextPage($event)"/>
-
-    <LazyBBevamoda v-if="linksPages.get('BBevamoda')" id="BBevamoda" :links="linksPages.get('BBevamoda')" @goToNextPage="nextPage($event)"/>
-
-    <LazyBBtablegames v-if="linksPages.get('BBtablegames')" id="BBtablegames" :links="linksPages.get('BBtablegames')" @goToNextPage="nextPage($event)"/>
-
-    <LazyBBgift id="BBgift" @goToNextPage="nextPage($event)"/>
-
-    <LazyBBnewyear v-if="linksPages.get('BBnewyear')" id="BBnewyear" :links="linksPages.get('BBnewyear')" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Полезно педагогам</h2>
-    <LazyBBteachers id="BBteachers" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Подписывайтесь на наш инстаграм, смотрите видео на канале</h2>
-    <LazyBBlinks id="BBlinks" @goToNextPage="nextPage($event)"/>
-    <h2 class="visually-hidden">Где купить</h2>
-    <LazyBBmap v-if="showMap" :shops="shops" id="BBmap" @goToNextPage="nextPage($event)"/>
+    <BBtitle id="BBtitle" @goToNextPage="nextPage($event)"/>
+    <BBslider id="BBslider" @goToNextPage="nextPage($event)"/>
+    <BBknow
+        v-if="linksPages.get('BBknow')"
+        id="BBknow"
+        :links="linksPages.get('BBknow')"
+        @goToNextPage="nextPage($event)"/>
+    <BBmicroscope
+        v-if="linksPages.get('BBmicroscope')"
+        id="BBmicroscope"
+        :links="linksPages.get('BBmicroscope')"
+        @goToNextPage="nextPage($event)"/>
+    <BBmosaic
+        v-if="linksPages.get('BBmosaic')"
+        id="BBmosaic"
+        :links="linksPages.get('BBmosaic')"
+        @goToNextPage="nextPage($event)"/>
+    <BBconstructor
+        v-if="linksPages.get('BBconstructor')"
+        id="BBconstructor"
+        :links="linksPages.get('BBconstructor')"
+        @goToNextPage="nextPage($event)"/>
+    <BBevamoda
+        v-if="linksPages.get('BBevamoda')"
+        id="BBevamoda"
+        :links="linksPages.get('BBevamoda')"
+        @goToNextPage="nextPage($event)"/>
+    <BBtablegames
+        v-if="linksPages.get('BBtablegames')"
+        id="BBtablegames"
+        :links="linksPages.get('BBtablegames')"
+        @goToNextPage="nextPage($event)"/>
+    <BBgift id="BBgift" @goToNextPage="nextPage($event)"/>
+    <BBnewyear
+        v-if="linksPages.get('BBnewyear')"
+        id="BBnewyear"
+        :links="linksPages.get('BBnewyear')"
+        @goToNextPage="nextPage($event)"/>
+    <BBteachers id="BBteachers" @goToNextPage="nextPage($event)"/>
+    <BBlinks id="BBlinks" @goToNextPage="nextPage($event)"/>
+    <BBmap
+        v-if="showMap"
+        :shops="shops"
+        id="BBmap"
+        @YandexReady="YandexReady"
+        @goToNextPage="nextPage($event)"/>
   </div>
 </template>
 
@@ -83,88 +103,107 @@ export default {
       shops: [],
       linksPages: new Map(),
       LinksUrl: '',
-      AddressUrl: ''
+      AddressUrl: '',
+      yandexLoaded: false,
+      scrollToMap: false,
     };
   },
+  watch: {
+    yandexLoaded(isLoaded) {
+      if (isLoaded) {
+        this.scrollToMap = false;
+        this.nextPage('BBmap');
+      }
+    },
+  },
   async asyncData({ $config: { LINKS_URL, ADDRESS_URL } }) {
-    let LinksUrl = LINKS_URL, AddressUrl = ADDRESS_URL;
-    return { LinksUrl, AddressUrl }
+    const LinksUrl = LINKS_URL; const
+      AddressUrl = ADDRESS_URL;
+    return { LinksUrl, AddressUrl };
   },
   created() {
     this.loadAddress(this.AddressUrl);
     this.loadLinks(this.LinksUrl);
   },
   methods: {
+    YandexReady(isReady) {
+      if (isReady) this.yandexLoaded = true;
+    },
     async loadAddress(url) {
       const response = await fetch(url);
       const result = await response.json();
-      if(result) {
+      if (result) {
         this.shops = [...result.shops];
       }
     },
     async loadLinks(url) {
       const response = await fetch(url);
       const result = await response.json();
-      if(result.pages.length > 0) {
-        result.pages.forEach(page => {
-          this.linksPages.set(page.id, {title: page.title, sections: [...page.sections]});
+      if (result.pages.length > 0) {
+        result.pages.forEach((page) => {
+          this.linksPages.set(page.id, { title: page.title, sections: [...page.sections] });
         });
       }
     },
     nextPage(page) {
-      const el = document.querySelector(`#${page}`);
-      VueScrollTo.scrollTo(el);
-    },
-    handleScroll () {
-      this.scrollPosition = window.scrollY;
-      if(this.isMobile) {
-        if (
-            (this.scrollPosition > 50 && this.scrollPosition < 850) ||
-            (this.scrollPosition > 920 && this.scrollPosition < 1570) ||
-            (this.scrollPosition > 1630 && this.scrollPosition < 2380) ||
-            (this.scrollPosition > 2470 && this.scrollPosition < 3170) ||
-            (this.scrollPosition > 3260 && this.scrollPosition < 3970) ||
-            (this.scrollPosition > 4060 && this.scrollPosition < 4770) ||
-            (this.scrollPosition > 4830 && this.scrollPosition < 5570) ||
-            (this.scrollPosition > 5660 && this.scrollPosition < 6370) ||
-            (this.scrollPosition > 6450 && this.scrollPosition < 7180) ||
-            (this.scrollPosition > 7220 && this.scrollPosition < 8760) ||
-            (this.scrollPosition > 8820 && this.scrollPosition < 9560) ||
-            (this.scrollPosition > 9610 && this.scrollPosition < 10500)
-        )
-          this.showHeader = false;
-        else
-          this.showHeader = true;
+      if (page === 'BBmap' && !this.showMap && !this.scrollToMap) {
+        this.showMap = true;
+        this.scrollToMap = true;
+      } else {
+        const el = document.querySelector(`#${page}`);
+        VueScrollTo.scrollTo(el);
       }
-      else if(
-          (this.scrollPosition > 50 && this.scrollPosition < 600) ||
-          (this.scrollPosition > 750 && this.scrollPosition < 1350) ||
-          (this.scrollPosition > 1415 && this.scrollPosition < 2030) ||
-          (this.scrollPosition > 2150 && this.scrollPosition < 2750) ||
-          (this.scrollPosition > 2850 && this.scrollPosition < 3430) ||
-          (this.scrollPosition > 3550 && this.scrollPosition < 4130) ||
-          (this.scrollPosition > 4250 && this.scrollPosition < 4830) ||
-          (this.scrollPosition > 4950 && this.scrollPosition < 5510) ||
-          (this.scrollPosition > 5650 && this.scrollPosition < 6220) ||
-          (this.scrollPosition > 6315 && this.scrollPosition < 6920) ||
-          (this.scrollPosition > 7050 && this.scrollPosition < 7630) ||
-          (this.scrollPosition > 7750 && this.scrollPosition < 8400)
-      )
-        this.showHeader = false;
-      else
-        this.showHeader = true;
-    }
+    },
+    handleScroll() {
+      this.scrollPosition = window.scrollY;
+      // console.log(this.scrollPosition);
+      if (this.scrollPosition > 6800 && !this.showMap) {
+        this.showMap = true;
+      }
+      if (this.isMobile) {
+        if (
+          (this.scrollPosition > 50 && this.scrollPosition < 850)
+            || (this.scrollPosition > 920 && this.scrollPosition < 1570)
+            || (this.scrollPosition > 1630 && this.scrollPosition < 2380)
+            || (this.scrollPosition > 2470 && this.scrollPosition < 3170)
+            || (this.scrollPosition > 3260 && this.scrollPosition < 3970)
+            || (this.scrollPosition > 4060 && this.scrollPosition < 4770)
+            || (this.scrollPosition > 4830 && this.scrollPosition < 5570)
+            || (this.scrollPosition > 5660 && this.scrollPosition < 6370)
+            || (this.scrollPosition > 6450 && this.scrollPosition < 7180)
+            || (this.scrollPosition > 7220 && this.scrollPosition < 8760)
+            || (this.scrollPosition > 8820 && this.scrollPosition < 9560)
+            || (this.scrollPosition > 9610 && this.scrollPosition < 10500)
+        ) this.showHeader = false;
+        else this.showHeader = true;
+      } else if (
+        (this.scrollPosition > 50 && this.scrollPosition < 600)
+          || (this.scrollPosition > 750 && this.scrollPosition < 1350)
+          || (this.scrollPosition > 1415 && this.scrollPosition < 2030)
+          || (this.scrollPosition > 2150 && this.scrollPosition < 2750)
+          || (this.scrollPosition > 2850 && this.scrollPosition < 3430)
+          || (this.scrollPosition > 3550 && this.scrollPosition < 4130)
+          || (this.scrollPosition > 4250 && this.scrollPosition < 4830)
+          || (this.scrollPosition > 4950 && this.scrollPosition < 5510)
+          || (this.scrollPosition > 5650 && this.scrollPosition < 6220)
+          || (this.scrollPosition > 6315 && this.scrollPosition < 6920)
+          || (this.scrollPosition > 7050 && this.scrollPosition < 7630)
+          || (this.scrollPosition > 7750 && this.scrollPosition < 8400)
+      ) this.showHeader = false;
+      else this.showHeader = true;
+    },
   },
   mounted() {
+    // this.nextPage('BBtitle');
     this.scrollPosition = document.body.scrollTop;
-    this.isMobile = window.innerWidth < 1024 ? true : false;
-    this.showMap = true;
+    this.isMobile = window.innerWidth < 1024;
+    // this.showMap = true;
   },
-  beforeMount () {
+  beforeMount() {
     window.addEventListener('scroll', this.handleScroll);
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
-  }
+  },
 };
 </script>

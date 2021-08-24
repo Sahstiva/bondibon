@@ -3,7 +3,11 @@
     <h2 class="visually-hidden">5000 наименований игр и игрушек</h2>
     <div class="title-benefit">
       <div class="title-benefit__item title-benefit__cyan">
-        <img src="~/assets/images/basket.svg" width="44" height="45" class="title-benefit__basket" alt="5000 наименований игр и игрушек">
+        <img
+            src="~/assets/images/basket.svg"
+            width="44" height="45"
+            class="title-benefit__basket"
+            alt="5000 наименований игр и игрушек">
         <div class="title-benefit__textbox">
           <p class="title-benefit__litera">
             5000
@@ -17,7 +21,11 @@
         </div>
       </div>
       <div class="title-benefit__item title-benefit__orange">
-        <img src="~/assets/images/cake.svg" width="52" height="50" class="title-benefit__cake" alt="15 лет бренду">
+        <img
+            src="~/assets/images/cake.svg"
+            width="52" height="50"
+            class="title-benefit__cake"
+            alt="15 лет бренду">
         <div class="title-benefit__textbox">
           <p class="title-benefit__litera">
             15 лет
@@ -28,7 +36,11 @@
         </div>
       </div>
       <div class="title-benefit__item title-benefit__magenta">
-        <img src="~/assets/images/medal.svg" width="47" height="54" class="title-benefit__medal" alt="Выбор педагогов">
+        <img
+            src="~/assets/images/medal.svg"
+            width="47" height="54"
+            class="title-benefit__medal"
+            alt="Выбор педагогов">
         <div class="title-benefit__textbox">
           <p class="title-benefit__litera">
             Выбор

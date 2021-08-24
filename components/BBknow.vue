@@ -10,7 +10,12 @@
       </p>
     </div>
     <div class="knowledge-grid">
-      <button v-for="section in links.sections" @click="showModal(section)" class="knowledge-grid__item">
+      <button
+          v-for="(section, index) in links.sections"
+          @click="showModal(section)"
+          class="knowledge-grid__item"
+          :key="index"
+      >
         <img
             :src="require(`~/assets/images/${section.image}`)"
             width="170"
@@ -33,7 +38,7 @@
 </template>
 
 <script>
-import modal from "@/components/modal";
+import modal from '@/components/modal.vue';
 
 export default {
   name: 'BBknow',
@@ -41,18 +46,18 @@ export default {
   methods: {
     showModal(section) {
       this.$modal.show(
-          modal,
-          {
-            title: section.text,
-            image: section.image,
-            links: section.links
-          },
-          {
-            height: 'auto',
-            adaptive: true,
-          }
+        modal,
+        {
+          title: section.text,
+          image: section.image,
+          links: section.links,
+        },
+        {
+          height: 'auto',
+          adaptive: true,
+        },
       );
-    }
-  }
+    },
+  },
 };
 </script>

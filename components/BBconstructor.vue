@@ -12,22 +12,12 @@
       </div>
     </div>
     <div class="constructor-items">
-      <button v-for="(section, index) in links.sections" @click="showModal(section)" class="constructor-items__item" :class="'constructor-items__' + styles[index]" v-html="section.text" :key="index"/>
-<!--      <div class="constructor-items__item constructor-items__robots">-->
-<!--        наборы робототехники-->
-<!--      </div>-->
-<!--      <div class="constructor-items__item constructor-items__magnit">-->
-<!--        магнитные,<br>блочные и игольчатые конструкторы-->
-<!--      </div>-->
-<!--      <div class="constructor-items__item constructor-items__sqrew">-->
-<!--        конструкторы с отвёрткой,<br>с шестеренками-->
-<!--      </div>-->
-<!--      <div class="constructor-items__item constructor-items__puzzles">-->
-<!--        3d пазлы-->
-<!--      </div>-->
-<!--      <div class="constructor-items__item constructor-items__models">-->
-<!--        сборные модели-->
-<!--      </div>-->
+      <button
+          v-for="(section, index) in links.sections"
+          @click="showModal(section)"
+          class="constructor-items__item"
+          :class="'constructor-items__' + styles[index]"
+          v-html="section.text" :key="index"/>
     </div>
     <button
         class="constructor-button"
@@ -39,7 +29,7 @@
 </template>
 
 <script>
-import modal from "@/components/modal";
+import modal from '@/components/modal.vue';
 
 export default {
   name: 'BBconstructor',
@@ -51,25 +41,25 @@ export default {
         'magnit',
         'sqrew',
         'puzzles',
-        'models'
-      ]
-    }
+        'models',
+      ],
+    };
   },
   methods: {
     showModal(section) {
       this.$modal.show(
-          modal,
-          {
-            title: section.text,
-            image: '',
-            links: section.links
-          },
-          {
-            height: 'auto',
-            adaptive: true,
-          }
+        modal,
+        {
+          title: section.text,
+          image: '',
+          links: section.links,
+        },
+        {
+          height: 'auto',
+          adaptive: true,
+        },
       );
-    }
-  }
+    },
+  },
 };
 </script>

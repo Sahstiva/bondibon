@@ -26,6 +26,7 @@
             >
             <img
               src="~/assets/images/slider_cup.png"
+              width="678" height="575"
               alt="Подарки своими руками"
             >
           </picture>
@@ -45,6 +46,7 @@
             >
             <img
               src="~/assets/images/slider_cup.png"
+              width="678" height="575"
               alt="Новогодние игры"
             >
           </picture>
@@ -65,6 +67,7 @@
             >
             <img
               src="~/assets/images/slider_cup.png"
+              width="678" height="575"
               alt="Креативные наборы"
             >
           </picture>
