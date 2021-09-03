@@ -44,11 +44,10 @@
         @goToNextPage="nextPage($event)"/>
     <BBteachers id="BBteachers" @goToNextPage="nextPage($event)"/>
     <BBlinks id="BBlinks" @goToNextPage="nextPage($event)"/>
+    <div id="BBmap"></div>
     <BBmap
-        v-if="showMap"
         :shops="shops"
-        id="BBmap"
-        @YandexReady="YandexReady"
+        :showMap="showMap"
         @goToNextPage="nextPage($event)"/>
   </div>
 </template>
@@ -71,8 +70,6 @@ import BBnewyear from '../components/BBnewyear.vue';
 import BBteachers from '../components/BBteachers.vue';
 import BBlinks from '../components/BBlinks.vue';
 import BBmap from '../components/BBmap.vue';
-
-const VueScrollTo = require('vue-scrollto');
 
 export default {
   name: 'Bondibon',
@@ -102,57 +99,42 @@ export default {
       isMobile: false,
       shops: [],
       linksPages: new Map(),
-      LinksUrl: '',
-      AddressUrl: '',
-      yandexLoaded: false,
-      scrollToMap: false,
     };
   },
-  watch: {
-    yandexLoaded(isLoaded) {
-      if (isLoaded) {
-        this.scrollToMap = false;
-        this.nextPage('BBmap');
-      }
-    },
-  },
-  async asyncData({ $config: { LINKS_URL, ADDRESS_URL } }) {
-    const LinksUrl = LINKS_URL; const
-      AddressUrl = ADDRESS_URL;
-    return { LinksUrl, AddressUrl };
-  },
   created() {
-    this.loadAddress(this.AddressUrl);
-    this.loadLinks(this.LinksUrl);
+    this.loadAddress(process.env.ADDRESS_URL);
+    this.loadLinks(process.env.LINKS_URL);
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  mounted() {
+    // this.nextPage('BBtitle');
+    this.scrollPosition = document.body.scrollTop;
+    this.isMobile = window.innerWidth < 1024;
   },
   methods: {
-    YandexReady(isReady) {
-      if (isReady) this.yandexLoaded = true;
-    },
     async loadAddress(url) {
-      const response = await fetch(url);
-      const result = await response.json();
-      if (result) {
-        this.shops = [...result.shops];
+      const response = await this.$axios.$get(url);
+      if (response) {
+        this.shops = [...response.shops];
       }
     },
     async loadLinks(url) {
-      const response = await fetch(url);
-      const result = await response.json();
-      if (result.pages.length > 0) {
-        result.pages.forEach((page) => {
+      const response = await this.$axios.$get(url);
+      if (response.pages.length > 0) {
+        response.pages.forEach((page) => {
           this.linksPages.set(page.id, { title: page.title, sections: [...page.sections] });
         });
       }
     },
     nextPage(page) {
-      if (page === 'BBmap' && !this.showMap && !this.scrollToMap) {
-        this.showMap = true;
-        this.scrollToMap = true;
-      } else {
-        const el = document.querySelector(`#${page}`);
-        VueScrollTo.scrollTo(el);
-      }
+      const el = document.getElementById(page);
+      console.log(`Go to page ${el.id}`);
+      el.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     },
     handleScroll() {
       this.scrollPosition = window.scrollY;
@@ -192,18 +174,6 @@ export default {
       ) this.showHeader = false;
       else this.showHeader = true;
     },
-  },
-  mounted() {
-    // this.nextPage('BBtitle');
-    this.scrollPosition = document.body.scrollTop;
-    this.isMobile = window.innerWidth < 1024;
-    // this.showMap = true;
-  },
-  beforeMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll);
   },
 };
 </script>

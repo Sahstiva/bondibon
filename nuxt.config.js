@@ -1,11 +1,7 @@
 export default {
-  publicRuntimeConfig: {
-    BASE_URL: process.env.NODE_ENV === 'production' ? 'https://promo.vitshas.dev/data/' : 'http://localhost:3000/data/',
-    LINKS_URL: '${BASE_URL}links.json',
-    ADDRESS_URL: '${BASE_URL}address.json',
-  },
-  privateRuntimeConfig: {
-    API_YMAP: process.env.API_YMAP,
+  env: {
+    LINKS_URL: process.env.LINKS_URL,
+    ADDRESS_URL: process.env.ADDRESS_URL,
   },
   target: 'static',
   components: true,
@@ -16,8 +12,7 @@ export default {
     title: 'BONDIBON',
     titleTemplate: 'Игрушки, развивающие и развлекательные игры | %s',
     htmlAttrs: {
-      lang: 'en',
-      amp: true,
+      lang: 'ru'
     },
     meta: [
       { charset: 'utf-8' },
@@ -44,13 +39,6 @@ export default {
     },
   ],
   modules: [
-    ['vue-scrollto/nuxt', {
-      container: 'body',
-      duration: 500,
-      easing: 'ease-in',
-      force: true,
-      cancelable: false,
-      offset: 1,
-    }],
+    '@nuxtjs/axios',
   ],
 };

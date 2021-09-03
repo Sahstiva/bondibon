@@ -41,7 +41,7 @@
           rel="noreferrer"
           target="_blank"
       >
-        социально- коммуника- тивное развитие
+        социально-коммуникативное развитие
       </a>
       <div class="teachers-items__item teachers-items__catalog">
         Получите&nbsp;<span class="teachers-items__large">каталог </span>
