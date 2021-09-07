@@ -1,7 +1,9 @@
 export default {
-  env: {
-    LINKS_URL: process.env.LINKS_URL,
-    ADDRESS_URL: process.env.ADDRESS_URL,
+  publicRuntimeConfig: {
+    LINKS_URL:
+        process.env.NODE_ENV === 'production' ? process.env.LINKS_URL : 'http://localhost:3000/data/links.json',
+    ADDRESS_URL:
+        process.env.NODE_ENV === 'production' ? process.env.ADDRESS_URL : 'http://localhost:3000/data/address.json',
   },
   target: 'static',
   components: true,
@@ -12,7 +14,7 @@ export default {
     title: 'BONDIBON',
     titleTemplate: 'Игрушки, развивающие и развлекательные игры | %s',
     htmlAttrs: {
-      lang: 'ru'
+      lang: 'ru',
     },
     meta: [
       { charset: 'utf-8' },
@@ -25,6 +27,9 @@ export default {
         name: 'description',
         content: 'Bondibon - игрушки, развивающие и развлекательные игры',
       },
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],
   },
   plugins: [

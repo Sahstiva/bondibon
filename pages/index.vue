@@ -101,9 +101,16 @@ export default {
       linksPages: new Map(),
     };
   },
-  created() {
-    this.loadAddress(process.env.ADDRESS_URL);
-    this.loadLinks(process.env.LINKS_URL);
+  async asyncData({ $axios, $config: { LINKS_URL, ADDRESS_URL } }) {
+    const { shops } = await $axios.$get(ADDRESS_URL);
+    const { pages } = await $axios.$get(LINKS_URL);
+    const links = new Map();
+    if (pages.length > 0) {
+      pages.forEach((page) => {
+        links.set(page.id, { title: page.title, sections: page.sections });
+      });
+    }
+    return { shops, linksPages: links };
   },
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll);
@@ -112,33 +119,16 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   mounted() {
-    // this.nextPage('BBtitle');
     this.scrollPosition = document.body.scrollTop;
     this.isMobile = window.innerWidth < 1024;
   },
   methods: {
-    async loadAddress(url) {
-      const response = await this.$axios.$get(url);
-      if (response) {
-        this.shops = [...response.shops];
-      }
-    },
-    async loadLinks(url) {
-      const response = await this.$axios.$get(url);
-      if (response.pages.length > 0) {
-        response.pages.forEach((page) => {
-          this.linksPages.set(page.id, { title: page.title, sections: [...page.sections] });
-        });
-      }
-    },
     nextPage(page) {
       const el = document.getElementById(page);
-      console.log(`Go to page ${el.id}`);
       el.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     },
     handleScroll() {
       this.scrollPosition = window.scrollY;
-      // console.log(this.scrollPosition);
       if (this.scrollPosition > 6800 && !this.showMap) {
         this.showMap = true;
       }

@@ -13,3 +13,5 @@ dist
 
 # IDEA
 .idea
+/dist/_nuxt/LICENSES
+/dist/*.html
