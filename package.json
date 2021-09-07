@@ -23,6 +23,7 @@
     "vue-yandex-maps": "^0.10.12"
   },
   "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.4.0",
     "core-js": "^2.6.12",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -30,9 +31,13 @@
     "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.16.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
     "push-dir": "^0.4.1",
     "sass": "^1.35.2",
     "sass-loader": "^10.2.0",
+    "webp-loader": "^0.6.0",
     "webpack": "^4.46.0"
   }
 }

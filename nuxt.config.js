@@ -46,4 +46,10 @@ export default {
   modules: [
     '@nuxtjs/axios',
   ],
+  buildModules: [
+    '@aceforth/nuxt-optimized-images',
+  ],
+  optimizedImages: {
+    optimizeImages: true,
+  },
 };
