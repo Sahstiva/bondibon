@@ -1,5 +1,5 @@
 .microscope {
-  background-image: url('~assets/images/background_microscope.png');
+  background-image: url('~assets/images/background_microscope.png?webp');
   background-position: center top;
   background-repeat: no-repeat;
   width: 1920px;
@@ -12,7 +12,7 @@
     width: 100vw;
   }
   @media (max-width: 1023px) {
-    background-image: url('~assets/mobile/background_micro_mobile.png');
+    background-image: url('~assets/mobile/background_micro_mobile.png?webp');
     background-position: center top;
     background-repeat: no-repeat;
     width: 100%;

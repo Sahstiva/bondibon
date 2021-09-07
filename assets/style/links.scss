@@ -1,5 +1,5 @@
 .links {
-  background-image: url('~assets/images/background_links.png');
+  background-image: url('~assets/images/background_links.png?webp');
   background-position: center top;
   background-repeat: no-repeat;
   width: 1920px;
@@ -13,7 +13,7 @@
     background-position: center top;
   }
   @media (max-width: 1023px) {
-    background-image: url('~assets/mobile/background_links_mobile.png');
+    background-image: url('~assets/mobile/background_links_mobile.png?webp');
     background-position: center top;
     background-repeat: no-repeat;
     width: 100vw;
@@ -193,7 +193,7 @@
 
       &:after {
         content: '';
-        background-image: url('assets/images/arrow.png');
+        background-image: url('assets/images/arrow.png?webp');
         width: 130px;
         height: 58px;
         position: absolute;
@@ -227,7 +227,7 @@
 
       &:after {
         content: '';
-        background-image: url('assets/images/arrow.png');
+        background-image: url('assets/images/arrow.png?webp');
         width: 130px;
         height: 58px;
         position: absolute;
@@ -315,7 +315,7 @@
 
       &:after {
         content: '';
-        background-image: url('assets/images/arrow.png');
+        background-image: url('assets/images/arrow.png?webp');
         width: 130px;
         height: 58px;
         position: absolute;

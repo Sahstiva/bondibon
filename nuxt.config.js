@@ -54,5 +54,16 @@ export default {
   ],
   optimizedImages: {
     optimizeImages: true,
+    optimizeImagesInDev: true,
+    mozjpeg: {
+      quality: 80,
+    },
+    optipng: {
+      optimizationLevel: 3,
+    },
+    webp: {
+      preset: 'default',
+      quality: 75,
+    },
   },
 };

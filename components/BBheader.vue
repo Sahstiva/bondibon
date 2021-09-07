@@ -7,13 +7,13 @@
         <a href="https://bondibon.ru">
           <picture class="header-address__logo">
             <source
-                srcset="~/assets/images/logo_bondibon.png"
+                srcset="~/assets/images/logo_bondibon.png?webp"
                 media="(min-width: 375px)">
             <source
-                srcset="~/assets/mobile/logo_bondibon_se.png"
+                srcset="~/assets/mobile/logo_bondibon_se.png?webp"
                 media="(max-width: 374px)">
             <img
-              src="~/assets/images/logo_bondibon.png"
+              src="~/assets/images/logo_bondibon.png?webp"
               width="131" height="36"
               alt="Бондибон -официальный сайт"
             >

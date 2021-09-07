@@ -14,7 +14,7 @@
           <img
               width="92"
               height="92"
-            src="~/assets/images/links_instagram.jpg"
+            src="~/assets/images/links_instagram.jpg?webp"
             alt="Подписывайтесь на наш инстаграм!"
           >
         </div>
@@ -38,7 +38,7 @@
               <img
                   width="89"
                   height="63"
-                src="~/assets/images/links_youtube.png"
+                src="~/assets/images/links_youtube.png?webp"
                 alt="Cмотрите отзывы практикующих педагогов"
               >
          </div>
@@ -60,7 +60,7 @@
                 width="120"
                 height="41"
               class="links-item__img"
-              src="~/assets/images/links_bondibongames.png"
+              src="~/assets/images/links_bondibongames.png?webp"
               alt="Заходите на наш youtube канал"
             >
           </div>

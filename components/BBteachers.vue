@@ -2,7 +2,7 @@
   <section class="teachers">
     <h2 class="visually-hidden">Полезно педагогам</h2>
     <div class="teachers-usefull">
-      <img src="~/assets/images/arrow.png"
+      <img src="~/assets/images/arrow.png?webp"
            width="130"
            height="58"
            class="teachers-usefull__arrow"

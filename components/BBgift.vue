@@ -13,19 +13,19 @@
         <swiper-slide>
           <picture>
             <source
-                srcset="~/assets/images/slider_cup.png"
+                srcset="~/assets/images/slider_cup.png?webp"
                 media="(min-width: 1024px)"
             >
             <source
-                srcset="~/assets/mobile/slider_cup_se.png"
+                srcset="~/assets/mobile/slider_cup_se.png?webp"
                 media="(max-width: 374px)"
             >
             <source
-              srcset="~/assets/mobile/slider_cup_mobile.png"
+              srcset="~/assets/mobile/slider_cup_mobile.png?webp"
               media="(max-width: 1023px)"
             >
             <img
-              src="~/assets/images/slider_cup.png"
+              src="~/assets/images/slider_cup.png?webp"
               width="678" height="575"
               alt="Подарки своими руками"
             >
@@ -34,18 +34,18 @@
         <swiper-slide>
           <picture>
             <source
-                srcset="~/assets/images/slider_newyear.png"
+                srcset="~/assets/images/slider_newyear.png?webp"
                 media="(min-width: 1024px)"
             >
             <source
-                srcset="~/assets/mobile/slider_newyear_se.png"
+                srcset="~/assets/mobile/slider_newyear_se.png?webp"
                 media="(max-width: 374px)"
             >            <source
-              srcset="~/assets/mobile/slider_newyear_mobile.png"
+              srcset="~/assets/mobile/slider_newyear_mobile.png?webp"
               media="(max-width: 1023px)"
             >
             <img
-              src="~/assets/images/slider_cup.png"
+              src="~/assets/images/slider_cup.png?webp"
               width="678" height="575"
               alt="Новогодние игры"
             >
@@ -54,19 +54,19 @@
         <swiper-slide>
           <picture>
             <source
-              srcset="~/assets/images/slider_xmastree.png"
+              srcset="~/assets/images/slider_xmastree.png?webp"
               media="(min-width: 1024px)"
             >
             <source
-                srcset="~/assets/mobile/slider_xmastree_se.png"
+                srcset="~/assets/mobile/slider_xmastree_se.png?webp"
                 media="(max-width: 374px)"
             >
             <source
-                srcset="~/assets/mobile/slider_xmastree_mobile.png"
+                srcset="~/assets/mobile/slider_xmastree_mobile.png?webp"
                 media="(max-width: 1023px)"
             >
             <img
-              src="~/assets/images/slider_cup.png"
+              src="~/assets/images/slider_cup.png?webp"
               width="678" height="575"
               alt="Креативные наборы"
             >

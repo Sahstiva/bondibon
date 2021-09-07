@@ -12,7 +12,7 @@
             rel="noreferrer"
         >
           <img
-              src="~/assets/images/logo_bondibon.png"
+              src="~/assets/images/logo_bondibon.png?webp"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине BONDIBON'"
               class="wheretobuy-img" />
@@ -26,7 +26,7 @@
             rel="noreferrer"
         >
           <img
-              src="~/assets/images/logo_ozon.png"
+              src="~/assets/images/logo_ozon.png?webp"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине OZON'"
               class="wheretobuy-img" />
@@ -39,7 +39,7 @@
             target="_blank"
             rel="noreferrer">
           <img
-              src="~/assets/images/logo_wb.png"
+              src="~/assets/images/logo_wb.png?webp"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине WILDBERRIES'"
               class="wheretobuy-img" />
@@ -52,7 +52,7 @@
             target="_blank"
             rel="noreferrer">
           <img
-              src="~/assets/images/logo_myshop.png"
+              src="~/assets/images/logo_myshop.png?webp"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине MY SHOP'"
               class="wheretobuy-img" />
@@ -66,7 +66,7 @@
             rel="noreferrer"
         >
           <img
-              src="~/assets/images/logo_akusherstvo.jpg"
+              src="~/assets/images/logo_akusherstvo.jpg?webp"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине AKUSHERSTVO'"
               class="wheretobuy-img" />
@@ -79,7 +79,7 @@
             target="_blank"
             rel="noreferrer">
           <img
-              src="~/assets/images/logo_onlayntreyd.png"
+              src="~/assets/images/logo_onlayntreyd.png?webp"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине ONLINE TRADE'"
               class="wheretobuy-img" />

@@ -15,7 +15,7 @@
           @click="markerClick(shop)"
           :icon="{
             layout: 'default#imageWithContent',
-            imageHref: '/images/ymaps_bondibon.png',
+            imageHref: '/images/ymaps_bondibon.png?webp',
             imageSize: [25, 25],
             imageOffset: [-12, -12],
             hintContent: shop.name,
@@ -57,10 +57,10 @@ export default {
       this.myMap = map;
 
       const btnZoomOut = new ymaps.control.Button('Показать все');
-      btnZoomOut.options.set("maxWidth", 200);
-      btnZoomOut.events.add(["click"], () => {
+      btnZoomOut.options.set('maxWidth', 200);
+      btnZoomOut.events.add(['click'], () => {
         this.showAllMarkers = true;
-        this.coords =  [55.750318, 37.620078];
+        this.coords = [55.750318, 37.620078];
         this.myMap.setCenter([55.750318, 37.620078]);
         this.myMap.setZoom(3);
         this.zoom = 3;
@@ -77,7 +77,7 @@ export default {
       console.log(`Кликнули по маркеру ${shop.position.split(' ').reverse()}, масштаб ${this.myMap.getZoom()}`);
     },
     balloonTemplate(shop) {
-      if(shop.link) {
+      if (shop.link) {
         return `
         <h3>
             <a  target=_blank
@@ -96,8 +96,8 @@ export default {
         </a>
       `;
       }
-      else {
-        return `
+
+      return `
         <h3>
             <p  class="map-link">
                 ${shop.name}
@@ -111,7 +111,6 @@ export default {
             Построить маршрут в Яндекс.Картах
         </a>
       `;
-      }
     },
   },
 };

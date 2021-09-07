@@ -1,5 +1,5 @@
 .map {
-  background-image: url('~assets/images/background_map.png');
+  background-image: url('~assets/images/background_map.png?webp');
   background-position: center top;
   background-repeat: no-repeat;
   width: 1920px;
@@ -18,7 +18,7 @@
     background-position: center top;
   }
   @media (max-width: 1023px) {
-    background-image: url('~assets/mobile/background_map_mobile.png');
+    background-image: url('~assets/mobile/background_map_mobile.png?webp');
     background-position: center top;
     background-repeat: no-repeat;
     background-color: #d77aea;
@@ -32,15 +32,15 @@
     height: 450px;
     border-radius: 50px;
     overflow: hidden;
-    background-image: url('~assets/images/map_replacer.jpg');
+    background-image: url('~assets/images/map_replacer.jpg?webp');
     background-size: contain;
     @media (max-width: 1023px) {
-      background-image: url('~assets/mobile/map_replacer_mobile.jpg');
+      background-image: url('~assets/mobile/map_replacer_mobile.jpg?webp');
       width: 335px;
       height: 685px;
     }
     @media (max-width: 374px) {
-      background-image: url('~assets/mobile/map_replacer_se.jpg');
+      background-image: url('~assets/mobile/map_replacer_se.jpg?webp');
       width: 300px;
       height: 685px;
     }  }

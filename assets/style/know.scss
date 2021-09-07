@@ -1,5 +1,5 @@
 .knowledge {
-  background-image: url('~assets/images/background_knowledge.png');
+  background-image: url('~assets/images/background_knowledge.png?webp');
   background-position: center top;
   background-repeat: no-repeat;
   width: 1920px;
@@ -12,7 +12,7 @@
     background-position: center top;
   }
   @media (max-width: 1023px) {
-    background-image: url('~assets/mobile/background_know_mobile.png');
+    background-image: url('~assets/mobile/background_know_mobile.png?webp');
     background-position: center top;
     background-repeat: no-repeat;
     max-width: 480px;

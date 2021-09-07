@@ -1,5 +1,5 @@
 .teachers {
-  background-image: url('~assets/images/background_teachers.png');
+  background-image: url('~assets/images/background_teachers.png?webp');
   background-position: center top;
   background-repeat: no-repeat;
   width: 1920px;
@@ -12,7 +12,7 @@
     background-position: center top;
   }
   @media (max-width: 1023px) {
-    background-image: url('~assets/mobile/background_teachers_mobile.png');
+    background-image: url('~assets/mobile/background_teachers_mobile.png?webp');
     background-position: center top;
     background-repeat: no-repeat;
     width: 100%;
