@@ -1,0 +1,113 @@
+.gift {
+  background-image: url('~assets/images/background_gifts.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  @media (max-width: 1920px) {
+    width: 100vw;
+  }
+  @media (max-width: 1023px) {
+    background-image: url('~assets/mobile/background_gift_mobile.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 480px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-wrapper {
+    width: 678px;
+    margin: 70px 0 0 450px;
+
+    @media (max-width: 1279px) {
+      margin: 70px 0 0 250px;
+    }
+    @media (max-width: 1023px) {
+      width: 100%;
+      max-width: 480px;
+      margin: 70px 0 0 0;
+    }
+  }
+  &-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 15px 0 0 0;
+    width: 65px;
+    height: 52px;
+
+    &__text {
+      @include font-Rotonda;
+      font-size: 35px;
+      text-align: right;
+      color: #d2beae;
+      margin: 0 0 15px 0;
+      width: 361px;
+      height: 80px;
+      @media (max-width: 1024px) {
+        width: 290px;
+        height: 120px;
+        margin: 0 0 5px 0;
+      }
+      @media (max-width: 1023px) {
+        margin: 0;
+        width: 325px;
+        height: 80px;
+        text-align: left;
+      }
+      @media (max-width: 374px) {
+        font-size: 27px;
+      }
+    }
+    &__right {
+      transform: rotate(270deg);
+      &:hover {
+        transform: rotate(270deg) scale(1.1) translateY(-5px);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      position: absolute;
+      top: 400px;
+      left:  360px;
+      @media (max-width: 1920px) {
+        left:  calc(50vw - 500px);
+      }
+      @media (max-width: 1024px) {
+        max-width: 270px;
+        left:  calc(50vw - 530px);
+      }
+      @media (max-width: 1023px) {
+        position: unset;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 480px;
+        margin: 25px 0 0 0;
+      }
+    }
+  }
+  &-down {
+    &__button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin: 0 150px 0 0;
+      &:hover {
+        transform: scale(1.1) translateY(-5px);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

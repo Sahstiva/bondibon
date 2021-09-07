@@ -1,19 +1,54 @@
 <template>
-  <div class="site_wrapper">
-    <LazyBBheader />
-    <LazyBBtitle />
-    <LazyBBslider />
-    <LazyBBknow />
-    <LazyBBmicroscope/>
-    <LazyBBmosaic/>
-    <LazyBBconstructor/>
-    <LazyBBevamoda/>
-    <LazyBBtablegames/>
-    <LazyBBgift/>
-    <LazyBBnewyear/>
-    <LazyBBteachers/>
-    <LazyBBlinks/>
-    <LazyBBmap/>
+  <div class="site-wrapper">
+    <h1 class="visually-hidden">Игрушки, развивающие и развлекательные игры - BONDIBON</h1>
+    <transition name="fade">
+      <BBheader v-show="showHeader" @goToNextPage="nextPage($event)"/>
+    </transition>
+    <BBtitle id="BBtitle" @goToNextPage="nextPage($event)"/>
+    <BBslider id="BBslider" @goToNextPage="nextPage($event)"/>
+    <BBknow
+        v-if="linksPages.get('BBknow')"
+        id="BBknow"
+        :links="linksPages.get('BBknow')"
+        @goToNextPage="nextPage($event)"/>
+    <BBmicroscope
+        v-if="linksPages.get('BBmicroscope')"
+        id="BBmicroscope"
+        :links="linksPages.get('BBmicroscope')"
+        @goToNextPage="nextPage($event)"/>
+    <BBmosaic
+        v-if="linksPages.get('BBmosaic')"
+        id="BBmosaic"
+        :links="linksPages.get('BBmosaic')"
+        @goToNextPage="nextPage($event)"/>
+    <BBconstructor
+        v-if="linksPages.get('BBconstructor')"
+        id="BBconstructor"
+        :links="linksPages.get('BBconstructor')"
+        @goToNextPage="nextPage($event)"/>
+    <BBevamoda
+        v-if="linksPages.get('BBevamoda')"
+        id="BBevamoda"
+        :links="linksPages.get('BBevamoda')"
+        @goToNextPage="nextPage($event)"/>
+    <BBtablegames
+        v-if="linksPages.get('BBtablegames')"
+        id="BBtablegames"
+        :links="linksPages.get('BBtablegames')"
+        @goToNextPage="nextPage($event)"/>
+    <BBgift id="BBgift" @goToNextPage="nextPage($event)"/>
+    <BBnewyear
+        v-if="linksPages.get('BBnewyear')"
+        id="BBnewyear"
+        :links="linksPages.get('BBnewyear')"
+        @goToNextPage="nextPage($event)"/>
+    <BBteachers id="BBteachers" @goToNextPage="nextPage($event)"/>
+    <BBlinks id="BBlinks" @goToNextPage="nextPage($event)"/>
+    <div id="BBmap"></div>
+    <BBmap
+        :shops="shops"
+        :showMap="showMap"
+        @goToNextPage="nextPage($event)"/>
   </div>
 </template>
 
@@ -21,88 +56,114 @@
 
 import '~/assets/style/style.scss';
 
-import BBheader from "../components/BBheader";
-import BBtitle from "../components/BBtitle";
-import BBslider from "../components/BBslider";
-import BBknow from "../components/BBknow";
-import BBmicroscope from "../components/BBmicroscope";
-import BBmosaic from "../components/BBmosaic";
-import BBconstructor from "../components/BBconstructor";
-import BBevamoda from "../components/BBevamoda";
-import BBtablegames from "../components/BBtablegames";
-import BBgift from "../components/BBgift";
-import BBnewyear from "../components/BBnewyear";
-import BBteachers from "../components/BBteachers";
-import BBlinks from "../components/BBlinks";
-import BBmap from "../components/BBmap";
-
-//const VueScrollTo = require('vue-scrollto');
+import BBheader from '../components/BBheader.vue';
+import BBtitle from '../components/BBtitle.vue';
+import BBslider from '../components/BBslider.vue';
+import BBknow from '../components/BBknow.vue';
+import BBmicroscope from '../components/BBmicroscope.vue';
+import BBmosaic from '../components/BBmosaic.vue';
+import BBconstructor from '../components/BBconstructor.vue';
+import BBevamoda from '../components/BBevamoda.vue';
+import BBtablegames from '../components/BBtablegames.vue';
+import BBgift from '../components/BBgift.vue';
+import BBnewyear from '../components/BBnewyear.vue';
+import BBteachers from '../components/BBteachers.vue';
+import BBlinks from '../components/BBlinks.vue';
+import BBmap from '../components/BBmap.vue';
 
 export default {
   name: 'Bondibon',
   title: 'Bondibon landing',
 
-   components: {
-     BBheader,
-     BBtitle,
-     BBslider,
-     BBknow,
-     BBmicroscope,
-     BBmosaic,
-     BBconstructor,
-     BBevamoda,
-     BBtablegames,
-     BBgift,
-     BBnewyear,
-     BBteachers,
-     BBlinks,
-     BBmap,
-   },
+  components: {
+    BBheader,
+    BBtitle,
+    BBslider,
+    BBknow,
+    BBmicroscope,
+    BBmosaic,
+    BBconstructor,
+    BBevamoda,
+    BBtablegames,
+    BBgift,
+    BBnewyear,
+    BBteachers,
+    BBlinks,
+    BBmap,
+  },
   data() {
     return {
-      //isScrolling: false,
-      currentComponent: 'BBtitle',
-      }
-    },
-  methods: {
-      nextPage(name) {
-        console.log(`Go to page ${name}`);
-        this.currentComponent = name;
-      },
-      // handleScroll: function (evt, el) {
-        // console.log('scrolling', el.className);
-        // console.log(window.scrollY);
-        // console.log(evt);
-        // if(!this.isScrolling && el.className === 'slider' && window.scrollY < 680) {
-        //   const _done = this.doneScrolling;
-        //   const options = { offset: -20, onDone: _done };
-        //   this.$scrollTo(el, 500, options);
-        //   this.isScrolling = true;
-        // }
-        // else if(!this.isScrolling && el.className === 'knowledge' && window.scrollY > 680) {
-        //   const _done = this.doneScrolling;
-        //   const options = { offset: 0, onDone: _done };
-        //   this.$scrollTo(el, 500, options);
-        //   this.isScrolling = true;
-        // }
-      //   if (window.scrollY > 50 && el.className === 'slider') {
-      //     el.setAttribute(
-      //         'style',
-      //         'opacity: 1; transform: translate3d(0, -10px, 0)'
-      //     );
-      //     //window.scrollY = 250;
-      //   } else if(window.scrollY > 680 && el.className === 'knowledge') {
-      //     el.setAttribute(
-      //         'style',
-      //         'opacity: 1; transform: translate3d(0, -10px, 0)'
-      //     );
-      //   }
-      //   return window.scrollY > 1000
-      // },
-      // doneScrolling: function(el) {
-      //   this.isScrolling = false;
-      //   console.log('scrolling',this.isScrolling);
-      // }
+      scrollPosition: 0,
+      showHeader: true,
+      showMap: false,
+      isMobile: false,
+      shops: [],
+      linksPages: new Map(),
+    };
+  },
+  async asyncData({ $axios, $config: { LINKS_URL, ADDRESS_URL } }) {
+    const { shops } = await $axios.$get(ADDRESS_URL);
+    const { pages } = await $axios.$get(LINKS_URL);
+    const links = new Map();
+    if (pages.length > 0) {
+      pages.forEach((page) => {
+        links.set(page.id, { title: page.title, sections: page.sections });
+      });
     }
-  }
+    return { shops, linksPages: links };
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  mounted() {
+    this.scrollPosition = document.body.scrollTop;
+    this.isMobile = window.innerWidth < 1024;
+  },
+  methods: {
+    nextPage(page) {
+      const el = document.getElementById(page);
+      el.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+    },
+    handleScroll() {
+      this.scrollPosition = window.scrollY;
+      if (this.scrollPosition > 6800 && !this.showMap) {
+        this.showMap = true;
+      }
+      if (this.isMobile) {
+        if (
+          (this.scrollPosition > 50 && this.scrollPosition < 850)
+            || (this.scrollPosition > 920 && this.scrollPosition < 1570)
+            || (this.scrollPosition > 1630 && this.scrollPosition < 2380)
+            || (this.scrollPosition > 2470 && this.scrollPosition < 3170)
+            || (this.scrollPosition > 3260 && this.scrollPosition < 3970)
+            || (this.scrollPosition > 4060 && this.scrollPosition < 4770)
+            || (this.scrollPosition > 4830 && this.scrollPosition < 5570)
+            || (this.scrollPosition > 5660 && this.scrollPosition < 6370)
+            || (this.scrollPosition > 6450 && this.scrollPosition < 7180)
+            || (this.scrollPosition > 7220 && this.scrollPosition < 8760)
+            || (this.scrollPosition > 8820 && this.scrollPosition < 9560)
+            || (this.scrollPosition > 9610 && this.scrollPosition < 10500)
+        ) this.showHeader = false;
+        else this.showHeader = true;
+      } else if (
+        (this.scrollPosition > 50 && this.scrollPosition < 600)
+          || (this.scrollPosition > 750 && this.scrollPosition < 1350)
+          || (this.scrollPosition > 1415 && this.scrollPosition < 2030)
+          || (this.scrollPosition > 2150 && this.scrollPosition < 2750)
+          || (this.scrollPosition > 2850 && this.scrollPosition < 3430)
+          || (this.scrollPosition > 3550 && this.scrollPosition < 4130)
+          || (this.scrollPosition > 4250 && this.scrollPosition < 4830)
+          || (this.scrollPosition > 4950 && this.scrollPosition < 5510)
+          || (this.scrollPosition > 5650 && this.scrollPosition < 6220)
+          || (this.scrollPosition > 6315 && this.scrollPosition < 6920)
+          || (this.scrollPosition > 7050 && this.scrollPosition < 7630)
+          || (this.scrollPosition > 7750 && this.scrollPosition < 8400)
+      ) this.showHeader = false;
+      else this.showHeader = true;
+    },
+  },
+};
 </script>
