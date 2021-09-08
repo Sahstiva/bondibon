@@ -20,7 +20,7 @@
           :key="index">
         <div class="newyear-item__wrapper">
           <img
-              :src="require(`~/assets/images/${section.image}`)"
+              :src="require(`~/assets/images/${section.image}?webp`)"
               width="160"
               height="160"
               :alt="section.text"

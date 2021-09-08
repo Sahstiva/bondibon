@@ -13,66 +13,69 @@
         <swiper-slide>
           <picture class="slider-img">
             <source
-              srcset="~/assets/images/slider_tablegames.png?webp"
+              data-srcset="~/assets/images/slider_tablegames.png?webp" type="image/webp"
               media="(min-width: 1024px)"
             >
             <source
-                srcset="~/assets/mobile/slider_tablegames_se.png?webp"
+                data-srcset="~/assets/mobile/slider_tablegames_se.png?webp" type="image/webp"
                 media="(max-width: 374px)"
             >            <source
-              srcset="~/assets/mobile/slider_tablegames_mobile.png?webp"
+              data-srcset="~/assets/mobile/slider_tablegames_mobile.png?webp" type="image/webp"
               media="(max-width: 1023px)"
             >
             <img
-                class="slider-img"
-              src="~/assets/images/slider_tablegames.png?webp"
-              width="678" height="575"
-              alt="Настольные игры"
+                class="slider-img lazyload"
+                data-src="~/assets/images/slider_tablegames.png"
+                loading="lazy"
+                width="678" height="575"
+                alt="Настольные игры"
             >
           </picture>
         </swiper-slide>
         <swiper-slide>
           <picture class="slider-img">
             <source
-              srcset="~/assets/images/slider_mosaic.png?webp"
+              data-srcset="~/assets/images/slider_mosaic.png?webp" type="image/webp"
               media="(min-width: 1024px)"
             >
             <source
-                srcset="~/assets/mobile/slider_mosaic_se.png?webp"
+                data-srcset="~/assets/mobile/slider_mosaic_se.png?webp" type="image/webp"
                 media="(max-width: 374px)"
             >
             <source
-              srcset="~/assets/mobile/slider_mosaic_mobile.png?webp"
+              data-srcset="~/assets/mobile/slider_mosaic_mobile.png?webp" type="image/webp"
               media="(max-width: 1023px)"
             >
             <img
-                class="slider-img"
-              src="~/assets/images/slider_mosaic.png?webp"
-              width="678"
-              height="575"
-              alt="Пазлы и мозаики"
+                class="slider-img lazyload"
+                data-src="~/assets/images/slider_mosaic.png"
+                loading="lazy"
+                width="678"
+                height="575"
+                alt="Пазлы и мозаики"
             >
           </picture>
         </swiper-slide>
         <swiper-slide>
           <picture class="slider-img">
             <source
-              srcset="~/assets/images/slider_roadgames.png?webp"
+              data-srcset="~/assets/images/slider_roadgames.png?webp" type="image/webp"
               media="(min-width: 1024px)"
             >
             <source
-                srcset="~/assets/mobile/slider_roadgames_se.png?webp"
+                data-srcset="~/assets/mobile/slider_roadgames_se.png?webp" type="image/webp"
                 media="(max-width: 374px)"
             >
             <source
-              srcset="~/assets/mobile/slider_roadgames_mobile.png?webp"
+              data-srcset="~/assets/mobile/slider_roadgames_mobile.png?webp" type="image/webp"
               media="(max-width: 1023px)"
             >
             <img
-                class="slider-img"
-              src="~/assets/images/slider_roadgames.png?webp"
-              width="678" height="575"
-              alt="Игры в дорогу"
+                class="slider-img lazyload"
+                data-src="~/assets/images/slider_roadgames.png"
+                loading="lazy"
+                width="678" height="575"
+                alt="Игры в дорогу"
             >
           </picture>
         </swiper-slide>

@@ -5,7 +5,7 @@ export default {
     ADDRESS_URL:
         process.env.NODE_ENV === 'production' ? process.env.ADDRESS_URL : 'http://localhost:3000/data/address.json',
   },
-  target: 'server',
+  target: 'static',
   components: true,
   router: {
     base: '/',
@@ -37,6 +37,7 @@ export default {
   },
   plugins: [
     '~/plugins/fontawesome.js',
+    '~/plugins/vue-lazysizes.client.js',
     {
       src: '~plugins/vue-js-modal.js',
       mode: 'client',
@@ -48,18 +49,29 @@ export default {
   ],
   modules: [
     '@nuxtjs/axios',
-  ],
-  buildModules: [
     '@aceforth/nuxt-optimized-images',
   ],
+  build: {
+    extend(config, { loaders: { vue } }) {
+      vue.transformAssetUrls.img = ['data-src', 'src'];
+      vue.transformAssetUrls.source = ['data-srcset', 'srcset'];
+    },
+  },
   optimizedImages: {
+    inlineImageLimit: -1,
+    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
     optimizeImages: true,
     optimizeImagesInDev: true,
+    defaultImageLoader: 'img-loader',
     mozjpeg: {
       quality: 80,
     },
     optipng: {
       optimizationLevel: 3,
+    },
+    pngquant: {
+      speed: 7,
+      quality: [0.65, 0.8],
     },
     webp: {
       preset: 'default',

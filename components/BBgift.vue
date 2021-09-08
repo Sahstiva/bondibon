@@ -13,19 +13,21 @@
         <swiper-slide>
           <picture>
             <source
-                srcset="~/assets/images/slider_cup.png?webp"
+                data-srcset="~/assets/images/slider_cup.png?webp" type="image/webp"
                 media="(min-width: 1024px)"
             >
             <source
-                srcset="~/assets/mobile/slider_cup_se.png?webp"
+                data-srcset="~/assets/mobile/slider_cup_se.png?webp" type="image/webp"
                 media="(max-width: 374px)"
             >
             <source
-              srcset="~/assets/mobile/slider_cup_mobile.png?webp"
+              data-srcset="~/assets/mobile/slider_cup_mobile.png?webp" type="image/webp"
               media="(max-width: 1023px)"
             >
             <img
-              src="~/assets/images/slider_cup.png?webp"
+              data-src="~/assets/images/slider_cup.png"
+              class="lazyload"
+              loading="lazy"
               width="678" height="575"
               alt="Подарки своими руками"
             >
@@ -34,39 +36,43 @@
         <swiper-slide>
           <picture>
             <source
-                srcset="~/assets/images/slider_newyear.png?webp"
+                data-srcset="~/assets/images/slider_newyear.png?webp" type="image/webp"
                 media="(min-width: 1024px)"
             >
             <source
-                srcset="~/assets/mobile/slider_newyear_se.png?webp"
+                data-srcset="~/assets/mobile/slider_newyear_se.png?webp" type="image/webp"
                 media="(max-width: 374px)"
             >            <source
-              srcset="~/assets/mobile/slider_newyear_mobile.png?webp"
+              data-srcset="~/assets/mobile/slider_newyear_mobile.png?webp" type="image/webp"
               media="(max-width: 1023px)"
             >
             <img
-              src="~/assets/images/slider_cup.png?webp"
-              width="678" height="575"
-              alt="Новогодние игры"
+                class="lazyload"
+                data-src="~/assets/images/slider_cup.png"
+                loading="lazy"
+                width="678" height="575"
+                alt="Новогодние игры"
             >
           </picture>
         </swiper-slide>
         <swiper-slide>
           <picture>
             <source
-              srcset="~/assets/images/slider_xmastree.png?webp"
+              data-srcset="~/assets/images/slider_xmastree.png?webp" type="image/webp"
               media="(min-width: 1024px)"
             >
             <source
-                srcset="~/assets/mobile/slider_xmastree_se.png?webp"
+                data-srcset="~/assets/mobile/slider_xmastree_se.png?webp" type="image/webp"
                 media="(max-width: 374px)"
             >
             <source
-                srcset="~/assets/mobile/slider_xmastree_mobile.png?webp"
+                data-srcset="~/assets/mobile/slider_xmastree_mobile.png?webp" type="image/webp"
                 media="(max-width: 1023px)"
             >
             <img
-              src="~/assets/images/slider_cup.png?webp"
+              data-src="~/assets/images/slider_cup.png"
+              loading="lazy"
+              class="lazyload"
               width="678" height="575"
               alt="Креативные наборы"
             >

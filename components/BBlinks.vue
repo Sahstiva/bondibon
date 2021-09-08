@@ -11,12 +11,17 @@
          rel="noreferrer"
       >
         <div class="links-item__wrapper">
-          <img
-              width="92"
-              height="92"
-            src="~/assets/images/links_instagram.jpg?webp"
-            alt="Подписывайтесь на наш инстаграм!"
-          >
+          <picture>
+            <source data-srcset="~/assets/images/links_instagram.jpg?webp" type="image/webp">
+              <img
+                  class="lazyload"
+                  loading="lazy"
+                  width="92"
+                  height="92"
+                  data-src="~/assets/images/links_instagram.jpg"
+                  alt="Подписывайтесь на наш инстаграм!"
+              >
+          </picture>
         </div>
       </a>
       <div class="links-item__come">
@@ -35,12 +40,17 @@
          rel="noreferrer"
       >
           <div class="links-item__wrapper">
+            <picture>
+              <source data-srcset="~/assets/images/links_youtube.png?webp" type="image/webp">
               <img
+                  class="lazyload"
+                  loading="lazy"
                   width="89"
                   height="63"
-                src="~/assets/images/links_youtube.png?webp"
-                alt="Cмотрите отзывы практикующих педагогов"
+                  data-src="~/assets/images/links_youtube.png"
+                  alt="Cмотрите отзывы практикующих педагогов"
               >
+            </picture>
          </div>
       </a>
       <a href="https://www.instagram.com/bondibon_games/" class="links-item__subscribe">
@@ -56,13 +66,17 @@
       >
         <div class="links-item__wrapper">
           <div class="links-item__redcircle">
-            <img
+            <picture>
+              <source data-srcset="~/assets/images/links_bondibongames.png?webp" type="image/webp">
+            </picture>
+              <img
+                loading="lazy"
                 width="120"
                 height="41"
-              class="links-item__img"
-              src="~/assets/images/links_bondibongames.png?webp"
-              alt="Заходите на наш youtube канал"
-            >
+                class="links-item__img lazyload"
+                data-src="~/assets/images/links_bondibongames.png"
+                alt="Заходите на наш youtube канал"
+              >
           </div>
         </div>
       </a>

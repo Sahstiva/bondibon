@@ -2,11 +2,15 @@
   <section class="teachers">
     <h2 class="visually-hidden">Полезно педагогам</h2>
     <div class="teachers-usefull">
-      <img src="~/assets/images/arrow.png?webp"
-           width="130"
-           height="58"
-           class="teachers-usefull__arrow"
-           alt="Полезно педагогам">
+      <picture class="teachers-usefull__arrow">
+        <source data-srcset="~/assets/images/arrow.png?webp" type="image/webp">
+          <img data-src="~/assets/images/arrow.png"
+               class="lazyload"
+               loading="lazy"
+               width="130"
+               height="58"
+               alt="Полезно педагогам">
+      </picture>
       <p class="teachers-usefull__text">
         полезно педагогам
       </p>

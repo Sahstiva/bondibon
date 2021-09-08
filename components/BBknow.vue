@@ -17,7 +17,7 @@
           :key="index"
       >
         <img
-            :src="require(`~/assets/images/${section.image}`)"
+            :src="require(`~/assets/images/${section.image}?webp`)"
             width="170"
             height="170"
             :alt="section.text"

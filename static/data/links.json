@@ -6,7 +6,7 @@
       "sections": [
         {
           "text": "играй, думай, учись<br>играй, думай, твори",
-          "image": "grid_playthinklearn.png?webp",
+          "image": "grid_playthinklearn.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -36,7 +36,7 @@
         },
         {
           "text": "Умная Сова",
-          "image": "grid_smartowl.png?webp",
+          "image": "grid_smartowl.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -66,7 +66,7 @@
         },
         {
           "text": "Обучение легко и интересно",
-          "image": "grid_learneasy.png?webp",
+          "image": "grid_learneasy.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -96,7 +96,7 @@
         },
         {
           "text": "Smartgames",
-          "image": "grid_smartgames.png?webp",
+          "image": "grid_smartgames.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -126,7 +126,7 @@
         },
         {
           "text": "Развивающие и обучающие игры",
-          "image": "grid_cultivategames.png?webp",
+          "image": "grid_cultivategames.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -156,7 +156,7 @@
         },
         {
           "text": "Мини-игры в дорогу",
-          "image": "grid_roadgames.png?webp",
+          "image": "grid_roadgames.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -186,7 +186,7 @@
         },
         {
           "text": "серия бондилогика",
-          "image": "grid_bondilogika.png?webp",
+          "image": "grid_bondilogika.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -216,7 +216,7 @@
         },
         {
           "text": "Настольные семейные игры",
-          "image": "grid_familygames.png?webp",
+          "image": "grid_familygames.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -246,7 +246,7 @@
         },
         {
           "text": "Игры из дерева",
-          "image": "grid_woodengames.png?webp",
+          "image": "grid_woodengames.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -276,7 +276,7 @@
         },
         {
           "text": "мозаики и пазлы<br>baby you",
-          "image": "grid_mosaic.png?webp",
+          "image": "grid_mosaic.png",
           "links": [
             {
               "shop": "Ozon",
@@ -1046,7 +1046,7 @@
       "sections": [
         {
           "text": "мини-игры в дорогу новогодние",
-          "image": "newyear_roadgames.png?webp",
+          "image": "newyear_roadgames.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -1076,7 +1076,7 @@
         },
         {
           "text": "керамические ёлочные украшения для росписи",
-          "image": "newyear_ceramic.png?webp",
+          "image": "newyear_ceramic.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -1106,7 +1106,7 @@
         },
         {
           "text": "наборы для создания ёлочных игрушек из фетра",
-          "image": "newyear_felt.png?webp",
+          "image": "newyear_felt.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -1132,7 +1132,7 @@
         },
         {
           "text": "самая компактная ёлка",
-          "image": "newyear_compact.png?webp",
+          "image": "newyear_compact.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -1158,7 +1158,7 @@
         },
         {
           "text": "новогодние наборы для выращивани кристаллов",
-          "image": "newyear_crystall.png?webp",
+          "image": "newyear_crystall.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -1188,7 +1188,7 @@
         },
         {
           "text": "керамические кружки и сувениры для росписи",
-          "image": "newyear_cups.png?webp",
+          "image": "newyear_cups.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -1218,7 +1218,7 @@
         },
         {
           "text": "аква- и термо- мозаики новогодние",
-          "image": "newyear_aquatermo.png?webp",
+          "image": "newyear_aquatermo.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -1248,7 +1248,7 @@
         },
         {
           "text": "новогодние открытки своими руками",
-          "image": "newyear_cards.png?webp",
+          "image": "newyear_cards.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -1274,7 +1274,7 @@
         },
         {
           "text": "развивающие игры под ёлку",
-          "image": "newyear_cultivate.png?webp",
+          "image": "newyear_cultivate.png",
           "links": [
             {
               "shop": "Bondibon",
@@ -1304,7 +1304,7 @@
         },
         {
           "text": "3d ёлочки деревянные",
-          "image": "newyear_3dxmaxtree.png?webp",
+          "image": "newyear_3dxmaxtree.png",
           "links": [
             {
               "shop": "Bondibon",
