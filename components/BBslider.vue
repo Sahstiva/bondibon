@@ -11,85 +11,46 @@
         :options="swiperOption"
       >
         <swiper-slide>
-          <picture class="slider-img">
-            <source
-              data-srcset="~/assets/images/slider_tablegames.png?webp" type="image/webp"
-              media="(min-width: 1024px)"
-            >
-            <source
-                data-srcset="~/assets/mobile/slider_tablegames_se.png?webp" type="image/webp"
-                media="(max-width: 374px)"
-            >            <source
-              data-srcset="~/assets/mobile/slider_tablegames_mobile.png?webp" type="image/webp"
-              media="(max-width: 1023px)"
-            >
-            <img
-                class="slider-img lazyload"
-                data-src="~/assets/images/slider_tablegames.png"
-                loading="lazy"
-                width="678" height="575"
-                alt="Настольные игры"
-            >
-          </picture>
+          <nuxt-img
+              class="slider-img lazyload"
+              data-sizes="auto"
+              format="webp"
+              src="/images/slider_tablegames.png"
+              sizes="sm:320px lg:480px xl:678"
+              quality="80"
+              loading="lazy"
+              alt="Пазлы и мозаики"
+          />
         </swiper-slide>
         <swiper-slide>
-          <picture class="slider-img">
-            <source
-              data-srcset="~/assets/images/slider_mosaic.png?webp" type="image/webp"
-              media="(min-width: 1024px)"
-            >
-            <source
-                data-srcset="~/assets/mobile/slider_mosaic_se.png?webp" type="image/webp"
-                media="(max-width: 374px)"
-            >
-            <source
-              data-srcset="~/assets/mobile/slider_mosaic_mobile.png?webp" type="image/webp"
-              media="(max-width: 1023px)"
-            >
-            <img
-                class="slider-img lazyload"
-                data-src="~/assets/images/slider_mosaic.png"
-                loading="lazy"
-                width="678"
-                height="575"
-                alt="Пазлы и мозаики"
-            >
-          </picture>
+          <nuxt-img
+              class="slider-img lazyload"
+              data-sizes="auto"
+              format="webp"
+              src="/images/slider_mosaic.png"
+              sizes="sm:320px lg:480px xl:678"
+              loading="lazy"
+              quality="80"
+              alt="Пазлы и мозаики"
+          />
         </swiper-slide>
         <swiper-slide>
-          <picture class="slider-img">
-            <source
-              data-srcset="~/assets/images/slider_roadgames.png?webp" type="image/webp"
-              media="(min-width: 1024px)"
-            >
-            <source
-                data-srcset="~/assets/mobile/slider_roadgames_se.png?webp" type="image/webp"
-                media="(max-width: 374px)"
-            >
-            <source
-              data-srcset="~/assets/mobile/slider_roadgames_mobile.png?webp" type="image/webp"
-              media="(max-width: 1023px)"
-            >
-            <img
-                class="slider-img lazyload"
-                data-src="~/assets/images/slider_roadgames.png"
-                loading="lazy"
-                width="678" height="575"
-                alt="Игры в дорогу"
-            >
-          </picture>
+          <nuxt-img
+              class="slider-img lazyload"
+              data-sizes="auto"
+              format="webp"
+              src="/images/slider_roadgames.png"
+              sizes="sm:320px lg:480px xl:678"
+              quality="80"
+              loading="lazy"
+              alt="Пазлы и мозаики"
+          />
         </swiper-slide>
       </swiper>
     </div>
     <div class="slider-button">
       <p class="slider-button__text">
-        {{
-          slidesText[
-              currentSlide <= slidesText.length
-                  ? currentSlide - 1
-                  : currentSlide % slidesText.length - 1
-              ]
-        }}
+        {{ currentText }}
       </p>
       <button
         class="slider-button__button slider-button__right"
@@ -98,6 +59,7 @@
         <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Следующий слайд">
       </button>
     </div>
+    <div class="slider-plate" :style="'background-color:' + currentColor"></div>
     <transition name="fade">
       <div v-show="showDown" class="slider-down">
         <button
@@ -110,8 +72,6 @@
     </transition>
   </section>
 </template>
-
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
@@ -127,6 +87,7 @@ export default {
       currentSlide: 1,
       showDown: true,
       slidesText: ['Настольные игры', 'Пазлы и мозаики', 'Игры в дорогу'],
+      slidesColor: ['#f08fc8', '#ff811e', '#96bde9'],
       swiperOption: {
         mousewheel: false,
         slidesPerView: 1,
@@ -134,6 +95,22 @@ export default {
         loop: true,
       },
     };
+  },
+  computed: {
+    currentText() {
+      return this.slidesText[
+        this.currentSlide <= this.slidesText.length
+          ? this.currentSlide - 1
+          : this.currentSlide % (this.slidesText.length - 1)
+      ];
+    },
+    currentColor() {
+      return this.slidesColor[
+        this.currentSlide <= this.slidesColor.length
+          ? this.currentSlide - 1
+          : this.currentSlide % (this.slidesColor.length - 1)
+      ];
+    },
   },
   mounted() {
     this.$refs.swiperMain.$swiper.on('slideChange', () => {

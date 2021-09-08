@@ -50,20 +50,26 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@aceforth/nuxt-optimized-images',
+    '@nuxt/image',
   ],
+  image: {
+    // The screen sizes predefined by `@nuxt/image`:
+    screens: {
+      sm: 474,
+      lg: 1023,
+    },
+  },
   build: {
-    extend(config, { isClient, loaders: { vue } }) {
-      if (isClient) {
-        vue.transformAssetUrls.img = ['data-src', 'src'];
-        vue.transformAssetUrls.source = ['data-srcset', 'srcset'];
-      }
+    extend(config, { loaders: { vue } }) {
+      vue.transformAssetUrls.img = ['data-src', 'src']; // eslint-disable-line no-param-reassign
+      vue.transformAssetUrls.source = ['data-srcset', 'srcset']; // eslint-disable-line no-param-reassign
     },
   },
   optimizedImages: {
-    inlineImageLimit: -1,
+    inlineImageLimit: 1000,
     handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
     optimizeImages: true,
-    optimizeImagesInDev: true,
+    optimizeImagesInDev: false,
     defaultImageLoader: 'img-loader',
     mozjpeg: {
       quality: 80,
