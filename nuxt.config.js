@@ -52,9 +52,11 @@ export default {
     '@aceforth/nuxt-optimized-images',
   ],
   build: {
-    extend(config, { loaders: { vue } }) {
-      vue.transformAssetUrls.img = ['data-src', 'src'];
-      vue.transformAssetUrls.source = ['data-srcset', 'srcset'];
+    extend(config, { isClient, loaders: { vue } }) {
+      if (isClient) {
+        vue.transformAssetUrls.img = ['data-src', 'src'];
+        vue.transformAssetUrls.source = ['data-srcset', 'srcset'];
+      }
     },
   },
   optimizedImages: {
