@@ -5,7 +5,7 @@ export default {
     ADDRESS_URL:
         process.env.NODE_ENV === 'production' ? process.env.ADDRESS_URL : 'http://localhost:3000/data/address.json',
   },
-  target: 'static',
+  target: 'server',
   components: true,
   router: {
     base: '/',
