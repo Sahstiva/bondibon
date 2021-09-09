@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",
-    "@nuxt/image": "^0.6.0",
     "core-js": "^2.6.12",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -36,9 +35,12 @@
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^9.0.0",
+    "jimp": "^0.16.1",
     "push-dir": "^0.4.1",
+    "responsive-loader": "^2.3.0",
     "sass": "^1.35.2",
     "sass-loader": "^10.2.0",
+    "sharp": "^0.29.1",
     "webp-loader": "^0.6.0",
     "webpack": "^4.46.0"
   }

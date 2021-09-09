@@ -11,40 +11,79 @@
         :options="swiperOption"
       >
         <swiper-slide>
-          <nuxt-img
-              class="slider-img lazyload"
-              data-sizes="auto"
-              format="webp"
-              src="/images/slider_tablegames.png"
-              sizes="sm:320px lg:480px xl:678"
-              quality="80"
-              loading="lazy"
-              alt="Пазлы и мозаики"
-          />
+          <picture>
+            <source
+                data-srcset="~/assets/images/slider_tablegames.png?webp"
+                type="image/webp"
+                media="(min-width: 1024px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_tablegames.png?resize&size=320&format=webp"
+                type="image/webp"
+                media="(max-width: 374px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_tablegames.png?resize&size=480&format=webp"
+                type="image/webp"
+                media="(max-width: 1023px)"
+            />
+            <img
+                data-src="~/assets/images/slider_tablegames.png"
+                class="lazyload"
+                loading="lazy"
+                alt="Настольные игры"
+            />
+          </picture>
         </swiper-slide>
         <swiper-slide>
-          <nuxt-img
-              class="slider-img lazyload"
-              data-sizes="auto"
-              format="webp"
-              src="/images/slider_mosaic.png"
-              sizes="sm:320px lg:480px xl:678"
-              loading="lazy"
-              quality="80"
-              alt="Пазлы и мозаики"
-          />
+          <picture>
+            <source
+                data-srcset="~/assets/images/slider_mosaic.png?format=webp"
+                type="image/webp"
+                media="(min-width: 1024px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_mosaic.png?resize&size=320&format=webp"
+                type="image/webp"
+                media="(max-width: 374px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_mosaic.png?resize&size=480&format=webp"
+                type="image/webp"
+                media="(max-width: 1023px)"
+            />
+            <img
+                data-src="~/assets/images/slider_mosaic.png"
+                class="lazyload"
+                loading="lazy"
+                alt="Пазлы и мозаики"
+            />
+          </picture>
         </swiper-slide>
         <swiper-slide>
-          <nuxt-img
-              class="slider-img lazyload"
-              data-sizes="auto"
-              format="webp"
-              src="/images/slider_roadgames.png"
-              sizes="sm:320px lg:480px xl:678"
-              quality="80"
-              loading="lazy"
-              alt="Пазлы и мозаики"
-          />
+          <picture data-sizes="auto">
+            <source
+                data-srcset="~/assets/images/slider_roadgames.png?format=webp"
+                type="image/webp"
+                media="(min-width: 1024px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_roadgames.png?resize&size=320&format=webp"
+                type="image/webp"
+                media="(max-width: 374px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_roadgames.png?resize&size=480&format=webp"
+                type="image/webp"
+                media="(max-width: 1023px)"
+            />
+            <img
+                data-src="~/assets/images/slider_roadgames.png"
+                class="lazyload"
+                loading="lazy"
+                alt="Пазлы и мозаики"
+            />
+          </picture>
         </swiper-slide>
       </swiper>
     </div>

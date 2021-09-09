@@ -50,15 +50,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@aceforth/nuxt-optimized-images',
-    '@nuxt/image',
   ],
-  image: {
-    // The screen sizes predefined by `@nuxt/image`:
-    screens: {
-      sm: 474,
-      lg: 1023,
-    },
-  },
   build: {
     extend(config, { loaders: { vue } }) {
       vue.transformAssetUrls.img = ['data-src', 'src']; // eslint-disable-line no-param-reassign
@@ -83,7 +75,7 @@ export default {
     },
     webp: {
       preset: 'default',
-      quality: 75,
+      quality: 80,
     },
   },
 };
