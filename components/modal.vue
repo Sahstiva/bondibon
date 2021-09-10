@@ -108,7 +108,7 @@
 
 <script>
 export default {
-  name: 'modal',
+  name: 'BBmodal',
   props: ['title', 'image', 'links'],
   data() {
     return {

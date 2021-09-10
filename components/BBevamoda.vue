@@ -21,7 +21,7 @@
     </div>
     <button
         class="evamoda-button"
-        @click="$emit('goToNextPage', 'BBtablegames')"
+        @click="$emit('goToNextPage', 'tablegames')"
     >
       <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
     </button>
@@ -33,7 +33,7 @@ import modal from '@/components/modal.vue';
 
 export default {
   name: 'BBevamoda',
-  props: ['links'],
+  props: ['links', 'show'],
   data() {
     return {
       styles: [
@@ -44,6 +44,14 @@ export default {
         'bags',
       ],
     };
+  },
+  mounted() {
+    if (this.show) {
+      const section = this.links.sections.find((item) => item.id === this.show);
+      if (section) {
+        this.showModal(section);
+      }
+    }
   },
   methods: {
     showModal(section) {

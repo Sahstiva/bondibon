@@ -33,7 +33,7 @@
     <div class="newyear-button">
       <button
         class="newyear-button__button"
-        @click="$emit('goToNextPage', 'BBteachers')"
+        @click="$emit('goToNextPage', 'teachers')"
       >
         <img src="~/assets/images/arrow_white.svg" width="49"  height="49" alt="Далее">
       </button>
@@ -46,7 +46,15 @@ import modal from '@/components/modal.vue';
 
 export default {
   name: 'BBnewyear',
-  props: ['links'],
+  props: ['links', 'show'],
+  mounted() {
+    if (this.show) {
+      const section = this.links.sections.find((item) => item.id === this.show);
+      if (section) {
+        this.showModal(section);
+      }
+    }
+  },
   methods: {
     showModal(section) {
       this.$modal.show(

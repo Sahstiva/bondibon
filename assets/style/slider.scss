@@ -49,18 +49,17 @@
     }
 
   }
-  &-img {
-    margin: 0;
-    @media (max-width: 480px) {
-      margin: 0 0 0 calc(50vw - 160px);
-    }
-  }
   &-wrapper {
     width: 678px;
     margin: 115px 400px 0 0;
     @media (max-width: 1023px) {
       width: 100%;
       max-width: 480px;
+      margin: 70px 0 0 80px;
+    }
+    @media (max-width: 479px) {
+      width: 100%;
+      max-width: 320px;
       margin: 70px 0 0 0;
     }
   }

@@ -1,10 +1,11 @@
 {
   "pages": [
     {
-      "id": "BBknow",
+      "id": "know",
       "title": "Настольные игры, Мозаики и пазлы, Игры в дорогу",
       "sections": [
         {
+          "id": "playthinklearn",
           "text": "играй, думай, учись<br>играй, думай, твори",
           "image": "grid_playthinklearn.png",
           "links": [
@@ -35,6 +36,7 @@
           ]
         },
         {
+          "id": "smartowl",
           "text": "Умная Сова",
           "image": "grid_smartowl.png",
           "links": [
@@ -65,6 +67,7 @@
           ]
         },
         {
+          "id": "learneasy",
           "text": "Обучение легко и интересно",
           "image": "grid_learneasy.png",
           "links": [
@@ -95,6 +98,7 @@
           ]
         },
         {
+          "id": "smartgames",
           "text": "Smartgames",
           "image": "grid_smartgames.png",
           "links": [
@@ -125,6 +129,7 @@
           ]
         },
         {
+          "id": "cultivating",
           "text": "Развивающие и обучающие игры",
           "image": "grid_cultivategames.png",
           "links": [
@@ -155,6 +160,7 @@
           ]
         },
         {
+          "id": "roadgames",
           "text": "Мини-игры в дорогу",
           "image": "grid_roadgames.png",
           "links": [
@@ -185,6 +191,7 @@
           ]
         },
         {
+          "id": "bondilogic",
           "text": "серия бондилогика",
           "image": "grid_bondilogika.png",
           "links": [
@@ -215,6 +222,7 @@
           ]
         },
         {
+          "id": "familygames",
           "text": "Настольные семейные игры",
           "image": "grid_familygames.png",
           "links": [
@@ -245,6 +253,7 @@
           ]
         },
         {
+          "id": "woodengames",
           "text": "Игры из дерева",
           "image": "grid_woodengames.png",
           "links": [
@@ -275,6 +284,7 @@
           ]
         },
         {
+          "id": "mosaic",
           "text": "мозаики и пазлы<br>baby you",
           "image": "grid_mosaic.png",
           "links": [
@@ -303,10 +313,11 @@
       ]
     },
     {
-      "id": "BBmicroscope",
+      "id": "science",
       "title": "Наука",
       "sections": [
         {
+          "id": "microscopes",
           "text": "Микроскопы",
           "links": [
             {
@@ -335,6 +346,7 @@
           ]
         },
         {
+          "id": "experiments",
           "text": "Научные опыты",
           "links": [
             {
@@ -364,6 +376,7 @@
           ]
         },
         {
+          "id": "archeologic",
           "text": "наборы для раскопок<span class=\"microscope-items__nomobile\"> археология и палеонтолия</span>",
           "links": [
             {
@@ -393,6 +406,7 @@
           ]
         },
         {
+          "id": "experiments",
           "text": "Развлекательные эксперименты",
           "links": [
             {
@@ -422,6 +436,7 @@
           ]
         },
         {
+          "id": "magic",
           "text": "Наборы фокусника",
           "links": [
             {
@@ -453,10 +468,11 @@
       ]
     },
     {
-      "id": "BBmosaic",
+      "id": "mosaic",
       "title": "Творчество",
       "sections": [
         {
+          "id": "auqathermo",
           "text": "аква- и термо- мозаики",
           "links": [
             {
@@ -486,6 +502,7 @@
           ]
         },
         {
+          "id": "engraving",
           "text": "гравюры, фрески и аппликации",
           "links": [
             {
@@ -515,9 +532,11 @@
           ]
         },
         {
+
           "text": "поделки, лепка, выжигание",
           "links": [
             {
+              "id": "modeling",
               "shop": "Bondibon",
               "link": "https://www.bondibon.ru/catalog/tvorchestvo/filter/tip-is-032946e0-f0fd-11ea-9788-0025902dd88f-or-f3d6b64b-f1b4-11ea-9788-0025902dd88f-or-f9f2e3fe-f1b4-11ea-9788-0025902dd88f-or-f3d6b64e-f1b4-11ea-9788-0025902dd88f-or-f3d6b64f-f1b4-11ea-9788-0025902dd88f-or-f9f2e404-f1b4-11ea-9788-0025902dd88f-or-032946e1-f0fd-11ea-9788-0025902dd88f-or-f3d6b63f-f1b4-11ea-9788-0025902dd88f-or-f3d6b640-f1b4-11ea-9788-0025902dd88f-or-f3d6b641-f1b4-11ea-9788-0025902dd88f-or-f9f2e400-f1b4-11ea-9788-0025902dd88f-or-032946f7-f0fd-11ea-9788-0025902dd88f-or-f9f2e3fa-f1b4-11ea-9788-0025902dd88f-or-ed819e43-f1b4-11ea-9788-0025902dd88f-or-f9f2e3ec-f1b4-11ea-9788-0025902dd88f-or-f9f2e402-f1b4-11ea-9788-0025902dd88f-or-ed819e44-f1b4-11ea-9788-0025902dd88f-or-032946e3-f0fd-11ea-9788-0025902dd88f-or-ed819e41-f1b4-11ea-9788-0025902dd88f-or-f3d6b65b-f1b4-11ea-9788-0025902dd88f-or-f3d6b651-f1b4-11ea-9788-0025902dd88f-or-f3d6b650-f1b4-11ea-9788-0025902dd88f-or-032946e8-f0fd-11ea-9788-0025902dd88f-or-f3d6b63e-f1b4-11ea-9788-0025902dd88f-or-ed819e42-f1b4-11ea-9788-0025902dd88f-or-f3d6b647-f1b4-11ea-9788-0025902dd88f-or-f9f2e408-f1b4-11ea-9788-0025902dd88f-or-f9f2e3fd-f1b4-11ea-9788-0025902dd88f-or-f3d6b648-f1b4-11ea-9788-0025902dd88f-or-032946f1-f0fd-11ea-9788-0025902dd88f-or-f3d6b652-f1b4-11ea-9788-0025902dd88f-or-032946f2-f0fd-11ea-9788-0025902dd88f-or-f3d6b64c-f1b4-11ea-9788-0025902dd88f/apply/"
             },
@@ -544,6 +563,7 @@
           ]
         },
         {
+          "id": "drawing",
           "text": "рисование, роспись, раскрашивание",
           "links": [
             {
@@ -573,6 +593,7 @@
           ]
         },
         {
+          "id": "sewing",
           "text": "рукоделие: вязание, шитьё, вышивка, плетение",
           "links": [
             {
@@ -604,10 +625,11 @@
       ]
     },
     {
-      "id": "BBconstructor",
+      "id": "constructor",
       "title": "Конструкторы",
       "sections": [
         {
+          "id": "robotics",
           "text": "наборы робототехники",
           "links": [
             {
@@ -637,6 +659,7 @@
           ]
         },
         {
+          "id": "magnetic",
           "text": "магнитные,<br>блочные и игольчатые конструкторы",
           "links": [
             {
@@ -666,6 +689,7 @@
           ]
         },
         {
+          "id": "skrew",
           "text": "конструкторы с отвёрткой,<br>с шестеренками",
           "links": [
             {
@@ -695,6 +719,7 @@
           ]
         },
         {
+          "id": "3d",
           "text": "3d пазлы",
           "links": [
             {
@@ -724,6 +749,7 @@
           ]
         },
         {
+          "id":"prefabric",
           "text": "сборные модели",
           "links": [
             {
@@ -751,10 +777,11 @@
       ]
     },
     {
-      "id": "BBevamoda",
+      "id": "evamoda",
       "title": "Красота",
       "sections": [
         {
+          "id": "cosmetic",
           "text": "eva moda косметика детская",
           "links": [
             {
@@ -784,6 +811,7 @@
           ]
         },
         {
+          "id": "bodyart",
           "text": "боди-арт, переводные татуировки,<br>дизайн ногтей",
           "links": [
             {
@@ -813,6 +841,7 @@
           ]
         },
         {
+          "id": "accessories",
           "text": "наборы для создания украшений и аксессуаров",
           "links": [
             {
@@ -842,6 +871,7 @@
           ]
         },
         {
+          "id": "umbrellas",
           "text": "десткие зонтики и сумочки",
           "links": [
             {
@@ -871,6 +901,7 @@
           ]
         },
         {
+          "id": "bags",
           "text": "сумки для раскрашивания",
           "links": [
             {
@@ -902,10 +933,11 @@
       ]
     },
     {
-      "id": "BBtablegames",
+      "id": "tablegames",
       "title": "Развлечения",
       "sections": [
         {
+          "id": "antistress",
           "text": "игрушки-антистресс <span class=\"tablegames-items__nomobile\">сквиши, тянучки, пружинки, мякиши и лизуны</span>",
           "links": [
             {
@@ -931,6 +963,7 @@
           ]
         },
         {
+          "id": "transport",
           "text": "транспорт<span class=\"tablegames-items__nomobile\">машинки, треки, железные дороги</span>",
           "links": [
             {
@@ -956,6 +989,7 @@
           ]
         },
         {
+          "id": "rolegames",
           "text": "сюжетно-ролевые игрушки",
           "links": [
             {
@@ -981,6 +1015,7 @@
           ]
         },
         {
+          "id": "dolls",
           "text": "куклы и пупсы",
           "links": [
             {
@@ -1010,6 +1045,7 @@
           ]
         },
         {
+          "id": "newborn",
           "text": "игрушки для малышей",
           "links": [
             {
@@ -1041,10 +1077,11 @@
       ]
     },
     {
-      "id": "BBnewyear",
+      "id": "newyear",
       "title": "Новый год",
       "sections": [
         {
+          "id": "roadgames",
           "text": "мини-игры в дорогу новогодние",
           "image": "newyear_roadgames.png",
           "links": [
@@ -1075,6 +1112,7 @@
           ]
         },
         {
+          "id": "ceramic",
           "text": "керамические ёлочные украшения для росписи",
           "image": "newyear_ceramic.png",
           "links": [
@@ -1105,6 +1143,7 @@
           ]
         },
         {
+          "id": "felt",
           "text": "наборы для создания ёлочных игрушек из фетра",
           "image": "newyear_felt.png",
           "links": [
@@ -1131,6 +1170,7 @@
           ]
         },
         {
+          "id": "compact",
           "text": "самая компактная ёлка",
           "image": "newyear_compact.png",
           "links": [
@@ -1157,6 +1197,7 @@
           ]
         },
         {
+          "id": "crystal",
           "text": "новогодние наборы для выращивани кристаллов",
           "image": "newyear_crystall.png",
           "links": [
@@ -1187,6 +1228,7 @@
           ]
         },
         {
+          "id": "cups",
           "text": "керамические кружки и сувениры для росписи",
           "image": "newyear_cups.png",
           "links": [
@@ -1217,6 +1259,7 @@
           ]
         },
         {
+          "id": "aquathermo",
           "text": "аква- и термо- мозаики новогодние",
           "image": "newyear_aquatermo.png",
           "links": [
@@ -1247,6 +1290,7 @@
           ]
         },
         {
+          "id": "cards",
           "text": "новогодние открытки своими руками",
           "image": "newyear_cards.png",
           "links": [
@@ -1273,6 +1317,7 @@
           ]
         },
         {
+          "id": "cultivating",
           "text": "развивающие игры под ёлку",
           "image": "newyear_cultivate.png",
           "links": [
@@ -1303,6 +1348,7 @@
           ]
         },
         {
+          "id": "3d",
           "text": "3d ёлочки деревянные",
           "image": "newyear_3dxmaxtree.png",
           "links": [

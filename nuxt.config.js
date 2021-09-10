@@ -50,6 +50,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@aceforth/nuxt-optimized-images',
+    '@nuxtjs/device',
   ],
   build: {
     extend(config, { loaders: { vue } }) {

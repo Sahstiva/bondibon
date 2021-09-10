@@ -29,7 +29,7 @@
     <div class="knowledge-button__wrapper">
       <button
         class="knowledge-button"
-        @click="$emit('goToNextPage', 'BBmicroscope')"
+        @click="$emit('goToNextPage', 'science')"
       >
         <img src="~/assets/images/arrow_white.svg" width="49"  height="49" alt="Далее">
       </button>
@@ -42,7 +42,15 @@ import modal from '@/components/modal.vue';
 
 export default {
   name: 'BBknow',
-  props: ['links'],
+  props: ['links', 'show'],
+  mounted() {
+    if (this.show) {
+      const section = this.links.sections.find((item) => item.id === this.show);
+      if (section) {
+        this.showModal(section);
+      }
+    }
+  },
   methods: {
     showModal(section) {
       this.$modal.show(

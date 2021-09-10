@@ -93,7 +93,7 @@
             src="~/assets/images/arrow_white.svg"
             width="49"  height="49" alt="Далее">
       </a>
-      <button class="links-item__button" @click="$emit('goToNextPage', 'BBmap')">
+      <button class="links-item__button" @click="$emit('goToNextPage', 'map')">
         <img src="~/assets/images/arrow_white.svg" width="49"  height="49" alt="Далее">
       </button>
       <a href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA"
@@ -106,7 +106,7 @@
         </p>
       </a>
     </div>
-    <button class="links-down" @click="$emit('goToNextPage', 'BBmap')">
+    <button class="links-down" @click="$emit('goToNextPage', 'map')">
       <img src="~/assets/images/arrow_white.svg" width="49"  height="49" alt="Далее">
     </button>
   </section>

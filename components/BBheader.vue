@@ -36,7 +36,7 @@
         />8-800-550-05-28</a>
       </div>
       <div class="header-wheretobuy">
-        <button class="header-wheretobuy__button" @click="$emit('goToNextPage', 'BBmap')">
+        <button class="header-wheretobuy__button" @click="$emit('goToNextPage', 'map')">
           <font-awesome-icon
             class="header-wheretobuy__icon"
             :icon="['fas', 'map-marker-alt']"

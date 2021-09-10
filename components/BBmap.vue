@@ -27,7 +27,7 @@
       <div class="map-back">
         <button
             class="map-back__button"
-            @click="$emit('goToNextPage', 'BBtitle')"
+            @click="$emit('goToNextPage', 'title')"
         >
           <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
         </button>

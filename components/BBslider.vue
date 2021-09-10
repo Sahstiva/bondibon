@@ -18,13 +18,25 @@
                 media="(min-width: 1024px)"
             />
             <source
+                data-srcset="~/assets/images/slider_tablegames.png"
+                media="(min-width: 1024px)"
+            />
+            <source
                 data-srcset="~/assets/images/slider_tablegames.png?resize&size=320&format=webp"
                 type="image/webp"
-                media="(max-width: 374px)"
+                media="(max-width: 479px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_tablegames.png?resize&size=320"
+                media="(max-width: 479px)"
             />
             <source
                 data-srcset="~/assets/images/slider_tablegames.png?resize&size=480&format=webp"
                 type="image/webp"
+                media="(max-width: 1023px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_tablegames.png?resize&size=480"
                 media="(max-width: 1023px)"
             />
             <img
@@ -38,18 +50,30 @@
         <swiper-slide>
           <picture>
             <source
-                data-srcset="~/assets/images/slider_mosaic.png?format=webp"
+                data-srcset="~/assets/images/slider_mosaic.png?webp"
                 type="image/webp"
+                media="(min-width: 1024px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_mosaic.png"
                 media="(min-width: 1024px)"
             />
             <source
                 data-srcset="~/assets/images/slider_mosaic.png?resize&size=320&format=webp"
                 type="image/webp"
-                media="(max-width: 374px)"
+                media="(max-width: 479px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_mosaic.png?resize&size=320"
+                media="(max-width: 479px)"
             />
             <source
                 data-srcset="~/assets/images/slider_mosaic.png?resize&size=480&format=webp"
                 type="image/webp"
+                media="(max-width: 1023px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_mosaic.png?resize&size=480"
                 media="(max-width: 1023px)"
             />
             <img
@@ -61,25 +85,37 @@
           </picture>
         </swiper-slide>
         <swiper-slide>
-          <picture data-sizes="auto">
+          <picture>
             <source
-                data-srcset="~/assets/images/slider_roadgames.png?format=webp"
+                data-srcset="~/assets/images/slider_roadgames.png?webp"
                 type="image/webp"
+                media="(min-width: 1024px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_roadgames.png"
                 media="(min-width: 1024px)"
             />
             <source
                 data-srcset="~/assets/images/slider_roadgames.png?resize&size=320&format=webp"
                 type="image/webp"
-                media="(max-width: 374px)"
+                media="(max-width: 479px)"
+            />
+            <source
+                data-srcset="~/assets/images/slider_roadgames.png?resize&size=320"
+                media="(max-width: 479px)"
             />
             <source
                 data-srcset="~/assets/images/slider_roadgames.png?resize&size=480&format=webp"
                 type="image/webp"
                 media="(max-width: 1023px)"
             />
+            <source
+                data-srcset="~/assets/images/slider_roadgames.png?resize&size=480"
+                media="(max-width: 1023px)"
+            />
             <img
                 data-src="~/assets/images/slider_roadgames.png"
-                class="lazyload"
+                class="slider-img lazyload"
                 loading="lazy"
                 alt="Пазлы и мозаики"
             />
@@ -103,7 +139,7 @@
       <div v-show="showDown" class="slider-down">
         <button
             class="slider-down__button"
-            @click="$emit('goToNextPage', 'BBknow')"
+            @click="$emit('goToNextPage', 'know')"
         >
           <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
         </button>

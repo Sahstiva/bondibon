@@ -13,22 +13,36 @@
         <swiper-slide>
           <picture>
             <source
-                data-srcset="~/assets/images/slider_cup.png?webp" type="image/webp"
+                data-srcset="~/assets/images/slider_cup.png?webp"
+                type="image/webp"
                 media="(min-width: 1024px)"
             >
             <source
-                data-srcset="~/assets/mobile/slider_cup_se.png?webp" type="image/webp"
-                media="(max-width: 374px)"
+                data-srcset="~/assets/images/slider_cup.png"
+                media="(min-width: 1024px)"
             >
             <source
-              data-srcset="~/assets/mobile/slider_cup_mobile.png?webp" type="image/webp"
+                data-srcset="~/assets/images/slider_cup.png?resize&size=320&format=webp"
+                type="image/webp"
+                media="(max-width: 479px)"
+            >
+            <source
+                data-srcset="~/assets/images/slider_cup.png?resize&size=320"
+                media="(max-width: 479px)"
+            >
+            <source
+              data-srcset="~/assets/images/slider_cup.png?resize&size=480&format=webp"
+              type="image/webp"
               media="(max-width: 1023px)"
+            >
+            <source
+                data-srcset="~/assets/images/slider_cup.png?resize&size=480"
+                media="(max-width: 1023px)"
             >
             <img
               data-src="~/assets/images/slider_cup.png"
               class="lazyload"
               loading="lazy"
-              width="678" height="575"
               alt="Подарки своими руками"
             >
           </picture>
@@ -36,21 +50,36 @@
         <swiper-slide>
           <picture>
             <source
-                data-srcset="~/assets/images/slider_newyear.png?webp" type="image/webp"
+                data-srcset="~/assets/images/slider_newyear.png?webp"
+                type="image/webp"
                 media="(min-width: 1024px)"
             >
             <source
-                data-srcset="~/assets/mobile/slider_newyear_se.png?webp" type="image/webp"
-                media="(max-width: 374px)"
-            >            <source
-              data-srcset="~/assets/mobile/slider_newyear_mobile.png?webp" type="image/webp"
+                data-srcset="~/assets/images/slider_newyear.png"
+                media="(min-width: 1024px)"
+            >
+            <source
+                data-srcset="~/assets/images/slider_newyear.png?resize&size=320&format=webp"
+                type="image/webp"
+                media="(max-width: 479px)"
+            >
+            <source
+                data-srcset="~/assets/images/slider_newyear.png?resize&size=320"
+                media="(max-width: 479px)"
+            >
+            <source
+              data-srcset="~/assets/images/slider_newyear.png?resize&size=480&format=webp"
+              type="image/webp"
               media="(max-width: 1023px)"
+            >
+            <source
+                data-srcset="~/assets/images/slider_newyear.png?resize&size=480"
+                media="(max-width: 1023px)"
             >
             <img
                 class="lazyload"
                 data-src="~/assets/images/slider_cup.png"
                 loading="lazy"
-                width="678" height="575"
                 alt="Новогодние игры"
             >
           </picture>
@@ -58,22 +87,36 @@
         <swiper-slide>
           <picture>
             <source
-              data-srcset="~/assets/images/slider_xmastree.png?webp" type="image/webp"
+              data-srcset="~/assets/images/slider_xmastree.png?webp"
+              type="image/webp"
               media="(min-width: 1024px)"
             >
             <source
-                data-srcset="~/assets/mobile/slider_xmastree_se.png?webp" type="image/webp"
-                media="(max-width: 374px)"
+                data-srcset="~/assets/images/slider_xmastree.png"
+                media="(min-width: 1024px)"
             >
             <source
-                data-srcset="~/assets/mobile/slider_xmastree_mobile.png?webp" type="image/webp"
+                data-srcset="~/assets/images/slider_xmastree.png?resize&size=320&format=webp"
+                type="image/webp"
+                media="(max-width: 479px)"
+            >
+            <source
+                data-srcset="~/assets/images/slider_xmastree.png?resize&size=320"
+                media="(max-width: 479px)"
+            >
+            <source
+                data-srcset="~/assets/images/slider_xmastree.png?resize&size=480&format=webp"
+                type="image/webp"
+                media="(max-width: 1023px)"
+            >
+            <source
+                data-srcset="~/assets/images/slider_xmastree.png?resize&size=480"
                 media="(max-width: 1023px)"
             >
             <img
               data-src="~/assets/images/slider_cup.png"
               loading="lazy"
               class="lazyload"
-              width="678" height="575"
               alt="Креативные наборы"
             >
           </picture>
@@ -82,13 +125,7 @@
     </div>
     <div class="gift-button__wrapper">
       <p class="gift-button__text">
-        {{
-          slidesText[
-              currentSlide <= slidesText.length
-              ? currentSlide - 1
-              : currentSlide % slidesText.length - 1
-              ]
-        }}
+        {{ currentText }}
       </p>
       <button
         class="gift-button gift-button__right"
@@ -100,7 +137,7 @@
     <div class="gift-down">
       <button
           class="gift-down__button"
-          @click="$emit('goToNextPage', 'BBnewyear')"
+          @click="$emit('goToNextPage', 'newyear')"
       >
         <img src="~/assets/images/arrow_white.svg" width="49"  height="49" alt="Далее">
       </button>
@@ -128,6 +165,22 @@ export default {
         loop: true,
       },
     };
+  },
+  computed: {
+    currentText() {
+      return this.slidesText[
+        this.currentSlide <= this.slidesText.length
+          ? this.currentSlide - 1
+          : this.currentSlide % (this.slidesText.length - 1)
+      ];
+    },
+    currentColor() {
+      return this.slidesColor[
+        this.currentSlide <= this.slidesColor.length
+          ? this.currentSlide - 1
+          : this.currentSlide % (this.slidesColor.length - 1)
+      ];
+    },
   },
   mounted() {
     this.$refs.swiperGift.$swiper.on('slideChange', () => {

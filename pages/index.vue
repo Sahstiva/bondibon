@@ -4,47 +4,54 @@
     <transition name="fade">
       <BBheader v-show="showHeader" @goToNextPage="nextPage($event)"/>
     </transition>
-    <BBtitle id="BBtitle" @goToNextPage="nextPage($event)"/>
-    <BBslider id="BBslider" @goToNextPage="nextPage($event)"/>
+    <BBtitle id="title" @goToNextPage="nextPage($event)"/>
+    <BBslider id="slider" @goToNextPage="nextPage($event)"/>
     <BBknow
-        v-if="linksPages.get('BBknow')"
-        id="BBknow"
-        :links="linksPages.get('BBknow')"
+        v-if="linksPages.get('know')"
+        id="know"
+        :links="linksPages.get('know')"
+        :show="showModal.get('know')"
         @goToNextPage="nextPage($event)"/>
-    <BBmicroscope
-        v-if="linksPages.get('BBmicroscope')"
-        id="BBmicroscope"
-        :links="linksPages.get('BBmicroscope')"
+    <BBscience
+        v-if="linksPages.get('science')"
+        id="science"
+        :links="linksPages.get('science')"
+        :show="showModal.get('science')"
         @goToNextPage="nextPage($event)"/>
     <BBmosaic
-        v-if="linksPages.get('BBmosaic')"
-        id="BBmosaic"
-        :links="linksPages.get('BBmosaic')"
+        v-if="linksPages.get('mosaic')"
+        id="mosaic"
+        :links="linksPages.get('mosaic')"
+        :show="showModal.get('mosaic')"
         @goToNextPage="nextPage($event)"/>
     <BBconstructor
-        v-if="linksPages.get('BBconstructor')"
-        id="BBconstructor"
-        :links="linksPages.get('BBconstructor')"
+        v-if="linksPages.get('constructor')"
+        id="constructor"
+        :links="linksPages.get('constructor')"
+        :show="showModal.get('constructor')"
         @goToNextPage="nextPage($event)"/>
     <BBevamoda
-        v-if="linksPages.get('BBevamoda')"
-        id="BBevamoda"
-        :links="linksPages.get('BBevamoda')"
+        v-if="linksPages.get('evamoda')"
+        id="evamoda"
+        :links="linksPages.get('evamoda')"
+        :show="showModal.get('evamoda')"
         @goToNextPage="nextPage($event)"/>
     <BBtablegames
-        v-if="linksPages.get('BBtablegames')"
-        id="BBtablegames"
-        :links="linksPages.get('BBtablegames')"
+        v-if="linksPages.get('tablegames')"
+        id="tablegames"
+        :links="linksPages.get('tablegames')"
+        :show="showModal.get('tablegames')"
         @goToNextPage="nextPage($event)"/>
-    <BBgift id="BBgift" @goToNextPage="nextPage($event)"/>
+    <BBgift id="gift" @goToNextPage="nextPage($event)"/>
     <BBnewyear
-        v-if="linksPages.get('BBnewyear')"
-        id="BBnewyear"
-        :links="linksPages.get('BBnewyear')"
+        v-if="linksPages.get('newyear')"
+        id="newyear"
+        :links="linksPages.get('newyear')"
+        :show="showModal.get('newyear')"
         @goToNextPage="nextPage($event)"/>
-    <BBteachers id="BBteachers" @goToNextPage="nextPage($event)"/>
-    <BBlinks id="BBlinks" @goToNextPage="nextPage($event)"/>
-    <div id="BBmap"></div>
+    <BBteachers id="teachers" @goToNextPage="nextPage($event)"/>
+    <BBlinks id="links" @goToNextPage="nextPage($event)"/>
+    <div id="map"></div>
     <BBmap
         :shops="shops"
         :showMap="showMap"
@@ -60,7 +67,7 @@ import BBheader from '../components/BBheader.vue';
 import BBtitle from '../components/BBtitle.vue';
 import BBslider from '../components/BBslider.vue';
 import BBknow from '../components/BBknow.vue';
-import BBmicroscope from '../components/BBmicroscope.vue';
+import BBscience from '../components/BBscience.vue';
 import BBmosaic from '../components/BBmosaic.vue';
 import BBconstructor from '../components/BBconstructor.vue';
 import BBevamoda from '../components/BBevamoda.vue';
@@ -80,7 +87,7 @@ export default {
     BBtitle,
     BBslider,
     BBknow,
-    BBmicroscope,
+    BBscience,
     BBmosaic,
     BBconstructor,
     BBevamoda,
@@ -96,6 +103,7 @@ export default {
       scrollPosition: 0,
       showHeader: true,
       showMap: false,
+      showModal: new Map(),
       isMobile: false,
       shops: [],
       linksPages: new Map(),
@@ -118,9 +126,25 @@ export default {
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
   },
+  created() {
+    console.log(`isDesktop: ${this.$device.isDesktop}`);
+    console.log(`isMobile: ${this.$device.isMobile}`);
+    console.log(`isTablet: ${this.$device.isTablet}`);
+    if (this.$route.query?.page && this.$route.query?.section) {
+      const { page } = this.$route.query;
+      const { section } = this.$route.query;
+      if (this.linksPages.get(page)) {
+        this.showModal.set(page, section);
+      }
+    }
+  },
   mounted() {
+    const { page } = this.$route.query;
     this.scrollPosition = document.body.scrollTop;
     this.isMobile = window.innerWidth < 1024;
+    if (this.linksPages.get(page)) {
+      this.nextPage(page);
+    }
   },
   methods: {
     nextPage(page) {
