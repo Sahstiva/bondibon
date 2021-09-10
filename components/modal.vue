@@ -12,10 +12,12 @@
             rel="noreferrer"
         >
           <img
-              data-src="~/assets/images/logo_bondibon.png?webp" type="image/webp"
+              data-src="~/assets/images/logo_bondibon.png?webp"
+              type="image/webp"
+              loading="lazy"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине BONDIBON'"
-              class="wheretobuy-img" />
+              class="wheretobuy-img lazyload" />
         </a>
       </div>
       <div v-if="shopLinks.get('Ozon')" class="wheretobuy-item">
@@ -26,10 +28,12 @@
             rel="noreferrer"
         >
           <img
-              data-src="~/assets/images/logo_ozon.png?webp" type="image/webp"
+              data-src="~/assets/images/logo_ozon.png?webp"
+              type="image/webp"
+              loading="lazy"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине OZON'"
-              class="wheretobuy-img" />
+              class="wheretobuy-img lazyload" />
         </a>
       </div>
       <div v-if="shopLinks.get('Wildberries')" class="wheretobuy-item">
@@ -39,10 +43,12 @@
             target="_blank"
             rel="noreferrer">
           <img
-              data-src="~/assets/images/logo_wb.png?webp" type="image/webp"
+              data-src="~/assets/images/logo_wb.png?webp"
+              type="image/webp"
+              loading="lazy"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине WILDBERRIES'"
-              class="wheretobuy-img" />
+              class="wheretobuy-img lazyload" />
         </a>
       </div>
       <div v-if="shopLinks.get('My Shop')" class="wheretobuy-item">
@@ -52,10 +58,12 @@
             target="_blank"
             rel="noreferrer">
           <img
-              data-src="~/assets/images/logo_myshop.png?webp" type="image/webp"
+              data-src="~/assets/images/logo_myshop.png?webp"
+              type="image/webp"
+              loading="lazy"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине MY SHOP'"
-              class="wheretobuy-img" />
+              class="wheretobuy-img lazyload" />
         </a>
       </div>
       <div v-if="shopLinks.get('Akusherstvo')" class="wheretobuy-item">
@@ -66,10 +74,12 @@
             rel="noreferrer"
         >
           <img
-              data-src="~/assets/images/logo_akusherstvo.jpg?webp" type="image/webp"
+              data-src="~/assets/images/logo_akusherstvo.jpg?webp"
+              type="image/webp"
+              loading="lazy"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине AKUSHERSTVO'"
-              class="wheretobuy-img" />
+              class="wheretobuy-img lazyload" />
         </a>
       </div>
       <div v-if="shopLinks.get('Online Trade')" class="wheretobuy-item">
@@ -79,10 +89,12 @@
             target="_blank"
             rel="noreferrer">
           <img
-              data-src="~/assets/images/logo_onlayntreyd.png?webp" type="image/webp"
+              data-src="~/assets/images/logo_onlayntreyd.png?webp"
+              type="image/webp"
+              loading="lazy"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине ONLINE TRADE'"
-              class="wheretobuy-img" />
+              class="wheretobuy-img lazyload" />
         </a>
       </div>
     </div>
