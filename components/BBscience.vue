@@ -29,7 +29,7 @@
 import modal from '@/components/modal.vue';
 
 export default {
-  name: 'BBmicroscope',
+  name: 'BBscience',
   props: ['links'],
   data() {
     return {
