@@ -406,7 +406,7 @@
           ]
         },
         {
-          "id": "experiments",
+          "id": "entertainment",
           "text": "Развлекательные эксперименты",
           "links": [
             {
@@ -943,6 +943,10 @@
             {
               "shop": "Bondibon",
               "link": "https://www.bondibon.ru/catalog/igrushki_antistress_i_zabavy/"
+            },
+            {
+              "shop": "Ozon",
+              "link": "https://www.ozon.ru/brand/bondibon-24931284/category/igrushki-antistress-7181/"
             },
             {
               "shop": "Wildberries",
