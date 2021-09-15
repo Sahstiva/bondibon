@@ -28,8 +28,10 @@
 <script>
 import modal from '@/components/modal.vue';
 
+const PAGE_NAME = 'science';
+
 export default {
-  name: 'BBscience',
+  name: `BB${PAGE_NAME}`,
   props: ['links', 'show'],
   data() {
     return {
@@ -58,11 +60,22 @@ export default {
           title: section.text,
           image: '',
           links: section.links,
+          id: section.id,
+          page: PAGE_NAME,
         },
         {
           height: 'auto',
           adaptive: true,
         },
+        {
+          'before-close': this.OnModalClose,
+        },
+      );
+    },
+    OnModalClose() {
+      window.history.pushState(
+        null,
+        document.title, `${window.location.pathname}?page=${PAGE_NAME}`,
       );
     },
   },

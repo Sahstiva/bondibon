@@ -4,7 +4,8 @@
   >
     <div class="header-wrapper">
       <div class="header-address">
-        <a href="https://bondibon.ru">
+        <a href="https://bondibon.ru"
+           onclick="ym(85182334,'reachGoal','outbound_link');return true;">
           <picture class="header-address__logo">
             <source
                 data-srcset="~/assets/images/logo_bondibon.png?webp" type="image/webp"
@@ -46,29 +47,43 @@
       </div>
       <div class="header-social">
         <div class="header-social__wrapper">
-          <a class="header-social__icon" href="https://vk.com/public173602765">
+          <a class="header-social__icon"
+             href="https://vk.com/public173602765"
+             target="_blank"
+             rel="noreferrer"
             <font-awesome-icon
               :icon="['fab', 'vk']"
             /><span class="visually-hidden">Перейти на ВК</span>
           </a>
         </div>
         <div class="header-social__wrapper">
-          <a class="header-social__icon" href="https://ru-ru.facebook.com/gameskidsgroup">
+          <a class="header-social__icon"
+             href="https://ru-ru.facebook.com/gameskidsgroup"
+             target="_blank"
+             rel="noreferrer"
+            >
             <font-awesome-icon
               :icon="['fab', 'facebook-f']"
             /><span class="visually-hidden">Перейти на Facebook</span>
           </a>
         </div>
         <div class="header-social__wrapper">
-          <a class="header-social__icon" href="https://www.instagram.com/bondibon_games/">
-            <font-awesome-icon
+          <a class="header-social__icon"
+             href="https://www.instagram.com/bondibon_games/"
+             target="_blank"
+             rel="noreferrer"
+          >
+          <font-awesome-icon
               :icon="['fab', 'instagram-square']"
             /><span class="visually-hidden">Перейти на Facebook</span>
           </a>
         </div>
         <div class="header-social__wrapper">
           <a class="header-social__icon"
-             href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA">
+             href="https://www.youtube.com/channel/UC9F9bwqIL0xBrPL27MrIYvA"
+             target="_blank"
+             rel="noreferrer"
+            >
           <font-awesome-icon
             :icon="['fab', 'youtube']"
           /></a>

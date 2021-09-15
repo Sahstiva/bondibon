@@ -17,6 +17,7 @@
     </div>
     <div class="teachers-items">
       <a
+          onclick="ym(85182334,'reachGoal','outbound_link');return true;"
           class="teachers-items__item teachers-items__speech"
           href="https://www.bondibon.ru/catalog/rechevoe_razvitie/"
           rel="noreferrer"
@@ -24,6 +25,7 @@
         речевое развитие
       </a>
       <a
+          onclick="ym(85182334,'reachGoal','outbound_link');return true;"
           class="teachers-items__item teachers-items__discovery"
           href="https://www.bondibon.ru/catalog/poznavatelnoe_razvitie/"
           rel="noreferrer"
@@ -32,6 +34,7 @@
           познавательное развитие
       </a>
       <a
+          onclick="ym(85182334,'reachGoal','outbound_link');return true;"
           class="teachers-items__item teachers-items__art"
           href="https://www.bondibon.ru/catalog/khudozhestvenno_esteticheskoe_razvitie/"
           rel="noreferrer"
@@ -40,6 +43,7 @@
         художественно- эстетическое развитие
       </a>
       <a
+          onclick="ym(85182334,'reachGoal','outbound_link');return true;"
           class="teachers-items__item teachers-items__social"
           href="https://www.bondibon.ru/catalog/sotsialno_kommunikativnoe_razvitie/"
           rel="noreferrer"

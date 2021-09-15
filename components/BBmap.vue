@@ -81,6 +81,7 @@ export default {
         return `
         <h3>
             <a  target=_blank
+                onclick="ym(85182334,'reachGoal','outbound_link');return true;"
                 rel="noreferrer"
                 href="${shop.link}"
                 class="map-link">
@@ -89,6 +90,7 @@ export default {
         </h3>
         <p>${shop.geocode}</p>
         <a  target=_blank
+            onclick="ym(85182334,'reachGoal','outbound_link');return true;"
             rel="noreferrer"
             class="map-link map-link__small"
             href="https://yandex.ru/maps/?rtext=~${shop.position.split(' ').reverse()}&rtt=auto">
@@ -105,6 +107,7 @@ export default {
         </h3>
         <p>${shop.geocode}</p>
         <a  target=_blank
+            onclick="ym(85182334,'reachGoal','outbound_link');return true;"
             rel="noreferrer"
             class="map-link map-link__small"
             href="https://yandex.ru/maps/?rtext=~${shop.position.split(' ').reverse()}&rtt=auto">

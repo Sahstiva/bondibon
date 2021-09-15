@@ -30,6 +30,10 @@ export default {
         name: 'description',
         content: 'Bondibon - игрушки, развивающие и развлекательные игры',
       },
+      {
+        name: 'yandex-verification',
+        content: '237f96a2f87aba73',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -51,7 +55,13 @@ export default {
     '@nuxtjs/axios',
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/device',
+    '@nuxtjs/yandex-metrika',
   ],
+  yandexMetrika:
+      {
+        id: process.env.YANDEX_METRIKA_ID,
+        webvisor: true,
+      },
   build: {
     extend(config, { loaders: { vue } }) {
       vue.transformAssetUrls.img = ['data-src', 'src']; // eslint-disable-line no-param-reassign

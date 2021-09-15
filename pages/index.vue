@@ -149,6 +149,10 @@ export default {
   methods: {
     nextPage(page) {
       const el = document.getElementById(page);
+      window.history.pushState(
+        null,
+        document.title, `${window.location.pathname}?page=${page}`,
+      );
       el.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     },
     handleScroll() {

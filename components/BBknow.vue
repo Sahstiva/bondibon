@@ -40,8 +40,10 @@
 <script>
 import modal from '@/components/modal.vue';
 
+const PAGE_NAME = 'know';
+
 export default {
-  name: 'BBknow',
+  name: `BB${PAGE_NAME}`,
   props: ['links', 'show'],
   mounted() {
     if (this.show) {
@@ -59,11 +61,22 @@ export default {
           title: section.text,
           image: section.image,
           links: section.links,
+          id: section.id,
+          page: PAGE_NAME,
         },
         {
           height: 'auto',
           adaptive: true,
         },
+        {
+          'before-close': this.OnModalClose,
+        },
+      );
+    },
+    OnModalClose() {
+      window.history.pushState(
+        null,
+        document.title, `${window.location.pathname}?page=${PAGE_NAME}`,
       );
     },
   },

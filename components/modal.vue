@@ -7,6 +7,7 @@
       <div v-if="shopLinks.get('Bondibon')" class="wheretobuy-item">
         <a
             class="wheretobuy-item__link"
+            onclick="ym(85182334,'reachGoal','outbound_link');return true;"
             :href="shopLinks.get('Bondibon')"
             target="_blank"
             rel="noreferrer"
@@ -23,6 +24,7 @@
       <div v-if="shopLinks.get('Ozon')" class="wheretobuy-item">
         <a
             class="wheretobuy-link"
+            onclick="ym(85182334,'reachGoal','outbound_link');return true;"
             :href="shopLinks.get('Ozon')"
             target="_blank"
             rel="noreferrer"
@@ -39,6 +41,7 @@
       <div v-if="shopLinks.get('Wildberries')" class="wheretobuy-item">
         <a
             class="wheretobuy-link"
+            onclick="ym(85182334,'reachGoal','outbound_link');return true;"
             :href="shopLinks.get('Wildberries')"
             target="_blank"
             rel="noreferrer">
@@ -54,6 +57,7 @@
       <div v-if="shopLinks.get('My Shop')" class="wheretobuy-item">
         <a
             class="wheretobuy-link"
+            onclick="ym(85182334,'reachGoal','outbound_link');return true;"
             :href="shopLinks.get('My Shop')"
             target="_blank"
             rel="noreferrer">
@@ -69,6 +73,7 @@
       <div v-if="shopLinks.get('Akusherstvo')" class="wheretobuy-item">
         <a
             class="wheretobuy-link"
+            onclick="ym(85182334,'reachGoal','outbound_link');return true;"
             :href="shopLinks.get('Akusherstvo')"
             target="_blank"
             rel="noreferrer"
@@ -86,6 +91,7 @@
         <a
             class="wheretobuy-link"
             :href="shopLinks.get('Online Trade')"
+            onclick="ym(85182334,'reachGoal','outbound_link');return true;"
             target="_blank"
             rel="noreferrer">
           <img
@@ -109,7 +115,7 @@
 <script>
 export default {
   name: 'BBmodal',
-  props: ['title', 'image', 'links'],
+  props: ['title', 'image', 'links', 'id', 'page'],
   data() {
     return {
       shopLinks: new Map(),
@@ -120,6 +126,16 @@ export default {
       this.shopLinks.set(shop.shop, shop.link);
     });
   },
-
+  mounted() {
+    window.history.pushState(
+      null,
+      document.title, `${window.location.pathname}?page=${this.page}&section=${this.id}`,
+    );
+  },
+  methods: {
+    reachGoal(goal) {
+      window.ym(85182334, 'reachGoal', goal);
+    },
+  },
 };
 </script>
