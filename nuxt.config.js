@@ -1,10 +1,4 @@
 export default {
-  publicRuntimeConfig: {
-    LINKS_URL:
-        process.env.NODE_ENV === 'production' ? process.env.LINKS_URL : 'http://localhost:3000/data/links.json',
-    ADDRESS_URL:
-        process.env.NODE_ENV === 'production' ? process.env.ADDRESS_URL : 'http://localhost:3000/data/address.json',
-  },
   target: 'static',
   components: true,
   router: {
@@ -56,13 +50,31 @@ export default {
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/device',
     '@nuxtjs/yandex-metrika',
+    '@nuxtjs/firebase',
   ],
   yandexMetrika:
       {
         id: process.env.YANDEX_METRIKA_ID,
         webvisor: true,
       },
+  firebase:
+      {
+        config: {
+          apiKey: 'AIzaSyACS5R9i9bFW7PBq3sXFK5k_hNW_t1MZns',
+          authDomain: 'bondibon-promo.firebaseapp.com',
+          databaseURL: 'https://bondibon-promo-default-rtdb.europe-west1.firebasedatabase.app',
+          projectId: 'bondibon-promo',
+          storageBucket: 'bondibon-promo.appspot.com',
+          messagingSenderId: '1078879388246',
+          appId: '1:1078879388246:web:0e9392d7ec34345c14b1f7',
+          measurementId: 'G-T2Z097GDWJ',
+        },
+        services: {
+          database: true,
+        },
+      },
   build: {
+    parallel: false,
     extend(config, { loaders: { vue } }) {
       vue.transformAssetUrls.img = ['data-src', 'src']; // eslint-disable-line no-param-reassign
       vue.transformAssetUrls.source = ['data-srcset', 'srcset']; // eslint-disable-line no-param-reassign

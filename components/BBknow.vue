@@ -47,7 +47,7 @@ export default {
   props: ['links', 'show'],
   mounted() {
     if (this.show) {
-      const section = this.links.sections.find((item) => item.id === this.show);
+      const section = Object.values(this.links.sections).find((item) => item.id === this.show);
       if (section) {
         this.showModal(section);
       }

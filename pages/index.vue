@@ -105,20 +105,19 @@ export default {
       showMap: false,
       showModal: new Map(),
       isMobile: false,
-      shops: [],
-      linksPages: new Map(),
     };
   },
-  async asyncData({ $axios, $config: { LINKS_URL, ADDRESS_URL } }) {
-    const { shops } = await $axios.$get(ADDRESS_URL);
-    const { pages } = await $axios.$get(LINKS_URL);
-    const links = new Map();
-    if (pages.length > 0) {
-      pages.forEach((page) => {
-        links.set(page.id, { title: page.title, sections: page.sections });
-      });
-    }
-    return { shops, linksPages: links };
+  async fetch({ store }) {
+    await store.dispatch('pages/getPages');
+    await store.dispatch('shops/getShops');
+  },
+  computed: {
+    linksPages() {
+      return this.$store.getters['pages/pages'];
+    },
+    shops() {
+      return this.$store.getters['shops/shops'];
+    },
   },
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll);
@@ -127,13 +126,14 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   created() {
-    console.log(`isDesktop: ${this.$device.isDesktop}`);
-    console.log(`isMobile: ${this.$device.isMobile}`);
-    console.log(`isTablet: ${this.$device.isTablet}`);
+    this.$fire.database.goOffline();
+    // console.log(`isDesktop: ${this.$device.isDesktop}`);
+    // console.log(`isMobile: ${this.$device.isMobile}`);
+    // console.log(`isTablet: ${this.$device.isTablet}`);
     if (this.$route.query?.page && this.$route.query?.section) {
       const { page } = this.$route.query;
       const { section } = this.$route.query;
-      if (this.linksPages.get(page)) {
+      if (this.linksPages && this.linksPages.get(page)) {
         this.showModal.set(page, section);
       }
     }
@@ -142,7 +142,7 @@ export default {
     const { page } = this.$route.query;
     this.scrollPosition = document.body.scrollTop;
     this.isMobile = window.innerWidth < 1024;
-    if (this.linksPages.get(page)) {
+    if (this.linksPages && this.linksPages.get(page)) {
       this.nextPage(page);
     }
   },

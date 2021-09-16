@@ -51,6 +51,7 @@
              href="https://vk.com/public173602765"
              target="_blank"
              rel="noreferrer"
+          >
             <font-awesome-icon
               :icon="['fab', 'vk']"
             /><span class="visually-hidden">Перейти на ВК</span>

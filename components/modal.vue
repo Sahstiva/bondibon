@@ -122,7 +122,7 @@ export default {
     };
   },
   created() {
-    this.links.forEach((shop) => {
+    Object.values(this.links).forEach((shop) => {
       this.shopLinks.set(shop.shop, shop.link);
     });
   },
