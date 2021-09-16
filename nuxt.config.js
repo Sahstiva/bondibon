@@ -83,17 +83,17 @@ export default {
   optimizedImages: {
     inlineImageLimit: 1000,
     handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
-    optimizeImages: true,
+    optimizeImages: false,
     optimizeImagesInDev: false,
     defaultImageLoader: 'img-loader',
     mozjpeg: {
       quality: 80,
     },
     optipng: {
-      optimizationLevel: 3,
+      optimizationLevel: 7,
     },
     pngquant: {
-      speed: 7,
+      speed: 3,
       quality: [0.65, 0.8],
     },
     webp: {
