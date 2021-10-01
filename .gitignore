@@ -13,7 +13,7 @@ dist
 
 # IDEA
 .idea
-/dist/_nuxt/LICENSES
-/dist/*.html
-/dist/_nuxt/img
-/.env
+
+#Environment
+.env
+/assets/serviceAccount.json

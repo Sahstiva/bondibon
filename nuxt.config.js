@@ -1,8 +1,4 @@
 export default {
-  privateRuntimeConfig: {
-    FIREBASE_USER: process.env.FIREBASE_USER,
-    FIREBASE_PASS: process.env.FIREBASE_PASS,
-  },
   target: 'static',
   components: true,
   router: {
@@ -74,8 +70,13 @@ export default {
           measurementId: 'G-T2Z097GDWJ',
         },
         services: {
-          auth: true,
           database: true,
+          auth: {
+            ssr: {
+              serverLogin: true,
+              credential: '~/assets/serviceAccount.json',
+            }
+          },
         },
       },
   build: {

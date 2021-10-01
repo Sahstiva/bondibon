@@ -107,16 +107,9 @@ export default {
       isMobile: false,
     };
   },
-  asyncData() {
-    return {
-      authenticatedUser: null,
-    };
-  },
-  async fetch({ store, $config: { FIREBASE_USER, FIREBASE_PASS } }) {
-    await store.dispatch('user/login', { email: FIREBASE_USER, password: FIREBASE_PASS });
+  async fetch({ store }) {
     await store.dispatch('pages/getPages');
     await store.dispatch('shops/getShops');
-    await store.dispatch('user/logout');
   },
   computed: {
     linksPages() {
