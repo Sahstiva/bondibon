@@ -51,18 +51,18 @@
       >
         социально-коммуникативное развитие
       </a>
-      <div class="teachers-items__item teachers-items__catalog">
+      <a :href="linkCatalog" target="_blank" class="teachers-items__item teachers-items__catalog">
         Получите&nbsp;<span class="teachers-items__large">каталог </span>
         <font-awesome-icon
           class="teachers-items__mobile"
           :icon="['fas', 'download']"
         />
         <span class="teachers-items__nomobile">рекомендованной продукции</span>
-      </div>
+      </a>
 
-    <button class="teachers-items__download">
+    <a :href="linkCatalog" target="_blank" class="teachers-items__download">
       <img src="~/assets/images/arrow_download.svg" width="49" height="49" alt="Скачать каталог">
-    </button>
+    </a>
     </div>
     <button
       class="teachers-button"
@@ -76,5 +76,10 @@
 <script>
 export default {
   name: 'BBteachers',
+  data() {
+    return {
+      linkCatalog: process.env.DOWNLOAD_LINK,
+    };
+  },
 };
 </script>

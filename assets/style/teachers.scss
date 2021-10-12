@@ -87,12 +87,16 @@
       justify-content: center;
       flex-direction: column;
       color: #ffffff;
+      text-decoration: none;
       @include font-desktop;
       &:hover {
         cursor: pointer;
         box-shadow: none;
         transform: translate(6.709px, 4.357px);
         transition: all 0.3s ease-in-out;
+      }
+      &:visited {
+        color: #ffffff;
       }
       @media (max-width: 1023px) {
         width: 100%;
@@ -103,7 +107,11 @@
       }
     }
     &__large {
+      text-decoration: none;
       font-size: 25px;
+      &:visited {
+        color: #ffffff;
+      }
       @media (max-width: 1023px) {
         font-size: 15px;
       }
@@ -119,6 +127,10 @@
       }
     }
     &__nomobile {
+      text-decoration: none;
+      &:visited {
+        color: #ffffff;
+      }
       @media (max-width: 1023px) {
         display: none;
         visibility: hidden;

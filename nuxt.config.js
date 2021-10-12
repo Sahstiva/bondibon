@@ -51,7 +51,12 @@ export default {
     '@nuxtjs/device',
     '@nuxtjs/yandex-metrika',
     '@nuxtjs/firebase',
+    '@nuxtjs/gtm',
   ],
+  gtm: {
+    id: process.env.GOOGLE_TAG_MANAGER_ID,
+    enabled: true,
+  },
   yandexMetrika:
       {
         id: process.env.YANDEX_METRIKA_ID,
@@ -75,7 +80,7 @@ export default {
             ssr: {
               serverLogin: true,
               credential: '~/assets/serviceAccount.json',
-            }
+            },
           },
         },
       },
@@ -85,6 +90,10 @@ export default {
       vue.transformAssetUrls.img = ['data-src', 'src']; // eslint-disable-line no-param-reassign
       vue.transformAssetUrls.source = ['data-srcset', 'srcset']; // eslint-disable-line no-param-reassign
     },
+  },
+  responsiveLoader: {
+    name: 'img/[hash:7]-[width].[ext]',
+    quality: 50,
   },
   optimizedImages: {
     inlineImageLimit: 1000,

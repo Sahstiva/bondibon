@@ -22,25 +22,26 @@
                 media="(min-width: 1024px)"
             >
             <source
-                data-srcset="~/assets/images/slider_cup.png?resize&size=320&format=webp"
+                data-srcset="~/assets/images/slider_cup_320.png?webp"
                 type="image/webp"
                 media="(max-width: 479px)"
             >
             <source
-                data-srcset="~/assets/images/slider_cup.png?resize&size=320"
+                data-srcset="~/assets/images/slider_cup_320.png"
                 media="(max-width: 479px)"
             >
             <source
-              data-srcset="~/assets/images/slider_cup.png?resize&size=480&format=webp"
+              data-srcset="~/assets/images/slider_cup_480.png?webp"
               type="image/webp"
               media="(max-width: 1023px)"
             >
             <source
-                data-srcset="~/assets/images/slider_cup.png?resize&size=480"
+                data-srcset="~/assets/images/slider_cup_480.png"
                 media="(max-width: 1023px)"
             >
             <img
-              data-src="~/assets/images/slider_cup.png"
+              data-src="~/assets/images/slider_cup.png?webp"
+              type="image/webp"
               class="lazyload"
               loading="lazy"
               alt="Подарки своими руками"
@@ -59,26 +60,27 @@
                 media="(min-width: 1024px)"
             >
             <source
-                data-srcset="~/assets/images/slider_newyear.png?resize&size=320&format=webp"
+                data-srcset="~/assets/images/slider_newyear_320.png?webp"
                 type="image/webp"
                 media="(max-width: 479px)"
             >
             <source
-                data-srcset="~/assets/images/slider_newyear.png?resize&size=320"
+                data-srcset="~/assets/images/slider_newyear_320.png"
                 media="(max-width: 479px)"
             >
             <source
-              data-srcset="~/assets/images/slider_newyear.png?resize&size=480&format=webp"
+              data-srcset="~/assets/images/slider_newyear_480.png?webp"
               type="image/webp"
               media="(max-width: 1023px)"
             >
             <source
-                data-srcset="~/assets/images/slider_newyear.png?resize&size=480"
+                data-srcset="~/assets/images/slider_newyear_480.png"
                 media="(max-width: 1023px)"
             >
             <img
                 class="lazyload"
-                data-src="~/assets/images/slider_cup.png"
+                data-src="~/assets/images/slider_newyear.png?webp"
+                type="image/webp"
                 loading="lazy"
                 alt="Новогодние игры"
             >
@@ -96,25 +98,26 @@
                 media="(min-width: 1024px)"
             >
             <source
-                data-srcset="~/assets/images/slider_xmastree.png?resize&size=320&format=webp"
+                data-srcset="~/assets/images/slider_xmastree_320.png?webp"
                 type="image/webp"
                 media="(max-width: 479px)"
             >
             <source
-                data-srcset="~/assets/images/slider_xmastree.png?resize&size=320"
+                data-srcset="~/assets/images/slider_xmastree_320.png?"
                 media="(max-width: 479px)"
             >
             <source
-                data-srcset="~/assets/images/slider_xmastree.png?resize&size=480&format=webp"
+                data-srcset="~/assets/images/slider_xmastree_480.png?webp"
                 type="image/webp"
                 media="(max-width: 1023px)"
             >
             <source
-                data-srcset="~/assets/images/slider_xmastree.png?resize&size=480"
+                data-srcset="~/assets/images/slider_xmastree_480.png"
                 media="(max-width: 1023px)"
             >
             <img
-              data-src="~/assets/images/slider_cup.png"
+              data-src="~/assets/images/slider_xmastree.png?webp"
+              type="image/webp"
               loading="lazy"
               class="lazyload"
               alt="Креативные наборы"

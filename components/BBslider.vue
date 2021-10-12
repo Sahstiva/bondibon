@@ -15,25 +15,26 @@
               media="(min-width: 1024px)"
             />
             <source
-              data-srcset="~/assets/images/slider_tablegames.png?resize&size=320&format=webp"
+              data-srcset="~/assets/images/slider_tablegames_320.png?webp"
               type="image/webp"
               media="(max-width: 479px)"
             />
             <source
-              data-srcset="~/assets/images/slider_tablegames.png?resize&size=320"
+              data-srcset="~/assets/images/slider_tablegames_320.png"
               media="(max-width: 479px)"
             />
             <source
-              data-srcset="~/assets/images/slider_tablegames.png?resize&size=480&format=webp"
+              data-srcset="~/assets/images/slider_tablegames_480.png?webp"
               type="image/webp"
               media="(max-width: 1023px)"
             />
             <source
-              data-srcset="~/assets/images/slider_tablegames.png?resize&size=480"
+              data-srcset="~/assets/images/slider_tablegames_480.png"
               media="(max-width: 1023px)"
             />
             <img
-              data-src="~/assets/images/slider_tablegames.png"
+              data-src="~/assets/images/slider_tablegames.png?webp"
+              type="image/webp"
               class="lazyload"
               loading="lazy"
               alt="Настольные игры"
@@ -52,25 +53,26 @@
               media="(min-width: 1024px)"
             />
             <source
-              data-srcset="~/assets/images/slider_mosaic.png?resize&size=320&format=webp"
+              data-srcset="~/assets/images/slider_mosaic_320.png?webp"
               type="image/webp"
               media="(max-width: 479px)"
             />
             <source
-              data-srcset="~/assets/images/slider_mosaic.png?resize&size=320"
+              data-srcset="~/assets/images/slider_mosaic_320.png"
               media="(max-width: 479px)"
             />
             <source
-              data-srcset="~/assets/images/slider_mosaic.png?resize&size=480&format=webp"
+              data-srcset="~/assets/images/slider_mosaic_480.png?webp"
               type="image/webp"
               media="(max-width: 1023px)"
             />
             <source
-              data-srcset="~/assets/images/slider_mosaic.png?resize&size=480"
+              data-srcset="~/assets/images/slider_mosaic_480.png"
               media="(max-width: 1023px)"
             />
             <img
-              data-src="~/assets/images/slider_mosaic.png"
+              data-src="~/assets/images/slider_mosaic.png?webp"
+              type="image/webp"
               class="lazyload"
               loading="lazy"
               alt="Пазлы и мозаики"
@@ -89,25 +91,26 @@
               media="(min-width: 1024px)"
             />
             <source
-              data-srcset="~/assets/images/slider_roadgames.png?resize&size=320&format=webp"
+              data-srcset="~/assets/images/slider_roadgames_320.png?webp"
               type="image/webp"
               media="(max-width: 479px)"
             />
             <source
-              data-srcset="~/assets/images/slider_roadgames.png?resize&size=320"
+              data-srcset="~/assets/images/slider_roadgames_320.png"
               media="(max-width: 479px)"
             />
             <source
-              data-srcset="~/assets/images/slider_roadgames.png?resize&size=480&format=webp"
+              data-srcset="~/assets/images/slider_roadgames_480.png?webp"
               type="image/webp"
               media="(max-width: 1023px)"
             />
             <source
-              data-srcset="~/assets/images/slider_roadgames.png?resize&size=480"
+              data-srcset="~/assets/images/slider_roadgames_480.png"
               media="(max-width: 1023px)"
             />
             <img
-              data-src="~/assets/images/slider_roadgames.png"
+              data-src="~/assets/images/slider_roadgames.png?webp"
+              type="image/webp"
               class="slider-img lazyload"
               loading="lazy"
               alt="Пазлы и мозаики"
@@ -152,10 +155,10 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 
 export default {
-  name: "BBslider",
+  name: 'BBslider',
   components: {
     Swiper,
     SwiperSlide,
@@ -164,8 +167,8 @@ export default {
     return {
       currentSlide: 1,
       showDown: true,
-      slidesText: ["Настольные игры", "Пазлы и мозаики", "Игры в дорогу"],
-      slidesColor: ["#f08fc8", "#ff811e", "#96bde9"],
+      slidesText: ['Настольные игры', 'Пазлы и мозаики', 'Игры в дорогу'],
+      slidesColor: ['#f08fc8', '#ff811e', '#96bde9'],
       swiperOption: {
         mousewheel: false,
         slidesPerView: 1,
@@ -191,7 +194,7 @@ export default {
     },
   },
   mounted() {
-    this.$refs.swiperMain.$swiper.on("slideChange", () => {
+    this.$refs.swiperMain.$swiper.on('slideChange', () => {
       this.currentSlide = this.$refs.swiperMain.$swiper.activeIndex;
     });
   },
@@ -207,10 +210,10 @@ export default {
     },
   },
   beforeMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   },
 };
 </script>
