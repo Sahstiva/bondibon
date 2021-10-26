@@ -170,6 +170,7 @@ export default {
       slidesText: ['Настольные игры', 'Пазлы и мозаики', 'Игры в дорогу'],
       slidesColor: ['#f08fc8', '#ff811e', '#96bde9'],
       swiperOption: {
+        autoplay: true,
         mousewheel: false,
         slidesPerView: 1,
         spaceBetween: 2,

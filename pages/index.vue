@@ -5,6 +5,14 @@
       <BBheader v-show="showHeader" @goToNextPage="nextPage($event)"/>
     </transition>
     <BBtitle id="title" @goToNextPage="nextPage($event)"/>
+    <BBgift id="gift" @goToNextPage="nextPage($event)"/>
+    <BBnewyear
+        v-if="linksPages.get('newyear')"
+        id="newyear"
+        :links="linksPages.get('newyear')"
+        :show="showModal.get('newyear')"
+        @goToNextPage="nextPage($event)"/>
+    <BBteachers id="teachers" @goToNextPage="nextPage($event)"/>
     <BBslider id="slider" @goToNextPage="nextPage($event)"/>
     <BBknow
         v-if="linksPages.get('know')"
@@ -42,14 +50,6 @@
         :links="linksPages.get('tablegames')"
         :show="showModal.get('tablegames')"
         @goToNextPage="nextPage($event)"/>
-    <BBgift id="gift" @goToNextPage="nextPage($event)"/>
-    <BBnewyear
-        v-if="linksPages.get('newyear')"
-        id="newyear"
-        :links="linksPages.get('newyear')"
-        :show="showModal.get('newyear')"
-        @goToNextPage="nextPage($event)"/>
-    <BBteachers id="teachers" @goToNextPage="nextPage($event)"/>
     <BBlinks id="links" @goToNextPage="nextPage($event)"/>
     <div id="map"></div>
     <BBmap

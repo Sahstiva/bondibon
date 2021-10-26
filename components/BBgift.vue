@@ -162,6 +162,7 @@ export default {
       currentSlide: 1,
       slidesText: ['подарки своими руками', 'новогодние игры', 'креативные наборы'],
       swiperOption: {
+        autoplay: true,
         mousewheel: false,
         slidesPerView: 1,
         spaceBetween: 2,

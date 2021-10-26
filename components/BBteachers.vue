@@ -66,7 +66,7 @@
     </div>
     <button
       class="teachers-button"
-      @click="$emit('goToNextPage', 'links')"
+      @click="$emit('goToNextPage', 'slider')"
     >
       <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
     </button>
