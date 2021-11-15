@@ -81,7 +81,7 @@
         </div>
       </a>
       <a href="https://gratwest.ru"
-         onclick="ym(85182334,'reachGoal','outbound_link');return true;"
+         onclick="ym(85182334,'reachGoal','gratwest_link');return true;"
          class="links-item__wholesale"
          target="_blank"
          rel="noreferrer"

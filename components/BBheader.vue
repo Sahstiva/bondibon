@@ -5,7 +5,7 @@
     <div class="header-wrapper">
       <div class="header-address">
         <a href="https://bondibon.ru"
-           onclick="ym(85182334,'reachGoal','outbound_link');return true;">
+           onclick="ym(85182334,'reachGoal','bondibon_link');return true;">
           <picture class="header-address__logo">
             <source
                 data-srcset="~/assets/images/logo_bondibon.png?webp" type="image/webp"
