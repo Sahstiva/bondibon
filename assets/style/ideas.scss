@@ -1,0 +1,313 @@
+.ideas {
+  background-image: url('~assets/images/background_ideas.png?webp');
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 2100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  @media (max-width: 1920px) {
+    width: 100vw;
+  }
+  @media (max-width: 1279px) {
+    background-image: url('~assets/images/background_ideas_1279.png?webp');
+    height: 2300px;
+  }
+  @media (max-width: 1023px) {
+    background-image: url('~assets/images/background_ideas_1023.png?webp');
+  height: 3500px;
+  }
+  @media (max-width: 767px) {
+    background-image: url('~assets/images/background_ideas_767.png?webp');
+    height: 4500px;
+  }
+  &-wrapper {
+    width: 678px;
+    margin: 40px 450px 0 0;
+    display: flex;
+    align-items: flex-start;
+
+    @media (max-width: 1279px) {
+      margin: 40px 350px 0 0;
+    }
+    @media (max-width: 1151px) {
+      margin: 40px 250px 0 0;
+    }
+    @media (max-width: 1023px) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 480px;
+      margin: 70px 0 0 80px;
+      align-items: flex-end;
+    }
+    @media (max-width: 479px) {
+      width: 100%;
+      max-width: 320px;
+      margin: 70px 0 0 0;
+    }
+  }
+  &-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 175px 0 0;
+    width: 65px;
+    height: 52px;
+
+    &:hover {
+      transform: scale(1.1) translateY(5px);
+      transition: all 0.3s ease-in-out;
+    }
+    &__text {
+      @include font-Rotonda;
+      font-size: 40px;
+      line-height: 50px;
+      text-align: left;
+      color: #ffffff;
+      margin: 100px 0 15px 100px;
+      width: 320px;
+      @media (max-width: 1024px) {
+        width: 290px;
+        height: 120px;
+        margin: 0 0 5px 75px;
+        font-size: 35px;
+      }
+      @media (max-width: 1023px) {
+        margin: 0 0 0 35px;
+        width: 380px;
+        height: 80px;
+        text-align: right;
+      }
+      @media (max-width: 374px) {
+        font-size: 27px;
+        margin: 0;
+        width: 90vw;
+        height: unset;
+        text-align: center;
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      // justify-content: flex-end;
+      align-items: center;
+      @media (max-width: 1920px) {
+        left:  calc(50vw - 500px);
+      }
+      @media (max-width: 1024px) {
+        max-width: 270px;
+        left:  calc(50vw - 530px);
+      }
+      @media (max-width: 1023px) {
+        position: unset;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 480px;
+        margin: 25px 0 0 0;
+      }
+      @media (max-width: 374px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+      }
+    }
+  }
+  &-cards {
+    margin: -105px;
+    width: 1140px;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat( auto-fill, minmax(330px, 1fr) );
+    grid-template-rows: auto;
+    gap: 10px 40px;
+    grid-template-areas:
+    ". . newyear"
+    ". science newyear"
+    "creative science newyear"
+    "creative science ."
+    "creative . logic"
+    ". tablegames logic"
+    "active tablegames logic"
+    "active tablegames logic"
+    ". . logic"
+    "newborn text logic"
+    "newborn text logic";
+
+    @media (max-width: 1279px) {
+      grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+      width: 1000px;
+      gap: 10px 30px;
+    }
+    @media (max-width: 1023px) {
+      margin: 100px;
+      width: 90vw;
+      gap: 105px 0;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "newyear"
+        "science"
+        "creative"
+        "logic"
+        "tablegames"
+        "active"
+        "newborn"
+        "text";
+      @media (max-width: 767px) {
+        margin: 230px;
+      }
+      @media (max-width: 374px) {
+        margin: 150px;
+      }
+    }
+    &__card {
+      max-width: 350px;
+      height: fit-content;
+      padding: 65px 10px 20px 10px;
+      background-color: #ffffff;
+      border-radius: 50px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 1023px) {
+        width: 87vw;
+        max-width: unset;
+      }
+    }
+    &__image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+      &__newyear {
+        grid-area: newyear;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(115px, 1fr) );
+        .ideas-cards__plate {
+          background-color: #da001a;
+        }
+      }
+      &__science {
+        grid-area: science;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(105px, 1fr) );
+        .ideas-cards__plate {
+          background-color: #ee7f00;
+          .ideas-cards__title {
+            width: 165px;
+            font-size: 15px;
+          }
+        }
+      }
+      &__creative {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(115px, 1fr) );
+        align-items: center;
+        align-content: center;
+        grid-area: creative;
+        .ideas-cards__plate {
+          background-color: #6dcd30;
+        }
+      }
+      &__active {
+        grid-area: active;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+        .ideas-cards__plate {
+          background-color: #1751b4;
+        }
+      }
+      &__newborn {
+        grid-area: newborn;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(110px, 1fr) );
+        margin: 100px 0 0 0;
+        @media (max-width: 1023px) {
+          margin: 0;
+        }
+        .ideas-cards__plate {
+          background-color: #ff96cf;
+        }
+      }
+      &__tablegames {
+        grid-area: tablegames;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
+        .ideas-cards__plate {
+          background-color: #9a84fb;
+        }
+      }
+      &__text {
+        grid-area: text;
+        background: transparent;
+        color: #ffffff;
+        @include font-desktop;
+        font-size: 34px;
+        padding: 65px 0 0 0;
+        @media (max-width: 1023px) {
+          padding: 0;
+          p {
+            margin: 0;
+          }
+        }
+        @media (max-width: 374px) {
+          font-size: 25px;
+        }
+      }
+    &__large {
+      font-size: 60px;
+      @media (max-width: 374px) {
+        font-size: 30px;
+      }
+    }
+      &__logic {
+        grid-area: logic;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(130px, 1fr) );
+        .ideas-cards__plate {
+          background-color: #00a0bd;
+        }
+      }
+
+    &__plate {
+      background-color: red;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      position: absolute;
+      top: -105px;
+      left: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      @include font-desktop;
+      font-size: 18px;
+    }
+    &__title {
+      width: 130px;
+      text-align: center;
+    }
+  }
+  &-down {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 120px 0 0 0;
+    width: 65px;
+    height: 52px;
+    &:hover {
+      transform: scale(1.1) translateY(5px);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

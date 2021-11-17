@@ -53,7 +53,6 @@ export default {
   }),
   methods: {
     mapInitialized(map) {
-      console.log('Yandex loaded');
       this.myMap = map;
 
       const btnZoomOut = new ymaps.control.Button('Показать все');
@@ -64,7 +63,7 @@ export default {
         this.myMap.setCenter([55.750318, 37.620078]);
         this.myMap.setZoom(3);
         this.zoom = 3;
-        console.log(`Показать всё, масштаб ${this.myMap.getZoom()}`);
+        // console.log(`Показать всё, масштаб ${this.myMap.getZoom()}`);
       });
       map.controls.add(btnZoomOut);
     },
@@ -74,7 +73,7 @@ export default {
       this.myMap.setCenter(shop.position.split(' ').reverse());
       this.myMap.setZoom(6);
       this.zoom = 6;
-      console.log(`Кликнули по маркеру ${shop.position.split(' ').reverse()}, масштаб ${this.myMap.getZoom()}`);
+      // console.log(`Кликнули по маркеру ${shop.position.split(' ').reverse()}, масштаб ${this.myMap.getZoom()}`);
     },
     balloonTemplate(shop) {
       if (shop.link) {

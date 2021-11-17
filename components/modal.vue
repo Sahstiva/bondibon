@@ -1,7 +1,7 @@
 <template>
   <div class="wheretobuy">
     <p class="wheretobuy-header">где купить</p>
-    <img v-if="image" class="wheretobuy-image" :src="require(`~/assets/images/${ image }`)"/>
+    <img v-if="image" :class="page === 'ideas' ? 'wheretobuy-ideas' : 'wheretobuy-image'" :src="require(`~/assets/images/${ image }`)"/>
     <p class="wheretobuy-title" v-html="title"/>
     <div class="wheretobuy-wrapper">
       <div v-if="shopLinks.get('Bondibon')" class="wheretobuy-item">
@@ -100,6 +100,40 @@
               loading="lazy"
               width="131" height="36"
               :alt="'Купить ' + title + 'в интернет-магазине ONLINE TRADE'"
+              class="wheretobuy-img lazyload" />
+        </a>
+      </div>
+      <div v-if="shopLinks.get('Seven gnomes')" class="wheretobuy-item">
+        <a
+            class="wheretobuy-link"
+            onclick="ym(85182334,'reachGoal','sevengnomes_link');return true;"
+            :href="shopLinks.get('Seven gnomes')"
+            target="_blank"
+            rel="noreferrer"
+        >
+          <img
+              data-src="~/assets/images/logo_sevengnomes.png?webp"
+              type="image/webp"
+              loading="lazy"
+              width="131" height="36"
+              :alt="'Купить ' + title + 'в интернет-магазине Школа семи гномов'"
+              class="wheretobuy-img lazyload" />
+        </a>
+      </div>
+      <div v-if="shopLinks.get('Labyrinth')" class="wheretobuy-item">
+        <a
+            class="wheretobuy-link"
+            onclick="ym(85182334,'reachGoal','labyrinth_link');return true;"
+            :href="shopLinks.get('Labyrinth')"
+            target="_blank"
+            rel="noreferrer"
+        >
+          <img
+              data-src="~/assets/images/logo_labirint.png?webp"
+              type="image/webp"
+              loading="lazy"
+              width="131" height="36"
+              :alt="'Купить ' + title + 'в интернет-магазине Лабиринт'"
               class="wheretobuy-img lazyload" />
         </a>
       </div>

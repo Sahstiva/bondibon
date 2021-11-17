@@ -104,13 +104,6 @@ export default {
     mozjpeg: {
       quality: 80,
     },
-    optipng: {
-      optimizationLevel: 7,
-    },
-    pngquant: {
-      speed: 3,
-      quality: [0.65, 0.8],
-    },
     webp: {
       preset: 'default',
       quality: 80,

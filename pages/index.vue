@@ -5,6 +5,11 @@
       <BBheader v-show="showHeader" @goToNextPage="nextPage($event)"/>
     </transition>
     <BBtitle id="title" @goToNextPage="nextPage($event)"/>
+    <BBideas id="ideas"
+             v-if="linksPages.get('ideas')"
+             :links="linksPages.get('ideas')"
+             :show="showModal.get('ideas')"
+             @goToNextPage="nextPage($event)" />
     <BBgift id="gift" @goToNextPage="nextPage($event)"/>
     <BBnewyear
         v-if="linksPages.get('newyear')"
@@ -65,6 +70,7 @@ import '~/assets/style/style.scss';
 
 import BBheader from '../components/BBheader.vue';
 import BBtitle from '../components/BBtitle.vue';
+import BBideas from '../components/BBideas.vue';
 import BBslider from '../components/BBslider.vue';
 import BBknow from '../components/BBknow.vue';
 import BBscience from '../components/BBscience.vue';
@@ -85,6 +91,7 @@ export default {
   components: {
     BBheader,
     BBtitle,
+    BBideas,
     BBslider,
     BBknow,
     BBscience,
@@ -126,7 +133,7 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   created() {
-    this.$fire.database.goOffline();
+    // this.$fire.database.goOffline();
     // console.log(`isDesktop: ${this.$device.isDesktop}`);
     // console.log(`isMobile: ${this.$device.isMobile}`);
     // console.log(`isTablet: ${this.$device.isTablet}`);
@@ -156,39 +163,52 @@ export default {
       el.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     },
     handleScroll() {
+      let showOffset = 0;
+      const screenWidth = document.body.clientWidth;
       this.scrollPosition = window.scrollY;
+      if (screenWidth < 768) {
+        showOffset = 2400;
+      } else if (screenWidth < 1024) {
+        showOffset = 1400;
+      } else if (screenWidth < 1280) {
+        showOffset = 200;
+      }
       if (this.scrollPosition > 6800 && !this.showMap) {
         this.showMap = true;
       }
       if (this.isMobile) {
         if (
-          (this.scrollPosition > 50 && this.scrollPosition < 850)
-            || (this.scrollPosition > 920 && this.scrollPosition < 1570)
-            || (this.scrollPosition > 1630 && this.scrollPosition < 2380)
-            || (this.scrollPosition > 2470 && this.scrollPosition < 3170)
-            || (this.scrollPosition > 3260 && this.scrollPosition < 3970)
-            || (this.scrollPosition > 4060 && this.scrollPosition < 4770)
-            || (this.scrollPosition > 4830 && this.scrollPosition < 5570)
-            || (this.scrollPosition > 5660 && this.scrollPosition < 6370)
-            || (this.scrollPosition > 6450 && this.scrollPosition < 7180)
-            || (this.scrollPosition > 7220 && this.scrollPosition < 8760)
-            || (this.scrollPosition > 8820 && this.scrollPosition < 9560)
-            || (this.scrollPosition > 9610 && this.scrollPosition < 10500)
+          (this.scrollPosition > 50 && this.scrollPosition < 750)
+            || (this.scrollPosition > 820 && this.scrollPosition < 4180)
+            || (this.scrollPosition > 4380 && this.scrollPosition < 4980)
+            || (this.scrollPosition > 5180 && this.scrollPosition < 6560)
+            || (this.scrollPosition > 6760 && this.scrollPosition < 7360)
+            || (this.scrollPosition > 7560 && this.scrollPosition < 8140)
+            || (this.scrollPosition > 8340 && this.scrollPosition < 8960)
+            || (this.scrollPosition > 9160 && this.scrollPosition < 9750)
+            || (this.scrollPosition > 9950 && this.scrollPosition < 10550)
+            || (this.scrollPosition > 10750 && this.scrollPosition < 11350)
+            || (this.scrollPosition > 11550 && this.scrollPosition < 12150)
+            || (this.scrollPosition > 12350 && this.scrollPosition < 12950)
+            || (this.scrollPosition > 13150 && this.scrollPosition < 13880)
+            || (this.scrollPosition > 14080 && this.scrollPosition < 20000)
         ) this.showHeader = false;
         else this.showHeader = true;
       } else if (
         (this.scrollPosition > 50 && this.scrollPosition < 600)
-          || (this.scrollPosition > 750 && this.scrollPosition < 1350)
-          || (this.scrollPosition > 1415 && this.scrollPosition < 2030)
-          || (this.scrollPosition > 2150 && this.scrollPosition < 2750)
-          || (this.scrollPosition > 2850 && this.scrollPosition < 3430)
-          || (this.scrollPosition > 3550 && this.scrollPosition < 4130)
-          || (this.scrollPosition > 4250 && this.scrollPosition < 4830)
-          || (this.scrollPosition > 4950 && this.scrollPosition < 5510)
-          || (this.scrollPosition > 5650 && this.scrollPosition < 6220)
-          || (this.scrollPosition > 6315 && this.scrollPosition < 6920)
-          || (this.scrollPosition > 7050 && this.scrollPosition < 7630)
-          || (this.scrollPosition > 7750 && this.scrollPosition < 8400)
+          || (this.scrollPosition > 750 && this.scrollPosition < (2750 + showOffset))
+          || (this.scrollPosition > (2850 + showOffset) && this.scrollPosition < (3430 + showOffset))
+          || (this.scrollPosition > (3550 + showOffset) && this.scrollPosition < (4130 + showOffset))
+          || (this.scrollPosition > (4250 + showOffset) && this.scrollPosition < (4830 + showOffset))
+          || (this.scrollPosition > (4950 + showOffset) && this.scrollPosition < (5510 + showOffset))
+          || (this.scrollPosition > (5650 + showOffset) && this.scrollPosition < (6220 + showOffset))
+          || (this.scrollPosition > (6315 + showOffset) && this.scrollPosition < (6920 + showOffset))
+          || (this.scrollPosition > (7050 + showOffset) && this.scrollPosition < (7630 + showOffset))
+          || (this.scrollPosition > (7750 + showOffset) && this.scrollPosition < (8300 + showOffset))
+          || (this.scrollPosition > (8400 + showOffset) && this.scrollPosition < (8980 + showOffset))
+          || (this.scrollPosition > (9180 + showOffset) && this.scrollPosition < (9680 + showOffset))
+          || (this.scrollPosition > (9880 + showOffset) && this.scrollPosition < (10380 + showOffset))
+          || (this.scrollPosition > (10580 + showOffset))
       ) this.showHeader = false;
       else this.showHeader = true;
     },

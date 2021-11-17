@@ -14,6 +14,9 @@ export const actions = {
   async getPages({ commit }) {
     try {
       const res = (await this.$fire.database.ref('/pages').once('value')).toJSON();
+      // const res = await this.$axios.$get('data/pages.json');
+      // console.log('Pages');
+      // console.log(res);
       commit('setPages', res);
     } catch (error) {
       commit('setError', error, { root: true });

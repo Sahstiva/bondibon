@@ -62,7 +62,7 @@
       </div>
       <button
         class="title-learnmore__button"
-        @click="$emit('goToNextPage', 'gift')"
+        @click="$emit('goToNextPage', 'ideas')"
       >
         <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
       </button>
