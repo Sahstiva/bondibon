@@ -60,7 +60,7 @@
         <span class="teachers-items__nomobile">рекомендованной продукции</span>
       </a>
 
-    <a :href="linkCatalog" target="_blank" class="teachers-items__download">
+    <a :href="linkCatalog" target="_blank" rel="noreferrer" class="teachers-items__download">
       <img src="~/assets/images/arrow_download.svg" width="49" height="49" alt="Скачать каталог">
     </a>
     </div>

@@ -101,10 +101,14 @@ export default {
   },
   mounted() {
     if (this.show) {
-      const section = Object.values(this.links.sections).find((item) => item.id === this.show);
-      if (section) {
-        this.showModal(section);
-      }
+      Object.values(this.links.sections).forEach((section) => {
+        if ('sections' in section) {
+          const showSection = Object.values(section.sections).find((item) => item.id === this.show);
+          if (showSection) {
+            this.showModal(showSection);
+          }
+        }
+      });
     }
   },
   methods: {
