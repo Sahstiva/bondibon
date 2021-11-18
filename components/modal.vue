@@ -1,13 +1,15 @@
 <template>
   <div class="wheretobuy">
     <p class="wheretobuy-header">где купить</p>
-    <img v-if="image" :class="page === 'ideas' ? 'wheretobuy-ideas' : 'wheretobuy-image'" :src="require(`~/assets/images/${ image }`)"/>
+    <img v-if="image"
+         :class="page === 'ideas' ? 'wheretobuy-ideas' : 'wheretobuy-image'"
+         :src="require(`~/assets/images/${ image }`)"/>
     <p class="wheretobuy-title" v-html="title"/>
     <div class="wheretobuy-wrapper">
       <div v-if="shopLinks.get('Bondibon')" class="wheretobuy-item">
         <a
             class="wheretobuy-item__link"
-            onclick="ym(85182334,'reachGoal','bondibon_link');return true;"
+            @click="reachGoal('bondibon_link')"
             :href="shopLinks.get('Bondibon')"
             target="_blank"
             rel="noreferrer"
@@ -24,7 +26,7 @@
       <div v-if="shopLinks.get('Ozon')" class="wheretobuy-item">
         <a
             class="wheretobuy-link"
-            onclick="ym(85182334,'reachGoal','ozon_link');return true;"
+            @click="reachGoal('ozon_link')"
             :href="shopLinks.get('Ozon')"
             target="_blank"
             rel="noreferrer"
@@ -41,7 +43,7 @@
       <div v-if="shopLinks.get('Wildberries')" class="wheretobuy-item">
         <a
             class="wheretobuy-link"
-            onclick="ym(85182334,'reachGoal','wildberries_link');return true;"
+            @click="reachGoal('wildberries_link')"
             :href="shopLinks.get('Wildberries')"
             target="_blank"
             rel="noreferrer">
@@ -57,7 +59,7 @@
       <div v-if="shopLinks.get('My Shop')" class="wheretobuy-item">
         <a
             class="wheretobuy-link"
-            onclick="ym(85182334,'reachGoal','myshop_link');return true;"
+            @click="reachGoal('myshop_link')"
             :href="shopLinks.get('My Shop')"
             target="_blank"
             rel="noreferrer">
@@ -73,7 +75,7 @@
       <div v-if="shopLinks.get('Akusherstvo')" class="wheretobuy-item">
         <a
             class="wheretobuy-link"
-            onclick="ym(85182334,'reachGoal','akusherstvo_link');return true;"
+            @click="reachGoal('akusherstvo_link')"
             :href="shopLinks.get('Akusherstvo')"
             target="_blank"
             rel="noreferrer"
@@ -91,7 +93,7 @@
         <a
             class="wheretobuy-link"
             :href="shopLinks.get('Online Trade')"
-            onclick="ym(85182334,'reachGoal','onlinetrade_link');return true;"
+            @click="reachGoal('onlinetrade_link')"
             target="_blank"
             rel="noreferrer">
           <img
@@ -106,7 +108,7 @@
       <div v-if="shopLinks.get('Seven gnomes')" class="wheretobuy-item">
         <a
             class="wheretobuy-link"
-            onclick="ym(85182334,'reachGoal','sevengnomes_link');return true;"
+            @click="reachGoal('sevengnomes_link')"
             :href="shopLinks.get('Seven gnomes')"
             target="_blank"
             rel="noreferrer"
@@ -123,7 +125,7 @@
       <div v-if="shopLinks.get('Labyrinth')" class="wheretobuy-item">
         <a
             class="wheretobuy-link"
-            onclick="ym(85182334,'reachGoal','labyrinth_link');return true;"
+            @click="reachGoal('labyrinth_link')"
             :href="shopLinks.get('Labyrinth')"
             target="_blank"
             rel="noreferrer"
@@ -153,6 +155,17 @@ export default {
   data() {
     return {
       shopLinks: new Map(),
+      scriptUrl: 'https://px.adhigh.net/p/conversion.js?site_id=7414&pixel_id=10',
+      bondilogic: [
+        'cats',
+        'camp',
+        'turtle',
+        'mechanics',
+        'snowflake',
+        'seasons',
+        'kaleidoscope',
+        'multicube',
+      ],
     };
   },
   created() {
@@ -169,6 +182,36 @@ export default {
   methods: {
     reachGoal(goal) {
       window.ym(85182334, 'reachGoal', goal);
+      if (this.bondilogic.find((el) => el === this.id)) {
+        this.loadScript(this.scriptUrl)
+          .then(() => console.log('Script loaded'))
+          .catch((e) => console.log(`Fail to load script: ${e}`));
+      }
+    },
+    async loadScript(source, async = true, defer = true) {
+      return new Promise((resolve, reject) => {
+        let script = document.createElement('script');
+        const prior = document.getElementsByTagName('script')[0];
+
+        script.async = async;
+        script.defer = defer;
+
+        function onloadHander(_, isAbort) {
+          if (isAbort || !script.readyState || /loaded|complete/.test(script.readyState)) {
+            script.onload = null;
+            script.onreadystatechange = null;
+            script = undefined;
+
+            if (isAbort) { reject(); } else { resolve(); }
+          }
+        }
+
+        script.onload = onloadHander;
+        script.onreadystatechange = onloadHander;
+
+        script.src = source;
+        prior.parentNode.insertBefore(script, prior);
+      });
     },
   },
 };
