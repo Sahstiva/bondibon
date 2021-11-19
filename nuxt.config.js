@@ -36,7 +36,7 @@ export default {
     script: [
       {
         // eslint-disable-next-line max-len,vue/max-len
-        innerHTML: `"undefined"==typeof __GetI&&(__GetI=[]),function(){__GetI.push({type:"VIEW",site_id:"7414",product_id:"",product_price:"",category_id:"",pixel_id:"10"});var t="undefined"==typeof __GetI_domain?"px.adhigh.net":__GetI_domain,e=("https:"==document.location.protocol?"https://":"http://")+t+"/p.js",p=document.createElement("script");p.type="text/javascript",p.src=e;var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(p,i)}();`,
+        innerHTML: `"undefined"==typeof __GetI&&(__GetI=[]),function(){__GetI.push({type:"CONVERSION",site_id:"7414",product_id:"",product_price:"",category_id:"",pixel_id:"10"});var t="undefined"==typeof __GetI_domain?"px.adhigh.net":__GetI_domain,e=("https:"==document.location.protocol?"https://":"http://")+t+"/p.js",p=document.createElement("script");p.type="text/javascript",p.src=e;var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(p,i)}();`,
         type: 'text/javascript',
         charset: 'utf-8',
       },
