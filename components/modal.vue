@@ -188,6 +188,31 @@ export default {
           .catch((e) => console.log(`Fail to load script: ${e}`));
       }
     },
+    loadConversionScript() {
+      if (typeof __GetI === 'undefined') {
+        // eslint-disable-next-line no-underscore-dangle
+        var __GetI = [];
+      }
+      // eslint-disable-next-line func-names
+      (function () {
+        const p = {
+          type: 'CONVERSION',
+          /* config START */
+          site_id: 7414,
+          pixel_id: 10,
+          /* config END */
+        };
+        // eslint-disable-next-line block-scoped-var
+        __GetI.push(p);
+        const domain = (typeof __GetI_domain) === 'undefined' ? 'px.adhigh.net' : __GetI_domain;
+        const src = `${(document.location.protocol === 'https:' ? 'https://' : 'http://') + domain}/p.js`;
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = src;
+        const s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(script, s);
+      }());
+    },
     async loadScript(source, async = true, defer = true) {
       return new Promise((resolve, reject) => {
         let script = document.createElement('script');
