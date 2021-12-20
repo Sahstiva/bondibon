@@ -1,61 +1,28 @@
 <template>
-  <section class="ideas">
+  <section class="bb20gifts">
     <h2 class="visually-hidden">{{ links.title }}</h2>
-    <div class="ideas-wrapper">
-      <picture>
-        <source
-            data-srcset="~/assets/images/ideas_girl.png?webp"
-            type="image/webp"
-            media="(min-width: 1024px)"
-        >
-        <source
-            data-srcset="~/assets/images/ideas_girl.png"
-            media="(min-width: 1024px)"
-        >
-        <source
-            data-srcset="~/assets/images/ideas_girl_320.png?webp"
-            type="image/webp"
-            media="(max-width: 479px)"
-        >
-        <source
-            data-srcset="~/assets/images/ideas_girl_320.png"
-            media="(max-width: 479px)"
-        >
-        <source
-            data-srcset="~/assets/images/ideas_girl_480.png?webp"
-            type="image/webp"
-            media="(max-width: 1023px)"
-        >
-        <source
-            data-srcset="~/assets/images/ideas_girl_480.png"
-            media="(max-width: 1023px)"
-        >
-        <img
-            data-src="~/assets/images/ideas_girl.png?webp"
-            type="image/webp"
-            class="lazyload"
-            loading="lazy"
-            alt="Подарки своими руками"
-        >
-      </picture>
-      <div class="ideas-button__wrapper">
-        <p class="ideas-button__text">
-          {{ links.title }}
+    <div class="bb20gifts-wrapper">
+        <p class="bb20gifts-wrapper__large">
+          20 подарков
         </p>
-      </div>
+      <p class="bb20gifts-wrapper__text">
+        для детей разных возрастов
+      </p>
     </div>
-    <div class="ideas-cards">
+    <div class="bb20gifts-cards">
       <div v-for="section in links.sections"
            :key="section.name"
-           class="ideas-cards__card"
-           :class="`ideas-cards__${section.name}`"
+           class="bb20gifts-cards__card"
+           :class="`bb20gifts-cards__${section.name}`"
       >
         <template v-if="section.name !== 'text'">
           <button
               v-for="item in section.sections"
               :key="item.id"
-              class="ideas-cards__image"
+              class="bb20gifts-cards__image"
+              :class="`bb20gifts-cards__${item.id}`"
               v-on:click="showModal(item)">
+
             <picture>
               <source
                 :data-srcset="require(`~/assets/images/${item.image}?webp`)"
@@ -70,16 +37,16 @@
                 loading="lazy"/>
             </picture>
           </button>
-          <div class="ideas-cards__plate">
-            <p class="ideas-cards__title">{{ section.text }}</p>
+          <div class="bb20gifts-cards__plate">
+            <p class="bb20gifts-cards__title">{{ section.text }}</p>
           </div>
         </template>
         <p v-else v-html="section.text" />
       </div>
     </div>
     <button
-        class="ideas-down"
-        @click="$emit('goToNextPage', 'links')"
+        class="bb20gifts-down"
+        @click="$emit('goToNextPage', 'gift')"
     >
       <img src="~/assets/images/arrow_white.svg" width="49"  height="49" alt="Следующая страница">
     </button>
@@ -89,7 +56,7 @@
 <script>
 import modal from '@/components/modal.vue';
 
-const PAGE_NAME = 'ideas';
+const PAGE_NAME = '20gifts';
 
 export default {
   name: `BB${PAGE_NAME}`,
@@ -100,6 +67,7 @@ export default {
     };
   },
   mounted() {
+    console.log(this.links.sections);
     if (this.show) {
       Object.values(this.links.sections).forEach((section) => {
         if ('sections' in section) {

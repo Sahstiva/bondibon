@@ -2,7 +2,7 @@
   <div class="wheretobuy">
     <p class="wheretobuy-header">где купить</p>
     <img v-if="image"
-         :class="page === 'ideas' ? 'wheretobuy-ideas' : 'wheretobuy-image'"
+         :class="page === 'ideas' || '20gifts' ? 'wheretobuy-ideas' : 'wheretobuy-image'"
          :src="require(`~/assets/images/${ image }`)"/>
     <p class="wheretobuy-title" v-html="title"/>
     <div class="wheretobuy-wrapper">

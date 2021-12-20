@@ -5,11 +5,11 @@
       <BBheader v-show="showHeader" @goToNextPage="nextPage($event)"/>
     </transition>
     <BBtitle id="title" @goToNextPage="nextPage($event)"/>
-    <BBideas id="ideas"
-             v-if="linksPages.get('ideas')"
-             :links="linksPages.get('ideas')"
-             :show="showModal.get('ideas')"
-             @goToNextPage="nextPage($event)" />
+    <BB20gifts id="20gifts"
+               v-if="linksPages.get('20gifts')"
+               :links="linksPages.get('20gifts')"
+               :show="showModal.get('20gifts')"
+               @goToNextPage="nextPage($event)"/>
     <BBgift id="gift" @goToNextPage="nextPage($event)"/>
     <BBnewyear
         v-if="linksPages.get('newyear')"
@@ -55,6 +55,11 @@
         :links="linksPages.get('tablegames')"
         :show="showModal.get('tablegames')"
         @goToNextPage="nextPage($event)"/>
+    <BBideas id="ideas"
+             v-if="linksPages.get('ideas')"
+             :links="linksPages.get('ideas')"
+             :show="showModal.get('ideas')"
+             @goToNextPage="nextPage($event)" />
     <BBlinks id="links" @goToNextPage="nextPage($event)"/>
     <div id="map"></div>
     <BBmap
@@ -83,12 +88,14 @@ import BBnewyear from '../components/BBnewyear.vue';
 import BBteachers from '../components/BBteachers.vue';
 import BBlinks from '../components/BBlinks.vue';
 import BBmap from '../components/BBmap.vue';
+import BB20gifts from '../components/BB20gifts';
 
 export default {
   name: 'Bondibon',
   title: 'Bondibon landing',
 
   components: {
+    BB20gifts,
     BBheader,
     BBtitle,
     BBideas,
@@ -166,6 +173,8 @@ export default {
       let showOffset = 0;
       const screenWidth = document.body.clientWidth;
       this.scrollPosition = window.scrollY;
+      console.log(this.scrollPosition);
+
       if (screenWidth < 768) {
         showOffset = 2400;
       } else if (screenWidth < 1024) {

@@ -18,7 +18,7 @@
     </div>
     <button
         class="tablegames-button"
-        @click="$emit('goToNextPage', 'links')"
+        @click="$emit('goToNextPage', 'ideas')"
     >
       <img src="~/assets/images/arrow_down.svg" width="49"  height="49" alt="Далее">
     </button>
