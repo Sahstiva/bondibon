@@ -3,6 +3,7 @@
     id="giftpage"
     class="gift"
   >
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')"/>
     <h2 class="visually-hidden">Подарки своими руками</h2>
     <div class="gift-wrapper">
       <swiper
@@ -150,12 +151,14 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import BBheader from './BBheader.vue';
 
 export default {
   name: 'BBgift',
   components: {
     Swiper,
     SwiperSlide,
+    BBheader,
   },
   data() {
     return {

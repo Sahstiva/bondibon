@@ -1,5 +1,6 @@
 <template>
   <section class="constructor">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')"/>
     <h2 class="visually-hidden">Мысли конструктивно</h2>
     <div class="constructor-think">
       <div class="constructor-think__wrapper">
@@ -30,12 +31,16 @@
 
 <script>
 import modal from '@/components/modal.vue';
+import BBheader from './BBheader.vue';
 
 const PAGE_NAME = 'constructor';
 
 export default {
   name: `BB${PAGE_NAME}`,
   props: ['links', 'show'],
+  components: {
+    BBheader,
+  },
   data() {
     return {
       styles: [

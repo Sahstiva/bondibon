@@ -1,5 +1,6 @@
 <template>
   <section class="microscope">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')"/>
     <h2 class="visually-hidden">Хочу всё знать</h2>
     <div class="microscope-wannaknow">
       <div class="microscope-wannaknow__wrapper">
@@ -27,11 +28,13 @@
 
 <script>
 import modal from '@/components/modal.vue';
+import BBheader from './BBheader.vue';
 
 const PAGE_NAME = 'science';
 
 export default {
   name: `BB${PAGE_NAME}`,
+  components: { BBheader },
   props: ['links', 'show'],
   data() {
     return {

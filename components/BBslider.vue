@@ -1,5 +1,6 @@
 <template>
   <section id="sliderpage" class="slider">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')"/>
     <h2 class="visually-hidden">Полезные игры</h2>
     <div class="slider-wrapper">
       <swiper ref="swiperMain" class="swiper" :options="swiperOption">
@@ -156,10 +157,12 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import BBheader from './BBheader.vue';
 
 export default {
   name: 'BBslider',
   components: {
+    BBheader,
     Swiper,
     SwiperSlide,
   },

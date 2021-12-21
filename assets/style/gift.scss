@@ -1,4 +1,5 @@
 .gift {
+  position: relative;
   background-image: url('~assets/images/background_gifts_v3.png?webp');
   background-position: center top;
   background-repeat: no-repeat;
@@ -56,6 +57,9 @@
         margin: 0 0 15px 0;
         width: 361px;
         height: 80px;
+        @media (max-width: 1279px) {
+          width: 300px;
+        }
         @media (max-width: 1024px) {
           width: 290px;
           height: 120px;
@@ -89,6 +93,9 @@
       @media (max-width: 1920px) {
         left:  calc(50vw - 500px);
       }
+        @media (max-width: 1279px) {
+          left:  calc(50vw - 550px);
+        }
       @media (max-width: 1024px) {
         max-width: 270px;
         left:  calc(50vw - 530px);
@@ -101,9 +108,15 @@
         max-width: 480px;
         margin: 25px 0 0 0;
       }
+        @media(max-width: 767px) {
+          margin: 100px 0 0 0;
+        }
     }
   }
   &-down {
+    @media (max-width: 767px) {
+      margin: 50px 0 0 0;
+    }
     &__button {
       background: transparent;
       border: none;

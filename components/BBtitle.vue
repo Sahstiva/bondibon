@@ -1,5 +1,6 @@
 <template>
   <section class="title">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')"/>
     <h2 class="visually-hidden">5000 наименований игр и игрушек</h2>
     <div class="title-benefit">
       <div class="title-benefit__item title-benefit__cyan">
@@ -71,7 +72,12 @@
 </template>
 
 <script>
+import BBheader from './BBheader.vue';
+
 export default {
   name: 'BBtitle',
+  components: {
+    BBheader,
+  },
 };
 </script>

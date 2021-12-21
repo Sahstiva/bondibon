@@ -1,5 +1,6 @@
 <template>
   <section class="knowledge">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')"/>
     <h2 class="visually-hidden">{{ links.title }}</h2>
     <div class="knowledge-title">
       <p class="knowledge-title__title">
@@ -39,11 +40,13 @@
 
 <script>
 import modal from '@/components/modal.vue';
+import BBheader from './BBheader.vue';
 
 const PAGE_NAME = 'know';
 
 export default {
   name: `BB${PAGE_NAME}`,
+  components: { BBheader },
   props: ['links', 'show'],
   mounted() {
     if (this.show) {

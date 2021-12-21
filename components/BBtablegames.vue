@@ -1,5 +1,6 @@
 <template>
   <section class="tablegames">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')"/>
     <h2 class="visually-hidden">Делу время - потехе час</h2>
     <div class="tablegames-time">
       <div class="tablegames-time__wrapper">
@@ -27,12 +28,16 @@
 
 <script>
 import modal from '@/components/modal.vue';
+import BBheader from './BBheader.vue';
 
 const PAGE_NAME = 'tablegames';
 
 export default {
   name: `BB${PAGE_NAME}`,
   props: ['links', 'show'],
+  components: {
+    BBheader,
+  },
   data() {
     return {
       styles: [

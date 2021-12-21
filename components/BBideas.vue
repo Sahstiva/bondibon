@@ -1,5 +1,6 @@
 <template>
   <section class="ideas">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')" class="ideas-header"/>
     <h2 class="visually-hidden">{{ links.title }}</h2>
     <div class="ideas-wrapper">
       <picture>
@@ -88,12 +89,16 @@
 
 <script>
 import modal from '@/components/modal.vue';
+import BBheader from './BBheader.vue';
 
 const PAGE_NAME = 'ideas';
 
 export default {
   name: `BB${PAGE_NAME}`,
   props: ['links', 'show'],
+  components: {
+    BBheader,
+  },
   data() {
     return {
 

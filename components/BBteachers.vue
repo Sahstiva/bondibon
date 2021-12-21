@@ -1,5 +1,6 @@
 <template>
   <section class="teachers">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')" />
     <h2 class="visually-hidden">Полезно педагогам</h2>
     <div class="teachers-usefull">
       <picture class="teachers-usefull__arrow">
@@ -74,8 +75,11 @@
 </template>
 
 <script>
+import BBheader from './BBheader.vue';
+
 export default {
   name: 'BBteachers',
+  components: { BBheader },
   data() {
     return {
       linkCatalog: process.env.DOWNLOAD_LINK,

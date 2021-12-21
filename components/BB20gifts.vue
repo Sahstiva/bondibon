@@ -1,5 +1,6 @@
 <template>
   <section class="bb20gifts">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')" class="bb20gifts-header"/>
     <h2 class="visually-hidden">{{ links.title }}</h2>
     <div class="bb20gifts-wrapper">
         <p class="bb20gifts-wrapper__large">
@@ -55,19 +56,22 @@
 
 <script>
 import modal from '@/components/modal.vue';
+import BBheader from './BBheader.vue';
 
 const PAGE_NAME = '20gifts';
 
 export default {
   name: `BB${PAGE_NAME}`,
   props: ['links', 'show'],
+  components: {
+    BBheader,
+  },
   data() {
     return {
 
     };
   },
   mounted() {
-    console.log(this.links.sections);
     if (this.show) {
       Object.values(this.links.sections).forEach((section) => {
         if ('sections' in section) {

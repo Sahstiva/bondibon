@@ -1,5 +1,6 @@
 <template>
   <section class="links">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')"/>
     <h2 class="visually-hidden">Подписывайтесь на наш инстаграм, смотрите видео на канале</h2>
     <div class="links-wrapper">
       <div class="links-item__opinion">
@@ -114,7 +115,12 @@
 </template>
 
 <script>
+import BBheader from './BBheader.vue';
+
 export default {
   name: 'BBlinks',
+  components: {
+    BBheader,
+  },
 };
 </script>

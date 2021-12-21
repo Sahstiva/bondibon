@@ -1,5 +1,6 @@
 <template>
   <section class="map">
+    <BBheader />
     <h2 class="visually-hidden">Где купить</h2>
     <yandex-map v-if="showMap" class="map-wrapper"
                 :coords="coords"
@@ -39,10 +40,14 @@
 </template>
 
 <script>
+import BBheader from './BBheader.vue';
 
 export default {
   name: 'BBmap',
   props: ['shops', 'showMap'],
+  components: {
+    BBheader,
+  },
   data: () => ({
     zoom: 2,
     myMap: null,

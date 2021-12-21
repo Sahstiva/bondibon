@@ -1,5 +1,6 @@
 <template>
   <section class="mosaic">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')"/>
     <h2 class="visually-hidden">Интеллект на кончиках пальцев</h2>
     <div class="mosaic-smart">
       <div class="mosaic-smart__wrapper">
@@ -31,11 +32,13 @@
 
 <script>
 import modal from '@/components/modal.vue';
+import BBheader from './BBheader.vue';
 
 const PAGE_NAME = 'mosaic';
 
 export default {
   name: `BB${PAGE_NAME}`,
+  components: { BBheader },
   props: ['links', 'show'],
   data() {
     return {

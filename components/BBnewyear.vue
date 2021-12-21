@@ -1,5 +1,6 @@
 <template>
   <section class="newyear">
+    <BBheader @goWhereToBuy="$emit('goToNextPage', 'map')" class="newyear-header"/>
     <h2 class="visually-hidden">Новый год к нам мчится</h2>
     <div class="newyear-title">
       <p class="newyear-title__title">
@@ -43,11 +44,13 @@
 
 <script>
 import modal from '@/components/modal.vue';
+import BBheader from './BBheader.vue';
 
 const PAGE_NAME = 'newyear';
 
 export default {
   name: `BB${PAGE_NAME}`,
+  components: { BBheader },
   props: ['links', 'show'],
   mounted() {
     if (this.show) {
