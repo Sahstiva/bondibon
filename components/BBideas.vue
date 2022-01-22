@@ -56,7 +56,7 @@
               v-for="item in section.sections"
               :key="item.id"
               class="ideas-cards__image"
-              v-on:click="showModal(item)">
+              @click="$emit('showModal', item)">
             <picture>
               <source
                 :data-srcset="require(`~/assets/images/${item.image}?webp`)"
@@ -88,60 +88,15 @@
 </template>
 
 <script>
-import modal from '@/components/modal.vue';
 import BBheader from './BBheader.vue';
 
 const PAGE_NAME = 'ideas';
 
 export default {
   name: `BB${PAGE_NAME}`,
-  props: ['links', 'show'],
+  props: ['links'],
   components: {
     BBheader,
-  },
-  data() {
-    return {
-
-    };
-  },
-  mounted() {
-    if (this.show) {
-      Object.values(this.links.sections).forEach((section) => {
-        if ('sections' in section) {
-          const showSection = Object.values(section.sections).find((item) => item.id === this.show);
-          if (showSection) {
-            this.showModal(showSection);
-          }
-        }
-      });
-    }
-  },
-  methods: {
-    showModal(section) {
-      this.$modal.show(
-        modal,
-        {
-          title: section.text,
-          image: section.image,
-          links: section.links,
-          id: section.id,
-          page: PAGE_NAME,
-        },
-        {
-          height: 'auto',
-          adaptive: true,
-        },
-        {
-          'before-close': this.OnModalClose,
-        },
-      );
-    },
-    OnModalClose() {
-      window.history.pushState(
-        null,
-        document.title, `${window.location.pathname}?page=${PAGE_NAME}`,
-      );
-    },
   },
 };
 </script>

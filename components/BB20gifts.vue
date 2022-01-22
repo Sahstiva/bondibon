@@ -22,7 +22,7 @@
               :key="item.id"
               class="bb20gifts-cards__image"
               :class="`bb20gifts-cards__${item.id}`"
-              v-on:click="showModal(item)">
+              @click="$emit('showModal', item)">
 
             <picture>
               <source
@@ -55,60 +55,59 @@
 </template>
 
 <script>
-import modal from '@/components/modal.vue';
+// import modal from '@/components/modal.vue';
 import BBheader from './BBheader.vue';
 
 const PAGE_NAME = '20gifts';
 
 export default {
   name: `BB${PAGE_NAME}`,
-  props: ['links', 'show'],
+  props: ['links'], // , 'show'],
   components: {
     BBheader,
   },
-  data() {
-    return {
-
-    };
-  },
-  mounted() {
-    if (this.show) {
-      Object.values(this.links.sections).forEach((section) => {
-        if ('sections' in section) {
-          const showSection = Object.values(section.sections).find((item) => item.id === this.show);
-          if (showSection) {
-            this.showModal(showSection);
-          }
-        }
-      });
-    }
-  },
-  methods: {
-    showModal(section) {
-      this.$modal.show(
-        modal,
-        {
-          title: section.text,
-          image: section.image,
-          links: section.links,
-          id: section.id,
-          page: PAGE_NAME,
-        },
-        {
-          height: 'auto',
-          adaptive: true,
-        },
-        {
-          'before-close': this.OnModalClose,
-        },
-      );
-    },
-    OnModalClose() {
-      window.history.pushState(
-        null,
-        document.title, `${window.location.pathname}?page=${PAGE_NAME}`,
-      );
-    },
-  },
+// data() {
+//   return {
+//   };
+// },
+// mounted() {
+//   if (this.show) {
+//     Object.values(this.links.sections).forEach((section) => {
+//       if ('sections' in section) {
+//         const showSection = Object.values(section.sections).find((item) => item.id === this.show);
+//         if (showSection) {
+//           this.showModal(showSection);
+//         }
+//       }
+//     });
+//   }
+// },
+//   methods: {
+//     showModal(section) {
+//       this.$modal.show(
+//         modal,
+//         {
+//           title: section.text,
+//           image: section.image,
+//           links: section.links,
+//           id: section.id,
+//           page: PAGE_NAME,
+//         },
+//         {
+//           height: 'auto',
+//           adaptive: true,
+//         },
+//         {
+//           'before-close': this.OnModalClose,
+//         },
+//       );
+//     },
+//     OnModalClose() {
+//       window.history.pushState(
+//         null,
+//         document.title, `${window.location.pathname}?page=${PAGE_NAME}`,
+//       );
+//     },
+//   },
 };
 </script>

@@ -13,7 +13,7 @@
     <div class="knowledge-grid">
       <button
           v-for="(section, index) in links.sections"
-          @click="showModal(section)"
+          @click="$emit('showModal', section)"
           class="knowledge-grid__item"
           :key="index"
       >
@@ -39,7 +39,6 @@
 </template>
 
 <script>
-import modal from '@/components/modal.vue';
 import BBheader from './BBheader.vue';
 
 const PAGE_NAME = 'know';
@@ -47,41 +46,6 @@ const PAGE_NAME = 'know';
 export default {
   name: `BB${PAGE_NAME}`,
   components: { BBheader },
-  props: ['links', 'show'],
-  mounted() {
-    if (this.show) {
-      const section = Object.values(this.links.sections).find((item) => item.id === this.show);
-      if (section) {
-        this.showModal(section);
-      }
-    }
-  },
-  methods: {
-    showModal(section) {
-      this.$modal.show(
-        modal,
-        {
-          title: section.text,
-          image: section.image,
-          links: section.links,
-          id: section.id,
-          page: PAGE_NAME,
-        },
-        {
-          height: 'auto',
-          adaptive: true,
-        },
-        {
-          'before-close': this.OnModalClose,
-        },
-      );
-    },
-    OnModalClose() {
-      window.history.pushState(
-        null,
-        document.title, `${window.location.pathname}?page=${PAGE_NAME}`,
-      );
-    },
-  },
+  props: ['links'],
 };
 </script>
